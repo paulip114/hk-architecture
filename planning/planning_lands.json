@@ -1,0 +1,51 @@
+{
+  "_source": "planning/planning-rules.md and lands/lands-rules.md (compiled 2026-11-05). Figures from TPB S16 Guidance Notes (Jan 2026), JPN 5, JPN 9, LAO PN 2/2023, 4/2021, 9/2026, SDEV reply 26.3.2025.",
+  "_uncertain": ["s16_validity_years (typical, set per decision)", "premium_assessment_months (observed average, no target in PN 2/2023)"],
+  "tpb": {
+    "s12A_decision_months": 2,
+    "s16_decision_months": 2,
+    "s16_comment_weeks": 3,
+    "decision_notice_weeks": 2,
+    "fi_window_months": 2,
+    "s17_lodge_days": 21,
+    "s17_decision_months": 3,
+    "appeal_lodge_days": 60,
+    "s16_validity_years": 4
+  },
+  "jpn5_rooftop": {
+    "enclosed_max_fraction_of_roof": 0.5,
+    "ancillary": {"low_rise_limit_m": 30, "low_rise_cap_m": 3.0, "low_rise_lift_cap_m": 5.2, "tall_pct": 0.10, "tall_cap_m": 15.0},
+    "feature_resi_composite": {"pct": 0.15, "cap_m": 7.0},
+    "feature_other": {"low_rise_limit_m": 35, "low_rise_cap_m": 7.0, "tall_pct": 0.20, "spire_extra_pct": 0.20}
+  },
+  "lands": {
+    "pn2_2023_weeks": {"preliminary_reply": 3, "initial_fee": 2, "decision_after_reply": 22, "pbto_accept": 2, "bbto_accept": 4, "execution_after_contract": 12},
+    "premium_assessment_months": [5.8, 8.5],
+    "pn4_2021_fast_track_weeks": 16,
+    "premium_deposit_pct": 10,
+    "appeal_counter_offer_months": 3
+  },
+  "jpn9_bonus_pr": {
+    "start": "2026-09-01",
+    "end": "2031-08-31",
+    "min_site_m2": 700,
+    "min_building_age_years": 50,
+    "min_residential_share": 0.5,
+    "bonus_fraction_of_max_domestic": 0.20,
+    "standard_rates_hkd_per_m2": {
+      "Sai Ying Pun & Sheung Wan": 84000,
+      "Wan Chai": 84000,
+      "Ma Tau Kok": 66000,
+      "Cheung Sha Wan": 63000,
+      "Mong Kok": 70000,
+      "Yau Ma Tei": 70000,
+      "Tsuen Wan": 46000
+    }
+  },
+  "jpn4_groups": {
+    "I": "Not counted by BD/LandsD/PlanD whatever the lease says (PNAP criteria apply)",
+    "II_nil": "Needs a lease GFA exemption clause; nil premium, administrative fee",
+    "II_premium": "Needs a lease GFA exemption clause and premium (standard rates PN 3/2026 for balconies, UPs, external walls; PN 4/2026 MiC)",
+    "III": "Case by case; must be specified in the lease"
+  }
+}

@@ -29,6 +29,11 @@ Working knowledge and tools Claude reads before doing architect's work in this p
 | `examples/demo_cinema.json`, `demo_cinema_report.md` | 5a cinema demo |
 | `examples/demo_composite_part_e_report.md` | Part E output |
 | `examples/demo_atrium_fe.json`, `demo_atrium_fe_report.md` | Part G demo |
+| `planning/planning-rules.md` | Town planning: OZP Notes (Column 1/2, Remarks), JPN 4/5 PR and height rules, s12A / s16 / s16A / s17 / appeal procedure and time limits, TPB guidelines, Bonus PR (JPN 9) and transfer of PR (PG-43A) |
+| `lands/lands-rules.md` | Land administration: lease clauses, JPN 4 GFA groups under lease, GBP under lease (LAO PN 2/2018), approval / consent (PN 4/2021), lease modification and land exchange (PN 2/2023), premium and standard rates |
+| `planning/planning_lands.json` | Time limits, JPN 5 roof-top limits, JPN 9 standard rates as data |
+| `tools/planning_lease_check.py` | OZP + lease checker: `python3 tools/planning_lease_check.py project.json [--block planning.json]` (reads `planning_lease`; GFA from `floors[]`) |
+| `examples/demo_composite_planning.json`, `demo_composite_planning_report.md` | OZP / lease demo for the composite building (fictional plan and lot) |
 
 ## Input fields (project.json)
 - `site`: `area_m2`; either `class` ("A"/"B"/"C") or `street_widths_m` + `perimeter_m` + `frontage_on_specified_streets_m`; optional `dedicated_area_m2`.
@@ -41,6 +46,7 @@ Working knowledge and tools Claude reads before doing architect's work in this p
 Exit code 1 when any item fails.
 
 ## Open items
+- Planning / lands: Cap. 131 text not read (eLegislation unreachable); LAO PN 3/2020 (DDH) scanned, not read. See open items in `planning/planning-rules.md` and `lands/lands-rules.md`.
 - Verify the APP-151 cap base and prerequisite list against the current PNAP.
 - Not yet automated: barrier-free access (reg 72, Third Schedule / Design Manual), reg 31 inclined-plane geometry, Part F (fire safety management).
 - Part G tool is a one-room screening; CO / visibility not modelled.
