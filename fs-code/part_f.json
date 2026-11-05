@@ -1,0 +1,127 @@
+{
+ "_source": "Code of Practice for Fire Safety in Buildings 2011 (2024 Edition), Part F (Clauses F1-F7, Appendix F1 Table F1). Checked against the full Code text (fs-code-2011.txt).",
+ "status": "advisory, except where fire engineering (FSAR) or a BO s.42 modification makes the fire safety management plan a condition (F4.1)",
+ "fsmp_parts": {
+  "maintenance_plan": {
+   "clause": "F5.1",
+   "items": {
+    "approved_gbp_exit_routes": "Approved general building plans with the exit routes highlighted",
+    "fsp_specifications": "Documents indicating the details / specifications of the fire safety provisions installed",
+    "maintenance_periods": "Period for regular maintenance of the fire safety provisions installed",
+    "method_statements": "Method statements for maintenance",
+    "repair_methods": "Repair methods",
+    "maintenance_records": "Records of maintenance or repair works carried out",
+    "housekeeping": "Housekeeping (checklist, Table F1)",
+    "final_fsar": "A copy of the final FSAR, if any"
+   }
+  },
+  "training_plan": {
+   "clause": "F6.1-F6.3",
+   "items": {
+    "staff_duties_routine": "Staff duties on routine inspection",
+    "staff_duties_fire": "Staff duties in case of fire",
+    "training_programme": "Regular staff training programme",
+    "training_records": "Staff training records",
+    "fire_wardens": "Fire wardens appointed for managing evacuation",
+    "drills_and_seminars": "Fire drills and fire safety seminars at regular intervals for staff and occupants, including persons with a disability"
+   }
+  },
+  "fire_action_plan": {
+   "clause": "F7.1-F7.2",
+   "items": {
+    "call_999": "Procedure to report the fire to FSD (dial 999)",
+    "inform_and_assist": "Inform occupants and assist them to the ultimate place of safety",
+    "evacuation_plan": "Contingency / evacuation plan",
+    "disabled_evacuation": "Evacuation procedures for persons with a disability",
+    "trs_locations": "Locations of temporary refuge spaces shown on the evacuation plan (where provided)",
+    "trs_communication": "Management office staff to communicate with persons in temporary refuge spaces and inform firefighters"
+   }
+  }
+ },
+ "fire_engineering": {
+  "clause": "F4.1, F4.3",
+  "bounding_conditions_in_gbp": "Bounding Conditions to be included as part of the general building plans",
+  "bounding_conditions_and_fsar_in_fsmp": "Bounding Conditions and a copy of the final FSAR included in the FSMP",
+  "bounding_conditions_in_dmc": "Bounding Conditions listed in the approved GBP included in the DMC, where applicable"
+ },
+ "open_kitchen_conditions": {
+  "clause": "F5.8 (open kitchens under C13.4)",
+  "items": {
+   "smoke_detectors_kept": "Smoke detectors inside the flats and at the common lobby not removed or obstructed",
+   "sprinkler_kept": "Sprinkler head above the open kitchen not removed or obstructed",
+   "fr_wall_kept": "Full height wall FRR not less than -/30/30 adjacent to the flat exit door not removed",
+   "annual_check": "Annual check of the above FSI by the management's registered FSI contractor"
+  },
+  "in_fsmp_and_dmc": true
+ },
+ "lift_works": {
+  "clause": "F5.7",
+  "max_doors_open_normal": 1,
+  "max_doors_open_absolute": 3,
+  "no_hot_work_if_more_than_one_open": true,
+  "max_doors_removed_without_hoarding": 1,
+  "hoarding_integrity_min": 120,
+  "vent_opening_max_mm2": 5500,
+  "vent_openings_max_per_liftway": 2,
+  "vent_openings_max_per_hoarding": 4,
+  "vent_openings_upper_portion": true,
+  "hoarding_door_frr_not_less_than_hoarding": true,
+  "hoarding_door_self_closing_lockable_openable_inside": true,
+  "temporary_works_non_combustible": true,
+  "openings_secured_when_unattended": true
+ },
+ "aa_works": {
+  "clause": "F5.6",
+  "items": {
+    "moe_maintained": "All means of escape maintained, free from obstruction, signed and lit",
+    "fr_doors_closed": "Fire rated doors along exit routes maintained and kept closed",
+    "fire_barriers_maintained": "All fire barriers maintained",
+    "alternative_measures": "Alternative measures where MoE, fire doors or fire barriers are temporarily removed",
+    "flame_retardant_sheeting": "Flame-retardant sheeting on scaffolding",
+    "combustibles_controlled": "Combustible materials in safe custody, not accumulated (Cap. 295)",
+    "fsd_notified_shutdown": "FSD notified of temporary shutdown of FSI",
+    "first_aid_firefighting_equipment": "First-aid and firefighting equipment readily accessible, workers trained",
+    "emergency_plan": "Emergency plan and training for all workers"
+  }
+ },
+ "drill_frequency_months": {
+  "5b": 6,
+  "_note": "Education Regulation (Cap. 279A) r.38: schools at least once every 6 months, recorded in the school log book. Other uses: 'regular intervals' (F6.3); no fixed period in the Code."
+ },
+ "table_F1": {
+  "1.1": "Exit routes free from obstructions at all times",
+  "1.2": "No unauthorized alteration along the exit route",
+  "1.3": "No metal gate or roller shutter across exit routes",
+  "1.4": "Doors / gates in common areas openable from inside without a key",
+  "1.5": "Doors / gates do not swing onto exit routes reducing effective width",
+  "1.6": "Fire rated doors self-closing and kept closed",
+  "1.7": "No combustible linings within exit routes",
+  "1.8": "Adequate lighting of exit routes in good condition",
+  "1.9": "Adequate signs along exit routes",
+  "1.10": "Balustrades and handrails in good condition",
+  "1.11": "Hold-open devices to fire rated doors tested",
+  "1.12": "Temporary refuge spaces free from obstruction",
+  "1.13": "CCTV and intercom for temporary refuge spaces in good condition",
+  "2.1": "Fire rated doors (protected exits, FL lobbies, staircases, plant rooms) in good condition incl. ironmongery and glazing",
+  "2.2": "Fire rated doors and smoke-sealed doors kept closed",
+  "2.3": "Fire rated doors not removed or replaced by lower FRR doors",
+  "2.4": "No unauthorized alteration to fire resisting construction",
+  "2.5": "Fire barriers in good condition, no unprotected openings, FRR maintained",
+  "2.6": "Non-emergency services in required staircases enclosed by fire barriers; access panels closed",
+  "2.7": "No unauthorized openings in protected exits / staircase walls",
+  "2.8": "No penetrations through a fixed light",
+  "2.9": "Fire shutters not obstructed",
+  "2.10": "Vision panels to fire rated doors intact",
+  "2.11": "Penetrations in fire barriers sealed with fire seals / stops",
+  "2.12": "No exhaust fans / A/C units in protected exits",
+  "2.13": "Basement smoke vents not blocked; basement smoke extraction inspected by registered FSI contractor",
+  "3.1": "Access to fireman's lifts unimpeded from the street",
+  "3.2": "Fireman's lift lobby walls in good condition, FRR maintained",
+  "3.3": "EVA free from obstructions and in good condition",
+  "4.1": "No change in Use Classification with fire safety implications",
+  "4.2": "Open kitchens: detectors, sprinkler and fire rated wall intact",
+  "4.3": "Fire safety seminars and fire drills organized regularly",
+  "4.4": "Electrical installations inspected by registered electrical contractors regularly",
+  "4.5": "Fire safety precautionary works during A&A and repair (F5.6 / F5.7)"
+ }
+}

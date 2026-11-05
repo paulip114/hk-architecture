@@ -48,7 +48,7 @@ Exit code 1 when any item fails.
 ## Open items
 - Planning / lands: Cap. 131 text not read (eLegislation unreachable); LAO PN 3/2020 (DDH) scanned, not read. See open items in `planning/planning-rules.md` and `lands/lands-rules.md`.
 - Verify the APP-151 cap base and prerequisite list against the current PNAP.
-- Not yet automated: reg 31 inclined-plane geometry, Part F (fire safety management).
+- Not yet automated: reg 31 inclined-plane geometry. (Part F is now covered by `tools/part_f_check.py`.)
 - Barrier-free: Divisions 15-20 of the Design Manual not yet verified (lift and counter limits from memory, reported as CHECK).
 - APP-152: Table 1 large-site columns and the Lp ≤ 5U limit to be checked against the PDF.
 - B(C)R / B(A)R notes are unverified until the Cap. 123A / 123B PDFs are uploaded.
@@ -82,5 +82,23 @@ Exit code 1 when any item fails.
 - `sustainable_design`: `site_area_m2`, `tallest_height_m`, `street_canyon_width_m`, `planes[]` {`name`, `lp_m`, `zones` {low/middle/high: {`p_pct`, `is_pct`}}, `min_is_to_boundary_m`, `min_is_between_facades_m`}, `streets[]` {`name`, `width_m`, `building_height_m`, `option` corridor/podium_garden, `min_dist_to_centreline_m`, `podium_clear_height_m`, `within_45deg_plane`, `projection_mm`}, `greenery[]` {`name`, `type` (key of `greenery_factors`), `area_m2`, `zone` primary/other}.
 - `barrier_free`: see the docstring of `tools/bfa_check.py` (car park, access route, ramps, stairs, handrails, corridors, doors, toilets, hotel, auditoria, lifts, counters, Table 2 uses and features).
 
-## Building submission procedures
-See `submission/README.md`: BD plan submission, consent, OP, minor works, UBW, MBIS / MWIS, with `tools/submission_timeline.py` and templates.
+## Fire Code Part A / Part F, FSD minimum FSI, energy efficiency
+| Path | What it is |
+| --- | --- |
+| `fs-code/part-a-rules.md`, `fs-code/part_a.json` | Part A: framework, Table A1 use classes, Performance Requirements B1-F1, 42 definitions (verbatim) |
+| `tools/fs_lookup.py` | `fs_lookup.py "travel distance"` / `fs_lookup.py 庇護` / `fs_lookup.py 4b` / `fs_lookup.py --clause C13.4` |
+| `fs-code/part-f-rules.md`, `fs-code/part_f.json` | Part F: FSMP (maintenance, training, fire action plans), Bounding Conditions, open kitchens, lift works, Table F1 |
+| `tools/part_f_check.py` | Part F checker (reads `fire_safety_management`) |
+| `fsi/fsi-rules.md`, `fsi/fsi_schedule.json` | FSD CoP Minimum FSI (Sept 2022) Part IV schedule. **Unverified** web extract |
+| `tools/fsi_check.py` | Minimum FSI checker (reads `fsi`) |
+| `energy/energy-rules.md`, `energy/energy.json` | OTTV (APP-67), RTTV / VLT / ER (APP-156), both Sept 2025; BEC 2024 LPD, COP, lift, retrofit triggers |
+| `tools/energy_check.py` | OTTV calculator + RTTV / BEC checks (reads `energy`). OTTV constants are placeholders until the OTTV Code 1995 is loaded |
+| `examples/demo_composite_fsm_energy.json` | Demo inputs for the three tools (same fictional scheme) |
+| `examples/demo_composite_part_f_report.md`, `demo_composite_fsi_report.md`, `demo_composite_energy_report.md` | Outputs |
+
+Input blocks: see each tool's docstring (`python3 tools/<tool>.py -h`).
+
+Open items for this group:
+- Verify `fsi/fsi_schedule.json` against the FSD PDF (File2022.pdf). Encode Part V (tank sizes, design rules) and the PPE, school and special-risk paragraphs.
+- Load the OTTV Code 1995 tables (TDeq, ΔT, solar factors) into `energy.json` and set `ottv_constants.verified` to true. Confirm whether the limit applies to the overall value or to walls and roof separately.
+- Read the BEC 2024 text for the space types, electrical (copper loss, power factor, THD, metering) and A/C tables not in the EMSD briefing.
