@@ -81,3 +81,6 @@ Exit code 1 when any item fails.
 
 - `sustainable_design`: `site_area_m2`, `tallest_height_m`, `street_canyon_width_m`, `planes[]` {`name`, `lp_m`, `zones` {low/middle/high: {`p_pct`, `is_pct`}}, `min_is_to_boundary_m`, `min_is_between_facades_m`}, `streets[]` {`name`, `width_m`, `building_height_m`, `option` corridor/podium_garden, `min_dist_to_centreline_m`, `podium_clear_height_m`, `within_45deg_plane`, `projection_mm`}, `greenery[]` {`name`, `type` (key of `greenery_factors`), `area_m2`, `zone` primary/other}.
 - `barrier_free`: see the docstring of `tools/bfa_check.py` (car park, access route, ramps, stairs, handrails, corridors, doors, toilets, hotel, auditoria, lifts, counters, Table 2 uses and features).
+
+## Building submission procedures
+See `submission/README.md`: BD plan submission, consent, OP, minor works, UBW, MBIS / MWIS, with `tools/submission_timeline.py` and templates.
