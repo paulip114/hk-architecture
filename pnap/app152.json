@@ -1,0 +1,64 @@
+{
+ "_source": "PNAP APP-152 Sustainable Building Design Guidelines, BD, version September 2023 (AD/NB1); first issued Jan 2011, last revised Jan 2016. Read from https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP152.pdf on 2026-11-05 through a text extractor (not the PDF itself).",
+ "_unverified": [
+  "Table 1 column layout (which column is Plane 1 / Plane 2 for sites >= 20,000 m2): the extractor flagged the headers as ambiguous. Check against the PDF before relying on the 25% / 33.3% figures.",
+  "Lp limit of 5 x U (para 4(a), App B 2.2): read once through the extractor only.",
+  "Which items count as 'greening features' under the 30% cap (App D para 3): assumed to be the items with a reduction factor in the App D table."
+ ],
+ "applicability": {
+  "building_separation_site_area_m2": 20000,
+  "building_separation_lp_m": 60,
+  "building_setback_street_width_lt_m": 15,
+  "greenery_site_area_min_m2": 1000,
+  "greenery_not_for_single_family_house": true
+ },
+ "assessment_zones_m": {"low": [0, 20], "middle": [20, 60], "high": [60, null]},
+ "table_1_permeability_pct": {
+  "small_site_lp_ge_60": {"h_le_60": 20, "h_gt_60": 20},
+  "large_site_plane_1": {"h_le_60": 20, "h_gt_60": 20},
+  "large_site_plane_2": {"h_le_60": 25, "h_gt_60": 33.3}
+ },
+ "separation": {
+  "is_min_share_of_p": 0.6667,
+  "pe_max_share_of_p": 0.3333,
+  "is_to_boundary_or_centreline_min_m": 7.5,
+  "is_no_building_within_boundary_m": 3,
+  "is_between_facades_min_m": 15,
+  "is_min_height_fraction_of_zone": 0.6667,
+  "pe_min_clear_width_m": 3,
+  "pe_min_clear_height_m": 3,
+  "air_corridor_min_width_m": 15,
+  "lp_max_multiple_of_street_width": 5,
+  "low_zone_disregard_below_m": 6.67,
+  "exempt_standalone_residential_le_m": 15
+ },
+ "setback": {
+  "corridor_section_m": [15, 15],
+  "applies_up_to_height_m": 15,
+  "min_from_street_centreline_m": 7.5,
+  "podium_garden_min_clear_height_m": 4.5,
+  "podium_garden_plane_deg": 45,
+  "projection_max_mm": 600,
+  "projection_min_clear_height_m": 2.5,
+  "waiver_if_height_lt_x_street_width": 2
+ },
+ "table_2_greenery_pct": {
+  "1000_to_20000": {"primary": 10, "overall": 20},
+  "ge_20000": {"primary": 15, "overall": 30}
+ },
+ "primary_zone_height_m": 15,
+ "greening_feature_cap_of_required": 0.30,
+ "greenery_factors": {
+  "soil_uncovered": {"factor": 1.0, "feature": false},
+  "green_buffer_app151_c1": {"factor": 2.0, "feature": false},
+  "covered_primary_accessible": {"factor": 0.5, "feature": true},
+  "water_feature": {"factor": 0.5, "feature": true},
+  "grass_paving": {"factor": 0.5, "feature": true},
+  "inaccessible_roof_planter_primary": {"factor": 0.5, "feature": true},
+  "vertical_greening": {"factor": 1.0, "feature": true, "note": "elevational area; frame above 7.5 m not counted"},
+  "slope_gt_45deg": {"factor": 1.0, "feature": true},
+  "covered_above_primary": {"factor": 0.0, "feature": false, "note": "not counted (App D para 6)"},
+  "removable_planter": {"factor": 0.0, "feature": false, "note": "not counted (App D para 5)"}
+ },
+ "recommended_soil_depth_m": {"trees": 1.2, "shrubs": 0.6, "grass": 0.3}
+}

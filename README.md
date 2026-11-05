@@ -42,7 +42,10 @@ Exit code 1 when any item fails.
 
 ## Open items
 - Verify the APP-151 cap base and prerequisite list against the current PNAP.
-- Not yet automated: barrier-free access (reg 72, Third Schedule / Design Manual), reg 31 inclined-plane geometry, Part F (fire safety management).
+- Not yet automated: reg 31 inclined-plane geometry, Part F (fire safety management).
+- Barrier-free: Divisions 15-20 of the Design Manual not yet verified (lift and counter limits from memory, reported as CHECK).
+- APP-152: Table 1 large-site columns and the Lp ≤ 5U limit to be checked against the PDF.
+- B(C)R / B(A)R notes are unverified until the Cap. 123A / 123B PDFs are uploaded.
 - Part G tool is a one-room screening; CO / visibility not modelled.
 
 ## Means of escape input (`means_of_escape` block)
@@ -58,6 +61,20 @@ Exit code 1 when any item fails.
 - `ppe`: see docstring of `tools/ppe_check.py` (auditoria with seats, level_m, exits, tiers, stairs, rows {seats, seatway_mm, gangway_sides, length_m}, gangways, foyer, projection room, linings).
 - `part_e`: `elements[]` {name, type (key in part_e.json), required_frr 60/120/240, thickness_mm / size_mm / width_mm / waist_mm / protection_mm, cover_mm, continuous}; `linings[]` {name, location, euro_class or bs476_class}; `products[]` {name, standard, test_report_lab_accredited}.
 - `fire_engineering.scenarios[]`: name, use_class (Table G1 key), floor_area_m2, ceiling_height_m, growth, sprinklered, optional hrr_cap_kw / fuel_load_mj_m2 + fire_area_m2, extract_m3_s, detection_s, alarm_s, pre_movement_s, or occupant_category (awake_familiar / awake_unfamiliar / sleeping_familiar_dwelling / sleeping_familiar_serviced / sleeping_unfamiliar / awake_assisted / sleeping_assisted) + alarm (voice / standard / local) + optional pre_movement_source, building_complexity (Table G2), occupants, travel_distance_m, exit_widths_mm[], walking_speed_m_s, specific_flow_p_s_m, movement (max/sum), safety_factor or safety_margin_s.
+
+## Design guides: APP-152, barrier-free access, B(C)R / B(A)R
+| Path | What it is |
+| --- | --- |
+| `pnap/app152-rules.md`, `pnap/app152.json` | PNAP APP-152 (Sept 2023): building separation, setback, site coverage of greenery |
+| `tools/sbd_check.py` | APP-152 checker (reads `sustainable_design`) |
+| `bfa/bfa-rules.md`, `bfa/bfa2008.json` | Design Manual: Barrier Free Access 2008 (2025 Ed.) obligatory requirements, Tables 1-2 |
+| `tools/bfa_check.py` | Barrier-free checker (reads `barrier_free`) |
+| `bcr-bar/bcr-bar-rules.md` | Cap. 123B / 123A outline. Unverified until the official PDFs are uploaded |
+| `examples/demo_composite_design.json` | Demo inputs for both tools (same fictional scheme as `demo_composite.json`) |
+| `examples/demo_composite_app152_report.md`, `demo_composite_bfa_report.md` | Outputs |
+
+- `sustainable_design`: `site_area_m2`, `tallest_height_m`, `street_canyon_width_m`, `planes[]` {`name`, `lp_m`, `zones` {low/middle/high: {`p_pct`, `is_pct`}}, `min_is_to_boundary_m`, `min_is_between_facades_m`}, `streets[]` {`name`, `width_m`, `building_height_m`, `option` corridor/podium_garden, `min_dist_to_centreline_m`, `podium_clear_height_m`, `within_45deg_plane`, `projection_mm`}, `greenery[]` {`name`, `type` (key of `greenery_factors`), `area_m2`, `zone` primary/other}.
+- `barrier_free`: see the docstring of `tools/bfa_check.py` (car park, access route, ramps, stairs, handrails, corridors, doors, toilets, hotel, auditoria, lifts, counters, Table 2 uses and features).
 
 ## Building submission procedures
 See `submission/README.md`: BD plan submission, consent, OP, minor works, UBW, MBIS / MWIS, with `tools/submission_timeline.py` and templates.
