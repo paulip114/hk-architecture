@@ -1,0 +1,359 @@
+{
+ "_source": "FSD Codes of Practice for Minimum Fire Service Installations and Equipment and Inspection, Testing and Maintenance of Installations and Equipment, September 2022 edition, Part IV (paras 4.1-4.45). Read from https://www.hkfsd.gov.hk/eng/source/safety/File2022.pdf on 2026-11-05 through a summarising web reader, not the PDF itself: lists and thresholds below are working extracts and must be checked against the PDF before use in a submission.",
+ "verified": false,
+ "high_rise_m": 30,
+ "_high_rise_note": "Part III: high rise = floor of the uppermost storey exceeds 30 m above the point of staircase discharge at ground level.",
+ "street_hydrant_max_m": 100,
+ "hose_reel_max_hose_m": 30,
+ "installations": {
+  "audio_visual_advisory": "Audio/visual advisory system",
+  "automatic_actuating_devices": "Automatic actuating devices",
+  "automatic_fixed_non_water": "Automatic fixed installation other than water (special risk areas)",
+  "emergency_generator": "Emergency generator",
+  "emergency_lighting": "Emergency lighting",
+  "exit_sign": "Exit sign",
+  "fire_alarm": "Fire alarm system",
+  "fire_control_centre": "Fire control centre",
+  "fire_detection": "Fire detection system",
+  "fire_hydrant_hose_reel": "Fire hydrant / hose reel system",
+  "firemans_emergency_switch": "Fireman's emergency switch",
+  "firemans_lift": "Fireman's lift",
+  "frs_stairway": "Firefighting and rescue stairway",
+  "portable_appliances": "Portable hand-operated approved appliances",
+  "staircase_pressurization": "Pressurization of staircase",
+  "sprinkler": "Sprinkler system",
+  "smoke_extraction": "Static or dynamic smoke extraction system",
+  "ventilation_ac_control": "Ventilation / air conditioning control system"
+ },
+ "conditions": {
+  "sprinkler_230": {
+   "text": "total floor area exceeds 230 m²",
+   "field": "total_floor_area_m2",
+   "gt": 230
+  },
+  "avas_2000": {
+   "text": "area occupied by one occupancy on one floor exceeds 2 000 m² (with transient occupants exposed to risk)",
+   "field": "max_single_occupancy_floor_m2",
+   "gt": 2000
+  },
+  "smoke_compartment": {
+   "text": "compartment > 7 000 m³ with openable windows ≤ 6.25% of floor area and fire load > 1 135 MJ/m², or atrium > 28 000 m³",
+   "test": "smoke"
+  },
+  "pressurization": {
+   "text": "no natural venting of staircase / openable window ≤ 6.25% of floor area, cubical extent > 28 000 m³ and fire load > 1 135 MJ/m² (check the full para; refers to Part II)",
+   "test": "press"
+  },
+  "pressurization_basement": {
+   "text": "basements of 3 or more levels with cubical extent > 7 000 m³ and fire load > 1 135 MJ/m²",
+   "test": "press_bsmt"
+  },
+  "firemans_lift_rule": {
+   "text": "B(P)R 41B / FS Code Part D calls for it (see fire_cd_check.py)",
+   "test": "manual"
+  },
+  "emergency_generator_rule": {
+   "text": "a secondary supply is needed for fireman's lift, FSI pumps etc. (para 1.8)",
+   "test": "manual"
+  },
+  "special_risk": {
+   "text": "special risk areas exist (e.g. transformer, switch rooms)",
+   "test": "manual"
+  },
+  "ev_heat_detect": {
+   "text": "≤ 230 m² with EV charging and no sprinklers (heat or multi-sensor detectors)",
+   "test": "manual"
+  }
+ },
+ "premises": {
+  "domestic_le3": {
+   "para": "4.21",
+   "name": "Domestic, up to and including 3 storeys",
+   "req": {
+    "portable_appliances": "yes"
+   },
+   "note": "one appliance per floor plus additional for car ports"
+  },
+  "domestic_low": {
+   "para": "4.22",
+   "name": "Domestic, over 3 storeys, low rise",
+   "req": {
+    "fire_alarm": "yes",
+    "fire_hydrant_hose_reel": "yes",
+    "portable_appliances": "yes"
+   }
+  },
+  "domestic_high": {
+   "para": "4.23",
+   "name": "Domestic, high rise",
+   "req": {
+    "emergency_generator": "yes",
+    "emergency_lighting": "yes",
+    "exit_sign": "yes",
+    "fire_alarm": "yes",
+    "fire_hydrant_hose_reel": "yes",
+    "firemans_lift": "yes",
+    "portable_appliances": "yes"
+   }
+  },
+  "commercial_low": {
+   "para": "4.14",
+   "name": "Commercial (non-domestic), low rise",
+   "req": {
+    "audio_visual_advisory": "avas_2000",
+    "automatic_actuating_devices": "yes",
+    "automatic_fixed_non_water": "special_risk",
+    "emergency_generator": "emergency_generator_rule",
+    "emergency_lighting": "yes",
+    "exit_sign": "yes",
+    "fire_alarm": "yes",
+    "fire_detection": "yes",
+    "fire_hydrant_hose_reel": "yes",
+    "firemans_lift": "firemans_lift_rule",
+    "portable_appliances": "yes",
+    "sprinkler": "sprinkler_230",
+    "smoke_extraction": "smoke_compartment",
+    "ventilation_ac_control": "yes"
+   }
+  },
+  "commercial_high": {
+   "para": "4.15",
+   "name": "Commercial (non-domestic), high rise",
+   "req": {
+    "audio_visual_advisory": "avas_2000",
+    "automatic_actuating_devices": "yes",
+    "automatic_fixed_non_water": "special_risk",
+    "emergency_generator": "yes",
+    "emergency_lighting": "yes",
+    "exit_sign": "yes",
+    "fire_alarm": "yes",
+    "fire_control_centre": "yes",
+    "fire_detection": "yes",
+    "fire_hydrant_hose_reel": "yes",
+    "firemans_lift": "yes",
+    "portable_appliances": "yes",
+    "staircase_pressurization": "pressurization",
+    "sprinkler": "sprinkler_230",
+    "smoke_extraction": "smoke_compartment",
+    "ventilation_ac_control": "yes"
+   }
+  },
+  "basement_le230": {
+   "para": "4.3",
+   "name": "Basement, total floor area ≤ 230 m²",
+   "req": {
+    "automatic_fixed_non_water": "special_risk",
+    "emergency_lighting": "yes",
+    "exit_sign": "yes",
+    "fire_alarm": "yes",
+    "fire_detection": "yes",
+    "fire_hydrant_hose_reel": "yes",
+    "firemans_lift": "firemans_lift_rule",
+    "portable_appliances": "yes",
+    "ventilation_ac_control": "yes"
+   },
+   "note": "fire detection excludes car parks, strong rooms and safe deposit vaults; FL or firefighting stair"
+  },
+  "basement_gt230": {
+   "para": "4.4",
+   "name": "Basement, total floor area > 230 m²",
+   "req": {
+    "audio_visual_advisory": "avas_2000",
+    "automatic_fixed_non_water": "special_risk",
+    "emergency_lighting": "yes",
+    "exit_sign": "yes",
+    "fire_alarm": "yes",
+    "fire_detection": "yes",
+    "fire_hydrant_hose_reel": "yes",
+    "frs_stairway": "firemans_lift_rule",
+    "portable_appliances": "yes",
+    "staircase_pressurization": "pressurization_basement",
+    "sprinkler": "yes",
+    "smoke_extraction": "smoke_compartment",
+    "ventilation_ac_control": "yes"
+   },
+   "note": "sprinklers with fast-response heads"
+  },
+  "garage": {
+   "para": "4.26",
+   "name": "Garage (enclosed car park)",
+   "req": {
+    "automatic_actuating_devices": "yes",
+    "emergency_lighting": "yes",
+    "exit_sign": "yes",
+    "fire_alarm": "yes",
+    "fire_detection": "ev_heat_detect",
+    "fire_hydrant_hose_reel": "yes",
+    "firemans_emergency_switch": "yes",
+    "firemans_lift": "firemans_lift_rule",
+    "portable_appliances": "yes",
+    "sprinkler": "sprinkler_230",
+    "ventilation_ac_control": "yes"
+   }
+  },
+  "car_port": {
+   "para": "4.9",
+   "name": "Car port",
+   "req": {
+    "emergency_lighting": "yes",
+    "exit_sign": "yes",
+    "fire_alarm": "yes",
+    "fire_detection": "ev_heat_detect",
+    "fire_hydrant_hose_reel": "yes",
+    "firemans_emergency_switch": "yes",
+    "firemans_lift": "firemans_lift_rule",
+    "portable_appliances": "yes"
+   }
+  },
+  "hotel_low": {
+   "para": "4.27",
+   "name": "Hotel, low rise",
+   "req": {
+    "audio_visual_advisory": "avas_2000",
+    "automatic_actuating_devices": "yes",
+    "automatic_fixed_non_water": "special_risk",
+    "emergency_generator": "yes",
+    "emergency_lighting": "yes",
+    "exit_sign": "yes",
+    "fire_alarm": "yes",
+    "fire_control_centre": "yes",
+    "fire_detection": "yes",
+    "fire_hydrant_hose_reel": "yes",
+    "firemans_lift": "firemans_lift_rule",
+    "portable_appliances": "yes",
+    "staircase_pressurization": "pressurization",
+    "sprinkler": "yes",
+    "smoke_extraction": "smoke_compartment",
+    "ventilation_ac_control": "yes"
+   },
+   "note": "smoke or multi-sensor detection over the whole floor where any part is sleeping accommodation; guestroom detectors with sounder bases"
+  },
+  "hotel_high": {
+   "para": "4.28",
+   "name": "Hotel, high rise",
+   "req": {
+    "audio_visual_advisory": "avas_2000",
+    "automatic_actuating_devices": "yes",
+    "automatic_fixed_non_water": "special_risk",
+    "emergency_generator": "yes",
+    "emergency_lighting": "yes",
+    "exit_sign": "yes",
+    "fire_alarm": "yes",
+    "fire_control_centre": "yes",
+    "fire_detection": "yes",
+    "fire_hydrant_hose_reel": "yes",
+    "firemans_lift": "yes",
+    "portable_appliances": "yes",
+    "staircase_pressurization": "pressurization",
+    "sprinkler": "yes",
+    "smoke_extraction": "smoke_compartment",
+    "ventilation_ac_control": "yes"
+   },
+   "note": "smoke extraction also to internal escape routes serving guestrooms"
+  },
+  "industrial_low": {
+   "para": "4.29",
+   "name": "Industrial / godown, low rise",
+   "req": {
+    "automatic_actuating_devices": "yes",
+    "automatic_fixed_non_water": "special_risk",
+    "emergency_generator": "emergency_generator_rule",
+    "emergency_lighting": "yes",
+    "exit_sign": "yes",
+    "fire_alarm": "yes",
+    "fire_control_centre": "yes",
+    "fire_detection": "yes",
+    "fire_hydrant_hose_reel": "yes",
+    "firemans_lift": "firemans_lift_rule",
+    "portable_appliances": "yes",
+    "sprinkler": "sprinkler_230",
+    "smoke_extraction": "smoke_compartment",
+    "ventilation_ac_control": "yes"
+   }
+  },
+  "industrial_high": {
+   "para": "4.30",
+   "name": "Industrial / godown, high rise",
+   "req": {
+    "automatic_actuating_devices": "yes",
+    "automatic_fixed_non_water": "special_risk",
+    "emergency_generator": "yes",
+    "emergency_lighting": "yes",
+    "exit_sign": "yes",
+    "fire_alarm": "yes",
+    "fire_control_centre": "yes",
+    "fire_detection": "yes",
+    "fire_hydrant_hose_reel": "yes",
+    "firemans_lift": "yes",
+    "portable_appliances": "yes",
+    "staircase_pressurization": "pressurization",
+    "sprinkler": "sprinkler_230",
+    "smoke_extraction": "smoke_compartment",
+    "ventilation_ac_control": "yes"
+   }
+  },
+  "institutional_low": {
+   "para": "4.31",
+   "name": "Institutional, low rise",
+   "req": {
+    "audio_visual_advisory": "avas_2000",
+    "automatic_actuating_devices": "yes",
+    "automatic_fixed_non_water": "special_risk",
+    "emergency_generator": "emergency_generator_rule",
+    "emergency_lighting": "yes",
+    "exit_sign": "yes",
+    "fire_alarm": "yes",
+    "fire_detection": "yes",
+    "fire_hydrant_hose_reel": "yes",
+    "firemans_lift": "firemans_lift_rule",
+    "portable_appliances": "yes",
+    "sprinkler": "sprinkler_230",
+    "ventilation_ac_control": "yes"
+   }
+  },
+  "institutional_high": {
+   "para": "4.32",
+   "name": "Institutional, high rise",
+   "req": {
+    "audio_visual_advisory": "avas_2000",
+    "automatic_actuating_devices": "yes",
+    "automatic_fixed_non_water": "special_risk",
+    "emergency_generator": "yes",
+    "emergency_lighting": "yes",
+    "exit_sign": "yes",
+    "fire_alarm": "yes",
+    "fire_control_centre": "yes",
+    "fire_detection": "yes",
+    "fire_hydrant_hose_reel": "yes",
+    "firemans_lift": "yes",
+    "portable_appliances": "yes",
+    "staircase_pressurization": "pressurization",
+    "sprinkler": "sprinkler_230",
+    "ventilation_ac_control": "yes"
+   },
+   "note": "web extract ended before the full 4.32 thresholds: check the PDF"
+  }
+ },
+ "composite_rule": {
+  "para": "4.16",
+  "text": "Each part complies with the paragraph for its own use. Where the non-domestic part is sprinklered, sprinklers in staircases serving the domestic part extend two further floors (fast-response heads)."
+ },
+ "fs_tank_unverified": {
+  "_note": "From memory, NOT read from the 2022 Code (the web extract did not reach Part V). Confirm before use.",
+  "hydrant_hose_reel_litres_by_largest_floor_m2": [
+   [
+    230,
+    9000
+   ],
+   [
+    460,
+    18000
+   ],
+   [
+    null,
+    27000
+   ]
+  ]
+ },
+ "other_paragraphs_not_encoded": "4.1 aircraft maintenance, 4.2 audio/visual production, 4.5 battery rooms / EV charging, 4.6 boiler rooms, 4.7 bowling alleys, 4.8 bulk fuel, 4.10 chemical plants, 4.11-4.13 cold stores, 4.17-4.20, 4.24-4.25, 4.33-4.45 (cinemas, theatres, PPE, schools, petrol filling stations, etc.): read the PDF directly."
+}
