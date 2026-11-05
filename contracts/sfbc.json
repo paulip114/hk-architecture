@@ -1,0 +1,53 @@
+{
+  "_source": "Clause headings and the periods marked verified: kctang.com.hk 'Forms of Contract' (SFBCwQ.2005, 2023 revision notes), read 2026-11-05. Everything else is the Appendix value or an industry norm, marked unverified. Check against the purchased HKIS/HKIA/HKICM form before use.",
+  "forms": [
+    {"key": "SFBCwQ.2005", "name": "Agreement & Schedule of Conditions of Building Contract for use in the HKSAR, Private Edition, With Quantities", "edition": "2005, revised 2023", "publishers": "HKIA / HKICM / HKIS", "use": "Bills of quantities form part of the contract; remeasurement of provisional quantities", "verified": true},
+    {"key": "SFBCnQ.2006", "name": "Agreement & Schedule of Conditions of Building Contract, Private Edition, Without Quantities", "edition": "2006, revised 2023", "publishers": "HKIA / HKICM / HKIS", "use": "Drawings + specification (+ schedule of rates) govern; smaller or simpler works", "verified": true},
+    {"key": "NSC.2005", "name": "Nominated Sub-Contract", "edition": "2005, revised 2023", "verified": true},
+    {"key": "NSupply.2005", "name": "Nominated Supply Contract", "edition": "2005, revised 2023", "verified": true},
+    {"key": "SFBC.2025", "name": "2025 Edition: Building Contract (With and Without Quantities), Nominated Sub-Contract, Nominated Supply Contract", "edition": "2025 (listed 31/1/2026)", "verified": true,
+     "note": "Clause changes from 2005/2023 not yet captured here. The HKIA-ARB PA Paper 2 study guide (2021) still cites the 2005 / 2006 editions: confirm which edition the current exam uses."},
+    {"key": "HKIA-SFA", "name": "HKIA Standard Form of Agreement for the appointment of an architect, with HKIA Standard Conditions of Agreement", "edition": "check current edition with HKIA", "verified": false},
+    {"key": "GCC-Gov", "name": "Government General Conditions of Contract for Building Works", "note": "Government now mainly uses NEC (NEC3/NEC4 ECC) for public works", "verified": false},
+    {"key": "HKHA-GCC", "name": "HKHA General Conditions of Contract for Building Works", "edition": "2013 Edition v1.1", "verified": true}
+  ],
+  "clauses_SFBCwQ_2005": {
+    "1": "Interpretation and definitions", "2": "Contractor's obligations", "3": "Master programme",
+    "4": "Architect's instructions", "5": "Documents forming the Contract and other documents",
+    "6": "Statutory obligations", "7": "Setting out the Works", "8": "Materials, goods, workmanship and work",
+    "9": "Intellectual property rights", "10": "Contractor's site management team",
+    "11": "Access for the Architect to the Works", "12": "Architect's representative",
+    "13": "Variations, Provisional Quantities, Provisional Items and Provisional Sums",
+    "14": "Contract Bills", "15": "Contract Sum", "16": "Materials and goods on or off-site",
+    "17": "Substantial Completion and defects liability", "18": "Partial possession by Employer",
+    "19": "Assignment and sub-letting", "20": "Injury to persons and property and indemnity to Employer",
+    "21": "Insurance against injury to persons or property", "22": "Insurance of the Works",
+    "22A": "Insurance of the Works by the Contractor", "22B": "Insurance of the Works by the Employer",
+    "22C": "Insurance of existing building and insurance of the Works by the Employer",
+    "23": "Possession, commencement and completion", "24": "Damages for non-completion",
+    "25": "Extension of time", "26": "Delay recovery measures", "27": "Direct loss and/or expense",
+    "28": "Notice of claims for additional payment", "29": "Nominated Sub-Contractors and Nominated Suppliers",
+    "30": "Persons engaged by Employer", "31": "Facilities for statutory undertakers and utility companies",
+    "32": "Certificates and payments", "33": "Surety bond", "34": "Antiquities",
+    "35": "Determination by Employer", "36": "Determination by Contractor",
+    "37": "Determination by Employer or Contractor", "38": "Fluctuations",
+    "39": "Notices, certificates and other communications", "40": "Recovery of money due to the Employer",
+    "41": "Settlement of disputes", "42": "Contracts (Rights of Third Parties) Ordinance (Cap. 623) (added in 2023 revision)"
+  },
+  "periods": {
+    "oral_instruction_confirm_days": {"clause": "4.2(1)", "days": 5, "text": "Contractor confirms an oral instruction in writing within 5 days of it being given", "verified": true},
+    "objection_to_instruction_days": {"clause": "4.3(2)", "days": 7, "text": "within 7 days of receipt of that instruction", "verified": true},
+    "claim_particulars_days": {"clause": "28.2(2)", "days": 60, "text": "particulars of a claim for additional payment within 60 days of the notice under 28.1", "verified": true},
+    "eot_further_particulars_interval_days": {"clause": "25.2(3)(b)", "days": 28, "text": "further particulars of a continuing delay at intervals not exceeding 28 days", "verified": true},
+    "retention_default_pct": {"clause": "32.4 / Appendix", "value": 10, "text": "rate of retention, if not stated 10 per cent (5% is the market norm)", "verified": true},
+    "retention_limit": {"clause": "32.4 / Appendix", "text": "limit of retention as stated in the Appendix (commonly 5% of the Contract Sum)", "verified": false},
+    "half_retention_release_days": {"clause": "32.5(2)", "days": 14, "text": "half of retention released within 14 days after the Substantial Completion Certificate", "verified": true},
+    "final_retention_release_days": {"clause": "32.5(4)", "days": 14, "text": "balance within 14 days after the Defects Rectification Certificate", "verified": true},
+    "defects_liability_period": {"clause": "17.3 / Appendix", "text": "period stated in the Appendix (12 months is usual for building works)", "verified": false},
+    "final_certificate": {"clause": "32.8(1)", "text": "as soon as practicable after the Defects Rectification Certificate", "verified": true},
+    "mediator_agreement_days": {"clause": "41.3(2)", "days": 21, "text": "if no agreement on a mediator within 21 days of a written request, appointed by institute presidents", "verified": true},
+    "mediation_period_days": {"clause": "41.4(1)", "days": 28, "text": "if not settled within 28 days of commencement of mediation, either party may refer to arbitration", "verified": true},
+    "arbitration_rules": {"clause": "41.4(5)", "text": "domestic arbitration under the Arbitration Ordinance (Cap. 609), HKIAC Domestic Arbitration Rules", "verified": true},
+    "interim_certificate_and_honouring": {"clause": "32", "text": "interim payment interval, certification period and honouring period are in clause 32 and the Appendix: enter from the actual contract", "verified": false}
+  }
+}

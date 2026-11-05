@@ -82,6 +82,23 @@ Exit code 1 when any item fails.
 - `sustainable_design`: `site_area_m2`, `tallest_height_m`, `street_canyon_width_m`, `planes[]` {`name`, `lp_m`, `zones` {low/middle/high: {`p_pct`, `is_pct`}}, `min_is_to_boundary_m`, `min_is_between_facades_m`}, `streets[]` {`name`, `width_m`, `building_height_m`, `option` corridor/podium_garden, `min_dist_to_centreline_m`, `podium_clear_height_m`, `within_45deg_plane`, `projection_mm`}, `greenery[]` {`name`, `type` (key of `greenery_factors`), `area_m2`, `zone` primary/other}.
 - `barrier_free`: see the docstring of `tools/bfa_check.py` (car park, access route, ramps, stairs, handrails, corridors, doors, toilets, hotel, auditoria, lifts, counters, Table 2 uses and features).
 
+## Practice: contracts, cost, site supervision, sketch drawings
+| Path | What it is |
+| --- | --- |
+| `contracts/contract-rules.md`, `contracts/sfbc.json` | HKIA/HKIS/HKICM SFBC (2005/2006 rev. 2023; 2025 Ed. noted) clause map, periods, appointment, tender, PA Paper 2 notes |
+| `tools/contract_admin.py` | Extended Completion Date, LD (with cap and pending EOT), retention and release dates, DLP, notice checks (cl. 4.2, 25.2, 28.2). Reads `contract` |
+| `cost/cost-rules.md`, `cost/hk_cost_rates.json` | Cost planning stages, Arcadis Q2 2026 HK$/m² CFA rates, TPI |
+| `tools/cost_estimate.py` | Order-of-cost estimate with low/mid/high range, allowances, escalation, fees, budget, S-curve. Reads `cost` (and `floors[]` via `from_floors`) |
+| `supervision/site-supervision-rules.md`, `supervision/supervision.json` | CoP for Site Supervision 2009 (2024 Ed.): TCP T1-T5, frequency levels, Table 8.1 scale factors |
+| `tools/supervision_plan.py` | Scale factors, TCP schedule and effort, stream cover, submission timing. Reads `supervision`. TM Table 1 rows not encoded |
+| `drawing/drawing-rules.md` | What the drawing tools can and cannot do; workflow to B(P)R and cost |
+| `tools/dxf_plan.py` | Sketch plans (DXF + SVG) with grid, rooms, areas, title block; area schedule JSON for `bpr_check.py`. Reads `drawing` |
+| `tools/ifc_model.py` | IFC4 massing model (storeys, slabs, walls, spaces with areas). Reads `drawing` |
+| `tools/dxf_area_takeoff.py` | Area take-off from any DXF by layer, with holes and text labels |
+| `examples/demo_practice.json` | Demo for all six tools; outputs `demo_practice_*` |
+| `tests/test_practice_tools.py` | `python3 -m unittest discover -s tests` |
+
+Drawing tools need `pip install -r requirements-drawing.txt` (ezdxf, ifcopenshell, shapely). Every output is a draft: contract results for the Architect / QS against the signed contract, cost for a QS to develop, supervision plan for the AP / RSE / AS, drawings marked "SKETCH – NOT FOR SUBMISSION".
 ## Fire Code Part A / Part F, FSD minimum FSI, energy efficiency
 | Path | What it is |
 | --- | --- |

@@ -1,0 +1,87 @@
+{
+ "project": "示範：大角咀住宅大廈（虛構）",
+ "floors": [
+  {"name": "B1 car park", "use": "car_park", "level_m": -4.0, "gross_area_m2": 600},
+  {"name": "G/F lobby & retail", "use": "retail", "level_m": 0.0, "gross_area_m2": 450},
+  {"name": "1/F–25/F typical flats", "use": "domestic", "level_m": 5.0, "count": 25, "gross_area_m2": 300},
+  {"name": "R/F plant", "use": "plant", "level_m": 83.0, "gross_area_m2": 80}
+ ],
+ "cost": {
+  "rate_level": "mid",
+  "from_floors": {"car_park": "carpark_basement", "retail": "retail_shopping_centre", "domestic": "dom_highrise_average"},
+  "extras": [{"name": "Piling on reclaimed land (allowance)", "amount": 28000000},
+             {"name": "Demolition of existing 6-storey building", "amount": 6000000}],
+  "allowances": {"external_works_pct": 2, "design_contingency_pct": 10},
+  "years_to_tender_midpoint": 1.5,
+  "gfa_m2": 7950,
+  "budget": 400000000,
+  "contract_months": 36
+ },
+ "contract": {
+  "form": "SFBCwQ.2005",
+  "contract_sum": 285000000,
+  "possession_date": "2026-03-02",
+  "completion_date": "2028-09-30",
+  "ld_per_day": 120000,
+  "retention_pct": 5,
+  "retention_limit_pct": 5,
+  "dlp_months": 12,
+  "substantial_completion_date": "2028-11-20",
+  "certified_gross_to_date": 285000000,
+  "eots": [
+   {"ref": "EOT-01", "event": "Typhoon signal No. 8 + black rainstorm (exceptionally inclement weather)", "days": 9, "granted": true,
+    "particulars_dates": ["2026-09-10", "2026-10-05"]},
+   {"ref": "EOT-02", "event": "AI-045 late structural information for transfer plate", "days": 21, "granted": true,
+    "particulars_dates": ["2027-02-01", "2027-03-01", "2027-04-02"]},
+   {"ref": "EOT-03", "event": "Variation: additional façade fins (VO-112)", "days": 14, "granted": false,
+    "particulars_dates": ["2028-05-04"]}
+  ],
+  "instructions": [
+   {"ref": "AI-061 (oral, site meeting 22)", "oral_date": "2027-06-08", "confirmed_date": "2027-06-11"},
+   {"ref": "AI-077 (oral, by phone)", "oral_date": "2027-09-02", "confirmed_date": "2027-09-12"}
+  ],
+  "claims": [
+   {"ref": "LE-03 prolongation (EOT-02)", "notice_date": "2027-02-01", "particulars_date": "2027-03-20"}
+  ]
+ },
+ "supervision": {
+  "geotechnical": false,
+  "works": [
+   {"type": "demolition", "value": 420, "months": 3},
+   {"type": "other_piles", "value": 7.0, "months": 4},
+   {"type": "cap_footing_basement", "value": 32, "months": 5},
+   {"type": "superstructure", "value": 8600, "months": 20}
+  ],
+  "tcps": [
+   {"stream": "AS", "grade": "T1", "name": "RGBC site agent", "frequency_level": 5, "works": ["demolition", "other_piles", "cap_footing_basement", "superstructure"]},
+   {"stream": "AS", "grade": "T3", "name": "RGBC project manager", "frequency_level": 4, "works": ["demolition", "other_piles", "cap_footing_basement", "superstructure"]},
+   {"stream": "AP", "grade": "T3", "name": "AP's clerk of works", "frequency_level": 4, "works": ["demolition", "cap_footing_basement", "superstructure"]},
+   {"stream": "AP", "grade": "T5", "name": "AP", "frequency_level": 2, "works": ["superstructure"]},
+   {"stream": "RSE", "grade": "T3", "name": "RSE's resident engineer", "frequency_level": 5, "works": ["other_piles", "cap_footing_basement", "superstructure"]},
+   {"stream": "RSE", "grade": "T5", "name": "RSE", "frequency_level": 2, "works": ["other_piles", "cap_footing_basement", "superstructure"]}
+  ],
+  "dates": {"plan_submitted": "2026-01-12", "consent_application": "2026-01-12", "commencement": "2026-03-02", "tcp_confirmed": "2026-03-06"}
+ },
+ "drawing": {
+  "title": "Tai Kok Tsui residential (fictitious) – typical floor study",
+  "drawing_no": "SK-101", "scale": 200, "north_deg": 20, "wall_mm": 200, "slab_mm": 200, "floor_to_floor_m": 3.15,
+  "site_boundary": [[0, 0], [30, 0], [30, 25], [0, 25]],
+  "setbacks": [{"name": "Rear boundary", "line": [[0, 23.5], [30, 23.5]], "distance_m": 1.5}],
+  "grid": {"x": [5, 12.5, 17.5, 25], "y": [4, 11.5, 19]},
+  "floors": [
+   {"name": "G/F", "use": "non_domestic", "level_m": 0.0, "floor_to_floor_m": 5.0,
+    "footprint": [[1, 1], [29, 1], [29, 22], [1, 22]],
+    "cores": [{"name": "CORE", "polygon": [[12.5, 8], [17.5, 8], [17.5, 15], [12.5, 15]]}],
+    "rooms": [{"name": "Shop 1", "use": "retail", "polygon": [[1.2, 1.2], [12.3, 1.2], [12.3, 21.8], [1.2, 21.8]]},
+              {"name": "Lobby", "use": "lobby", "polygon": [[12.5, 1.2], [17.5, 1.2], [17.5, 7.8], [12.5, 7.8]]},
+              {"name": "Shop 2", "use": "retail", "polygon": [[17.7, 1.2], [28.8, 1.2], [28.8, 21.8], [17.7, 21.8]]}]},
+   {"name": "Typical floor", "use": "domestic", "level_m": 5.0, "count": 25,
+    "footprint": [[5, 4], [25, 4], [25, 19], [5, 19]],
+    "cores": [{"name": "CORE", "polygon": [[12.5, 8], [17.5, 8], [17.5, 15], [12.5, 15]]}],
+    "rooms": [{"name": "Flat A living", "use": "habitable", "polygon": [[5.2, 4.2], [12.3, 4.2], [12.3, 11.5], [5.2, 11.5]]},
+              {"name": "Flat A bedroom", "use": "habitable", "polygon": [[5.2, 11.7], [12.3, 11.7], [12.3, 18.8], [5.2, 18.8]]},
+              {"name": "Flat B living", "use": "habitable", "polygon": [[17.7, 4.2], [24.8, 4.2], [24.8, 11.5], [17.7, 11.5]]},
+              {"name": "Flat B bedroom", "use": "habitable", "polygon": [[17.7, 11.7], [24.8, 11.7], [24.8, 18.8], [17.7, 18.8]]}]}
+  ]
+ }
+}

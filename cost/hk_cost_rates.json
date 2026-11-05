@@ -1,0 +1,38 @@
+{
+  "_source": "Arcadis, Quarterly Construction Cost Review Q2 2026 – Hong Kong and China (https://www.arcadis.com/contentassets/51b6ca88731442dfa76230f3426cee33/cnhk-qcc-2026-q2-final-1-2.pdf), transcribed 2026-11-05 by automated text extraction. Re-check each figure against the PDF before issuing an estimate.",
+  "_basis": "HK$/m2 CFA, fixed-price competitive tenders, Q2 2026. CFA measured to outside face of external walls incl. lift shafts, stairs, balconies, plant rooms, tanks. Assumes no basement, flat ground, normal soil. Excludes site formation, external works, land, professional fees, finance and legal costs.",
+  "base_quarter": "2026Q2",
+  "rates": {
+    "dom_public_highrise":       {"label": "Apartments, high rise, public authority standard", "low": 12200, "high": 14300},
+    "dom_highrise_average":      {"label": "Apartments, high rise, average standard", "low": 25200, "high": 28800},
+    "dom_highrise_high_end":     {"label": "Apartments, high rise, high end", "low": 32200, "high": 37100},
+    "dom_terraced_average":      {"label": "Terraced houses, average standard", "low": 34500, "high": 39400},
+    "dom_detached_high_end":     {"label": "Detached houses, high end", "low": 50000, "high": null},
+    "office_average":            {"label": "Medium/high rise offices, average standard", "low": 25100, "high": 28300},
+    "office_prestige":           {"label": "High rise offices, prestige quality", "low": 29600, "high": 33600},
+    "retail_shopping_centre":    {"label": "Out-of-town shopping centre, average standard", "low": 24700, "high": 28800},
+    "retail_mall_high_end":      {"label": "Retail malls, high end", "low": 31700, "high": 36600},
+    "industrial_factory":        {"label": "Owner-operated factories, low rise, light-weight industry", "low": 18900, "high": 23400},
+    "hotel_budget":              {"label": "Budget hotels, 3-star mid-market", "low": 31400, "high": 33200},
+    "hotel_business":            {"label": "Business hotels, 4/5-star", "low": 32400, "high": 37100},
+    "hotel_luxury":              {"label": "Luxury hotels, 5-star", "low": 37700, "high": 41900},
+    "carpark_basement":          {"label": "Underground/basement car parks (<3 levels)", "low": 28500, "high": 32600},
+    "carpark_multistorey":       {"label": "Multi-storey car parks, above ground (<4 levels)", "low": 16700, "high": 19500},
+    "school":                    {"label": "Schools (primary and secondary), public authority standard", "low": 21300, "high": 22900},
+    "student_residence":         {"label": "Students' residences", "low": 24100, "high": 27100},
+    "sports_club":               {"label": "Sports clubs / leisure centres (dry sports)", "low": 31300, "high": 35200},
+    "hospital_public":           {"label": "General hospitals, public sector", "low": 39300, "high": 43200}
+  },
+  "tpi_arcadis": {"_base": "Q1 1970 = 100", "2025Q1": 1935, "2025Q2": 1925, "2025Q3": 1920, "2025Q4": 1915, "2026Q1": 1912, "2026Q2": 1912},
+  "tpi_archsd": {"_base": "Q1 1970 = 100", "2025Q1": 1855, "2025Q2": 1855, "2025Q3": 1855, "2025Q4": 1836, "2026Q1": 1836},
+  "allowances_default": {
+    "_note": "Planning allowances for a feasibility estimate, not market data. Set project-specific values; all unverified.",
+    "site_formation_pct": 0,
+    "external_works_pct": 3,
+    "preliminaries_note": "Arcadis rates are understood to include preliminaries and contractor's margin (tender rates); confirm.",
+    "design_contingency_pct": 10,
+    "construction_contingency_pct": 5,
+    "professional_fees_pct": 10,
+    "escalation_pct_per_year": 2
+  }
+}

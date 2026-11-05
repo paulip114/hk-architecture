@@ -1,0 +1,68 @@
+# Contracts and professional practice (Hong Kong, private sector)
+
+Draft working rules for PA Paper 2 ("Building Contracts, Professional Practice, Professional Conduct & Conditions of Agreement") and day-to-day contract administration. Data: `sfbc.json`. Tool: `../tools/contract_admin.py`.
+
+Status legend: **[V]** checked against a secondary source on 2026-11-05 (kctang.com.hk clause notes, HKIA-ARB Paper 2 Study Guide 2021). **[U]** from general practice, not yet checked against the form itself. Buy the forms from HKIS / HKIA and check before relying on any clause wording.
+
+## 1. Which form
+| Situation | Form |
+| --- | --- |
+| Private building contract with bills of quantities | SFBCwQ (2005, rev. 2023; 2025 Ed. now issued) **[V]** |
+| Private contract on drawings + specification | SFBCnQ (2006, rev. 2023; 2025 Ed. now issued) **[V]** |
+| Specialist trades chosen by the Employer | Nominated Sub-Contract / Nominated Supply Contract (2005, rev. 2023) **[V]** |
+| Public works | Government GCC, increasingly NEC3/NEC4 ECC **[U]** |
+| Housing Authority | HKHA GCC for Building Works 2013 v1.1 **[V]** |
+| Architect's appointment | HKIA Standard Form of Agreement + Standard Conditions of Agreement **[V name, U edition]** |
+
+Paper 2 study guide (2021) cites the 2005 / 2006 editions. The 2025 Edition was listed on 31/1/2026: check which one the exam sitting uses, and note the changes once the 2025 text is in hand.
+
+## 2. Appointment of the architect (Section A of Paper 2)
+- Conditions of engagement: scope of services by stage, fee basis (percentage, lump sum or time charge), payment by stage, additional services, termination, PI insurance, copyright and limitation of liability. **[U]**
+- Typical stage breakdown used in HK fee agreements: inception / feasibility, scheme design, detailed design, tender documentation, tender and award, construction (contract administration), and completion / DLP. Percentages differ between editions: take them from the signed agreement. **[U]**
+- Statutory roles are separate from the contract role. The AP (Buildings Ordinance s.4) is appointed by the building owner and owes duties to the Building Authority. The Architect named in the building contract acts for the Employer and must certify fairly between the parties.
+- Duty of care: contract and tort (reasonable skill and care of an ordinary competent architect). Duties continue in certifying, so a negligent certificate can make the architect liable. **[U]**
+- Professional conduct: HKIA Code of Professional Conduct, Architects Registration Ordinance (Cap. 408), Prevention of Bribery Ordinance (Cap. 201). No undisclosed commissions, no supplanting another architect, declare conflicts. **[V names]**
+
+## 3. Tender (Section B)
+1. Choose procurement: traditional lump sum (with or without quantities), remeasurement, design and build, management contracting, GMP. Choose with the client on cost certainty, speed and design control. **[U]**
+2. Pre-qualify and select tenderers (financial standing, track record, workload, safety record, registration: RGBC for building works). **[U]**
+3. Tender documents: form of tender, conditions (form + Appendix + special conditions), specification, drawings, bills or schedule of rates, NSC/NS provisional sums, programme requirements. **[U]**
+4. Tender period, queries via tender addenda to all tenderers, single sealed return and opening with witnesses. **[U]**
+5. Tender report (normally by QS): arithmetic check, qualifications, rate comparison, recommendation. **[U]**
+6. Award: letter of acceptance, then execute the Articles of Agreement, surety bond (cl. 33) and insurances (cl. 21-22) before possession. **[V clause numbers]**
+
+## 4. Contract administration (Section C), SFBCwQ.2005
+| Topic | Clause | Working rule |
+| --- | --- | --- |
+| Possession, commencement, completion | 23 **[V]** | Date for possession and Completion Date from the Appendix. Sectional completion if stated. |
+| Master programme | 3 **[V]** | Contractor submits; not a contract document. Use it to assess EOT. |
+| Architect's instructions | 4 **[V]** | Must be in writing. Oral instruction: Contractor confirms within 5 days (4.2(1)). Contractor may object within 7 days (4.3(2)). **[V]** |
+| Variations | 13 **[V]** | Only the Architect may order. Valued by QS: bill rates, then pro-rata, then fair rates. Provisional sums spent by instruction. **[U valuation order]** |
+| Materials and workmanship | 8 **[V]** | Can order tests, removal of non-conforming work and opening up. Cost of opening up falls on the Employer if the work complies. **[U]** |
+| Substantial Completion and DLP | 17 **[V]** | Substantial Completion Certificate starts DLP (period in Appendix, usually 12 months **[U]**). Defects list at end; Defects Rectification Certificate when made good. |
+| Partial possession | 18 **[V]** | Employer takes part early with Contractor's consent; LD reduced pro rata; half retention on that part released. **[U detail]** |
+| Damages for non-completion | 24 **[V]** | Architect certifies non-completion after the Completion Date (as extended) passes. Employer may deduct LD at the Appendix rate to Substantial Completion. LD must be a genuine pre-estimate, not a penalty. **[U legal test]** |
+| Extension of time | 25 **[V]** | Contractor notifies delay; continuing delays updated at ≤ 28-day intervals (25.2(3)(b)) **[V]**. Architect grants a fair and reasonable EOT for Relevant Events (variations, instructions, late information, exceptionally inclement weather, Employer's default, force majeure, etc.) **[U list]**. Concurrent delay: assess against the critical path. |
+| Delay recovery | 26 **[V]** | Architect may require acceleration measures; cost depends on whether the delay is excusable. |
+| Loss and expense | 27-28 **[V]** | Notice under 28.1, then particulars within 60 days (28.2(2)) **[V]**. Late notice can bar the claim (condition precedent). **[U]** |
+| Nominated sub-contractors | 29 **[V]** | Architect nominates; main contractor may object on reasonable grounds; direct payment if main contractor fails to pay. **[U]** |
+| Certificates and payments | 32 **[V]** | Interim certificates at the interval in the Appendix. Retention at the Appendix rate (10% if not stated, 5% typical) up to the limit. Half released within 14 days of the SC Certificate; balance within 14 days of the DRC (32.5) **[V]**. Final Certificate as soon as practicable after the DRC (32.8) **[V]**. |
+| Fluctuations | 38 **[V]** | Only if the fluctuation option applies (usually by CSD indices). |
+| Determination | 35-37 **[V]** | Employer: default notice, then determine if default continues; insolvency. Contractor: non-payment, suspension. Follow the notice periods and special delivery (cl. 39) exactly or the determination may be repudiatory. **[U periods]** |
+| Disputes | 41 **[V]** | Mediation first: mediator agreed within 21 days or appointed by institute presidents; if unsettled 28 days after mediation starts, arbitration under Cap. 609 with HKIAC Domestic Arbitration Rules (41.3-41.4). **[V]** |
+
+### Certificate sequence
+Interim certificates (monthly) → Certificate of Non-Completion (if late) → Substantial Completion Certificate (½ retention, DLP starts) → end of DLP, schedule of defects → Defects Rectification Certificate (balance of retention) → final account → Final Certificate.
+
+## 5. Security of payment
+Government public works carry security-of-payment provisions by contract (DEVB, from 2021-2022). A Security of Payment Ordinance for the wider industry had not been confirmed here: check the current position before advising. **[U]**
+
+## 6. Exam technique (Paper 2)
+- Answer as the Architect under the named form: cite the clause, state who acts, by when, and with what document.
+- Separate the contractual role (Architect, cl. 4, 17, 24, 25, 32) from the statutory role (AP under the Buildings Ordinance).
+- For delay questions, walk through: Relevant Event? notice given? critical? concurrent? EOT amount, then LD and loss and expense separately.
+
+## Open items
+- Load 2025 Edition clause changes once the form text is available.
+- HKIA appointment agreement: current edition, stage percentages and standard services.
+- Determination notice periods, interim certificate periods and the full EOT Relevant Events list need checking against the form.

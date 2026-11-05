@@ -1,0 +1,68 @@
+{
+ "site_area_m2": 750.0,
+ "floors": [
+  {
+   "name": "G/F",
+   "use": "non_domestic",
+   "level_m": 0.0,
+   "count": 1,
+   "gross_area_m2": 588.0,
+   "site_coverage_m2": 588.0,
+   "exempt": []
+  },
+  {
+   "name": "Typical floor",
+   "use": "domestic",
+   "level_m": 5.0,
+   "count": 25,
+   "gross_area_m2": 300.0,
+   "site_coverage_m2": 300.0,
+   "exempt": []
+  }
+ ],
+ "rooms": [
+  {
+   "floor": "G/F",
+   "name": "Shop 1",
+   "use": "retail",
+   "floor_area_m2": 228.66
+  },
+  {
+   "floor": "G/F",
+   "name": "Lobby",
+   "use": "lobby",
+   "floor_area_m2": 33.0
+  },
+  {
+   "floor": "G/F",
+   "name": "Shop 2",
+   "use": "retail",
+   "floor_area_m2": 228.66
+  },
+  {
+   "floor": "Typical floor",
+   "name": "Flat A living",
+   "use": "habitable",
+   "floor_area_m2": 51.83
+  },
+  {
+   "floor": "Typical floor",
+   "name": "Flat A bedroom",
+   "use": "habitable",
+   "floor_area_m2": 50.41
+  },
+  {
+   "floor": "Typical floor",
+   "name": "Flat B living",
+   "use": "habitable",
+   "floor_area_m2": 51.83
+  },
+  {
+   "floor": "Typical floor",
+   "name": "Flat B bedroom",
+   "use": "habitable",
+   "floor_area_m2": 50.41
+  }
+ ],
+ "warnings": []
+}
