@@ -1,0 +1,54 @@
+{
+  "_source": "Code of Practice for Site Supervision 2009 (2024 Edition, rev. Aug 2024), BD, paras 4.1-4.6, 8.4-8.8, Table 8.1; Technical Memorandum for Supervision Plans 2009, Table 2 and the frequency key of Table 1. Read via automated extraction 2026-11-05. The row-by-row grades and frequencies of TM Table 1 were NOT extracted reliably and are not encoded: enter them from the TM.",
+  "tcp_grades": {
+    "T1": {"role": "routine safety supervision", "min": "certificate or diploma + 2 years relevant experience", "verified": true},
+    "T2": {"role": "routine safety supervision", "min": "higher certificate / higher diploma + 3 years", "verified": true},
+    "T3": {"role": "routine safety supervision", "min": "HC/HD + 5 years, or degree + 2 years", "verified": true},
+    "T4": {"role": "engineering safety supervision", "min": "degree + 4 years, or a registered professional", "verified": true},
+    "T5": {"role": "engineering safety supervision", "min": "registered professional + 5 years", "verified": true}
+  },
+  "frequency_levels": {
+    "1": {"text": "inspection as and when required", "visits_per_month": 0},
+    "2": {"text": "monthly inspection", "visits_per_month": 1},
+    "3": {"text": "fortnightly inspection", "visits_per_month": 2},
+    "4": {"text": "weekly inspection", "visits_per_month": 4.33},
+    "5": {"text": "full-time inspection during site working hours", "visits_per_month": null}
+  },
+  "streams": {
+    "AS": "Authorized Signatory of the registered contractor (RGBC / RSC)",
+    "AP": "Authorized Person",
+    "RSE": "Registered Structural Engineer",
+    "RGE": "Registered Geotechnical Engineer"
+  },
+  "scale_basic_values": {
+    "_note": "Table 8.1. Scale factor = estimated value / basic value, capped at 2 (para 8.5). Factor 1 = full-day TCP inspection each occasion (8.7); below 1 allows shorter visits, never fewer (8.7-8.8).",
+    "demolition":            {"measure": "max floor area demolished per storey", "unit": "m2", "basic": 750},
+    "gifw_rigs":             {"measure": "number of drilling rigs (GIFW)", "unit": "no.", "basic": 6},
+    "gifw_pits":             {"measure": "trial pits, coreholes, slope strippings concurrently (no drillholes)", "unit": "no.", "basic": 20},
+    "site_formation":        {"measure": "total cost", "unit": "HK$M", "basic": 40},
+    "slope_repair":          {"measure": "total cost (slope / retaining wall / buried services repair)", "unit": "HK$M", "basic": 12},
+    "elsw":                  {"measure": "average cost per month (excavation & lateral support)", "unit": "HK$M/month", "basic": 8},
+    "pile_wall":             {"measure": "average cost per month", "unit": "HK$M/month", "basic": 8},
+    "tunnel":                {"measure": "total cost", "unit": "HK$M", "basic": 47},
+    "large_dia_bored_piles": {"measure": "average cost per month (large diameter bored / barrette piles)", "unit": "HK$M/month", "basic": 19},
+    "other_piles":           {"measure": "average cost per month (piles other than the above)", "unit": "HK$M/month", "basic": 9.5},
+    "cap_footing_basement":  {"measure": "total cost", "unit": "HK$M", "basic": 47},
+    "superstructure":        {"measure": "total construction floor area", "unit": "m2", "basic": 20000},
+    "curtain_wall":          {"measure": "total aggregated surface area (curtain wall / cladding)", "unit": "m2", "basic": 10000},
+    "alteration_addition":   {"measure": "total cost", "unit": "HK$M", "basic": 17.5},
+    "minor_works":           {"measure": "total cost", "unit": "HK$M", "basic": 11},
+    "street_works":          {"measure": "total cost", "unit": "HK$M", "basic": 12}
+  },
+  "scale_factor_cap": 2,
+  "rules": [
+    {"ref": "CoP 4.1", "text": "Supervision plan names each TCP and the frequency / extent of supervision; submit before or with the consent application."},
+    {"ref": "CoP 4.4", "text": "AP lodges the plan with or before the first consent application; minor works (simplified requirements): ≥ 7 days before commencement."},
+    {"ref": "CoP 4.5", "text": "Confirm TCP appointments as an annex to the plan or within 7 days of commencement."},
+    {"ref": "CoP 4.1", "text": "AP / RSE / RGE / AS notify the BA of any subsequent change of TCP."},
+    {"ref": "CoP 8.5", "text": "Revised plan when a revised contract sum changes the scale factor and resources."},
+    {"ref": "CoP 8.8", "text": "Full-time TCPs stationed on site; minimum frequency in TM Table 1 must not be reduced."},
+    {"ref": "CoP 4.12", "text": "Temporary works supporting a tower crane: designer and independent checker each a registered professional engineer (civil / structural) with ≥ 5 years relevant experience."},
+    {"ref": "CoP 6.15", "text": "Soil nailing: at least one TCP T3 (RGE stream) and one TCP T1 (RSC stream) resident full-time at every stage."},
+    {"ref": "CoP 7.3", "text": "Significant geotechnical works: RGE normally provides TCP T3 and T5."}
+  ]
+}
