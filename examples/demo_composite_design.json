@@ -1,0 +1,59 @@
+{
+ "project": "示範：堅尼地城商住大廈（虛構）",
+ "_note": "Same fictional scheme as demo_composite.json. Kept in a separate file so the APP-152 and barrier-free inputs can be edited without touching the B(P)R / fire inputs.",
+ "sustainable_design": {
+  "site_area_m2": 1000,
+  "tallest_height_m": 100.4,
+  "street_canyon_width_m": 9,
+  "planes": [
+   {"name": "Plane facing 12 m street", "lp_m": 38},
+   {"name": "Plane facing 6 m lane", "lp_m": 25}
+  ],
+  "streets": [
+   {"name": "12 m street", "width_m": 12, "building_height_m": 100.4, "option": "corridor", "min_dist_to_centreline_m": 7.5, "projection_mm": 500},
+   {"name": "6 m lane", "width_m": 6, "building_height_m": 100.4, "option": "corridor", "min_dist_to_centreline_m": 6.0}
+  ],
+  "greenery": [
+   {"name": "G/F planters in setback", "type": "soil_uncovered", "area_m2": 70, "zone": "primary"},
+   {"name": "Green wall at G/F entrance (≤ 7.5 m)", "type": "vertical_greening", "area_m2": 40, "zone": "primary"},
+   {"name": "Covered planter under canopy", "type": "covered_primary_accessible", "area_m2": 20, "zone": "primary"},
+   {"name": "Podium roof garden (3/F, uncovered)", "type": "soil_uncovered", "area_m2": 120, "zone": "other"},
+   {"name": "Main roof planters", "type": "soil_uncovered", "area_m2": 30, "zone": "other"}
+  ]
+ },
+ "barrier_free": {
+  "building_type": "composite",
+  "storeys": 31,
+  "height_m": 100.4,
+  "uses": ["shopping", "carpark"],
+  "provided_features": ["tactile_floor_plan", "accessible_counter", "visual_fire_alarm"],
+  "car_park": {"total_spaces": 30, "accessible_spaces": 1, "bay_width_mm": 3500},
+  "access_route": {"width_mm": 1500},
+  "ramps": [
+   {"name": "Main entrance ramp", "gradient": 12, "rise_mm": 450, "length_mm": 5400, "width_mm": 1500,
+    "landing_mm": [1500, 1500], "handrails_both_sides": true, "tactile": true},
+   {"name": "Shop threshold ramp", "gradient": 10, "rise_mm": 120, "length_mm": 1200, "width_mm": 1200}
+  ],
+  "stairs": [
+   {"name": "Stair A", "tread_mm": 250, "riser_mm": 170, "steps_per_flight": 16, "handrails_both_sides": true},
+   {"name": "Stair B", "tread_mm": 250, "riser_mm": 170, "steps_per_flight": 17, "handrails_both_sides": true},
+   {"name": "External steps to podium garden", "tread_mm": 300, "riser_mm": 165, "external": true, "steps_per_flight": 6, "handrails_both_sides": true}
+  ],
+  "handrails": [{"name": "Stair handrail", "height_mm": 900, "diameter_mm": 40, "wall_clear_mm": 45, "extension_mm": 300}],
+  "corridors": [
+   {"name": "Retail corridor", "width_mm": 2000, "dead_end_turning": true},
+   {"name": "Domestic lift lobby corridor", "width_mm": 1200, "dead_end_turning": true}
+  ],
+  "doors": [
+   {"name": "Main entrance (auto)", "clear_mm": 1500, "threshold_mm": 0, "kind": "exterior"},
+   {"name": "Flat lobby door", "clear_mm": 850, "leading_side_mm": 330, "handle_mm": 1000, "threshold_mm": 15, "force_n": 30, "kind": "fire"},
+   {"name": "Accessible toilet door", "clear_mm": 900, "leading_side_mm": 350, "handle_mm": 1000, "force_n": 20, "kind": "interior"}
+  ],
+  "toilets": [
+   {"name": "1/F retail toilets", "cubicles_per_sex": 8, "accessible_per_sex": 1, "unisex": true,
+    "size_mm": [1500, 1750], "seat_mm": 450, "basin_rim_mm": 750, "flush_mm": 900}
+  ],
+  "lifts": [{"name": "Lift L1 (fireman's / accessible)", "car_mm": [1400, 1300], "door_mm": 900, "button_mm": [900, 1200]}],
+  "counters": [{"name": "G/F management counter", "height_mm": 850}]
+ }
+}
