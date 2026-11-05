@@ -1,0 +1,260 @@
+{
+ "_title": "FS Code 2011 (2024 Ed.) Part E - reaction-to-fire classes, lining requirements and deemed-to-satisfy FRR tables E2-E7",
+ "_source": "architect-kb/fs-code-2011.txt Part E pp.148-171",
+ "_columns": "values listed for FRR [240, 120, 60] minutes; null = not given for that FRR",
+ "frr_cols": [
+  240,
+  120,
+  60
+ ],
+ "table_E1_euro_to_bs476": {
+  "A1": "Non-combustible",
+  "A2": "Limited combustibility",
+  "B": "Class 0",
+  "C": "Class 1",
+  "D": "Class 3",
+  "E": "Class 4",
+  "F": "Unclassified"
+ },
+ "class_order": [
+  "A1",
+  "A2",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F"
+ ],
+ "lining_requirements": {
+  "protected_exit_all": "C",
+  "use_class_3_general": "B",
+  "use_class_5a_auditoria": "C"
+ },
+ "non_combustible": "A1 (BS EN 13501-1; BS EN ISO 1182 + 1716) or BS 476-4",
+ "limited_combustibility": "A2-s3,d2",
+ "bipv_minimum": "A2-s1,d0",
+ "elements": {
+  "wall_brick_solid": {
+   "table": "E2",
+   "thickness_mm": [
+    225,
+    225,
+    100
+   ],
+   "note": "120 min may be 100 mm with 13 mm gypsum plaster each side"
+  },
+  "wall_rc_ge1pct": {
+   "table": "E2",
+   "thickness_mm": [
+    180,
+    100,
+    75
+   ],
+   "cover_mm": [
+    25,
+    25,
+    15
+   ]
+  },
+  "wall_rc_lt1pct": {
+   "table": "E2",
+   "thickness_mm": [
+    240,
+    160,
+    120
+   ],
+   "cover_mm": [
+    25,
+    25,
+    25
+   ]
+  },
+  "wall_clay_hollow_block": {
+   "table": "E2",
+   "thickness_mm": [
+    null,
+    100,
+    100
+   ],
+   "note": "2 cells ≥ 50% solid, 13 mm gypsum plaster each side"
+  },
+  "wall_concrete_hollow_block": {
+   "table": "E2",
+   "thickness_mm": [
+    null,
+    null,
+    190
+   ],
+   "note": "one cell ≥ 50% solid, 13 mm gypsum plaster each side"
+  },
+  "floor_rc": {
+   "table": "E4",
+   "thickness_mm": [
+    170,
+    125,
+    100
+   ],
+   "cover_simply_supported_mm": [
+    55,
+    35,
+    20
+   ],
+   "cover_continuous_mm": [
+    45,
+    25,
+    20
+   ]
+  },
+  "floor_prestressed": {
+   "table": "E4",
+   "thickness_mm": [
+    170,
+    125,
+    100
+   ],
+   "cover_simply_supported_mm": [
+    65,
+    40,
+    25
+   ],
+   "cover_continuous_mm": [
+    55,
+    35,
+    20
+   ]
+  },
+  "steel_column_concrete_encased": {
+   "table": "E5",
+   "protection_mm": [
+    75,
+    50,
+    50
+   ],
+   "note": "≥ 45 kg/m, Grade 20 concrete, reinforced"
+  },
+  "steel_column_brick_solid": {
+   "table": "E5",
+   "protection_mm": [
+    75,
+    50,
+    50
+   ]
+  },
+  "steel_beam_concrete_encased": {
+   "table": "E5",
+   "protection_mm": [
+    75,
+    50,
+    50
+   ],
+   "note": "≥ 30 kg/m"
+  },
+  "steel_column_brick_hollow": {
+   "table": "E5",
+   "protection_mm": [
+    115,
+    50,
+    50
+   ]
+  },
+  "rc_column_fully_exposed": {
+   "table": "E6",
+   "size_mm": [
+    450,
+    300,
+    200
+   ],
+   "cover_mm": [
+    35,
+    35,
+    25
+   ]
+  },
+  "rc_column_50pct_exposed": {
+   "table": "E6",
+   "size_mm": [
+    350,
+    200,
+    160
+   ],
+   "cover_mm": [
+    35,
+    25,
+    25
+   ]
+  },
+  "rc_column_one_face": {
+   "table": "E6",
+   "size_mm": [
+    240,
+    160,
+    120
+   ],
+   "cover_mm": [
+    25,
+    25,
+    25
+   ]
+  },
+  "rc_beam": {
+   "table": "E6",
+   "width_mm": [
+    280,
+    200,
+    200
+   ],
+   "cover_simply_supported_mm": [
+    80,
+    50,
+    30
+   ],
+   "cover_continuous_mm": [
+    60,
+    40,
+    30
+   ]
+  },
+  "prestressed_beam": {
+   "table": "E6",
+   "width_mm": [
+    280,
+    200,
+    200
+   ],
+   "cover_simply_supported_mm": [
+    90,
+    70,
+    30
+   ]
+  },
+  "stair_rc": {
+   "table": "E7",
+   "waist_mm": [
+    170,
+    125,
+    95
+   ],
+   "cover_mm": [
+    55,
+    35,
+    20
+   ]
+  }
+ },
+ "_star_note": "Covers marked * in the Code (e.g. 240-min floors, 120/240-min simply supported beams) need supplementary mesh/lath within 20 mm of the face.",
+ "test_standards": {
+  "loadbearing": "BS EN 1363-1, BS EN 1365-1 to -6 (classified to BS EN 13501-2); BS 476-20/21 until obsolete",
+  "non_loadbearing_walls": "BS EN 1364-1; ceilings BS EN 1364-2; raised floors BS EN 1366-6",
+  "doors_shutters_windows": "BS EN 1634-1/-2/-3, BS EN 14600 (insulation I1 recommended); BS 476-22 until obsolete; tag/label every fire door",
+  "ducts": "BS EN 1366-1, -8, -9; BS 476-24",
+  "penetration_seals": "BS EN 1366-3, joint seals BS EN 1366-4 (integrity only)",
+  "dampers": "BS EN 1366-2, BS ISO 10294-1/2/3/5; certified by registered specialist contractor (ventilation works)",
+  "smoke_seal_doors": "BS EN 1634-3, BS EN 14600, ISO 5925-1, UL 1784 or AS 1530.7 (ambient and medium temperature)",
+  "facades": "BS EN 1364-3 / 1364-4 (also NFPA 285, ULC-S134)",
+  "linings": "BS EN ISO 1182, 1716, BS EN 13823, BS EN ISO 11925-2; BS 476-4/6/7 until obsolete",
+  "floor_coverings": "BS EN ISO 1182, 1716, 9239-1, 11925-2; BS 4790, BS 6307",
+  "insulation": "BS EN ISO 1182, 1716, BS EN 13823, EN ISO 11925-2, BS EN 13501-1",
+  "fire_rated_glass": "BS EN ISO 12543",
+  "laboratories": "HOKLAS-accredited (or MRA partner) laboratory test report, or HKCAS-accredited certification body assessment, within accredited scope"
+ }
+}

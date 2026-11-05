@@ -1,0 +1,427 @@
+{
+ "project": "示範：堅尼地城商住大廈（虛構）",
+ "site": {
+  "area_m2": 1000,
+  "street_widths_m": [
+   12,
+   6
+  ],
+  "perimeter_m": 130,
+  "frontage_on_specified_streets_m": 60
+ },
+ "building": {
+  "type": "composite",
+  "height_m": 100.4
+ },
+ "limits": {
+  "ozp_max_pr_total": 10,
+  "max_height_m": 110
+ },
+ "floors": [
+  {
+   "name": "B1",
+   "use": "non_domestic",
+   "level_m": -4,
+   "gross_area_m2": 950,
+   "exempt": [
+    {
+     "item": "Private car park",
+     "area_m2": 800,
+     "category": "car_park_underground"
+    },
+    {
+     "item": "Transformer & switch room",
+     "area_m2": 120,
+     "category": "mandatory_plant"
+    }
+   ]
+  },
+  {
+   "name": "G/F retail",
+   "use": "non_domestic",
+   "level_m": 0,
+   "gross_area_m2": 950,
+   "site_coverage_m2": 950,
+   "exempt": [
+    {
+     "item": "A/C plant room",
+     "area_m2": 40,
+     "category": "non_mandatory_plant"
+    }
+   ]
+  },
+  {
+   "name": "1/F retail",
+   "use": "non_domestic",
+   "level_m": 5,
+   "gross_area_m2": 950,
+   "site_coverage_m2": 950,
+   "exempt": [
+    {
+     "item": "A/C plant room",
+     "area_m2": 40,
+     "category": "non_mandatory_plant"
+    }
+   ]
+  },
+  {
+   "name": "2/F retail",
+   "use": "non_domestic",
+   "level_m": 10,
+   "gross_area_m2": 950,
+   "site_coverage_m2": 950,
+   "exempt": [
+    {
+     "item": "A/C plant room",
+     "area_m2": 40,
+     "category": "non_mandatory_plant"
+    }
+   ]
+  },
+  {
+   "name": "3/F–30/F typical flats",
+   "count": 28,
+   "use": "domestic",
+   "level_m": 15,
+   "gross_area_m2": 260,
+   "site_coverage_m2": 260,
+   "exempt": [
+    {
+     "item": "Lift machine / meter room",
+     "area_m2": 6,
+     "category": "mandatory_plant"
+    }
+   ]
+  }
+ ],
+ "open_space": {
+  "provided_m2": 90,
+  "roofed_over_area_m2": 260,
+  "rear_setback_m": 3,
+  "level_below_lowest_floor_mm": 150
+ },
+ "rooms": [
+  {
+   "name": "Living/dining",
+   "use": "habitable",
+   "floor_area_m2": 22,
+   "glass_m2": 3.0,
+   "openable_m2": 1.5,
+   "window_head_m": 2.2,
+   "max_distance_to_window_m": 7.5,
+   "ceiling_height_m": 2.75
+  },
+  {
+   "name": "Bedroom 2",
+   "use": "habitable",
+   "floor_area_m2": 9,
+   "glass_m2": 1.0,
+   "openable_m2": 0.5,
+   "window_head_m": 2.1,
+   "max_distance_to_window_m": 4
+  },
+  {
+   "name": "Kitchen",
+   "use": "kitchen",
+   "floor_area_m2": 6,
+   "glass_m2": 0.7,
+   "openable_m2": 0.4,
+   "window_head_m": 2.1
+  },
+  {
+   "name": "Bathroom",
+   "use": "bathroom",
+   "floor_area_m2": 4,
+   "glass_m2": 0.5,
+   "openable_m2": 0.4,
+   "window_head_m": 2.1
+  }
+ ],
+ "_how_to_use": "Copy this file, replace the figures with your scheme, run: python3 tools/bpr_check.py <file>.json -o report.md",
+ "means_of_escape": {
+  "project": "示範：堅尼地城商住大廈（虛構）",
+  "sprinklered": true,
+  "storeys_above_ground": 31,
+  "top_floor_level_m": 97.35,
+  "refuge_floors": [
+   16
+  ],
+  "storeys": [
+   {
+    "name": "B1 car park",
+    "level": "basement",
+    "use_class": "7",
+    "areas": [
+     {
+      "type": "7_carpark",
+      "usable_area_m2": 850
+     }
+    ],
+    "exit_routes_mm": [
+     1200,
+     1200
+    ],
+    "max_travel_m": 34,
+    "max_deadend_m": 12
+   },
+   {
+    "name": "G/F retail",
+    "level": "ground",
+    "use_class": "4b",
+    "areas": [
+     {
+      "type": "4b_retail_low",
+      "usable_area_m2": 780
+     }
+    ],
+    "exit_routes_mm": [
+     1500,
+     1500
+    ],
+    "max_travel_m": 28,
+    "max_deadend_m": 10
+   },
+   {
+    "name": "1/F–2/F retail",
+    "count": 2,
+    "level": "above",
+    "use_class": "4b",
+    "areas": [
+     {
+      "type": "4b_retail_low",
+      "usable_area_m2": 820
+     }
+    ],
+    "exit_routes_mm": [
+     1500,
+     1500
+    ],
+    "max_travel_m": 33,
+    "max_deadend_m": 14,
+    "stair_door_separation_m": 18,
+    "max_stair_to_stair_m": 40
+   },
+   {
+    "name": "3/F–30/F typical flats",
+    "count": 28,
+    "level": "above",
+    "use_class": "1b",
+    "areas": [
+     {
+      "type": "1b_flats_other",
+      "usable_area_m2": 215
+     }
+    ],
+    "exit_routes_mm": [
+     1050,
+     1050
+    ],
+    "max_travel_m": 13,
+    "max_deadend_m": 6,
+    "max_within_flat_m": 14,
+    "stair_door_separation_m": 7.5
+   }
+  ],
+  "staircases": [
+   {
+    "name": "Stair A",
+    "width_mm": 1200,
+    "storeys_served": 30,
+    "serves": "above",
+    "pressurised": true,
+    "tread_mm": 250,
+    "riser_mm": 170,
+    "risers_per_flight": 16
+   },
+   {
+    "name": "Stair B",
+    "width_mm": 1200,
+    "storeys_served": 30,
+    "serves": "above",
+    "pressurised": true,
+    "tread_mm": 250,
+    "riser_mm": 170,
+    "risers_per_flight": 17
+   },
+   {
+    "name": "Stair C (basement)",
+    "width_mm": 1200,
+    "storeys_served": 1,
+    "serves": "basement",
+    "upward": true
+   }
+  ]
+ },
+ "fire_construction": {
+  "sprinklered": true,
+  "compartments": [
+   {
+    "name": "B1 car park",
+    "use_class": "7",
+    "area_m2": 850,
+    "frr_min": 240,
+    "basement": true
+   },
+   {
+    "name": "G/F–2/F retail (per floor)",
+    "use_class": "4b",
+    "area_m2": 780,
+    "frr_min": 60
+   },
+   {
+    "name": "Typical flats floor",
+    "use_class": "1",
+    "area_m2": 260,
+    "frr_min": 60
+   }
+  ],
+  "use_separation_frr_min": 120,
+  "liftwell_frr_min": 120,
+  "special_hazards": [
+   {
+    "name": "B1 transformer room (CLP)",
+    "frr_min": 120
+   }
+  ],
+  "basement": {
+   "barrier_to_ground_frr_min": 240,
+   "floor_area_m2": 850,
+   "smoke_outlet_area_m2": 5.0,
+   "smoke_outlet_max_spacing_m": 24,
+   "smoke_outlet_min_dim_m": 1.2
+  },
+  "stair_external_walls": [
+   {
+    "name": "Stair A",
+    "distance_to_exposure_m": 4.5,
+    "fire_rated": true,
+    "fixed_light_fraction": 0.2
+   }
+  ],
+  "floor_voids": [
+   {
+    "name": "G/F–1/F escalator void",
+    "downstand_mm": 450
+   }
+  ]
+ },
+ "means_of_access": {
+  "parts": [
+   {
+    "name": "domestic tower",
+    "building_kind": "domestic",
+    "height_above_lowest_street_m": 100.4,
+    "storeys": 31
+   },
+   {
+    "name": "retail podium",
+    "building_kind": "non_domestic",
+    "height_above_lowest_street_m": 15,
+    "storeys": 3,
+    "cubical_extent_m3": 14000
+   }
+  ],
+  "basement": {
+   "storeys": 1,
+   "depth_m": 5,
+   "cubical_extent_m3": 4000
+  },
+  "firemans_lifts": 1,
+  "frs": 0,
+  "max_distance_to_lobby_m": 35,
+  "fsap_distance_m": 12,
+  "fsap_passage_width_mm": 1500,
+  "lift_car": {
+   "min_dim_m": 1.4,
+   "area_m2": 1.8,
+   "load_kg": 1000
+  },
+  "lift_door_mm": [
+   900,
+   2100
+  ],
+  "fl_lobby": {
+   "area_m2": 3.0,
+   "min_dim_m": 1.4
+  },
+  "eva": {
+   "site": "redevelopment",
+   "width_m": 6,
+   "headroom_m": 5,
+   "gradient": 0.0833,
+   "facade_served_fraction": 0.3
+  }
+ },
+ "part_e": {
+  "elements": [
+   {
+    "name": "Basement retaining wall (RC ≥1%)",
+    "type": "wall_rc_ge1pct",
+    "required_frr": 240,
+    "thickness_mm": 300,
+    "cover_mm": 40
+   },
+   {
+    "name": "Transfer plate / podium slab",
+    "type": "floor_rc",
+    "required_frr": 120,
+    "thickness_mm": 150,
+    "cover_mm": 30,
+    "continuous": true
+   },
+   {
+    "name": "Typical floor slab",
+    "type": "floor_rc",
+    "required_frr": 60,
+    "thickness_mm": 125,
+    "cover_mm": 20,
+    "continuous": true
+   },
+   {
+    "name": "Podium column (fully exposed)",
+    "type": "rc_column_fully_exposed",
+    "required_frr": 120,
+    "size_mm": 600,
+    "cover_mm": 40
+   },
+   {
+    "name": "Typical beam (simply supported)",
+    "type": "rc_beam",
+    "required_frr": 60,
+    "width_mm": 250,
+    "cover_mm": 25
+   },
+   {
+    "name": "Stair waist",
+    "type": "stair_rc",
+    "required_frr": 120,
+    "waist_mm": 150,
+    "cover_mm": 30
+   },
+   {
+    "name": "Flat partition (dry wall)",
+    "type": "drywall_system",
+    "required_frr": 60
+   }
+  ],
+  "linings": [
+   {
+    "name": "Staircase wall paint",
+    "location": "protected_exit_all",
+    "euro_class": "B"
+   },
+   {
+    "name": "Lift lobby timber veneer",
+    "location": "protected_exit_all",
+    "bs476_class": "Class 3"
+   }
+  ],
+  "products": [
+   {
+    "name": "Fire door FD60 (flat entrance)",
+    "standard": "BS EN 1634-1",
+    "test_report_lab_accredited": true
+   }
+  ]
+ }
+}

@@ -1,0 +1,47 @@
+{
+  "project": "Demo – mall atrium extended travel distance",
+  "fire_engineering": {
+    "scenarios": [
+      {
+        "name": "Atrium, sprinklered, with extraction",
+        "use_class": "4b",
+        "floor_area_m2": 800,
+        "ceiling_height_m": 12,
+        "growth": "fast",
+        "sprinklered": true,
+        "extract_m3_s": 30,
+        "detection_s": 90,
+        "alarm_s": 30,
+        "occupants": 600,
+        "travel_distance_m": 60,
+        "exit_widths_mm": [
+          2000,
+          2000,
+          1800
+        ],
+        "safety_factor": 1.5,
+        "occupant_category": "awake_unfamiliar",
+        "alarm": "voice",
+        "building_complexity": "large_complex"
+      },
+      {
+        "name": "Shop unit, sprinklered, no extraction",
+        "use_class": "4b",
+        "floor_area_m2": 300,
+        "ceiling_height_m": 3.5,
+        "growth": "fast",
+        "sprinklered": true,
+        "detection_s": 60,
+        "alarm_s": 0,
+        "occupants": 100,
+        "travel_distance_m": 30,
+        "exit_widths_mm": [
+          1050,
+          1050
+        ],
+        "occupant_category": "awake_unfamiliar",
+        "alarm": "standard"
+      }
+    ]
+  }
+}

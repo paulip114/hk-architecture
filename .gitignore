@@ -1,0 +1,4 @@
+fs-code-2011.txt
+*.pdf
+__pycache__/
+*.pyc

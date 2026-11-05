@@ -1,0 +1,315 @@
+{
+  "_source": "FS Code 2011 (2024 Ed.) Part G – Fire Engineering. Text lines ~5708-7300 of fs-code-2011.txt.",
+  "t2_alpha_kw_s2": {
+    "slow": 0.00293,
+    "medium": 0.01172,
+    "fast": 0.0469,
+    "ultra_fast": 0.1876
+  },
+  "t2_alpha_note": "t-squared curves per NFPA 92B / Karlsson & Quintiere cited in G6.5; Q = alpha t^2. Alpha values are the standard NFPA ones (time to 1055 kW: 600/300/150/75 s).",
+  "table_G1_sprinkler_controlled_kw": {
+    "1": {
+      "use": "Residential",
+      "kw": null,
+      "growth": "medium",
+      "note": "Pre-flashover: medium growth. Post-flashover: ventilation-controlled (CIBSE Guide E / TM19 example)."
+    },
+    "2": {
+      "use": "Hotel and similar",
+      "kw": 1700,
+      "headroom_m": 3.0
+    },
+    "3a": {
+      "use": "Health / child care",
+      "kw": 1700,
+      "headroom_m": 3.0
+    },
+    "3b": {
+      "use": "Detention / correctional",
+      "kw": 1500,
+      "headroom_m": 2.5
+    },
+    "4a": {
+      "use": "Business (office)",
+      "kw": 1500,
+      "headroom_m": 2.5
+    },
+    "4b": {
+      "use": "Mercantile",
+      "kw": 1500,
+      "headroom_m": 2.5,
+      "unsprinklered": "Q_U (kW/m2) = q (kJ/m2) / 1200"
+    },
+    "5a": {
+      "use": "Places of public entertainment",
+      "kw": 1500,
+      "headroom_m": 2.5
+    },
+    "5b": {
+      "use": "Educational",
+      "kw": null,
+      "note": "No value given in Table G1"
+    },
+    "5c": {
+      "use": "Transport",
+      "kw": null,
+      "note": "Vehicle fires Note (4); train fire 5-22 MW Note (5)"
+    },
+    "5d": {
+      "use": "Other assembly",
+      "kw": 1500,
+      "headroom_m": 2.5
+    },
+    "6": {
+      "use": "Industrial / warehouse",
+      "kw": 2000,
+      "headroom_m": 3.5
+    },
+    "7": {
+      "use": "Carpark",
+      "kw": null,
+      "note": "Sprinklered per FSI Code; single-vehicle fire, Note (6)"
+    },
+    "8": {
+      "use": "Plant rooms",
+      "kw": 1700,
+      "headroom_m": 3.0
+    }
+  },
+  "tenability_G6_8": {
+    "smoke_layer_height_m": 2.0,
+    "radiation_kw_m2": 2.5,
+    "radiation_note": "about 200 degC layer, short exposure",
+    "co_ppm_max": 1000,
+    "optical_density_max_per_m": 0.1,
+    "visibility_m": 10,
+    "smoke_temp_below_layer_c": 60
+  },
+  "safety_factor_G3_4": {
+    "typical_min": 1.5,
+    "typical_max": 2.0,
+    "note": "May be reduced or omitted where single-system-failure analysis verifies reliability. Margin vs factor to be agreed case by case."
+  },
+  "assessment_types_G6_4": {
+    "1": "Qualitative, or simple quantitative, single sub-system; may be equivalence.",
+    "2": "Quantitative, more than one sub-system (timeline ASET vs RSET); most common.",
+    "3": "All six sub-systems, probabilistic, comparative only; special/complex buildings only."
+  },
+  "sub_systems_G5": [
+    "1 Fire initiation and development",
+    "2 Smoke development, spread and control",
+    "3 Fire detection, warning and suppression",
+    "4 Fire spread, impact and control",
+    "5 Occupant characteristics and evacuation",
+    "6 Fire service intervention"
+  ],
+  "table_G2_pre_movement_min": {
+    "_columns": "PD 7974-6 T1 (first few, note a) / T2 (last few, note b) / SFPE / NZ Framework origin / remote / CIBSE Guide E; minutes",
+    "_source": "FS Code 2011 (2024 Ed.) p.221, image supplied by user 2026-11-05 (fs-code/table_G2_p221.png)",
+    "_notes": {
+      "c": "large complex building: add 0.5",
+      "d": "simple multi-storey building: add 0.5",
+      "e": "large complex building: add 1.0",
+      "f": "depends on presence of staff"
+    },
+    "awake_familiar": {
+      "examples": "office, industrial",
+      "pd_notes": "c",
+      "voice": {
+        "pd7974_t1": 0.5,
+        "pd7974_t2": 1,
+        "sfpe": "<1",
+        "nz_origin": 0.5,
+        "nz_remote": 1,
+        "cibse": 1
+      },
+      "standard": {
+        "pd7974_t1": 1,
+        "pd7974_t2": 2,
+        "sfpe": 3,
+        "nz_origin": 0.5,
+        "nz_remote": 1,
+        "cibse": 1
+      },
+      "local": {
+        "pd7974_t1": ">15",
+        "pd7974_t2": ">15",
+        "sfpe": ">4",
+        "nz_origin": 0.5,
+        "nz_remote": 1,
+        "cibse": 1
+      }
+    },
+    "awake_unfamiliar": {
+      "examples": "retail, restaurant, cinema, theatre",
+      "pd_notes": "d,e",
+      "voice": {
+        "pd7974_t1": 0.5,
+        "pd7974_t2": 2,
+        "sfpe": "<2",
+        "nz_origin": 0.5,
+        "nz_remote": 1,
+        "cibse": 3
+      },
+      "standard": {
+        "pd7974_t1": 1,
+        "pd7974_t2": 3,
+        "sfpe": 3,
+        "nz_origin": 1,
+        "nz_remote": 2,
+        "cibse": 3
+      },
+      "local": {
+        "pd7974_t1": ">15",
+        "pd7974_t2": ">15",
+        "sfpe": ">6",
+        "nz_origin": 1,
+        "nz_remote": 2,
+        "cibse": 3
+      }
+    },
+    "sleeping_familiar_dwelling": {
+      "examples": "dwelling, individual occupancy",
+      "voice": {
+        "pd7974_t1": "-",
+        "pd7974_t2": "-",
+        "sfpe": "<2",
+        "nz_origin": 1,
+        "nz_remote": 5,
+        "cibse": 5
+      },
+      "standard": {
+        "pd7974_t1": 5,
+        "pd7974_t2": 5,
+        "sfpe": 4,
+        "nz_origin": 1,
+        "nz_remote": 5,
+        "cibse": 5
+      },
+      "local": {
+        "pd7974_t1": 10,
+        "pd7974_t2": ">20",
+        "sfpe": ">5",
+        "nz_origin": 1,
+        "nz_remote": 5,
+        "cibse": 5
+      }
+    },
+    "sleeping_familiar_serviced": {
+      "examples": "serviced flats, hall of residence",
+      "voice": {
+        "pd7974_t1": 10,
+        "pd7974_t2": 20,
+        "sfpe": "<2",
+        "nz_origin": 1,
+        "nz_remote": 5,
+        "cibse": 5
+      },
+      "standard": {
+        "pd7974_t1": 15,
+        "pd7974_t2": 25,
+        "sfpe": 4,
+        "nz_origin": 1,
+        "nz_remote": 5,
+        "cibse": 5
+      },
+      "local": {
+        "pd7974_t1": ">20",
+        "pd7974_t2": ">20",
+        "sfpe": ">5",
+        "nz_origin": 1,
+        "nz_remote": 5,
+        "cibse": 5
+      }
+    },
+    "sleeping_unfamiliar": {
+      "examples": "hotel, boarding house",
+      "voice": {
+        "pd7974_t1": 15,
+        "pd7974_t2": 15,
+        "sfpe": "<2",
+        "nz_origin": 1,
+        "nz_remote": 5,
+        "cibse": 20
+      },
+      "standard": {
+        "pd7974_t1": 20,
+        "pd7974_t2": 20,
+        "sfpe": 4,
+        "nz_origin": 1,
+        "nz_remote": 10,
+        "cibse": 20
+      },
+      "local": {
+        "pd7974_t1": ">20",
+        "pd7974_t2": ">20",
+        "sfpe": ">6",
+        "nz_origin": 1,
+        "nz_remote": 10,
+        "cibse": 20
+      }
+    },
+    "awake_assisted": {
+      "examples": "day care, clinic, dentist",
+      "pd_notes": "f",
+      "voice": {
+        "pd7974_t1": 0.5,
+        "pd7974_t2": 2,
+        "sfpe": "<3",
+        "nz_origin": 1,
+        "nz_remote": 2,
+        "cibse": 2
+      },
+      "standard": {
+        "pd7974_t1": 1,
+        "pd7974_t2": 3,
+        "sfpe": 5,
+        "nz_origin": 1,
+        "nz_remote": 2,
+        "cibse": 2
+      },
+      "local": {
+        "pd7974_t1": ">15",
+        "pd7974_t2": ">15",
+        "sfpe": ">8",
+        "nz_origin": 1,
+        "nz_remote": 2,
+        "cibse": 2
+      }
+    },
+    "sleeping_assisted": {
+      "examples": "hospital, nursing home",
+      "voice": {
+        "pd7974_t1": 5,
+        "pd7974_t2": 10,
+        "sfpe": "<3",
+        "nz_origin": 5,
+        "nz_remote": 30,
+        "cibse": "-"
+      },
+      "standard": {
+        "pd7974_t1": 10,
+        "pd7974_t2": 20,
+        "sfpe": 5,
+        "nz_origin": 5,
+        "nz_remote": 30,
+        "cibse": "-"
+      },
+      "local": {
+        "pd7974_t1": ">10",
+        "pd7974_t2": ">20",
+        "sfpe": ">8",
+        "nz_origin": 5,
+        "nz_remote": 30,
+        "cibse": "-"
+      }
+    }
+  },
+  "table_G2_note": "Alarm keys: voice = voice alarm / trained staff; standard = standard alarm signal throughout building; local = local/standard alarm and non-trained staff. Apply one source consistently across the assessment (G6.7).",
+  "movement_defaults_not_from_code": {
+    "walking_speed_m_s": 1.2,
+    "specific_flow_p_s_m": 1.3,
+    "boundary_layer_each_side_m": 0.15,
+    "note": "SFPE Handbook / PD 7974-6 typical values. NOT stated in the FS Code: must be justified in the FSAR."
+  }
+}

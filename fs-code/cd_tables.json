@@ -1,0 +1,190 @@
+{
+ "_title": "FS Code 2011 (2024 Edition) Parts C and D - tables and limits as data",
+ "_source": "architect-kb/fs-code-2011.txt (user upload), Part C pp.76-99, Part D pp.112-133",
+ "table_C1": {
+  "1": [
+   [
+    null,
+    60
+   ]
+  ],
+  "2": [
+   [
+    null,
+    60
+   ]
+  ],
+  "3": [
+   [
+    2500,
+    60
+   ]
+  ],
+  "4a": [
+   [
+    10500,
+    60
+   ]
+  ],
+  "4b": [
+   [
+    2500,
+    60
+   ],
+   [
+    10500,
+    120
+   ]
+  ],
+  "5a": [
+   [
+    2500,
+    60
+   ],
+   [
+    10500,
+    120
+   ]
+  ],
+  "5d": [
+   [
+    2500,
+    60
+   ],
+   [
+    10500,
+    120
+   ]
+  ],
+  "5b": [
+   [
+    2500,
+    60
+   ],
+   [
+    10500,
+    120
+   ]
+  ],
+  "5c": [
+   [
+    10500,
+    120
+   ]
+  ],
+  "6a": [
+   [
+    10500,
+    120
+   ]
+  ],
+  "6b": [
+   [
+    10500,
+    120
+   ]
+  ],
+  "6c": [
+   [
+    null,
+    120
+   ]
+  ],
+  "7": [
+   [
+    10500,
+    60
+   ]
+  ]
+ },
+ "table_C1_volume_limits_m3": {
+  "6b": 28000,
+  "6c": 7000
+ },
+ "_table_C1_note": "Rows are [max compartment area m2 (None = not limited), FRR minutes]. Larger compartments: BA on individual merits (Note 1).",
+ "liftwell_frr": 120,
+ "special_hazard_frr": 120,
+ "special_hazard_to_protected_exit_frr": 240,
+ "restaurant_kitchen_frr": 60,
+ "restaurant_kitchen_lobby_ufa_m2": 45,
+ "flat_kitchen_single_exit_frr": 30,
+ "basement": {
+  "elements_frr": 240,
+  "barrier_to_ground_frr": 240,
+  "internal_compartment_frr": 120,
+  "smoke_outlet_max_spacing_m": 30,
+  "smoke_outlet_min_dim_m": 1.0,
+  "smoke_outlet_area_fraction": 0.005,
+  "smoke_outlet_area_fraction_storage": 0.025,
+  "dynamic_extract_m3_per_outlet": 3500
+ },
+ "spandrel_m": 0.9,
+ "horizontal_projection_m": 0.5,
+ "same_site_adjoining_if_lt_m": 1.8,
+ "boundary_fire_wall_within_m": 0.9,
+ "boundary_opening_min_m": 0.45,
+ "stair_external_wall_exposure_m": 6,
+ "stair_fixed_light_max_fraction": 0.25,
+ "stair_wall_return_mm": 450,
+ "void_downstand_mm": 450,
+ "atrium": {
+  "max_volume_m3": 28000,
+  "max_height_m": 15,
+  "max_floors": 3
+ },
+ "compartment_door_insulation_if_openings_gt_fraction": 0.25,
+ "fire_door_bottom_gap_max_mm": 10,
+ "refuge_floor_frr": 120,
+ "refuge_open_side_exposure_m": 6,
+ "fireman_lift": {
+  "max_distance_m": 60,
+  "design_direct_line_m": 45,
+  "fsap_max_distance_m": 18,
+  "passage_width_mm": 1500,
+  "headroom_mm": 2000,
+  "car_min_dim_m": 1.1,
+  "car_min_area_m2": 1.35,
+  "car_min_load_kg": 680,
+  "lobby_min_area_m2": 2.25,
+  "lobby_min_dim_m": 1.5,
+  "door_min_width_mm": 800,
+  "door_min_height_mm": 2000,
+  "max_lifts_per_liftwell": 3,
+  "lobby_max_frr": 120
+ },
+ "frs": {
+  "max_distance_m": 60,
+  "fsap_max_distance_m": 18,
+  "lobby_area_m2": [
+   5,
+   10
+  ],
+  "lobby_min_dim_m": 1.5,
+  "lobby_vent_fraction": 0.25,
+  "lobby_vent_top_min_m": 1.9,
+  "basement_lobby_smoke_outlet_m2": 1.0,
+  "stair_min_width_mm": 1050,
+  "stair_vent_fraction": 0.15,
+  "stair_top_vent_fraction": 0.05
+ },
+ "eva": {
+  "virgin_carriageway_width_m": 7.3,
+  "virgin_non_carriageway_width_m": 6,
+  "redevelopment_width_m": 6,
+  "redevelopment_class6_width_m": 7.3,
+  "class6_two_way_no_divider_m": 13.5,
+  "headroom_m": 4.5,
+  "max_gradient": 0.1,
+  "max_gradient_non_major_facade": 0.16666666666666666,
+  "vehicle": {
+   "weight_kg": 30000,
+   "turning_circle_m": 26,
+   "length_m": 12
+  },
+  "facade_fraction": 0.25,
+  "facade_max_distance_m": 10,
+  "facade_height_exempt_m": 60,
+  "sign_interval_m": 100,
+  "no_parking_interval_m": 50
+ }
+}

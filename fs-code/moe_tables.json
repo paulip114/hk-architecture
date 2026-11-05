@@ -1,0 +1,400 @@
+{
+ "_title": "Code of Practice for Fire Safety in Buildings 2011 (2024 Edition), Part B means of escape - tables as data",
+ "_source": "User upload fs_code2011.pdf.txt (2024 Edition, incorporating amendments to Sept 2024); copy at architect-kb/fs-code-2011.txt",
+ "_note": "Table B1 (p.25-27) office rows confirmed by user against the PDF on 2026-11-05: offices 9, board/conference/function rooms 10, staff rooms 9 m2/person.",
+ "occupancy_factor_m2_per_person": {
+  "1b_flats_corridor_5plus": 4.5,
+  "1b_flats_other": 9,
+  "1c_tenement": 3,
+  "2_dormitory": 3,
+  "3a_day_care": 4,
+  "3a_hospital_non_patient": 9,
+  "4a_office": 9,
+  "4a_board_conference_function": 10,
+  "4a_staff_room": 9,
+  "4b_retail_low": 3,
+  "4b_retail_3f_up": 4.5,
+  "4b_market_showroom": 2,
+  "4b_restaurant_bar": 1,
+  "4b_banking_betting_counter": 0.5,
+  "5a_gallery_exhibition": 2,
+  "5a_cinema_foyer": 0.5,
+  "5a_dance_floor": 0.75,
+  "5a_sports_standing": 0.5,
+  "5a_indoor_sports_area": 10,
+  "5b_library": 2,
+  "5b_reading_room": 1,
+  "5b_classroom": 2,
+  "5d_hall_removable_seating": 0.5,
+  "5d_gymnasium": 3,
+  "5d_swimming_pool_water": 3,
+  "5d_columbarium": 2,
+  "5d_viewing_gallery": 0.5,
+  "6a_laundry_lab": 10,
+  "6a_factory_workshop": 4.5,
+  "6a_commercial_kitchen": 4.5,
+  "6b_warehouse": 30,
+  "6c_dangerous_goods": 30,
+  "7_carpark": 30,
+  "8_plant_room": 30
+ },
+ "occupancy_by_count": [
+  "2_hotel (bedspaces)",
+  "3a_patient_care (bedspaces)",
+  "3b_detention (bedspaces)",
+  "5a cinema/theatre seating (seats)",
+  "fixed seating (seats)",
+  "bench seating (450 mm/person)"
+ ],
+ "plant_room_zero_if_net_area_le_m2": 100,
+ "table_B2": [
+  [
+   30,
+   1,
+   750,
+   1050,
+   750,
+   1050
+  ],
+  [
+   200,
+   2,
+   1750,
+   2100,
+   850,
+   1050
+  ],
+  [
+   300,
+   2,
+   2500,
+   2500,
+   1050,
+   1050
+  ],
+  [
+   500,
+   2,
+   3000,
+   3000,
+   1050,
+   1050
+  ],
+  [
+   750,
+   3,
+   4500,
+   4500,
+   1200,
+   1200
+  ],
+  [
+   1000,
+   4,
+   6000,
+   6000,
+   1200,
+   1200
+  ],
+  [
+   1250,
+   5,
+   7500,
+   7500,
+   1350,
+   1350
+  ],
+  [
+   1500,
+   6,
+   9000,
+   9000,
+   1350,
+   1350
+  ],
+  [
+   1750,
+   7,
+   10500,
+   10500,
+   1500,
+   1500
+  ],
+  [
+   2000,
+   8,
+   12000,
+   12000,
+   1500,
+   1500
+  ],
+  [
+   2250,
+   9,
+   13500,
+   13500,
+   1500,
+   1500
+  ],
+  [
+   2500,
+   10,
+   15000,
+   15000,
+   1500,
+   1500
+  ],
+  [
+   2750,
+   11,
+   16500,
+   16500,
+   1500,
+   1500
+  ],
+  [
+   3000,
+   12,
+   18000,
+   18000,
+   1500,
+   1500
+  ]
+ ],
+ "table_B3_width_bands_mm": [
+  1050,
+  1200,
+  1350,
+  1500,
+  1600,
+  1700
+ ],
+ "table_B3_non_sprinkler": [
+  [
+   210,
+   240,
+   270,
+   300,
+   320,
+   340
+  ],
+  [
+   242,
+   278,
+   315,
+   351,
+   377,
+   402
+  ],
+  [
+   274,
+   316,
+   360,
+   402,
+   434,
+   464
+  ],
+  [
+   306,
+   354,
+   405,
+   453,
+   491,
+   526
+  ],
+  [
+   338,
+   392,
+   450,
+   504,
+   548,
+   588
+  ],
+  [
+   370,
+   430,
+   495,
+   555,
+   605,
+   650
+  ],
+  [
+   402,
+   468,
+   540,
+   606,
+   662,
+   712
+  ],
+  [
+   434,
+   506,
+   585,
+   657,
+   719,
+   774
+  ],
+  [
+   466,
+   544,
+   630,
+   708,
+   776,
+   836
+  ],
+  [
+   498,
+   582,
+   675,
+   759,
+   833,
+   898
+  ]
+ ],
+ "table_B4_sprinkler": [
+  [
+   420,
+   480,
+   540,
+   600,
+   640,
+   680
+  ],
+  [
+   452,
+   518,
+   585,
+   651,
+   697,
+   742
+  ],
+  [
+   484,
+   556,
+   630,
+   702,
+   754,
+   804
+  ],
+  [
+   516,
+   594,
+   675,
+   753,
+   811,
+   866
+  ],
+  [
+   548,
+   632,
+   720,
+   804,
+   868,
+   928
+  ],
+  [
+   580,
+   670,
+   765,
+   855,
+   925,
+   990
+  ],
+  [
+   612,
+   708,
+   810,
+   906,
+   982,
+   1052
+  ],
+  [
+   644,
+   746,
+   855,
+   957,
+   1039,
+   1114
+  ],
+  [
+   676,
+   784,
+   900,
+   1008,
+   1096,
+   1176
+  ],
+  [
+   708,
+   822,
+   945,
+   1059,
+   1153,
+   1238
+  ]
+ ],
+ "table_B3_B4_each_additional_storey": [
+  32,
+  38,
+  45,
+  51,
+  57,
+  62
+ ],
+ "discharge_factor_upward": 0.8,
+ "discharge_factor_scissors_no_landing": 0.7,
+ "travel_distance_m": {
+  "deadend": {
+   "1_2_within_flat": 24,
+   "1_2_flat_door_to_stair": 15,
+   "3": 12,
+   "3_balcony": 24,
+   "other": 18,
+   "other_balcony": 24
+  },
+  "max_two_exits": {
+   "1_2": 24,
+   "1_2_balcony": 45,
+   "3": 30,
+   "3_balcony": 45,
+   "other": 36,
+   "other_balcony": 45
+  },
+  "max_between_stairs": 48,
+  "min_between_stair_doors": 6
+ },
+ "staircase": {
+  "max_risers_per_flight": 16,
+  "min_risers": 2,
+  "min_tread_mm": 225,
+  "max_riser_mm": 175,
+  "5a_min_tread_mm": 280,
+  "5a_max_riser_mm": 150,
+  "5b_min_tread_mm": 250,
+  "5b_max_riser_mm": 150,
+  "5b_min_riser_mm": 75,
+  "max_width_mm": 1800,
+  "headroom_mm": 2000,
+  "handrail_mm": [
+   850,
+   1100
+  ]
+ },
+ "refuge_floor": {
+  "trigger_storeys": 25,
+  "interval_storeys_other": 25,
+  "interval_storeys_class6": 20,
+  "net_area_fraction": 0.5,
+  "headroom_mm": 2300
+ },
+ "single_stair": {
+  "max_storeys": 6,
+  "max_top_floor_m": 17,
+  "ufa_limit_top_le_13m": 250,
+  "ufa_limit_top_gt_13m": 150
+ },
+ "protected_lobby_exempt_top_floor_m": {
+  "single_stair": 13,
+  "two_plus_stairs": 20
+ }
+}
