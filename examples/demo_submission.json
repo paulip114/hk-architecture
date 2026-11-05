@@ -1,0 +1,30 @@
+{
+  "name": "Demo composite building, Kowloon (submission tracking)",
+  "submission": {
+    "as_of": "2026-11-05",
+    "submissions": [
+      {"id": "GBP-1", "kind": "GBP", "type": "first", "date": "2026-05-04", "result": "disapproved", "result_date": "2026-07-02"},
+      {"id": "GBP-2", "kind": "GBP", "type": "resubmission", "date": "2026-08-17", "wr_dates": ["2026-09-10"], "result": "approved", "result_date": "2026-10-08"},
+      {"id": "FDN-1", "kind": "foundation", "type": "first", "date": "2026-09-14"},
+      {"id": "A&A-1", "kind": "A&A", "type": "fast_track_aa", "date": "2026-10-20"}
+    ],
+    "consents": [
+      {"id": "C-site-formation", "applied": "2026-10-09", "approval_date": "2026-10-08", "granted": "2026-11-02"},
+      {"id": "C-A&A", "applied": "2026-10-20", "concurrent": true, "foundation_beyond_spread_footing": false, "spread_footing_depth_m": 5.0, "precautionary_works": false, "reg8_plans_complete": true, "supervision_plan": true}
+    ],
+    "commencement": {"date": "2026-11-09", "ba10_date": "2026-11-04"},
+    "amendments": [
+      {"id": "AM-1", "approved": false, "works_started": false, "drainage_excavation_depth_m": 3.4, "treated_as_minor": false}
+    ],
+    "minor_works": [
+      {"item": "Shop canopy (existing building next door)", "class": "I", "notice_date": "2026-10-30", "commence": "2026-11-04"},
+      {"item": "Drying rack", "class": "III", "complete": "2026-10-10", "cert_date": "2026-10-20"}
+    ],
+    "op": {
+      "superstructure_consent_date": "2027-03-01",
+      "first_gbp_date": "2026-05-04",
+      "prereq": {"all_amendments_approved": false, "plans_tally": true, "stage_iii_done": false, "bd106_in_plans": true, "gfa_summary": true, "consolidated_digital_file": false}
+    },
+    "mbis": {"building_age_years": 34, "storeys": 12, "domestic_only": false, "inspection_date": "2026-10-20", "report_date": "2026-10-30"}
+  }
+}
