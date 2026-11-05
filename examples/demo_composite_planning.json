@@ -1,0 +1,45 @@
+{
+  "_how_to_use": "Planning and lease block for examples/demo_composite.json (fictional figures, not the real Kennedy Town OZP or any real lot). Run: python3 tools/planning_lease_check.py examples/demo_composite.json --block examples/demo_composite_planning.json -o examples/demo_composite_planning_report.md",
+  "planning_lease": {
+    "ozp": {
+      "plan_no": "S/H1/示範 (fictional)",
+      "zone": "R(A)",
+      "max_pr_domestic": 8.0,
+      "max_pr_total": 10.0,
+      "max_bh_mpd": 120,
+      "minor_relaxation": true,
+      "column1_uses": ["Flat", "Shop and Services", "Eating Place", "Office"],
+      "column2_uses": ["Public Vehicle Park (excluding container vehicle)", "Hotel", "Institutional Use"],
+      "nba_m2": 0
+    },
+    "proposal": {
+      "uses": ["Flat", "Shop and Services", "Eating Place", "Public Vehicle Park (excluding container vehicle)"],
+      "building_kind": "composite",
+      "site_formation_level_mpd": 8.5,
+      "main_roof_mpd": 108.9,
+      "roof_area_m2": 260,
+      "sc_pct": 95,
+      "rooftop": [
+        {"name": "Lift machine room", "type": "lift", "height_above_roof_m": 5.0, "enclosed_covered_m2": 40},
+        {"name": "Water tanks / plant", "type": "ancillary", "height_above_roof_m": 4.0, "enclosed_covered_m2": 60},
+        {"name": "Crown feature", "type": "feature", "height_above_roof_m": 6.0}
+      ]
+    },
+    "lease": {
+      "lot": "Inland Lot No. 0000 (fictional)",
+      "user_allows": ["Flat", "Shop and Services", "Eating Place", "Office"],
+      "max_gfa_m2": 9500,
+      "min_gfa_m2": 5700,
+      "max_sc_pct": null,
+      "gfa_exemption_clause": false,
+      "ddh_clause": true,
+      "building_covenant_months": 60
+    },
+    "lease_gfa_concessions": [
+      {"item": "Lift shafts above standard", "area_m2": 30, "group": "I"},
+      {"item": "Balconies (28 floors x 2 m2 x 2 flats)", "area_m2": 112, "group": "II_premium"}
+    ],
+    "bonus_pr": {"district": "Kennedy Town & Mount Davis", "oldest_op_year": 1968, "application_year": 2026},
+    "premium_estimate": {"before_rate_hkd_m2": 60000, "after_rate_hkd_m2": 60000, "before_gfa_m2": 9500}
+  }
+}

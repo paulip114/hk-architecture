@@ -1,0 +1,289 @@
+{
+ "_source": "Code of Practice for Fire Safety in Buildings 2011 (2024 Edition), Part A, Section 3 – Definitions. Definitions copied verbatim from the Code text; Chinese terms are working translations (not the official Chinese version).",
+ "definitions": {
+  "Access staircase": {
+   "text": "means a staircase so designed and constructed as to allow firemen safe and unobstructed access to all storeys of a building in the event of fire.",
+   "zh": "消防員通道樓梯"
+  },
+  "Balcony approach": {
+   "text": "means a balcony which is used as an external approach to a common staircase and which serves two or more occupancies.",
+   "zh": "露台通道"
+  },
+  "Basement": {
+   "text": "means any storey, which is below the lower or lowest ground storey and from which any exit route is in an upward direction. A basement may have one or more sides open to the air, due to a sloping site.",
+   "zh": "地庫"
+  },
+  "Bounding Conditions": {
+   "text": "means the set of fire safety provisions that must be maintained as a result of a performance-based approach to the fire safety design and that if altered will invalidate the performance-based fire safety design.",
+   "zh": "界限條件"
+  },
+  "Compartment area": {
+   "text": "means the area of the floors of a building contained within the external surfaces of a fire compartment.",
+   "zh": "防火分隔區面積"
+  },
+  "Compartment volume": {
+   "text": "means the volume of the portion of a building contained within the external surfaces of the walls and floors forming a fire compartment.",
+   "zh": "防火分隔區容積"
+  },
+  "Cubical extent": {
+   "text": "in relation to a building, means the space contained within the external surfaces of its walls and roof of a building and the upper surface of the floor of its lowest storey, excluding any space within any enclosure on the roof used exclusively for accommodating a water tank or lift gear or any other services, and, if any side of the building is not enclosed by a wall, that side shall be deemed to be enclosed by a wall extending downwards from the outer edge of the roof",
+   "zh": "立方容積"
+  },
+  "Deadend travel distance": {
+   "text": "means the overall length of travel within an exit route before an alternative exit is available.",
+   "zh": "盡頭路行走距離"
+  },
+  "Discharge value": {
+   "text": "means the number of persons that a staircase of a given width may be assumed to be capable of discharging from a given number of storeys.",
+   "zh": "疏散量"
+  },
+  "Element of construction": {
+   "text": "means: • any floor, beam, column, or hanger; • any loadbearing wall or loadbearing member other than a member forming the roof or part of the roof; • any required staircase including the landings and supports thereto. (Note: Any raised flooring system at a height of not more than 600 mm from the original floor will not be considered as an element of construction. In such case, the compartment walls or other fire barriers should start from the structural floor and not just rest on the raised floor.)",
+   "zh": "建築構件"
+  },
+  "Emergency Vehicular Access (EVA)": {
+   "text": "means a vehicular access used or to be used for access of a vehicle of the Fire Services Department to the building in the event of a fire or other emergency.",
+   "zh": "緊急車輛通道"
+  },
+  "Exit door": {
+   "text": "means a door from a storey, flat, or room, which gives access from such storey, flat or room on to an exit route.",
+   "zh": "出口門"
+  },
+  "Exit route": {
+   "text": "means the continuous path of travel from any part of a building to the ultimate place of safety, not including a revolving door, lift or escalator (see Diagram A2).",
+   "zh": "逃生路線"
+  },
+  "Factory": {
+   "text": "is as defined in the Factories and Industrial Undertakings Ordinance (Cap. 59).",
+   "zh": null
+  },
+  "Fire barrier": {
+   "text": "means the construction that has a fire resistance rating separating one space from another. It may form part of a fire compartment.",
+   "zh": "防火屏障"
+  },
+  "Fire compartment": {
+   "text": "means a space enclosed by fire barriers or appropriate construction to all sides such that fire will not spread from the space; or spread into adjoining space.",
+   "zh": "防火分隔區"
+  },
+  "Firefighting and rescue stairway": {
+   "text": "means a stairway accommodating an access staircase and a fireman’s lift",
+   "zh": "消防及救援樓梯間"
+  },
+  "Fire resistance rating (FRR)": {
+   "text": "means the period of time that a building element is capable of resisting the action of fire when tested in accordance with ISO 834, BS 476: Parts 20 to 24 or equivalent. Fire resistance ratings are designated by three terms, to represent the make up of the element of construction, i.e. X/Y/Z, where: • X - Stability fire resistance rating (minutes) • Y - Integrity fire resistance rating (minutes) • Z - Insulation fire resistance rating (minutes)",
+   "zh": "耐火時效"
+  },
+  "Fire safety provisions": {
+   "text": "means the installations, equipments, systems, building elements or methods used in a building to achieve the fire safety objectives as stated within Subsection A2. The provisions include active fire safety provisions (sprinklers, detectors, alarms etc.) and passive fire safety provisions.",
+   "zh": "消防安全設施"
+  },
+  "Fireman’s lift": {
+   "text": "means a lift designed and installed to be used by firemen in the event of a fire",
+   "zh": "消防員升降機"
+  },
+  "Flat": {
+   "text": "means a separate and self-contained dwelling, forming a part of a building from some other part of which it is divided horizontally, and includes a maisonette and tenement floor.",
+   "zh": "單位"
+  },
+  "Ground storey": {
+   "text": "means the storey in which is situated an entrance from a street to the building and, where a building fronts or abuts on more than one street and due to a difference in street levels there are two or more entrances serving different streets and situated in different storeys, means each such storey.",
+   "zh": "地面層"
+  },
+  "Industrial undertaking": {
+   "text": "is as defined in the Factories and Industrial Undertakings Ordinance (Cap. 59).",
+   "zh": null
+  },
+  "Maisonette": {
+   "text": "means a flat not being a tenement floor and having more than one but not more than three storeys.",
+   "zh": "複式單位"
+  },
+  "Non-combustible": {
+   "text": "means a material which satisfies a recognized non-combustibility test stipulated in Part E.",
+   "zh": "不可燃"
+  },
+  "Notifiable workplace": {
+   "text": "is as defined in the Factories and Industrial Undertakings Ordinance (Cap. 59).",
+   "zh": null
+  },
+  "Occupant capacity": {
+   "text": "means the number of persons, which the room or storey or fire compartment of a building, for the purposes of this Code, is capable of holding. Provided that where there is on any storey the entrance to a maisonette, that storey shall, for the purpose of this definition, be deemed to include all floors of the maisonette.",
+   "zh": "容納人數"
+  },
+  "Passive fire safety provisions": {
+   "text": "means permanent building features and architectural aspects of a building that prevent fire development and spread. Examples include required staircases, fire rated doors, spandrels, fire barriers, linings with low combustibility etc.",
+   "zh": "被動消防安全設施"
+  },
+  "Places of public entertainment": {
+   "text": "means any building or that part of a building constructed or adapted to be used for any public entertainment and includes the place itself and any means of ingress or egress for the purpose of and in connection with such place, and in cases in which such place consists of a part or parts only of a building includes also any other part or parts of such building used or intended to be used for the purpose of and in connection with such place. Public entertainment in this context is as defined in the Places of Public Entertainment Ordinance (Cap. 172).",
+   "zh": "公眾娛樂場所"
+  },
+  "Protected exit": {
+   "text": "means a required staircase, or ramp, or passageway, being enclosed by fire barriers, that leads to an ultimate place of safety.",
+   "zh": "受保護出口"
+  },
+  "Protected lobby": {
+   "text": "means a lobby formed by fire and smoke resisting construction in accordance with Part C to prevent the spread of heat and smoke.",
+   "zh": "受保護門廊"
+  },
+  "Redevelopment site": {
+   "text": "means a site that is not a virgin site.",
+   "zh": "重建地盤"
+  },
+  "Refuge floor": {
+   "text": "means a protected floor that serves as a refuge for the occupants of the building to assemble in case of fire, for a short period of time, before reaching an ultimate place of safety.",
+   "zh": "庇護層"
+  },
+  "Required staircase": {
+   "text": "means an access staircase, whether in a firefighting and rescue stairway or not, or a staircase required for means of escape in case of fire.",
+   "zh": "規定樓梯"
+  },
+  "Smoke seal": {
+   "text": "means a sealing compound or component installed at an opening to limit the spread of smoke between two adjoining spaces. Typically it is provided to a door, damper or other penetration where smoke is required to be inhibited.",
+   "zh": "防煙封條"
+  },
+  "Special hazard": {
+   "text": "means a hazard that requires special consideration given the occupant awareness, knowledge of building, fire services systems installed, physical construction and location and width of exits, relative to the ignition risk, spread of fire, generation of smoke, heat or toxic gases that may endanger the life and safety of the occupants. Areas of special hazard have a relatively higher fire risk with regard to ignition. These areas include transformer rooms, central A/C plant rooms, lift machine rooms, main switch rooms, generator rooms, boiler rooms, dangerous goods store rooms, fuel tank rooms and the like.",
+   "zh": "特殊危險"
+  },
+  "Storey": {
+   "text": "means the space between the upper surface of every floor and the upper surface of the floor next above it where such a floor exists and in the case of a top storey the space between the upper surface of that floor and the mean height of the ceiling or roof.",
+   "zh": "樓層"
+  },
+  "Travel distance": {
+   "text": "means the horizontal distance measured on the floor along the centreline of the exit route between the furthest point (most remote point) on a storey or within a fire compartment to: (a) the centre of the fire rated door to a protected exit or a required staircase, as the case may be; or (b) if there is no such door, the first tread of the required staircase; or (c) if the exit route leads directly to an ultimate place of safety, any one of the discharge points to the ultimate place of safety.",
+   "zh": "行走距離"
+  },
+  "Ultimate place of safety": {
+   "text": "means a place of safety for final exit discharge where a protected exit terminates that provides access to an area clear of the effects of fire, where people may safely disperse. The ultimate place of safety is a street or an open area outside the subject building and connects directly with a street, with a width not less than 1.5m wide or the total required width of exit routes discharging into the area, whichever is greater, from which occupants can safely disperse away from the subject building.",
+   "zh": "最終安全地方"
+  },
+  "Usable floor area": {
+   "text": "means the aggregate of the areas of the floor or floors in a storey or a building excluding, unless otherwise specified, any staircase, public circulation space, lift landings, lavatories, water-closets, kitchens in flats, and any space occupied by machinery for any lift, air-conditioning system or similar service provided for the building.",
+   "zh": "可用樓面面積"
+  },
+  "Use Classification": {
+   "text": "means the categories of use of premises stipulated in Table A1.",
+   "zh": "用途分類"
+  },
+  "Virgin site": {
+   "text": "means a site where there is no temporary or permanent building, including a building exempted from the Buildings Ordinance under the Buildings Ordinance (Application to the New Territories) Ordinance, in existence before.",
+   "zh": "未發展地盤"
+  }
+ },
+ "use_classes": {
+  "1a": {
+   "name": "Residential – House type dwellings",
+   "examples": "Single family house up to three storeys high.",
+   "zh": "住宅－獨立屋"
+  },
+  "1b": {
+   "name": "Residential – Flats",
+   "examples": "Flats including service apartments.",
+   "zh": "住宅－分層單位"
+  },
+  "1c": {
+   "name": "Residential – Tenement houses",
+   "examples": "Living room for cooking or sleeping used by more than one tenant or sub-tenant.",
+   "zh": "住宅－唐樓"
+  },
+  "2": {
+   "name": "Hotel and similar transient accommodation",
+   "examples": "Hotels, guesthouses, barracks, dormitories, hostels, boarding houses, motels.",
+   "zh": "酒店及類似短住"
+  },
+  "3a": {
+   "name": "Institutional – Health/child care",
+   "examples": "Hospitals, purpose-built clinic, nurseries, child care centres, day care centres, drug dependent person treatment areas, homes for the elderly.",
+   "zh": "醫療／托兒"
+  },
+  "3b": {
+   "name": "Institutional – Detention and correctional",
+   "examples": "Detention centres, correctional centres.",
+   "zh": "羈留／懲教"
+  },
+  "4a": {
+   "name": "Commercial – Business",
+   "examples": "Offices and associated business spaces.",
+   "zh": "商業－辦公"
+  },
+  "4b": {
+   "name": "Commercial – Mercantile",
+   "examples": "Retail shops, markets, supermarkets, department stores, food courts, cafés, restaurants, lounges, bars and pubs, banking halls, betting halls, showrooms.",
+   "zh": "商業－商舖食肆"
+  },
+  "5a": {
+   "name": "Assembly – Places of public entertainment",
+   "examples": "Uses listed in Cap. 172: cinemas, theatres, exhibition centres, stadia.",
+   "zh": "公眾娛樂場所"
+  },
+  "5b": {
+   "name": "Assembly – Educational",
+   "examples": "Classrooms, lecture rooms, libraries and study rooms in schools, kindergarten, colleges or universities.",
+   "zh": "教育"
+  },
+  "5c": {
+   "name": "Assembly – Transport facilities",
+   "examples": "Passenger terminals for air, rail, road or sea.",
+   "zh": "交通設施"
+  },
+  "5d": {
+   "name": "Assembly – Other",
+   "examples": "Conference centres, skating rinks, gymnasia, churches, public halls, columbaria.",
+   "zh": "其他集會"
+  },
+  "6a": {
+   "name": "Industrial workplaces",
+   "examples": "Manufacturing, power generation, depots, aircraft maintenance, film production, commercial kitchens, commercial laundries, commercial laboratories.",
+   "zh": "工業工作場所"
+  },
+  "6b": {
+   "name": "Warehouses",
+   "examples": "Container terminals, freight stations, general goods warehouses, logistic centres.",
+   "zh": "貨倉"
+  },
+  "6c": {
+   "name": "Hazardous / dangerous goods",
+   "examples": "Storage or manufacturing of flammable or explosive goods, chemical processing.",
+   "zh": "危險品"
+  },
+  "7": {
+   "name": "Carparks",
+   "examples": "Parking structure and garage, including car ports.",
+   "zh": "停車場"
+  },
+  "8": {
+   "name": "Plant rooms & the like",
+   "examples": "M&E plant rooms, IT equipment room, telecom and broadcasting access facilities.",
+   "zh": "機房"
+  }
+ },
+ "performance_requirements": {
+  "B1": "Adequate means of escape for all occupants to evacuate safely without being overwhelmed by the effects of fire.",
+  "B2": "Adequate fire safety provisions to protect evacuating occupants from the impact of fire.",
+  "B3": "Adequate lighting of means of escape to identify exits and paths of travel.",
+  "B4": "Sufficient warning to occupants to evacuate.",
+  "B5": "Building management provides an effectively managed process for orderly evacuation.",
+  "B6": "Adequate signs to identify the means of escape.",
+  "B7": "Tall buildings: short safe rest, minimise smoke in staircases, firefighting staging area.",
+  "C1": "Inhibit spread of fire within a building, between buildings, to allow evacuation and fire service intervention.",
+  "C2": "Maintain stability in fire for evacuation and fire service intervention.",
+  "C3": "Openings and penetrations at fire barriers adequately protected.",
+  "C4": "Building elements minimise the spread of smoke.",
+  "C5": "Fire safety provisions keep functioning for a reasonable period during a fire.",
+  "C6": "Fire safety provisions during construction, demolition, alteration, repair or maintenance.",
+  "D1": "Access staircases for firemen, fireman's lifts, firefighting and rescue stairways, EVA.",
+  "F1": "Fire safety provisions kept in good working order and evacuation procedure effectively implemented."
+ },
+ "functional_statements": {
+  "B": "B(P)R 41(1) means of escape",
+  "C": "B(C)R s.35 fire resisting construction",
+  "D": "B(P)R 41A-41D access staircases, fireman's lifts, FRS, EVA",
+  "F": "Fire safety provisions available during fire emergency (A11)"
+ },
+ "compliance_routes": [
+  "Deemed-to-Comply provisions (Parts B-E)",
+  "Alternative Solution meeting the Performance Requirements (Part G fire engineering)",
+  "A combination of both (A3.1)"
+ ],
+ "change_of_use": "A5.1: change of Use Classification (material change in use under BO s.25) or change of Bounding Conditions may need a submission to the BA."
+}

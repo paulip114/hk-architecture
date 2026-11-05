@@ -1,0 +1,269 @@
+{
+ "project": "示範：堅尼地城商住大廈（虛構）",
+ "_how_to_use": "Part A/F, FSD minimum FSI and energy inputs for the same demo building as demo_composite.json. Run tools/part_f_check.py, tools/fsi_check.py, tools/energy_check.py on this file. Kept separate so parallel edits to demo_composite.json do not clash; merge the blocks into the project file when convenient.",
+ "fire_safety_management": {
+  "use_classes": [
+   "1b",
+   "4b",
+   "7"
+  ],
+  "fire_engineering": false,
+  "s42_modification": false,
+  "temporary_refuge_spaces": true,
+  "fsmp": {
+   "maintenance_plan": [
+    "approved_gbp_exit_routes",
+    "fsp_specifications",
+    "maintenance_periods",
+    "method_statements",
+    "repair_methods",
+    "maintenance_records",
+    "housekeeping"
+   ],
+   "training_plan": [
+    "staff_duties_routine",
+    "staff_duties_fire",
+    "training_programme",
+    "training_records",
+    "fire_wardens",
+    "drills_and_seminars"
+   ],
+   "fire_action_plan": [
+    "call_999",
+    "inform_and_assist",
+    "evacuation_plan",
+    "disabled_evacuation",
+    "trs_locations"
+   ]
+  },
+  "open_kitchens": {
+   "provided": true,
+   "conditions": [
+    "smoke_detectors_kept",
+    "sprinkler_kept",
+    "fr_wall_kept"
+   ],
+   "in_fsmp": true,
+   "in_dmc": true
+  },
+  "drill_interval_months": 12,
+  "lift_works": {
+   "doors_open_max": 2,
+   "hot_work": false,
+   "doors_removed": 2,
+   "hoarding_integrity_min": 120,
+   "liftways": 1,
+   "vent_openings": [
+    {
+     "area_mm2": 5000,
+     "upper_portion": true
+    },
+    {
+     "area_mm2": 5000,
+     "upper_portion": true
+    }
+   ],
+   "hoarding_door_frr_ok": true,
+   "hoarding_door_self_closing_openable_inside": true,
+   "temporary_works_non_combustible": true,
+   "openings_secured_when_unattended": true
+  },
+  "housekeeping": {
+   "1.1": "yes",
+   "1.3": "no",
+   "1.6": "yes",
+   "2.2": "yes",
+   "2.11": "yes",
+   "3.3": "yes",
+   "4.2": "yes"
+  }
+ },
+ "fsi": {
+  "uppermost_floor_above_staircase_discharge_m": 97.35,
+  "street_hydrant_distance_m": 60,
+  "hose_reel_max_hose_m": 30,
+  "fs_tank_litres": 18000,
+  "largest_floor_m2": 950,
+  "parts": [
+   {
+    "name": "B1 car park",
+    "use": "garage",
+    "total_floor_area_m2": 950,
+    "ev_charging": true,
+    "provided": [
+     "automatic_actuating_devices",
+     "emergency_lighting",
+     "exit_sign",
+     "fire_alarm",
+     "fire_detection",
+     "fire_hydrant_hose_reel",
+     "firemans_lift",
+     "portable_appliances",
+     "sprinkler",
+     "ventilation_ac_control"
+    ]
+   },
+   {
+    "name": "G/F–2/F retail podium",
+    "use": "commercial",
+    "total_floor_area_m2": 2850,
+    "max_single_occupancy_floor_m2": 820,
+    "compartment_volume_m3": 4300,
+    "openable_window_pct": 4,
+    "fire_load_mj_m2": 1135,
+    "cubical_extent_m3": 14250,
+    "provided": [
+     "automatic_actuating_devices",
+     "automatic_fixed_non_water",
+     "emergency_generator",
+     "emergency_lighting",
+     "exit_sign",
+     "fire_alarm",
+     "fire_control_centre",
+     "fire_detection",
+     "fire_hydrant_hose_reel",
+     "firemans_lift",
+     "portable_appliances",
+     "staircase_pressurization",
+     "sprinkler",
+     "ventilation_ac_control"
+    ]
+   },
+   {
+    "name": "3/F–30/F flats",
+    "use": "domestic",
+    "provided": [
+     "emergency_generator",
+     "emergency_lighting",
+     "exit_sign",
+     "fire_alarm",
+     "fire_hydrant_hose_reel",
+     "firemans_lift",
+     "portable_appliances",
+     "fire_detection",
+     "sprinkler"
+    ]
+   }
+  ]
+ },
+ "energy": {
+  "plans_submitted": "2026-03-01",
+  "ottv_parts": [
+   {
+    "name": "Retail podium G/F–2/F",
+    "kind": "podium",
+    "use": "shops",
+    "walls": [
+     {
+      "orientation": "N",
+      "opaque_m2": 180,
+      "u_wall": 2.5,
+      "absorptivity": 0.6,
+      "density_kg_m2": 420,
+      "glass_m2": 240,
+      "u_glass": 5.6,
+      "sc": 0.45
+     },
+     {
+      "orientation": "E",
+      "opaque_m2": 220,
+      "u_wall": 2.5,
+      "absorptivity": 0.6,
+      "density_kg_m2": 420,
+      "glass_m2": 90,
+      "u_glass": 5.6,
+      "sc": 0.45,
+      "esm": 0.8
+     },
+     {
+      "orientation": "S",
+      "opaque_m2": 300,
+      "u_wall": 2.5,
+      "absorptivity": 0.6,
+      "density_kg_m2": 420,
+      "glass_m2": 60,
+      "u_glass": 5.6,
+      "sc": 0.45
+     },
+     {
+      "orientation": "W",
+      "opaque_m2": 160,
+      "u_wall": 2.5,
+      "absorptivity": 0.6,
+      "density_kg_m2": 420,
+      "glass_m2": 200,
+      "u_glass": 5.6,
+      "sc": 0.45
+     }
+    ],
+    "roofs": [
+     {
+      "opaque_m2": 690,
+      "u_roof": 0.6,
+      "absorptivity": 0.4,
+      "density_kg_m2": 500
+     }
+    ]
+   }
+  ],
+  "rttv": {
+   "wall_W_m2": 13.1,
+   "roof_W_m2": 3.2,
+   "windows": [
+    {
+     "name": "Living room window",
+     "prescribed": true,
+     "vlt_pct": 52,
+     "er_pct": 15
+    },
+    {
+     "name": "Bedroom window",
+     "prescribed": true,
+     "vlt_pct": 48,
+     "er_pct": 15
+    }
+   ]
+  },
+  "bec": {
+   "spaces": [
+    {
+     "name": "G/F shop",
+     "type": "retail",
+     "area_m2": 780,
+     "lighting_W": 8100
+    },
+    {
+     "name": "Lift lobby (typical)",
+     "type": "lift_lobby",
+     "area_m2": 18,
+     "lighting_W": 120
+    },
+    {
+     "name": "B1 car park",
+     "type": "car_park",
+     "area_m2": 850,
+     "lighting_W": 2380
+    },
+    {
+     "name": "Staircase A",
+     "type": "staircase",
+     "area_m2": 14,
+     "lighting_W": 72
+    }
+   ],
+   "chillers": [
+    {
+     "name": "CH-1 water-cooled VSD centrifugal 900 kW",
+     "type": "water_cooled_vsd_centrifugal_lt1000_full",
+     "cop": 5.8
+    }
+   ],
+   "lift_car_fans": [
+    {
+     "name": "L1-L4",
+     "W_per_l_s": 0.6
+    }
+   ]
+  }
+ }
+}

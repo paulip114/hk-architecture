@@ -29,6 +29,11 @@ Working knowledge and tools Claude reads before doing architect's work in this p
 | `examples/demo_cinema.json`, `demo_cinema_report.md` | 5a cinema demo |
 | `examples/demo_composite_part_e_report.md` | Part E output |
 | `examples/demo_atrium_fe.json`, `demo_atrium_fe_report.md` | Part G demo |
+| `planning/planning-rules.md` | Town planning: OZP Notes (Column 1/2, Remarks), JPN 4/5 PR and height rules, s12A / s16 / s16A / s17 / appeal procedure and time limits, TPB guidelines, Bonus PR (JPN 9) and transfer of PR (PG-43A) |
+| `lands/lands-rules.md` | Land administration: lease clauses, JPN 4 GFA groups under lease, GBP under lease (LAO PN 2/2018), approval / consent (PN 4/2021), lease modification and land exchange (PN 2/2023), premium and standard rates |
+| `planning/planning_lands.json` | Time limits, JPN 5 roof-top limits, JPN 9 standard rates as data |
+| `tools/planning_lease_check.py` | OZP + lease checker: `python3 tools/planning_lease_check.py project.json [--block planning.json]` (reads `planning_lease`; GFA from `floors[]`) |
+| `examples/demo_composite_planning.json`, `demo_composite_planning_report.md` | OZP / lease demo for the composite building (fictional plan and lot) |
 
 ## Input fields (project.json)
 - `site`: `area_m2`; either `class` ("A"/"B"/"C") or `street_widths_m` + `perimeter_m` + `frontage_on_specified_streets_m`; optional `dedicated_area_m2`.
@@ -41,8 +46,9 @@ Working knowledge and tools Claude reads before doing architect's work in this p
 Exit code 1 when any item fails.
 
 ## Open items
+- Planning / lands: Cap. 131 text not read (eLegislation unreachable); LAO PN 3/2020 (DDH) scanned, not read. See open items in `planning/planning-rules.md` and `lands/lands-rules.md`.
 - Verify the APP-151 cap base and prerequisite list against the current PNAP.
-- Not yet automated: reg 31 inclined-plane geometry, Part F (fire safety management).
+- Not yet automated: reg 31 inclined-plane geometry. (Part F is now covered by `tools/part_f_check.py`.)
 - Barrier-free: Divisions 15-20 of the Design Manual not yet verified (lift and counter limits from memory, reported as CHECK).
 - APP-152: Table 1 large-site columns and the Lp ≤ 5U limit to be checked against the PDF.
 - B(C)R / B(A)R notes are unverified until the Cap. 123A / 123B PDFs are uploaded.
@@ -93,3 +99,23 @@ Exit code 1 when any item fails.
 | `tests/test_practice_tools.py` | `python3 -m unittest discover -s tests` |
 
 Drawing tools need `pip install -r requirements-drawing.txt` (ezdxf, ifcopenshell, shapely). Every output is a draft: contract results for the Architect / QS against the signed contract, cost for a QS to develop, supervision plan for the AP / RSE / AS, drawings marked "SKETCH – NOT FOR SUBMISSION".
+## Fire Code Part A / Part F, FSD minimum FSI, energy efficiency
+| Path | What it is |
+| --- | --- |
+| `fs-code/part-a-rules.md`, `fs-code/part_a.json` | Part A: framework, Table A1 use classes, Performance Requirements B1-F1, 42 definitions (verbatim) |
+| `tools/fs_lookup.py` | `fs_lookup.py "travel distance"` / `fs_lookup.py 庇護` / `fs_lookup.py 4b` / `fs_lookup.py --clause C13.4` |
+| `fs-code/part-f-rules.md`, `fs-code/part_f.json` | Part F: FSMP (maintenance, training, fire action plans), Bounding Conditions, open kitchens, lift works, Table F1 |
+| `tools/part_f_check.py` | Part F checker (reads `fire_safety_management`) |
+| `fsi/fsi-rules.md`, `fsi/fsi_schedule.json` | FSD CoP Minimum FSI (Sept 2022) Part IV schedule. **Unverified** web extract |
+| `tools/fsi_check.py` | Minimum FSI checker (reads `fsi`) |
+| `energy/energy-rules.md`, `energy/energy.json` | OTTV (APP-67), RTTV / VLT / ER (APP-156), both Sept 2025; BEC 2024 LPD, COP, lift, retrofit triggers |
+| `tools/energy_check.py` | OTTV calculator + RTTV / BEC checks (reads `energy`). OTTV constants are placeholders until the OTTV Code 1995 is loaded |
+| `examples/demo_composite_fsm_energy.json` | Demo inputs for the three tools (same fictional scheme) |
+| `examples/demo_composite_part_f_report.md`, `demo_composite_fsi_report.md`, `demo_composite_energy_report.md` | Outputs |
+
+Input blocks: see each tool's docstring (`python3 tools/<tool>.py -h`).
+
+Open items for this group:
+- Verify `fsi/fsi_schedule.json` against the FSD PDF (File2022.pdf). Encode Part V (tank sizes, design rules) and the PPE, school and special-risk paragraphs.
+- Load the OTTV Code 1995 tables (TDeq, ΔT, solar factors) into `energy.json` and set `ottv_constants.verified` to true. Confirm whether the limit applies to the overall value or to walls and roof separately.
+- Read the BEC 2024 text for the space types, electrical (copper loss, power factor, THD, metering) and A/C tables not in the EMSD briefing.
