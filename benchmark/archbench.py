@@ -28,7 +28,7 @@ RUNS_DIR = HERE / "runs"
 STAGES = {"1": "可行性研究與前期規劃", "2": "方案設計", "3": "設計發展與法定審批", "4": "施工圖與招標", "5": "施工與竣工交付"}
 # Provisional gates: a starting point, not calibrated against human architects.
 GATES = {"overall": 0.80, "stage": 0.60}
-KB_EXCLUDE = {"benchmark", ".git", ".venv", "__pycache__", "tests", ".DS_Store"}
+KB_EXCLUDE = {"benchmark", ".git", ".venv", "__pycache__", "tests", ".DS_Store", "AGENTS.md", "CLAUDE.md"}
 PUBLIC_CHECK_FIELDS = ("path", "type", "options", "desc", "file")
 
 
@@ -56,7 +56,7 @@ def public_view(task):
 
 def task_markdown(task, mode):
     v = public_view(task)
-    kb = ("A knowledge base and tools are in ./kb (read kb/README.md first). Only use them if they help."
+    kb = ("A knowledge base and tools are in ./kb (start with kb/README.md and kb/docs/reference.md). Only use them if they help."
           if mode == "kb" else "No knowledge base is provided for this task. Use what you know and say what you cannot verify.")
     return f"""# {v['title']} ({v['id']})
 
