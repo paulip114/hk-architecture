@@ -11,6 +11,7 @@ Hong Kong Buildings Department procedures from plan submission to occupation per
 | `ubw-enforcement.md` | UBW definition, BD's actionable categories, orders and warning notices, AP practice |
 | `mbis-mwis.md` | Mandatory building / window inspection: scope, RI / QP, sequence, MBI forms, penalties |
 | `periods.json` | Processing periods and limits as data, each with source and `verified` flag |
+| `hk_holidays.json` | General holidays used to move statutory last days under Cap. 1 s.71(1)(b) |
 | `forms.json` | BA, MW and MBI forms with workflow stage |
 | `templates/reply-to-bd-comments.md` | Cover letter and response schedule for BD disapproval / departmental comments |
 | `templates/withdraw-and-resubmit-letter.md` | W&R letter (ADM-22) |
@@ -31,7 +32,6 @@ Hong Kong Buildings Department procedures from plan submission to occupation per
 - Enforcement: s.24 orders, s.33 cost + 20% surcharge, s.40 penalties; MBIS s.30B (30 years), MWIS s.30C (10 years).
 
 ## Open items (⚠️)
-- Cap. 1 s.71 day counting is checked (version 31.7.2026), but `tools/submission_timeline.py` does not move last days that fall on holidays or warning days.
 - Technical Memorandum for Supervision Plans (TCP grades, supervision streams).
 - Validation schemes: Cap. 123N does not mention them. See `minor-works.md`.
 - Cap. 123P prescribed inspection scope and the MWIS forms have not been compared line by line with `mbis-mwis.md`.
