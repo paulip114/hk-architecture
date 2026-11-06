@@ -34,6 +34,8 @@ Working knowledge and tools Claude reads before doing architect's work in this p
 | `planning/planning_lands.json` | Time limits, JPN 5 roof-top limits, JPN 9 standard rates as data |
 | `tools/planning_lease_check.py` | OZP + lease checker: `python3 tools/planning_lease_check.py project.json [--block planning.json]` (reads `planning_lease`; GFA from `floors[]`) |
 | `examples/demo_composite_planning.json`, `demo_composite_planning_report.md` | OZP / lease demo for the composite building (fictional plan and lot) |
+| `design/` | Massing study methods, design statement guide and templates, architectural movements and masters (see `design/README.md`) |
+| `tools/massing_study.py` | Massing options and development envelope, runs `bpr_check` on each option (`examples/demo_massing.json`) |
 
 ## Input fields (project.json)
 - `site`: `area_m2`; either `class` ("A"/"B"/"C") or `street_widths_m` + `perimeter_m` + `frontage_on_specified_streets_m`; optional `dedicated_area_m2`.

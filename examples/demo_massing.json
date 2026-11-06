@@ -1,0 +1,32 @@
+{
+ "project": "示範：堅尼地城商住地盤體量比較（虛構）",
+ "site": {"area_m2": 1000, "street_widths_m": [12, 6], "perimeter_m": 130, "frontage_on_specified_streets_m": 60},
+ "building_type": "composite",
+ "limits": {"ozp_max_pr_total": 10, "max_height_m": 110},
+ "mean_street_level_mpd": 6.5,
+ "ozp_height_mpd": 120,
+ "open_space": {"provided_m2": 120, "roofed_over_area_m2": 330},
+ "options": [
+  {"name": "A 三層商業平台＋單塔",
+   "note": "最常見做法：平台做零售，轉換層上面住宅塔，塔樓貼近主街以爭取景觀。",
+   "basements": [{"name": "B1 car park", "use": "non_domestic", "plate_m2": 950, "exempt_pct": 100}],
+   "blocks": [
+    {"name": "Podium retail", "use": "non_domestic", "storeys": 3, "ftf_m": 5.0, "plate_m2": 950, "exempt_pct": 4},
+    {"name": "Transfer + clubhouse", "use": "domestic", "storeys": 1, "ftf_m": 4.5, "plate_m2": 330, "exempt_pct": 60},
+    {"name": "Tower flats", "use": "domestic", "storeys": 22, "ftf_m": 3.15, "plate_m2": 330, "exempt_pct": 5}]},
+  {"name": "B 兩層平台＋高塔（地積比用到盡）",
+   "note": "反面教材：以為減少商業樓面就可以加住宅，但複合地積比 (reg 21(2)) 同 OZP 總地積比同時超標，高度亦超限。",
+   "basements": [{"name": "B1 car park", "use": "non_domestic", "plate_m2": 950, "exempt_pct": 100}],
+   "blocks": [
+    {"name": "Podium retail", "use": "non_domestic", "storeys": 2, "ftf_m": 5.0, "plate_m2": 950, "exempt_pct": 4},
+    {"name": "Transfer + clubhouse", "use": "domestic", "storeys": 1, "ftf_m": 4.5, "plate_m2": 330, "exempt_pct": 60},
+    {"name": "Tower flats", "use": "domestic", "storeys": 32, "ftf_m": 3.15, "plate_m2": 330, "exempt_pct": 5}]},
+  {"name": "C 平台上雙塔",
+   "note": "兩座細塔並排（塔距要另核 APP-152 樓宇間距），通風同景觀較好，但每層核心筒重複，實用率較低。",
+   "basements": [{"name": "B1 car park", "use": "non_domestic", "plate_m2": 950, "exempt_pct": 100}],
+   "blocks": [
+    {"name": "Podium retail", "use": "non_domestic", "storeys": 3, "ftf_m": 5.0, "plate_m2": 950, "exempt_pct": 4},
+    {"name": "Tower 1", "use": "domestic", "storeys": 21, "ftf_m": 3.15, "plate_m2": 180, "exempt_pct": 5, "start_level_m": 15},
+    {"name": "Tower 2", "use": "domestic", "storeys": 21, "ftf_m": 3.15, "plate_m2": 180, "exempt_pct": 5, "start_level_m": 15}]}
+ ]
+}
