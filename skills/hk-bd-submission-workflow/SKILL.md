@@ -9,7 +9,7 @@ Use when the user asks about getting plans approved by BD, replying to a BD disa
 
 ## Before starting
 1. Read `/mnt/project-files/architect-kb/submission/README.md` and `submission/bd-submission-process.md`.
-2. Every fact there is marked ✅ (read on bd.gov.hk) or ⚠️ (unverified). If an answer depends on a ⚠️ item (e.g. the 30-day resubmission period, the 14-day OP period, BO section numbers), say so. If the user has uploaded Cap. 123 / Cap. 123A, check the section first and update the file.
+2. Every fact there is marked ✅ (read on bd.gov.hk), 📜 (checked against Cap. 123 version 1.3.2026 / Cap. 123A version 30.6.2024) or ⚠️ (unverified). If an answer depends on a ⚠️ item, say so. Cite the section or regulation for 📜 items (e.g. B(A)R reg 30(3), BO s.21(7)).
 
 ## Work out where the project is
 Ask only for what is missing (one short list):
@@ -33,7 +33,7 @@ Ask only for what is missing (one short list):
 
 ## Report back
 - Lead with the next deadline and anything FAIL / CHECK, with the action.
-- State: draft for review and signature by the AP; ⚠️ items not checked against the Ordinance.
+- State: draft for review and signature by the AP; name any ⚠️ items relied on.
 - Do not send anything to BD or any department. The AP signs and submits.
 
 ## Limits

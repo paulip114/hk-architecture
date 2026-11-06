@@ -8,7 +8,7 @@ description: "Hong Kong existing-building procedures: Minor Works Control System
 Use when the user asks whether small works need BD approval, which minor works class applies, the MW forms and notice periods, how to deal with an unauthorised building works order or a suspected UBW, or what an owner must do under MBIS / MWIS. Also for PA exam questions on these schemes.
 
 ## Before starting
-Read `/mnt/project-files/architect-kb/submission/minor-works.md`, `submission/ubw-enforcement.md` and `submission/mbis-mwis.md`. Facts are marked ✅ (read on bd.gov.hk) or ⚠️ (unverified). Say so when an answer rests on a ⚠️ item (e.g. penalties under s.40, MBIS 10-year / MWIS 5-year cycle, details of the validation schemes).
+Read `/mnt/project-files/architect-kb/submission/minor-works.md`, `submission/ubw-enforcement.md` and `submission/mbis-mwis.md`. Facts are marked ✅ (read on bd.gov.hk), 📜 (checked against Cap. 123 version 1.3.2026) or ⚠️ (unverified). Say so when an answer rests on a ⚠️ item (e.g. MBIS 10-year / MWIS 5-year cycle, Cap. 123N item list, details of the validation schemes). s.24 orders, s.40 penalties and s.30B / s.30C are 📜.
 
 ## Minor works
 1. Decide: building works at all? Designated exempted works? On the minor works list? Which class? (flow in section 5 of `minor-works.md`). The Schedule 1 item list in Cap. 123N is not in the knowledge base: if the class depends on the exact item, say so and ask for the item number or the regulation.
