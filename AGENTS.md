@@ -40,3 +40,4 @@ Keep the checking tools standard-library only and compatible with Python 3.9. On
 ## Git
 - Work on a branch, not directly on `main`. Commit and push only when asked.
 - Several sessions may share one working tree. Before committing, check `git status` and stage only your own files by name.
+- Every time you merge to `main`, check whether `README.md` needs updating, and update it if it does. Cover counts, commands, demo images, and the lists of what is and is not verified. Make the update in the same pull request before merging. If you find a gap after merging, fix it in a follow-up pull request. Tell the user what you changed, or that nothing was needed.
