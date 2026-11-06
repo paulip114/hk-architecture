@@ -178,11 +178,11 @@ def run(q):
             PASS if d <= S["hose_reel_max_hose_m"] else FAIL)
     if "fs_tank_litres" in q and "largest_floor_m2" in q:
         a = q["largest_floor_m2"]
-        tab = S["fs_tank"]["hydrant_hose_reel_litres_by_largest_floor_m2_unverified"]
+        tab = S["fs_tank"]["hydrant_hose_reel_litres_by_largest_floor_m2"]
         need = next(l for lim, l in tab if lim is None or a <= lim)
-        add("para 5.26 (table unverified)", "FH/HR fire service water tank", f"{q['fs_tank_litres']} L",
-            f"≥ {need} L for largest floor {a} m²", WARN,
-            ("meets" if q["fs_tank_litres"] >= need else "SHORT of") + " the remembered table: the 5.26 table is an image missing from the uploaded text")
+        add("para 5.26", "FH/HR fire service water tank", f"{q['fs_tank_litres']} L",
+            f"≥ {need} L for largest floor {a} m²", PASS if q["fs_tank_litres"] >= need else FAIL,
+            "Effective quantity, gross floor area of the largest floor")
     return rows
 
 
@@ -216,4 +216,6 @@ def main():
 
 
 if __name__ == "__main__":
+    for stream in (sys.stdout, sys.stderr):
+        stream.reconfigure(encoding="utf-8")  # reports contain Chinese and symbols
     main()

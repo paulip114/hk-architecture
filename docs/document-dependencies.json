@@ -96,6 +96,17 @@
    "issue": null
   },
   {
+   "id": "Cap.648",
+   "zh": "延長政府租契條例",
+   "en": "Extension of Government Leases Ordinance",
+   "kind": "law",
+   "stage": "S1",
+   "inLibrary": true,
+   "version": "22.5.2025",
+   "usedFor": "Land administration rules",
+   "issue": null
+  },
+  {
    "id": "Cap.124",
    "zh": "收回土地條例",
    "en": "Lands Resumption Ordinance",
@@ -291,7 +302,7 @@
    "inLibrary": true,
    "version": "11.4.2025",
    "usedFor": "EIA coverage",
-   "issue": 39
+   "issue": null
   },
   {
    "id": "Cap.519",
@@ -302,7 +313,7 @@
    "inLibrary": true,
    "version": "1.9.2023",
    "usedFor": "Railway protection coverage",
-   "issue": 40
+   "issue": null
   },
   {
    "id": "Cap.276",
@@ -313,7 +324,7 @@
    "inLibrary": true,
    "version": "12.8.2021",
    "usedFor": "Railway protection coverage",
-   "issue": 40
+   "issue": null
   },
   {
    "id": "PNAP APP-24",
@@ -324,7 +335,7 @@
    "inLibrary": true,
    "version": "12.2022",
    "usedFor": "Railway protection coverage",
-   "issue": 40
+   "issue": null
   },
   {
    "id": "Cap.121",
@@ -467,7 +478,7 @@
    "inLibrary": true,
    "version": "2025 預發佈版",
    "usedFor": "Contract rules",
-   "issue": 26
+   "issue": null
   },
   {
    "id": "Cap.652",
@@ -511,7 +522,7 @@
    "inLibrary": true,
    "version": "14.3.2024",
    "usedFor": "Lifts and escalators coverage",
-   "issue": 42
+   "issue": null
   },
   {
    "id": "Cap.344",
@@ -522,7 +533,7 @@
    "inLibrary": true,
    "version": "13.7.2025",
    "usedFor": "Building management coverage",
-   "issue": 41
+   "issue": null
   },
   {
    "id": "Cap.123N",
@@ -634,6 +645,24 @@
    "evidence": "Cap. 131 s.13A（PDF p.54）",
    "note": "按 Cap. 519 批准的計劃，視為已根據 Cap. 131 批准。",
    "citations": 4
+  },
+  {
+   "from": "Cap.648",
+   "to": "Cap.131",
+   "type": "gate",
+   "confidence": "documented",
+   "evidence": "Cap. 648 s.13（PDF p.19）",
+   "note": "續期租契隱含契諾：發展和用途都要符合 Cap. 131。",
+   "citations": 2
+  },
+  {
+   "from": "Cap.648",
+   "to": "Cap.123",
+   "type": "gate",
+   "confidence": "documented",
+   "evidence": "Cap. 648 s.13（PDF p.19）",
+   "note": "續期租契隱含契諾：建築物要符合 BO 及其附屬法例。",
+   "citations": 2
   },
   {
    "from": "Cap.123F",
@@ -1131,6 +1160,42 @@
    "citations": null
   },
   {
+   "from": "Cap.648",
+   "to": "Cap.515",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 648 s.13（PDF p.18）",
+   "note": "延長期內的地租按 Cap. 515 繳付。",
+   "citations": 2
+  },
+  {
+   "from": "Cap.515",
+   "to": "Cap.648",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 515 s.3（PDF p.13）",
+   "note": "適用於按 Cap. 648 s.12 延長的租契。",
+   "citations": 2
+  },
+  {
+   "from": "Cap.648",
+   "to": "Cap.150",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 648 s.13（PDF p.21）",
+   "note": "計算租期時要計入 Cap. 150 s.6 的延長期。",
+   "citations": 4
+  },
+  {
+   "from": "Cap.648",
+   "to": "Cap.128",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 648 s.9 起（PDF p.13、p.15–16）",
+   "note": "通知和備忘錄按 Cap. 128 或 Cap. 585 註冊。",
+   "citations": 9
+  },
+  {
    "from": "Cap.499",
    "to": "Cap.131",
    "type": "definition",
@@ -1290,6 +1355,15 @@
    "confidence": "inferred",
    "evidence": "《基本法》第 120 條",
    "note": "第 120 條承認跨越 1997 年的租契。Cap. 150 沒有引用《基本法》。",
+   "citations": null
+  },
+  {
+   "from": "Cap.648",
+   "to": "BL",
+   "type": "workflow",
+   "confidence": "inferred",
+   "evidence": "《基本法》第 123 條",
+   "note": "第 123 條處理沒有續期權的租契到期安排。Cap. 648 沒有引用《基本法》。",
    "citations": null
   },
   {
@@ -2092,15 +2166,6 @@
   },
   {
    "from": "Cap.515",
-   "to": "Cap.648",
-   "count": 2,
-   "pages": [
-    13,
-    19
-   ]
-  },
-  {
-   "from": "Cap.515",
    "to": "Cap.7",
    "count": 2,
    "pages": [
@@ -2627,6 +2692,43 @@
    "count": 1,
    "pages": [
     1
+   ]
+  },
+  {
+   "from": "Cap.648",
+   "to": "Cap.1015",
+   "count": 1,
+   "pages": [
+    23
+   ]
+  },
+  {
+   "from": "Cap.648",
+   "to": "Cap.190",
+   "count": 1,
+   "pages": [
+    22
+   ]
+  },
+  {
+   "from": "Cap.648",
+   "to": "Cap.558",
+   "count": 1,
+   "pages": [
+    22
+   ]
+  },
+  {
+   "from": "Cap.648",
+   "to": "Cap.585",
+   "count": 10,
+   "pages": [
+    4,
+    5,
+    13,
+    15,
+    16,
+    28
    ]
   },
   {

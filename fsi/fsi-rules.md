@@ -31,7 +31,7 @@ Each installation in a paragraph is one of three kinds:
 | 4.16 | 綜合用途 | each use to its own paragraph. If the non-domestic part is sprinklered, the staircases leading to the domestic part on the floors immediately above and below it are sprinklered too, with fast-response heads |
 | 4.3 / 4.4 | 地庫 ≤ / > 230 m² | > 230 m²: fast-response sprinklers throughout; FRS stairway for ≥ 3 levels; smoke extraction where > 7,000 m³ and > 1,135 MJ/m², an industrial basement, or ≥ 3 levels (excluding parking-only areas); pressurization for ≥ 3 levels with no open-air access for firemen, > 7,000 m³ and > 1,135 MJ/m² |
 | 4.26 | 車房 (garage) | sprinklers > 230 m² incl. stairs to it. **Fireman's emergency switch only where EV charging is provided.** Heat or multi-sensor detectors where EV charging is not sprinklered. An extra dry-powder or CO₂ extinguisher at each hose reel on EV floors |
-| 4.9 | 停車間 (car port) | FA and FH/HR depend on risk; same EV rules as garages |
+| 4.9 | 停車間 (car port) | FA and FH/HR depend on risk; same EV rules as garages; sprinklers where total floor area > 230 m² (Circular Letter 1/2023) |
 | 4.27 / 4.28 | 旅館 | sprinklers in all parts incl. bathrooms; smoke or multi-sensor detection over whole floors with sleeping (sounder bases in guestrooms); smoke extraction for internal escape routes serving guestrooms unless openable windows > 6.25%; pressurization where stairs are not naturally ventilated and openable windows ≤ 6.25% |
 | 4.29 / 4.30 | 工業／貨倉 | low rise: sprinklers > 230 m². High rise: sprinklers throughout, FRS stairway, pressurization (four conditions) |
 | 4.31 / 4.32 | 社團 (GIC, clubs, schools, hostels, hospitals, prisons, nursing homes) | low rise: sprinklers > 230 m²; EG for hospitals, nursing homes and prisons or as the risk requires. High rise: sprinklers throughout; pressurization only for hospitals and nursing homes |
@@ -48,7 +48,11 @@ Each installation in a paragraph is one of three kinds:
 - Hose reels: every part within 30 m of hose. Hydrants in the approach lobby or enclosure of a required staircase. One actuating point and one sounder at each hose reel, starting the pumps and the alarm.
 - Linings in ducts, concealed spaces and protected exits: BS 476 Part 7 Class 1 or 2, or equivalent.
 
+## Checked on 2026-11-07
+- **Para 5.26 FH/HR supply tank:** minimum effective quantity by the gross area of the largest floor: ≤ 230 m² 9,000 L; ≤ 460 m² 18,000 L; ≤ 920 m² 27,000 L; > 920 m² 36,000 L. `fsi_check.py` reports PASS or FAIL.
+- **FSD certificate:** the Fire Services Certificate is **F.S. 172**, issued after a satisfactory inspection. The Certificate of Fire Service Installations and Equipment for maintenance and inspection is **F.S. 251**.
+- **Later changes to the September 2022 Codes:** Circular Letter 1/2023 adds sprinklers to para 4.9 (car ports over 230 m², effective 1 April 2023). Circular Letter 4/2024 is a corrigendum and does not change para 5.26. Circular Letter 3/2023 sets the gas extraction specification for battery rooms and charging facilities, for building plans first received on or after 1 September 2023. The copy of the English Code in the document library does not include the 1/2023 change.
+- **Part V scope:** the tool checks para 5.26 tank size only. Other Part V design specifications are for manual checking against the Code.
+
 ## Still unverified
-- **5.26 FH/HR tank size.** The text confirms the basis: 「按最大樓層的樓面面積計算」. The table itself is an image, missing from the uploaded text.
-  - The tool uses 9,000 / 18,000 / 27,000 L (≤ 230 / ≤ 460 / > 460 m²) from memory, and reports it as CHECK only.
 - The Part II pressurization table.

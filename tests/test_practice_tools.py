@@ -7,6 +7,7 @@ Pillow is deliberately not part of that skip check, so test_svg_preview fails if
 import copy
 import importlib.util
 import json
+import os
 import subprocess
 import sys
 import tempfile
@@ -68,6 +69,22 @@ class Contract(unittest.TestCase):
 
     def test_dlp_month_end(self):
         self.assertEqual(contract_admin.add_months(date(2028, 1, 31), 1), date(2028, 2, 29))
+
+
+class Sfbc2025(unittest.TestCase):
+    PERIODS = contract_admin.S["sfbc_2025"]["periods"]
+
+    def test_mediation_period_differs_from_2005(self):
+        self.assertEqual(self.PERIODS["mediation_period_days"]["days"], 42)
+        self.assertEqual(contract_admin.S["periods"]["mediation_period_days"]["days"], 28)
+
+    def test_periods_used_by_the_tool_match_the_2005_values(self):
+        for key in ("oral_instruction_confirm_days", "claim_particulars_days", "half_retention_release_days",
+                    "eot_further_particulars_interval_days"):
+            self.assertEqual(self.PERIODS[key]["days"], contract_admin.P[key]["days"], key)
+
+    def test_listed_events_are_counted(self):
+        self.assertEqual(contract_admin.S["sfbc_2025"]["listed_events"]["count"], 24)
 
 
 class Cost(unittest.TestCase):
@@ -189,6 +206,20 @@ class Drawing(unittest.TestCase):
         log = ifcopenshell.validate.json_logger()
         ifcopenshell.validate.validate(f, log)
         self.assertEqual(log.statements, [])
+
+
+class Console(unittest.TestCase):
+    def test_every_tool_sets_utf8_output(self):
+        for path in sorted(TOOLS.glob("*.py")):
+            self.assertIn('reconfigure(encoding="utf-8")', path.read_text(encoding="utf-8"), path.name)
+
+    def test_reports_print_on_a_non_utf8_console(self):
+        env = dict(os.environ, PYTHONIOENCODING="cp1252", PYTHONUTF8="0")
+        cases = (("cost_estimate.py", "demo_practice.json"), ("bpr_check.py", "demo_composite.json"))
+        for tool, demo in cases:
+            r = subprocess.run([sys.executable, TOOLS / tool, ROOT / "examples" / demo], capture_output=True, env=env)
+            self.assertNotIn(b"UnicodeEncodeError", r.stderr, tool)
+            self.assertIn("Draft", r.stdout.decode("utf-8"), tool)
 
 
 class CLI(unittest.TestCase):

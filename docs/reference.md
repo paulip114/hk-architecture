@@ -8,6 +8,10 @@ Unfinished work is tracked in [GitHub issues](https://github.com/paulip114/hk-ar
 
 | Path | What it is |
 | --- | --- |
+| `statutes/eia-rules.md` | EIA Ordinance (Cap. 499): how to tell whether a scheme is affected, and what is required |
+| `statutes/railway-protection-rules.md` | Railway protection (PNAP APP-24, Cap. 519, Cap. 276): how to tell whether a site is affected, process and design limits |
+| `statutes/building-management-rules.md` | Building Management Ordinance (Cap. 344): common parts, owners' decisions and DMCs for design and A&A work |
+| `statutes/lifts-escalators-rules.md` | Lifts and Escalators Ordinance (Cap. 618): responsible person, examination and use permits |
 | `docs/document-library.md` | Source documents used to check the rules: version dates, official links and what each is used for. The documents are not in the repo |
 | `docs/document-dependencies.json` | How the documents in the library depend on each other across project stages. An edge from A to B means A depends on B. Each edge records its type, evidence and whether it is documented or inferred. Draft for AP review |
 | `docs/document-dependency-graph.html` | Interactive view of `docs/document-dependencies.json`. Download it and open it in a browser. It holds a copy of the data, so update both together. Draft for AP review |
@@ -86,7 +90,7 @@ Exit code 1 when any item fails.
 ## Practice: contracts, cost, site supervision, sketch drawings
 | Path | What it is |
 | --- | --- |
-| `contracts/contract-rules.md`, `contracts/sfbc.json` | HKIA/HKIS/HKICM SFBC (2005/2006 rev. 2023; 2025 Ed. noted) clause map, periods, appointment, tender, PA Paper 2 notes |
+| `contracts/contract-rules.md`, `contracts/sfbc.json` | HKIA/HKIS/HKICM SFBC (2005/2006 rev. 2023; 2025 Ed. periods checked against a pre-launch copy) clause map, periods, appointment, tender, PA Paper 2 notes |
 | `tools/contract_admin.py` | Extended Completion Date, LD (with cap and pending EOT), retention and release dates, DLP, notice checks (cl. 4.2, 25.2, 28.2), CISPO (Cap. 652) payment response / payment deadlines. Reads `contract` |
 | `cost/cost-rules.md`, `cost/hk_cost_rates.json` | Cost planning stages, Arcadis Q2 2026 HK$/m² CFA rates, TPI |
 | `tools/cost_estimate.py` | Order-of-cost estimate with low/mid/high range, allowances, escalation, fees, budget, S-curve. Reads `cost` (and `floors[]` via `from_floors`) |
@@ -100,7 +104,7 @@ Exit code 1 when any item fails.
 | `tests/test_practice_tools.py` | `python3 -m unittest discover -s tests` |
 | `tests/test_compliance_rules.py` | Tests for the APP-151 cap, B(P)R reg 31, the APP-152 figures and the barrier-free lift and counter limits, run by the same command |
 | `tests/test_document_dependencies.py` | Checks the dependency data and that the interactive page holds the same data |
-| `.github/workflows/tests.yml` | Runs the tests and BIM tests with the drawing packages on Python 3.9 and 3.13 |
+| `.github/workflows/tests.yml` | Runs the tests and BIM tests with the drawing packages on Linux (Python 3.9 and 3.13) and Windows (Python 3.13) |
 
 Drawing tools need `pip install -r requirements-drawing.txt` (ezdxf, ifcopenshell, shapely, pillow). Every output is a draft: contract results for the Architect / QS against the signed contract, cost for a QS to develop, supervision plan for the AP / RSE / AS, drawings marked "SKETCH – NOT FOR SUBMISSION".
 ## Fire Code Part A / Part F, FSD minimum FSI, energy efficiency

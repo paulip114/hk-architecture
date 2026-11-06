@@ -13,7 +13,11 @@ Last compiled: 2026-11-05. Sources read: LAO PN 2/2023, 4/2021, 2/2018, 4/2014A,
 | Waiver letter (豁免書) | Temporary relaxation of user etc. while the lease stays unchanged; fee payable; can be terminated |
 | Consent / approval letter | Under an existing discretionary clause of the lease (PN 4/2021) |
 
-Lease term: most leases expiring before 2047 were extended to 30.6.2047 and beyond under the Basic Law and the New Territories Leases (Extension) Ordinance (Cap. 150), with Government rent at 3% of rateable value (Cap. 515) [verify]. Check the lot's lease from the Land Registry search (IL / KIL / NKIL / STTL / TPTL / DD lot number).
+Lease term and Government rent. Check the lot's lease from the Land Registry search (IL / KIL / NKIL / STTL / TPTL / DD lot number).
+- **Basic Law Art. 120-123:** leases extending beyond 30.6.1997 continue to be protected (Art. 120). Leases granted or renewed from 27.5.1985 to 30.6.1997 with no right of renewal, extending beyond 30.6.1997 and expiring by 30.6.2047, need no additional premium from 1.7.1997 but pay annual rent of 3% of rateable value (Art. 121). Rent stays unchanged on old schedule lots, village lots, small houses and similar rural holdings held by the persons Art. 122 describes. Leases without a right of renewal expiring after 1997 are dealt with under Hong Kong law and policy (Art. 123).
+- **Cap. 150:** New Territories leases that would have expired before 30.6.1997 were extended until 30.6.2047 without additional premium (s.2, s.6). It excludes short term tenancies and leases for special purposes.
+- **Cap. 648, in force 5.7.2024:** for a lease expiring on or after 5.7.2024 with no remaining right of renewal, not a short term tenancy (s.3). A lease covered by an Extension Notice and not on a Non-extension List is extended for 50 years from the day after expiry, without additional premium (s.7, s.8, s.12). Part 4 applies where a foreign-related entity is a registered owner and the land or premises are used for a consular post or an international organization's representative office, or as staff residences. It needs the approval of the Office of the Commissioner of the Ministry of Foreign Affairs by the expiry date. For land under s.15, without approval the lease is not extended under s.12 and ends on expiry (s.18). Section 19 sets the consequences for interests under s.16, and was not read in detail.
+- **Cap. 515:** Government rent is 3% of rateable value (s.6) on leases extended by Cap. 150 s.6 or Cap. 648 s.12, and leases with an express obligation to pay that rent (s.3). Section 4 exempts certain interests of indigenous villagers.
 
 ## 2. Clauses that drive design
 Typical clauses an AP must check (LAO PN 2/2018 Appendix I lists them for the Development Schedule):
@@ -21,7 +25,7 @@ Typical clauses an AP must check (LAO PN 2/2018 Appendix I lists them for the De
 - **Maximum / minimum GFA (最高／最低總樓面面積)** – modern leases mirror the OZP PR (JPN 4 para 2). A minimum GFA clause can also bind.
 - **Site coverage (上蓋面積)** – SC beyond the lease limit for PNAP APP-2 / APP-151 features needs a discretionary clause; where it is missing, lease modification at administrative fee, then premium for the relaxation (PN 1/2004).
 - **Height** – generally no longer in new leases (JPN 5 para 4); in old leases an mPD or storey limit may remain and needs modification to remove.
-- **Design, Disposition and Height (DDH, 設計、佈局及高度)** – Director's approval of the layout; no premium for approval itself (PN 4/2021 App A(I)); PN 3/2020 and 3/2020A explain the clause [text was scanned, not read – verify].
+- **Design, Disposition and Height (DDH, 設計、佈局及高度)** – Director's approval of the layout; no premium for approval itself (PN 4/2021 App A(I)); PN 3/2020 and 3/2020A explain the clause; see the summary below.
 - **Building covenant (建築規約)** – complete a minimum GFA within a stated period (often 48–72 months) and obtain the Certificate of Compliance (滿意紙, PN 1/2026); extensions under PN 2/2021, 2/2022, with premium.
 - **Non-building area, setback, building separation, greenery / landscape (PN 1/2020), tree preservation (PN 6/2023)**.
 - **Car parking, loading / unloading, vehicular access points** – rates may differ from HKPSG; variation usually attracts premium (PN 4/2021 App B).
@@ -86,10 +90,16 @@ Programme rule of thumb (uninterrupted case, no appeal): 3 weeks + 22 weeks + 2 
 4. Sequence with planning: s16 / s12A → lease modification → GBP.
 5. Run `tools/planning_lease_check.py` to tabulate the checks, the route and an indicative programme and premium.
 
+## 8A. DDH and DD clauses (LAO PN 3/2020 and 3/2020A)
+- **Not generally imposed** in new or modified leases for commercial, industrial or godown sites, private residential or composite sites in Density Zone I in urban areas, R(A) sites in the New Territories, and sites needing an MLP or layout plan (PN 3/2020 para 3). Owners of such existing leases may apply to remove the clause when pursuing a lease modification, subject to a maximum GFA clause, administrative fee and premium as the Director thinks fit (para 5).
+- **Timing:** considered with the building plans through BD's Centralized Processing System, with no separate application. Approval in principle may be given at stage 1 (para 6).
+- **Guide figures** under the clause, each assessed on its merits: stilts up to 8 m with justification and surface treatment; soil filling on sloping or undulating sites up to 2 m (para 7). Pipes over public streets up to 300 mm at 2.5 m or more above ground, as B(P)R reg 7(2).
+- **Site coverage:** all components count unless exempted under the lease (para 7(a)). PN 3/2020A varies this for underground structures. Where the lease has a GFA or plot ratio limit and an SC limit, LandsD generally follows BD's SC treatment unless the lease prohibits it. Where SC and height are what control intensity, underground structures may be disregarded only if the intensity does not increase; otherwise a lease modification is needed. PN 3/2020A does not apply to buildings exempted under Cap. 121.
+- **Appeal:** the Director may consider an appeal, and the decision is final (para 10).
+
 ## 9. Open items
-- LAO PN 3/2020, 3/2020A (DDH clause) are scanned PDFs; text not read.
-- Cap. 150 / Cap. 515 / Basic Law Art. 120–123 statements not checked against eLegislation.
-- Lands Department's current administrative fee schedule not read.
+- Lands Department's current administrative fee was not found ([#63](https://github.com/paulip114/hk-architecture/issues/63)). The Land Registry registration fees under Cap. 128B are a separate charge.
+- Checked on 2026-11-07: PN 3/2020 (27 April 2020), PN 3/2020A (11 August 2021), Basic Law Art. 120-123, Cap. 150 (24.8.2025), Cap. 515 (22.5.2025) and Cap. 648 sections 3, 4, 11, 12 and 14-18 (22.5.2025). The PN 3/2020 Appendix sketch was not read in detail.
 - Small House Policy, NT land exchange specifics and resumption / compensation not covered.
 
 ## Sources
