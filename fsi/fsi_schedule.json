@@ -1,5 +1,5 @@
 {
- "_source": "FSD《最低限度之消防裝置及設備守則與裝置及設備之檢查、測試及保養守則》2022年9月 (Chinese text uploaded by the user 2026-11-06). Part IV paras 4.1-4.45 parsed from the text: the installation lists and the applicability wording (applicability_zh) are verbatim. English names are working translations.",
+ "_source": "FSD《最低限度之消防裝置及設備守則與裝置及設備之檢查、測試及保養守則》2022年9月 (Chinese text uploaded by the user 2026-11-06). Para 5.26 and para 4.9 sprinklers: English Code and FSD Circular Letter 1/2023, read 2026-11-07. Part IV paras 4.1-4.45 parsed from the text: the installation lists and the applicability wording (applicability_zh) are verbatim. English names are working translations.",
  "verified": true,
  "high_rise_m": 30,
  "_high_rise_def_zh": "「高層建築物」指最高樓層的樓面在地面層水平的樓梯出口處之上超過30米的建築物。",
@@ -661,6 +661,10 @@
    "para": "4.9",
    "title_zh": "停車間",
    "installations": {
+    "sprinkler": {
+     "cond": "sprinkler_230",
+     "applicability_zh": "FSD Amendment Sheet 1/2023 英文本：總樓面面積超過230平方米的停車間須安裝，並覆蓋停車間所有部分，包括通往停車間的樓梯。適用於2023年4月1日或之後收到的新建築物圖則，以及大規模重建或改動的圖則。"
+    },
     "emergency_lighting": {
      "cond": "yes",
      "applicability_zh": "所有公眾地方及通往地面的所有出路通道均須安裝應急照明系統。"
@@ -2269,20 +2273,12 @@
  "fs_tank": {
   "para": "5.26",
   "basis_zh": "就消防栓／喉轆系統而言，按最大樓層的樓面面積計算，所需提供的最少有效存水量如下：",
-  "_note": "The table that follows is an image in the PDF and is missing from the uploaded text. The values below are from memory and remain UNVERIFIED.",
-  "hydrant_hose_reel_litres_by_largest_floor_m2_unverified": [
-   [
-    230,
-    9000
-   ],
-   [
-    460,
-    18000
-   ],
-   [
-    null,
-    27000
-   ]
+  "_note": "Checked on 2026-11-07 against a rendered page of the English Code, September 2022, para 5.26 (printed page 81). Floor area is gross; the factor is the largest floor. The English text says 9 000 l up to 230 m2, 18 000 l up to 460 m2, 27 000 l up to 920 m2 and 36 000 l above.",
+  "hydrant_hose_reel_litres_by_largest_floor_m2": [
+   [230, 9000],
+   [460, 18000],
+   [920, 27000],
+   [null, 36000]
   ]
  },
  "hydrant_flow_zh": "5.25: 2 個 65 毫米消防栓出水口同時出水，總出水量不少於每分鐘 4 000 公升，運行壓力不少於 170 千帕斯卡，輸水時間最低限度 60 分鐘 (street / private hydrant system)"
