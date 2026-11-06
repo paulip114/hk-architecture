@@ -13,9 +13,10 @@ Usage:  python3 supervision_plan.py project.json [-o report.md]   (reads the `su
   minor_works: true for minor works under the simplified requirements
   geotechnical: true when the works have significant geotechnical content
 Produces: scale factor per work type (capped at 2), inspection effort per TCP, submission timing checks,
-and a draft supervision plan schedule. TM Table 1 (grade and frequency by stream and works type) is not
-encoded: enter the grades and levels from the TM; the tool checks that every work type has AS and AP
-stream cover, and that frequencies are consistent with the scale factor rules.
+TM Table 1 minimum grade and frequency per stream (supervision/supervision.json `tm_table1`), and a draft
+supervision plan schedule. Each work maps to a TM row by `work_type_to_tm_row` (override with work `tm_row`:
+gi_field_works / geotech_foundation / geotech_others / foundation / all_other / minor_class1 ...).
+  streams_appointed: optional list, default AS, AP, RSE (+ RGE when geotechnical)
 """
 import argparse
 import json
@@ -75,21 +76,43 @@ def run(q):
             add("TM Table 1", f"{t.get('name', t['grade'])} {t['stream']} {t['grade']} full-time", "level 5", "check TM", WARN,
                 "full-time T4/T5 is unusual in AP/AS streams; confirm against TM Table 1")
 
-    covered = {}
-    for t in q.get("tcps", []):
-        for w in t.get("works", []):
-            covered.setdefault(w, set()).add(t["stream"])
-    structural = {"demolition", "site_formation", "elsw", "pile_wall", "tunnel", "large_dia_bored_piles",
-                  "other_piles", "cap_footing_basement", "superstructure", "alteration_addition", "slope_repair"}
-    geotech = {"site_formation", "elsw", "pile_wall", "tunnel", "large_dia_bored_piles", "other_piles",
-               "slope_repair", "gifw_rigs", "gifw_pits"}
-    foundation_only = {"large_dia_bored_piles", "other_piles", "pile_wall", "gifw_rigs", "gifw_pits"}
-    for w in factors:
-        need = ["AS"] + ([] if w in foundation_only else ["AP"]) + (["RSE"] if w in structural else []) + \
-               (["RGE"] if q.get("geotechnical") and w in geotech else [])
-        miss = [s for s in need if s not in covered.get(w, set())]
-        add("TM Table 1", f"Stream cover – {w.replace('_', ' ')}", ", ".join(sorted(covered.get(w, []))) or "none",
-            "indicative: AS, AP (not piling), RSE (structural), RGE (geotechnical)", WARN if miss else PASS, f"missing: {', '.join(miss)}" if miss else "")
+    # TM Table 1: each required (stream, grade, level) must be met by a TCP of that stream covering the work,
+    # with grade >= required grade and frequency level >= required level (higher grade assumed acceptable).
+    tm = S["tm_table1"]
+    appointed = set(q.get("streams_appointed") or (["AS", "AP", "RSE"] + (["RGE"] if q.get("geotechnical") else [])))
+    order = ["T1", "T2", "T3", "T4", "T5"]
+    for w in q.get("works", []):
+        wt = w["type"]
+        row_key = w.get("tm_row") or S["work_type_to_tm_row"].get(wt)
+        if q.get("geotechnical") and wt in S["geotech_types"] and not w.get("tm_row"):
+            row_key = S["geotech_switch"].get(row_key, row_key)
+        row = tm.get(row_key)
+        if row is None:
+            add("TM Table 1", f"Row for {wt}", "-", "-", WARN, "no TM Table 1 row mapped; give `tm_row`")
+            continue
+        for stream in ("AS", "AP", "RSE", "RGE"):
+            req = row.get(stream)
+            if not req:
+                continue
+            if stream not in appointed:
+                add("TM Table 1", f"{wt.replace('_', ' ')} – {stream} stream", "not appointed", row["label"], INFO,
+                    "stream not in streams_appointed; confirm it is not needed")
+                continue
+            have = [t for t in q.get("tcps", []) if t["stream"] == stream and wt in t.get("works", [])]
+            free = sorted(have, key=lambda t: (order.index(t["grade"]), t["frequency_level"]))
+            # each required grade needs its own TCP: fill the highest grade first, using the lowest TCP that fits
+            for grade, lvl in sorted(((g, l) for g, l in req.items() if g != "principal"),
+                                     key=lambda x: -order.index(x[0])):
+                ok = [t for t in free if order.index(t["grade"]) >= order.index(grade) and t["frequency_level"] >= lvl]
+                if ok:
+                    free.remove(ok[0])
+                status = PASS if ok else FAIL
+                note = "" if ok else "no TCP of this grade (or higher) at this frequency"
+                if row.get("uncertain"):
+                    status, note = WARN, row["uncertain"]
+                add(f"TM Table 1 ({row_key})", f"{wt.replace('_', ' ')} – {stream} {grade}",
+                    ", ".join(f"{t['grade']} L{t['frequency_level']}" for t in have) or "none",
+                    f"{grade} at level {lvl} ({S['frequency_levels'][str(lvl)]['text']})", status, note)
 
     dt = q.get("dates", {})
     ps, ca, cm, tc = d(dt.get("plan_submitted")), d(dt.get("consent_application")), d(dt.get("commencement")), d(dt.get("tcp_confirmed"))
@@ -126,7 +149,7 @@ def main():
     out = [f"# Site supervision plan – {p.get('project', 'Untitled')}", "",
            f"**{fails} fail, {checks} to check** ({len(rows)} items).", "",
            "> Draft for the AP / RSE / RGE / AS. Grades and frequencies must match Table 1 of the Technical Memorandum for "
-           "Supervision Plans 2009, which this tool does not encode. Effort assumes a visit of 8 h × scale factor (CoP 8.7). Use the BD standard form of supervision plan (CoP Appendix I).", "",
+           "Supervision Plans 2009 (encoded from an automated read; check against the TM). A higher grade is assumed to satisfy a lower one. Effort assumes a visit of 8 h × scale factor (CoP 8.7). Use the BD standard form of supervision plan (CoP Appendix I).", "",
            "| Ref | Item | Value | Requirement | Result | Note |", "| --- | --- | --- | --- | --- | --- |"]
     out += ["| " + " | ".join(str(x) for x in r) + " |" for r in rows]
     out += ["", "## Draft TCP schedule", "",

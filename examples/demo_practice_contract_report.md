@@ -1,6 +1,6 @@
 # Contract administration – 示範：大角咀住宅大廈（虛構）
 
-**2 notice failures, 2 items to check** (14 items, form SFBCwQ.2005).
+**3 notice failures, 2 items to check** (19 items, form SFBCwQ.2005).
 
 > Draft for the Architect / QS. Clause numbers from SFBCwQ.2005 (rev. 2023); check against the signed contract, its Appendix and any special conditions. Not legal advice.
 
@@ -20,3 +20,8 @@
 | 4.2(1) | AI-061 (oral, site meeting 22) oral instruction confirmed | 3 days | ≤ 5 days | PASS |  |
 | 4.2(1) | AI-077 (oral, by phone) oral instruction confirmed | 10 days | ≤ 5 days | FAIL |  |
 | 28.2(2) | LE-03 prolongation (EOT-02) claim particulars | 47 days | ≤ 60 days | PASS |  |
+| Cap. 652 | IPA-31 payment response | 2028-10-20 | by 2028-10-21 (≤ 21 days) | PASS |  |
+| Cap. 652 | IPA-31 admitted amount paid | HK$8,600,000 | by 2028-11-25 | PASS |  |
+| Cap. 652 | IPA-31 disputed amount | HK$1,200,000 | claimed − admitted | INFO | adjudication referral window 28 days (CIC timeline: days 61-88 after the claim); pay-when-paid terms are void |
+| Cap. 652 | IPA-32 payment response | none | by 2028-11-30 | FAIL | no response: set-off (e.g. LD) cannot be raised in adjudication |
+| Cap. 652 | IPA-32 payment deadline | - | 2028-12-30 | INFO |  |

@@ -13,8 +13,8 @@ Use when the user asks about the architect's role under a Hong Kong building con
 3. Ask which form and edition applies (SFBCwQ.2005 / SFBCnQ.2006 rev. 2023, or the 2025 Edition) and for the Appendix values. Do not assume Appendix values.
 
 ## Run
-- Contract: write a `contract` block following `examples/demo_practice.json`, then `python3 /mnt/project-files/architect-kb/tools/contract_admin.py <file>.json --as-of <date> -o <report>.md`.
-- Supervision: write a `supervision` block, then `python3 .../tools/supervision_plan.py <file>.json -o <report>.md`. Enter TCP grades and frequency levels from TM Table 1 (not encoded).
+- Contract: if the contract was made on or after 28 Aug 2025 and is above the CISPO threshold, set `cispo: true` and add `payment_claims[]`. Write a `contract` block following `examples/demo_practice.json`, then `python3 /mnt/project-files/architect-kb/tools/contract_admin.py <file>.json --as-of <date> -o <report>.md`.
+- Supervision: write a `supervision` block, then `python3 .../tools/supervision_plan.py <file>.json -o <report>.md`. The tool checks TCPs against TM Table 1; override the TM row per work with `tm_row` where the default mapping is wrong.
 - Save under `/mnt/project-files/projects/<project-name>/`.
 
 ## Report back

@@ -12,6 +12,9 @@ Usage:  python3 contract_admin.py project.json [-o report.md] [--as-of YYYY-MM-D
   eots[]: {ref, event, days, granted (bool), particulars_dates[] (ISO dates, cl. 25.2(3)(b) <= 28 days apart)},
   instructions[]: {ref, oral_date, confirmed_date}       (cl. 4.2(1) 5 days)
   claims[]: {ref, notice_date, particulars_date}         (cl. 28.2(2) 60 days)
+  cispo: true when CISPO (Cap. 652) applies (contract on/after 2025-08-28, above threshold); then
+  payment_claims[]: {ref, served, claimed, response_date, admitted, paid_date, paid,
+                     response_days (contract, ≤ 30), payment_days (contract, ≤ 60)}
 Exit code 1 when any notice check fails. Periods and clause numbers from contracts/sfbc.json.
 The results are a draft for the Architect / QS to check against the signed contract and its Appendix.
 """
@@ -130,6 +133,41 @@ def run(c, as_of=None):
         else:
             add("28.2(2)", f"{cl['ref']} claim particulars", f"{(pd - nd).days} days", f"≤ {lim60} days",
                 PASS if pd <= due else FAIL, "late particulars may bar the claim (check wording)" if pd > due else "")
+    sop = S["cispo"]
+    if c.get("cispo"):
+        if d(c.get("contract_date")) and d(c["contract_date"]) < date(2025, 8, 28):
+            add("Cap. 652", "CISPO applicability", c["contract_date"], "contracts from 2025-08-28", WARN,
+                "contract predates CISPO: payment checks shown for reference only")
+        for pc in c.get("payment_claims", []):
+            sv = d(pc["served"])
+            rd = min(pc.get("response_days", 30), sop["payment_response_max_days"])
+            pdays = min(pc.get("payment_days", 60), sop["payment_deadline_max_days"])
+            r_due, p_due = sv + timedelta(days=rd), sv + timedelta(days=pdays)
+            resp = d(pc.get("response_date"))
+            if resp is None:
+                st = FAIL if as_of > r_due else WARN
+                add("Cap. 652", f"{pc['ref']} payment response", "none", f"by {r_due}", st,
+                    "no response: set-off (e.g. LD) cannot be raised in adjudication" if st == FAIL else "")
+            else:
+                add("Cap. 652", f"{pc['ref']} payment response", str(resp), f"by {r_due} (≤ {rd} days)",
+                    PASS if resp <= r_due else FAIL, "" if resp <= r_due else "late: set-off cannot be raised in adjudication")
+            due = pc.get("admitted", pc.get("claimed"))
+            paid = pc.get("paid", 0)
+            pd = d(pc.get("paid_date"))
+            if due is not None:
+                short = due - paid if (pd and pd <= p_due) else (due if as_of > p_due else 0)
+                if short > 0:
+                    add("Cap. 652", f"{pc['ref']} admitted amount paid", money(paid), f"{money(due)} by {p_due}", FAIL,
+                        f"claimant may refer to adjudication within {sop['adjudication_referral_days']} days and may suspend "
+                        f"on {sop['suspension_notice_working_days']} working days' notice")
+                elif pd or as_of > p_due:
+                    add("Cap. 652", f"{pc['ref']} admitted amount paid", money(paid), f"by {p_due}", PASS)
+                else:
+                    add("Cap. 652", f"{pc['ref']} payment deadline", "-", str(p_due), INFO)
+            if pc.get("claimed") is not None and pc.get("admitted") is not None and pc["admitted"] < pc["claimed"]:
+                add("Cap. 652", f"{pc['ref']} disputed amount", money(pc["claimed"] - pc["admitted"]), "claimed − admitted", INFO,
+                    f"adjudication referral window {sop['adjudication_referral_days']} days (CIC timeline: days 61-88 after the claim); "
+                    "pay-when-paid terms are void")
     return rows
 
 
