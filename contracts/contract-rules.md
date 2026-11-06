@@ -14,7 +14,7 @@ Status legend: **[V]** checked against a secondary source on 2026-11-05 (kctang.
 | Housing Authority | HKHA GCC for Building Works 2013 v1.1 **[V]** |
 | Architect's appointment | HKIA Standard Form of Agreement + Standard Conditions of Agreement **[V name, U edition]** |
 
-Paper 2 study guide (2021) cites the 2005 / 2006 editions. The 2025 Edition was listed on 31/1/2026: check which one the exam sitting uses, and note the changes once the 2025 text is in hand.
+Paper 2 study guide (2021) cites the 2005 / 2006 editions. **2025 Edition [V]**: one form with Option 1 (With Quantities) and Option 2 (Without Quantities), plus Nominated Sub-Contract and Nominated Supply Contract; draft e-copy 29 Aug 2025, launched 6 Jan 2026, drafted by Pinsent Masons for HKIA / HKIS / HKICM, written to fit CISPO (section 5). Reported changes **[U, secondary source only]**: programme submission and updating in the conditions, float and EOT interaction, payment timelines and pay-less notices with day counts in the Appendix, stricter variation notice windows, retention bond option. The clause text is copyright and not online: buy the form from HKIS before relying on clause numbers. Clause numbers below are the 2005 edition.
 
 ## 2. Appointment of the architect (Section A of Paper 2)
 - Conditions of engagement: scope of services by stage, fee basis (percentage, lump sum or time charge), payment by stage, additional services, termination, PI insurance, copyright and limitation of liability. **[U]**
@@ -54,8 +54,18 @@ Paper 2 study guide (2021) cites the 2005 / 2006 editions. The 2025 Edition was 
 ### Certificate sequence
 Interim certificates (monthly) → Certificate of Non-Completion (if late) → Substantial Completion Certificate (½ retention, DLP starts) → end of DLP, schedule of defects → Defects Rectification Certificate (balance of retention) → final account → Final Certificate.
 
-## 5. Security of payment
-Government public works carry security-of-payment provisions by contract (DEVB, from 2021-2022). A Security of Payment Ordinance for the wider industry had not been confirmed here: check the current position before advising. **[U]**
+## 5. Security of payment: CISPO (Cap. 652) **[V]**
+Source: CIC briefing and CMS update, read 2026-11-06. Tool: `contract_admin.py` `payment_claims[]` with `cispo: true`.
+- In force 28 Aug 2025 for contracts entered into on or after that date. Cannot be contracted out of.
+- Applies to main works contracts ≥ HK$5M and main supply / services contracts ≥ HK$0.5M, public and private, and to every subcontract below them. Private existing buildings: excludes occupied residential and works not needing BA approval. Composite buildings: only BA-approved works in non-residential parts count toward the threshold.
+- Payment claim: on the contract date, else the last day of the month; one per progress payment. Variations go through the contract procedure first.
+- Payment response within the contract period, max 30 days, stating the admitted amount and reasons. **No response = no set-off (e.g. LD) in adjudication.**
+- Admitted amount paid within the contract period, max 60 days.
+- Pay-when-paid and pay-if-paid are void.
+- Adjudication: refer within 28 days (CIC timeline days 61-88 after the claim). Working days: ANB appoints by day 7, submission day 8, response day 28, reply day 30, determination within 55 working days of appointment. Pay the adjudicated amount within 30 days unless the adjudicator says otherwise. Set aside / enforce in the District Court (< HK$3M) or CFI.
+- Suspension: 5 working days' notice after an admitted or adjudicated amount goes unpaid; resume within 5 working days of payment; EOT and loss and expense follow.
+- EOT disputes under private main contracts are not yet adjudicable (later phase).
+- Architect's practice point: under SFBC the Architect certifies, but the Employer must issue the CISPO payment response. Align certificate timing with the 30-day response so the Employer does not lose its set-off.
 
 ## 6. Exam technique (Paper 2)
 - Answer as the Architect under the named form: cite the clause, state who acts, by when, and with what document.
@@ -63,6 +73,6 @@ Government public works carry security-of-payment provisions by contract (DEVB, 
 - For delay questions, walk through: Relevant Event? notice given? critical? concurrent? EOT amount, then LD and loss and expense separately.
 
 ## Open items
-- Load 2025 Edition clause changes once the form text is available.
-- HKIA appointment agreement: current edition, stage percentages and standard services.
-- Determination notice periods, interim certificate periods and the full EOT Relevant Events list need checking against the form.
+- 2025 Edition clause text and numbering: needs the purchased form (copyright, not published online).
+- HKIA appointment agreement: current edition, stage percentages and standard services are not published online; check with HKIA.
+- 2005 form: interim certificate and honouring periods, EOT initial notice, determination notice periods and the full Relevant Events list are not in any public source found; the full text was removed from kctang.com.hk for copyright. Check against the form.

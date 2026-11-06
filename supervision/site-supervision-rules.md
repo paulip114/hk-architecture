@@ -20,9 +20,22 @@ Draft working rules. Data: `supervision.json`. Tool: `../tools/supervision_plan.
 | T5 | engineering safety supervision | registered professional + 5 years |
 The AP, RSE and RGE are deemed to meet these minimums in their own streams (CoP 4.6). **[V]**
 
-## 3. Frequency (TM Table 1 key) **[V]**
-Level 1 as and when required; 2 monthly; 3 fortnightly; 4 weekly; 5 full-time during site working hours.
-The grade and level for each works type and stream are in TM Table 1. **They are not encoded here**: the extraction did not keep the table's columns. Read them from the TM for every plan. **[open item]**
+## 3. TM Table 1: minimum grade and frequency **[V, two consistent automated reads]**
+Levels: 1 as and when required · 2 monthly · 3 fortnightly · 4 weekly · 5 full-time. Each principal (AS, AP, RSE, RGE) is at level 1 personally.
+
+| Works (TM row) | RC / AS stream | AP stream | RSE stream | RGE stream |
+| --- | --- | --- | --- | --- |
+| Ground investigation field works | T1 L5, T4 L4 | T3 L3 | – | T3 L5, T5 L4 |
+| Significant geotechnical: foundation | T1 L5, T2 L5, T4 L4 | T3 L4, T4 L2 | T3 L5, T5 L4 | T3 L5, T5 L4 |
+| Significant geotechnical: others | T1 L5, T2 L4, T4 L4 | T3 L4, T4 L2 | T3 L4, T5 L3 | T3 L5, T5 L4 |
+| Foundation (other) | T1 L5, T2 L5, T4 L4 | T3 L4, T4 L2 | T3 L5, T5 L4 | – |
+| All other building works / street works | T1 L5, T3 L4, T4 L4 | T3 L4, T4 L2 | T3 L4, T5 L3 | – |
+| Class I minor works (AP only) | T1 L5, T3 L4 | T3 L4 | – | – |
+| Class I minor works, + RSE | – | – | T3 L4 | – |
+| Class I minor works, + RGE | – | – | – | one cell unclear (read as T2 L5; likely T3) **[U]** |
+
+Notes: higher grade or more frequent inspection may be required at critical stages (Note 2); CoP defines "significant geotechnical content" (Notes 4, 5).
+The tool maps Table 8.1 work types to these rows (`work_type_to_tm_row`: piles, pile walls and cap/footing/basement → foundation; the rest → all other). Override with `tm_row` where the mapping is wrong. A higher grade is assumed to satisfy a lower one **[U]**.
 
 ## 4. Scale of works (CoP section 8, Table 8.1) **[V]**
 - Scale factor = estimated value ÷ basic value of the measurable item, capped at 2.
@@ -50,5 +63,5 @@ The grade and level for each works type and stream are in TM Table 1. **They are
 - Construction Sites (Safety) Regulations (Cap. 59I) and the Factories and Industrial Undertakings Ordinance (Cap. 59) put site safety on the contractor; the designer must still design for safe construction and maintenance. **[U]**
 
 ## Open items
-- Encode TM Table 1 rows after a manual read of the TM PDF.
+- TM Table 1 was read by automated extraction (twice, consistent). Spot-check against the PDF, especially the Class I minor works RGE cell.
 - Check BO / B(A)R section numbers and the BA forms (BA10 consent, BA12, BA14) against the current BD forms list.

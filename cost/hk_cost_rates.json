@@ -1,5 +1,5 @@
 {
-  "_source": "Arcadis, Quarterly Construction Cost Review Q2 2026 – Hong Kong and China (https://www.arcadis.com/contentassets/51b6ca88731442dfa76230f3426cee33/cnhk-qcc-2026-q2-final-1-2.pdf), transcribed 2026-11-05 by automated text extraction. Re-check each figure against the PDF before issuing an estimate.",
+  "_source": "Arcadis, Quarterly Construction Cost Review Q2 2026 – Hong Kong and China (https://www.arcadis.com/contentassets/51b6ca88731442dfa76230f3426cee33/cnhk-qcc-2026-q2-final-1-2.pdf), page 5 'Approximate Building Costs Hong Kong'. Read twice (2026-11-05, 2026-11-06) by automated extraction with identical results. Preliminaries / foundations inclusion not stated on the page.",
   "_basis": "HK$/m2 CFA, fixed-price competitive tenders, Q2 2026. CFA measured to outside face of external walls incl. lift shafts, stairs, balconies, plant rooms, tanks. Assumes no basement, flat ground, normal soil. Excludes site formation, external works, land, professional fees, finance and legal costs.",
   "base_quarter": "2026Q2",
   "rates": {
@@ -29,7 +29,7 @@
     "_note": "Planning allowances for a feasibility estimate, not market data. Set project-specific values; all unverified.",
     "site_formation_pct": 0,
     "external_works_pct": 3,
-    "preliminaries_note": "Arcadis rates are understood to include preliminaries and contractor's margin (tender rates); confirm.",
+    "preliminaries_note": "Not stated on the Arcadis page whether preliminaries, margin and foundations are included (usually they are); unverified.",
     "design_contingency_pct": 10,
     "construction_contingency_pct": 5,
     "professional_fees_pct": 10,

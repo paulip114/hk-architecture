@@ -52,6 +52,18 @@ class Contract(unittest.TestCase):
         self.assertEqual(by_item(rows, "EOT-02")[0][4], "FAIL")      # 32-day gap > 28
         self.assertEqual(by_item(rows, "LE-03")[0][4], "PASS")
 
+    def test_cispo_payment(self):
+        rows = contract_admin.run(DEMO["contract"], date(2028, 12, 1))
+        self.assertEqual(by_item(rows, "IPA-31 payment response")[0][4], "PASS")
+        self.assertEqual(by_item(rows, "IPA-31 admitted amount paid")[0][4], "PASS")
+        self.assertEqual(by_item(rows, "IPA-32 payment response")[0][4], "FAIL")   # served 31 Oct, none by 30 Nov
+        c = copy.deepcopy(DEMO["contract"])
+        c["payment_claims"] = [{"ref": "X", "served": "2028-01-31", "response_date": "2028-02-10", "admitted": 100,
+                                "payment_days": 90}]
+        rows = contract_admin.run(c, date(2028, 4, 15))
+        self.assertEqual(by_item(rows, "X admitted amount paid")[0][3], "HK$100 by 2028-03-31")   # 90 capped to 60
+        self.assertEqual(by_item(rows, "X admitted amount paid")[0][4], "FAIL")
+
     def test_dlp_month_end(self):
         self.assertEqual(contract_admin.add_months(date(2028, 1, 31), 1), date(2028, 2, 29))
 
@@ -81,9 +93,23 @@ class Supervision(unittest.TestCase):
 
     def test_demo(self):
         rows, sched = supervision_plan.run(DEMO["supervision"])
-        self.assertEqual(by_item(rows, "Stream cover – demolition")[0][4], "CHECK")   # no RSE
+        fails = [r[1] for r in rows if r[4] == "FAIL"]
+        self.assertEqual(sorted(fails), ["demolition – RSE T3", "demolition – RSE T5"])   # no RSE TCPs on demolition
         self.assertEqual(by_item(rows, "TCP appointments")[0][4], "PASS")
-        self.assertEqual(len(sched), 6)
+        self.assertEqual(len(sched), 8)
+
+    def test_tm_table1_each_grade_needs_its_own_tcp(self):
+        # all other works, AP stream needs T3 weekly + T4 monthly; one T4 weekly TCP cannot fill both
+        q = {"works": [{"type": "superstructure", "value": 10000}], "streams_appointed": ["AP"],
+             "tcps": [{"stream": "AP", "grade": "T4", "frequency_level": 4, "works": ["superstructure"]}]}
+        rows, _ = supervision_plan.run(q)
+        res = {r[1]: r[4] for r in rows if r[0].startswith("TM") and r[4] != "INFO"}
+        self.assertEqual(res, {"superstructure – AP T4": "PASS", "superstructure – AP T3": "FAIL"})
+
+    def test_tm_geotech_switch(self):
+        q = {"geotechnical": True, "works": [{"type": "other_piles", "value": 5}], "tcps": []}
+        rows, _ = supervision_plan.run(q)
+        self.assertTrue(any("geotech_foundation" in r[0] and "RGE T5" in r[1] for r in rows))
 
     def test_minor_works_timing(self):
         q = {"minor_works": True, "works": [], "tcps": [],
@@ -158,7 +184,7 @@ class CLI(unittest.TestCase):
         run = lambda t, *a: subprocess.run([sys.executable, TOOLS / t, demo, *a], capture_output=True).returncode
         self.assertEqual(run("contract_admin.py", "--as-of", "2028-12-01"), 1)   # notice failures
         self.assertEqual(run("cost_estimate.py"), 0)                            # within budget
-        self.assertEqual(run("supervision_plan.py"), 0)
+        self.assertEqual(run("supervision_plan.py"), 1)                         # demolition lacks RSE TCPs
 
 
 if __name__ == "__main__":

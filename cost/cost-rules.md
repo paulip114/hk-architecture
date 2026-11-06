@@ -14,7 +14,8 @@ Draft working rules for feasibility and design-stage cost advice. Data: `hk_cost
 | Construction | Valuation of variations, interim valuations, final account | QS, certified by Architect | – |
 
 ## Unit rates
-- Source in use: Arcadis Quarterly Construction Cost Review Q2 2026, HK$/m² CFA. **[V, transcription to re-check]**
+- Source in use: Arcadis Quarterly Construction Cost Review Q2 2026, "Approximate Building Costs Hong Kong", p. 5, HK$/m² CFA at 2Q 2026 levels. **[V: two independent reads of the PDF on 2026-11-05 and 11-06 gave identical figures]**
+- The page does not say whether preliminaries, contractor's margin or foundations are included. Arcadis handbooks normally include preliminaries and normal foundations in these rates **[U]**: add abnormal piling as a lump sum.
 - Example ranges: average high-rise apartments 25,200–28,800; average office 25,100–28,300; basement car park 28,500–32,600. Full list in the JSON.
 - The rates exclude site formation, external works, land, fees, finance and legal costs, and assume no basement, flat ground and normal soil. Add these separately. **[V]**
 - Other published sources to cross-check: Rider Levett Bucknall, AECOM / Langdon & Seah, and the Arcadis Construction Cost Handbook. **[U]**
@@ -41,4 +42,4 @@ Construction spend follows an S-curve. A quick check uses a cumulative spend fra
 
 ## Open items
 - Elemental cost plan template (by element, HK$/m² CFA) and benchmarking against completed projects.
-- Re-check every transcribed rate against the Arcadis PDF, and refresh each quarter.
+- Refresh the rates each quarter (next: Arcadis Q3 2026).
