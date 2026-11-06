@@ -19,5 +19,5 @@ Read `/mnt/project-files/architect-kb/pnap/app152-rules.md` and `/mnt/project-fi
 ## Report back
 - Lead with each FAIL and the fix (e.g. setback the lowest 15 m by another 1.5 m; add a tactile guide path; split a 17-riser flight).
 - An APP-152 FAIL puts APP-151 GFA concessions at risk: say so.
-- Say which results rest on unverified figures (BFA Chapter 5).
+- Say which results rest on unverified figures (BFA Chapter 6).
 - Draft for review and signature by an Authorized Person, not a submission.
