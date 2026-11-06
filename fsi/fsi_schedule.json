@@ -1,346 +1,2276 @@
 {
- "_source": "FSD Codes of Practice for Minimum Fire Service Installations and Equipment and Inspection, Testing and Maintenance of Installations and Equipment, September 2022 edition, Part IV (paras 4.1-4.45). Read from https://www.hkfsd.gov.hk/eng/source/safety/File2022.pdf on 2026-11-05 through a summarising web reader, not the PDF itself: lists and thresholds below are working extracts and must be checked against the PDF before use in a submission.",
- "verified": false,
+ "_source": "FSD《最低限度之消防裝置及設備守則與裝置及設備之檢查、測試及保養守則》2022年9月 (Chinese text uploaded by the user 2026-11-06). Part IV paras 4.1-4.45 parsed from the text: the installation lists and the applicability wording (applicability_zh) are verbatim. English names are working translations.",
+ "verified": true,
  "high_rise_m": 30,
- "_high_rise_note": "Part III: high rise = floor of the uppermost storey exceeds 30 m above the point of staircase discharge at ground level.",
+ "_high_rise_def_zh": "「高層建築物」指最高樓層的樓面在地面層水平的樓梯出口處之上超過30米的建築物。",
  "street_hydrant_max_m": 100,
  "hose_reel_max_hose_m": 30,
  "installations": {
-  "audio_visual_advisory": "Audio/visual advisory system",
-  "automatic_actuating_devices": "Automatic actuating devices",
-  "automatic_fixed_non_water": "Automatic fixed installation other than water (special risk areas)",
-  "emergency_generator": "Emergency generator",
-  "emergency_lighting": "Emergency lighting",
-  "exit_sign": "Exit sign",
-  "fire_alarm": "Fire alarm system",
-  "fire_control_centre": "Fire control centre",
-  "fire_detection": "Fire detection system",
-  "fire_hydrant_hose_reel": "Fire hydrant / hose reel system",
-  "firemans_emergency_switch": "Fireman's emergency switch",
-  "firemans_lift": "Fireman's lift",
-  "frs_stairway": "Firefighting and rescue stairway",
-  "portable_appliances": "Portable hand-operated approved appliances",
-  "staircase_pressurization": "Pressurization of staircase",
-  "sprinkler": "Sprinkler system",
-  "smoke_extraction": "Static or dynamic smoke extraction system",
-  "ventilation_ac_control": "Ventilation / air conditioning control system"
+  "audio_visual_advisory": {
+   "zh": "聲響╱視像警報系統",
+   "en": "Audio/visual advisory system"
+  },
+  "automatic_actuating_devices": {
+   "zh": "自動啓動裝置",
+   "en": "Automatic actuating devices"
+  },
+  "automatic_fixed_non_water": {
+   "zh": "不含水的滅火劑自動固定裝置",
+   "en": "Automatic fixed installation other than water"
+  },
+  "automatic_fixed_water": {
+   "zh": "用水作滅火劑的自動固定裝置",
+   "en": "Automatic fixed installation using water"
+  },
+  "dust_detection": {
+   "zh": "塵埃偵測系統",
+   "en": "Dust detection system"
+  },
+  "emergency_generator": {
+   "zh": "應急發電機",
+   "en": "Emergency generator"
+  },
+  "emergency_lighting": {
+   "zh": "應急照明系統",
+   "en": "Emergency lighting"
+  },
+  "exit_sign": {
+   "zh": "出口指示牌",
+   "en": "Exit sign"
+  },
+  "fire_alarm": {
+   "zh": "火警警報系統",
+   "en": "Fire alarm system"
+  },
+  "fire_control_centre": {
+   "zh": "消防控制中心",
+   "en": "Fire control centre"
+  },
+  "fire_detection": {
+   "zh": "火警偵測系統",
+   "en": "Fire detection system"
+  },
+  "fire_hydrant_hose_reel": {
+   "zh": "消防栓╱喉轆系統",
+   "en": "Fire hydrant / hose reel system"
+  },
+  "firemans_lift": {
+   "zh": "消防員升降機",
+   "en": "Fireman's lift"
+  },
+  "firemans_lift_or_frs": {
+   "zh": "消防員升降機或消防和救援樓梯間",
+   "en": "Fireman's lift or firefighting and rescue stairway"
+  },
+  "frs_stairway": {
+   "zh": "消防和救援樓梯間",
+   "en": "Firefighting and rescue stairway"
+  },
+  "firemans_emergency_switch": {
+   "zh": "消防員緊急開關掣",
+   "en": "Fireman's emergency switch"
+  },
+  "fixed_automatic_appliance": {
+   "zh": "認可的自動操作固定器具",
+   "en": "Approved fixed automatic appliance"
+  },
+  "fixed_foam": {
+   "zh": "固定泡沫系統",
+   "en": "Fixed foam system"
+  },
+  "gas_detection": {
+   "zh": "氣體偵測系統",
+   "en": "Gas detection system"
+  },
+  "gas_extraction": {
+   "zh": "氣體排放系統",
+   "en": "Gas extraction system"
+  },
+  "portable_appliances": {
+   "zh": "認可的人手操作手提器具",
+   "en": "Portable hand-operated approved appliances"
+  },
+  "ring_main_fixed_pump": {
+   "zh": "裝有固定水泵的環形水管系統",
+   "en": "Ring main system with fixed pump"
+  },
+  "special_installation": {
+   "zh": "特別設備╱規定",
+   "en": "Special installation / requirement"
+  },
+  "staircase_pressurization": {
+   "zh": "樓梯增壓",
+   "en": "Pressurization of staircase"
+  },
+  "sprinkler": {
+   "zh": "花灑系統",
+   "en": "Sprinkler system"
+  },
+  "smoke_extraction": {
+   "zh": "靜態式或機械式排煙系統",
+   "en": "Static or dynamic smoke extraction system"
+  },
+  "smoke_extraction_dynamic": {
+   "zh": "機械式排煙系統",
+   "en": "Dynamic smoke extraction system"
+  },
+  "ventilation_ac_control": {
+   "zh": "通風╱空調控制系統",
+   "en": "Ventilation / air conditioning control system"
+  },
+  "cctv": {
+   "zh": "閉路電視系統",
+   "en": "CCTV system"
+  },
+  "emergency_power_socket": {
+   "zh": "應急電插座",
+   "en": "Emergency power socket"
+  },
+  "firemans_communication": {
+   "zh": "消防員通訊系統",
+   "en": "Fireman's communication system"
+  },
+  "pedestrian_cross_passage": {
+   "zh": "行人跨管設施",
+   "en": "Pedestrian cross-passage"
+  },
+  "institute_of_energy_code": {
+   "zh": "能源學會公布的《安全作業標準守則》的有關規定",
+   "en": "Institute of Energy model code of safe practice"
+  }
  },
  "conditions": {
   "sprinkler_230": {
-   "text": "total floor area exceeds 230 m²",
+   "text": "total floor area exceeds 230 m² (garage: of the garage)",
    "field": "total_floor_area_m2",
    "gt": 230
   },
   "avas_2000": {
-   "text": "area occupied by one occupancy on one floor exceeds 2 000 m² (with transient occupants exposed to risk)",
+   "text": "part of any floor > 2 000 m² in single occupancy with transient occupants (shoppers, spectators, guests)",
    "field": "max_single_occupancy_floor_m2",
    "gt": 2000
   },
   "smoke_compartment": {
-   "text": "compartment > 7 000 m³ with openable windows ≤ 6.25% of floor area and fire load > 1 135 MJ/m², or atrium > 28 000 m³",
-   "test": "smoke"
+   "text": "atrium compartment > 28 000 m³ (or a basement / storey of it > 7 000 m³), or any compartment > 7 000 m³ with openable windows ≤ 6.25% of its floor area and fire load > 1 135 MJ/m²"
   },
-  "pressurization": {
-   "text": "no natural venting of staircase / openable window ≤ 6.25% of floor area, cubical extent > 28 000 m³ and fire load > 1 135 MJ/m² (check the full para; refers to Part II)",
-   "test": "press"
+  "smoke_hotel": {
+   "text": "all internal escape routes serving guestrooms (unless openable windows > 6.25% of the route floor area), plus the atrium / 7 000 m³ compartment tests"
   },
-  "pressurization_basement": {
-   "text": "basements of 3 or more levels with cubical extent > 7 000 m³ and fire load > 1 135 MJ/m²",
-   "test": "press_bsmt"
+  "smoke_basement": {
+   "text": "compartment > 7 000 m³ with fire load > 1 135 MJ/m², or an industrial basement, or a basement of 3 or more levels (excluding parking-only areas)"
   },
-  "firemans_lift_rule": {
-   "text": "B(P)R 41B / FS Code Part D calls for it (see fire_cd_check.py)",
-   "test": "manual"
+  "press_4": {
+   "text": "stairs not naturally ventilated, openable windows ≤ 6.25% per floor, building > 28 000 m³ and fire load > 1 135 MJ/m² (all four)"
   },
-  "emergency_generator_rule": {
-   "text": "a secondary supply is needed for fireman's lift, FSI pumps etc. (para 1.8)",
-   "test": "manual"
+  "press_2": {
+   "text": "stairs not naturally ventilated and openable windows ≤ 6.25% per floor (both)"
   },
-  "special_risk": {
-   "text": "special risk areas exist (e.g. transformer, switch rooms)",
-   "test": "manual"
+  "press_hospital": {
+   "text": "hospitals and nursing homes where stairs are not naturally ventilated and openable windows ≤ 6.25%"
   },
-  "ev_heat_detect": {
-   "text": "≤ 230 m² with EV charging and no sprinklers (heat or multi-sensor detectors)",
-   "test": "manual"
+  "press_basement": {
+   "text": "basement of 3 or more levels with no open-air access for firemen, > 7 000 m³ and fire load > 1 135 MJ/m²"
+  },
+  "frs_basement": {
+   "text": "basement of 3 or more levels, or as required by the FS Code"
+  },
+  "ev_detection": {
+   "text": "heat / multi-sensor detectors where EV charging is not covered by sprinklers (whole garage if ≤ 230 m²)"
+  },
+  "ev_charging": {
+   "text": "car park / garage with EV charging facilities"
+  },
+  "eg_institutional": {
+   "text": "hospitals, nursing homes and prisons, or as the risk requires"
+  },
+  "fd_uncovered": {
+   "text": "areas not covered by an automatic fixed installation (e.g. sprinklers)"
+  },
+  "check": {
+   "text": "conditional: read applicability_zh"
   }
  },
  "premises": {
-  "domestic_le3": {
-   "para": "4.21",
-   "name": "Domestic, up to and including 3 storeys",
-   "req": {
-    "portable_appliances": "yes"
+  "4.1": {
+   "para": "4.1",
+   "title_zh": "飛機保養維修設施",
+   "installations": {
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於不宜用水滅火的佔用部分或行業經營範圍。"
+    },
+    "automatic_fixed_water": {
+     "cond": "check",
+     "applicability_zh": "設於上文第(ii)項所指範圍以外的所有範圍，包括樓梯。"
+    },
+    "dust_detection": {
+     "cond": "check",
+     "applicability_zh": "設於所有具潛在塵埃爆炸危險的範圍。"
+    },
+    "emergency_generator": {
+     "cond": "yes",
+     "applicability_zh": "須設置發電量足以為消防裝置和消防員升降機供電的獨立發電機。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整幢建築物及通往地面的所有出路通道均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各層的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_control_centre": {
+     "cond": "yes",
+     "applicability_zh": "最少設立1個控制中心，並須視乎建築物設計的複雜程度增設控制中心。"
+    },
+    "fire_detection": {
+     "cond": "fd_uncovered",
+     "applicability_zh": "設於自動固定裝置沒有覆蓋的範圍。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "每層須設有足夠的消防栓和喉轆。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間。建築物如沒有該等樓梯，消防栓須設置在令消防處處長滿意的位置。須設置喉轆以確保處所每一部分均有喉轆膠喉可達，而膠喉的長度不會超過30米。"
+    },
+    "firemans_lift_or_frs": {
+     "cond": "check",
+     "applicability_zh": "須按照《建築物消防安全守則》的規定提供。"
+    },
+    "fixed_automatic_appliance": {
+     "cond": "check",
+     "applicability_zh": "視乎佔用用途而定。"
+    },
+    "fixed_foam": {
+     "cond": "check",
+     "applicability_zh": "如消防處處長認為有需要，須提供此系統代替其他固定自動系統。"
+    },
+    "gas_extraction": {
+     "cond": "yes",
+     "applicability_zh": "獲認可適用於建築物內可能產生易燃霧氣部分的系統，用以將霧氣濃度減至低於爆炸下限。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    },
+    "ring_main_fixed_pump": {
+     "cond": "yes",
+     "applicability_zh": "為此等綜合建築物內公共水管不足的範圍供水。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
    },
-   "note": "one appliance per floor plus additional for car ports"
+   "note_zh": "註：此等綜合建築物內的建築物須符合本守則有關同類處所的指明規定。",
+   "additional_zh": [
+    "管道和隱蔽位置內作隔音和隔熱用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "防護逃生途徑內作隔音、隔熱和裝飾用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "如擬貯存或使用香港法例第295章所界定的危險品，應通知消防處處長。"
+   ]
   },
-  "domestic_low": {
-   "para": "4.22",
-   "name": "Domestic, over 3 storeys, low rise",
-   "req": {
-    "fire_alarm": "yes",
-    "fire_hydrant_hose_reel": "yes",
-    "portable_appliances": "yes"
-   }
+  "4.2": {
+   "para": "4.2",
+   "title_zh": "視聽製作設施",
+   "installations": {
+    "audio_visual_advisory": {
+     "cond": "check",
+     "applicability_zh": "視乎風險程度而定。"
+    },
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於不宜用水滅火的佔用部分或行業經營範圍。"
+    },
+    "automatic_fixed_water": {
+     "cond": "check",
+     "applicability_zh": "視乎風險程度而定。"
+    },
+    "emergency_generator": {
+     "cond": "yes",
+     "applicability_zh": "須設置發電量足以為消防裝置和消防員升降機供電的獨立發電機。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整幢建築物及通往地面的所有出路通道均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各層的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_control_centre": {
+     "cond": "check",
+     "applicability_zh": "視乎風險程度而定。"
+    },
+    "fire_detection": {
+     "cond": "fd_uncovered",
+     "applicability_zh": "設於自動固定裝置沒有覆蓋的範圍。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "每層須設有足夠的消防栓和喉轆。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間。建築物如沒有該等樓梯，消防栓須設置在令消防處處長滿意的位置。須設置喉轆以確保處所每一部分均有喉轆膠喉可達，而膠喉的長度不會超過30米。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎風險程度而定。"
+    },
+    "smoke_extraction": {
+     "cond": "smoke_compartment",
+     "applicability_zh": "須設於任何體積超過7 000立方米而符合下述情況的防火間：(a) 該防火間內可開啓窗口的總面積不超過該防火間樓面面積的6.25%；以及(b) 該防火間的設定燃燒負荷量可能超過每平方米1 135兆焦耳。消防處處長如認為有需要，會在涉及下列防火間的建築圖則訂明進行熱煙測試的規定：(i) 淨空高度達12米或以上的防火間；或(ii) 形狀不規則或面積特大的防火間。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
+   },
+   "additional_zh": [
+    "管道和隱蔽位置內作隔音和隔熱用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "防護逃生途徑內作隔音、隔熱和裝飾用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "如擬貯存或使用香港法例第295章所界定的危險品，應通知消防處處長。"
+   ]
   },
-  "domestic_high": {
-   "para": "4.23",
-   "name": "Domestic, high rise",
-   "req": {
-    "emergency_generator": "yes",
-    "emergency_lighting": "yes",
-    "exit_sign": "yes",
-    "fire_alarm": "yes",
-    "fire_hydrant_hose_reel": "yes",
-    "firemans_lift": "yes",
-    "portable_appliances": "yes"
-   }
-  },
-  "commercial_low": {
-   "para": "4.14",
-   "name": "Commercial (non-domestic), low rise",
-   "req": {
-    "audio_visual_advisory": "avas_2000",
-    "automatic_actuating_devices": "yes",
-    "automatic_fixed_non_water": "special_risk",
-    "emergency_generator": "emergency_generator_rule",
-    "emergency_lighting": "yes",
-    "exit_sign": "yes",
-    "fire_alarm": "yes",
-    "fire_detection": "yes",
-    "fire_hydrant_hose_reel": "yes",
-    "firemans_lift": "firemans_lift_rule",
-    "portable_appliances": "yes",
-    "sprinkler": "sprinkler_230",
-    "smoke_extraction": "smoke_compartment",
-    "ventilation_ac_control": "yes"
-   }
-  },
-  "commercial_high": {
-   "para": "4.15",
-   "name": "Commercial (non-domestic), high rise",
-   "req": {
-    "audio_visual_advisory": "avas_2000",
-    "automatic_actuating_devices": "yes",
-    "automatic_fixed_non_water": "special_risk",
-    "emergency_generator": "yes",
-    "emergency_lighting": "yes",
-    "exit_sign": "yes",
-    "fire_alarm": "yes",
-    "fire_control_centre": "yes",
-    "fire_detection": "yes",
-    "fire_hydrant_hose_reel": "yes",
-    "firemans_lift": "yes",
-    "portable_appliances": "yes",
-    "staircase_pressurization": "pressurization",
-    "sprinkler": "sprinkler_230",
-    "smoke_extraction": "smoke_compartment",
-    "ventilation_ac_control": "yes"
-   }
-  },
-  "basement_le230": {
+  "4.3": {
    "para": "4.3",
-   "name": "Basement, total floor area ≤ 230 m²",
-   "req": {
-    "automatic_fixed_non_water": "special_risk",
-    "emergency_lighting": "yes",
-    "exit_sign": "yes",
-    "fire_alarm": "yes",
-    "fire_detection": "yes",
-    "fire_hydrant_hose_reel": "yes",
-    "firemans_lift": "firemans_lift_rule",
-    "portable_appliances": "yes",
-    "ventilation_ac_control": "yes"
+   "title_zh": "總樓面面積不超過230平方米的地庫",
+   "installations": {
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於具特別風險的範圍。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整個地庫範圍及通往地面的所有出路通道均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按地庫的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示地庫內所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_detection": {
+     "cond": "yes",
+     "applicability_zh": "火警偵測系統須覆蓋整個地庫範圍，但停車場、保險庫和夾萬房除外。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "每層須設有足夠的消防栓和喉轆。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間。地庫如沒有該等樓梯，消防栓須設置在令消防處處長滿意的位置。須設置喉轆以確保地庫每一部分（保險庫和夾萬房除外）均有喉轆膠喉可達，而膠喉的長度不會超過30米。"
+    },
+    "firemans_lift_or_frs": {
+     "cond": "check",
+     "applicability_zh": "須按照《建築物消防安全守則》的規定提供。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
    },
-   "note": "fire detection excludes car parks, strong rooms and safe deposit vaults; FL or firefighting stair"
+   "alias": "basement_le230",
+   "note_zh": "註：此等綜合建築物內的建築物須符合本守則有關同類處所的指明規定。",
+   "additional_zh": [
+    "管道和隱蔽位置內作隔音和隔熱用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "防護逃生途徑內作隔音、隔熱和裝飾用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "如擬貯存或使用香港法例第295章所界定的危險品，應通知消防處處長。"
+   ]
   },
-  "basement_gt230": {
+  "4.4": {
    "para": "4.4",
-   "name": "Basement, total floor area > 230 m²",
-   "req": {
-    "audio_visual_advisory": "avas_2000",
-    "automatic_fixed_non_water": "special_risk",
-    "emergency_lighting": "yes",
-    "exit_sign": "yes",
-    "fire_alarm": "yes",
-    "fire_detection": "yes",
-    "fire_hydrant_hose_reel": "yes",
-    "frs_stairway": "firemans_lift_rule",
-    "portable_appliances": "yes",
-    "staircase_pressurization": "pressurization_basement",
-    "sprinkler": "yes",
-    "smoke_extraction": "smoke_compartment",
-    "ventilation_ac_control": "yes"
+   "title_zh": "總樓面面積超過230平方米的地庫",
+   "installations": {
+    "audio_visual_advisory": {
+     "cond": "avas_2000",
+     "applicability_zh": "如建築物內任何一個樓層有面積超過2 000平方米的部分作單一佔用用途，而作為購物者、觀眾或賓客的佔用人因短暫停留而面對風險，需要此等系統額外提供警報，則須在有關部分設置此等系統。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於不宜用水滅火的佔用部分或行業經營範圍。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整個地庫範圍及通往地面的所有出路通道均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按地庫的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示地庫內所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_detection": {
+     "cond": "yes",
+     "applicability_zh": "火警偵測系統須覆蓋整個地庫範圍，但停車場、保險庫和夾萬房除外。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "每層須設有足夠的消防栓和喉轆。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間。地庫如沒有該等樓梯，消防栓須設置在令消防處處長滿意的位置。須設置喉轆以確保地庫每一部分（保險庫和夾萬房除外）均有喉轆膠喉可達，而膠喉的長度不會超過30米。"
+    },
+    "frs_stairway": {
+     "cond": "frs_basement",
+     "applicability_zh": "須設於有3層或以上樓層的地庫，或按照《建築物消防安全守則》的規定提供。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    },
+    "staircase_pressurization": {
+     "cond": "press_basement",
+     "applicability_zh": "須設於有3層或以上樓層而符合下述情況的地庫：(a) 沒有露天通道供消防員使用；(b) 體積超過7 000立方米；以及(c) 設定燃燒負荷量可能超過每平方米1 135兆焦耳。增壓樓梯數目須按載於第二部「樓梯增壓」一詞釋義下面的列表而定，惟不得超過《建築物消防安全守則》規定的樓梯總數。"
+    },
+    "sprinkler": {
+     "cond": "yes",
+     "applicability_zh": "地庫各部分均須安裝快速感應型消防花灑頭，但上文第(ii)項所指的範圍或第(vi)項所指的保險庫和夾萬房除外。"
+    },
+    "smoke_extraction": {
+     "cond": "smoke_basement",
+     "applicability_zh": "須設於：(a) 任何體積超過7 000立方米而其設定燃燒負荷量可能超過每平方米1 135兆焦耳的防火間；或(b) 工業地庫；或(c) 有3層或以上樓層（專供停泊車輛之用的範圍除外）的地庫。消防處處長如認為有需要，會在涉及下列防火間的建築圖則訂明進行熱煙測試的規定：(i) 淨空高度達12米或以上的防火間；或(ii) 形狀不規則或面積特大的防火間。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
    },
-   "note": "sprinklers with fast-response heads"
+   "alias": "basement_gt230",
+   "note_zh": "註：此等綜合建築物內的建築物須符合本守則有關同類處所的指明規定。",
+   "additional_zh": [
+    "管道和隱蔽位置內作隔音和隔熱用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "防護逃生途徑內作隔音、隔熱和裝飾用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "如擬貯存或使用香港法例第295章所界定的危險品，應通知消防處處長。"
+   ]
   },
-  "garage": {
-   "para": "4.26",
-   "name": "Garage (enclosed car park)",
-   "req": {
-    "automatic_actuating_devices": "yes",
-    "emergency_lighting": "yes",
-    "exit_sign": "yes",
-    "fire_alarm": "yes",
-    "fire_detection": "ev_heat_detect",
-    "fire_hydrant_hose_reel": "yes",
-    "firemans_emergency_switch": "yes",
-    "firemans_lift": "firemans_lift_rule",
-    "portable_appliances": "yes",
-    "sprinkler": "sprinkler_230",
-    "ventilation_ac_control": "yes"
-   }
+  "4.5": {
+   "para": "4.5",
+   "title_zh": "電池房和充電設施",
+   "installations": {
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於不宜用水滅火的範圍。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示處所內各層的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "所有出口門前須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動聲響╱視像警報裝置。"
+    },
+    "fire_detection": {
+     "cond": "fd_uncovered",
+     "applicability_zh": "設於自動固定裝置沒有覆蓋的範圍。"
+    },
+    "gas_extraction": {
+     "cond": "yes",
+     "applicability_zh": "獲認可適用於建築物內可能產生易燃霧氣部分的系統，用以將霧氣濃度減至低於爆炸下限。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
+   },
+   "alias": "battery_charging"
   },
-  "car_port": {
+  "4.6": {
+   "para": "4.6",
+   "title_zh": "鍋爐房",
+   "installations": {
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於氣體╱燃油鍋爐房。"
+    },
+    "automatic_fixed_water": {
+     "cond": "check",
+     "applicability_zh": "如氣體╱燃油鍋爐房內沒有安裝不含水的滅火劑自動固定裝置，便須安裝此裝置。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整個範圍及通往地面的所有出路通道均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內該範圍的所有出路通道。"
+    },
+    "fire_detection": {
+     "cond": "fd_uncovered",
+     "applicability_zh": "設於自動固定裝置沒有覆蓋的範圍。"
+    },
+    "fixed_foam": {
+     "cond": "yes",
+     "applicability_zh": "裝設在位於地庫的燃油鍋爐房，以代替上述第(ii)和第(iii)項的自動固定裝置。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎風險程度而定。"
+    }
+   },
+   "alias": "boiler_room"
+  },
+  "4.7": {
+   "para": "4.7",
+   "title_zh": "保齡球場",
+   "installations": {
+    "audio_visual_advisory": {
+     "cond": "avas_2000",
+     "applicability_zh": "如建築物內任何一個樓層有面積超過2 000平方米的部分作保齡球場用途，而玩球者與觀眾因短暫停留而面對風險，需要此等系統額外提供警報，則須在有關部分設置此等系統。"
+    },
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於不宜用水滅火的範圍。"
+    },
+    "emergency_generator": {
+     "cond": "yes",
+     "applicability_zh": "須設置發電量足以為消防裝置和消防員升降機供電的獨立發電機。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整個處所及通往地面的所有出路通道均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各層的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_detection": {
+     "cond": "fd_uncovered",
+     "applicability_zh": "設於自動固定裝置沒有覆蓋的範圍。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "每層須設有足夠的消防栓和喉轆。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間。建築物如沒有該等樓梯，消防栓須設置在令消防處處長滿意的位置。須設置喉轆以確保處所每一部分均有喉轆膠喉可達，而膠喉的長度不會超過30米。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    },
+    "sprinkler": {
+     "cond": "yes",
+     "applicability_zh": "設於球場所有部分及相關範圍，包括樓梯、公共走廊和廁所。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
+   },
+   "alias": "bowling_alley",
+   "additional_zh": [
+    "管道和隱蔽位置內作隔音和隔熱用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "防護逃生途徑內作隔音、隔熱和裝飾用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "如擬貯存或使用香港法例第295章所界定的危險品，應通知消防處處長。"
+   ]
+  },
+  "4.8": {
+   "para": "4.8",
+   "title_zh": "巨型燃料倉庫",
+   "installations": {
+    "institute_of_energy_code": {
+     "cond": "yes",
+     "applicability_zh": "消防處處長認為須予遵守的規定。"
+    },
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於不宜用水滅火的具特別風險範圍。"
+    },
+    "automatic_fixed_water": {
+     "cond": "yes",
+     "applicability_zh": "用以冷卻和保護燃料缸、燃料喉管和突堤式碼頭。"
+    },
+    "emergency_generator": {
+     "cond": "yes",
+     "applicability_zh": "須設置發電量足以為消防裝置和消防員升降機供電的獨立發電機。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整幢建築物及通往地面的所有出路通道均須安裝應急照明系統。此外，亦須提供應急照明系統，確保有充足照明，方便安全疏散到倉庫範圍之外。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各層的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_control_centre": {
+     "cond": "yes",
+     "applicability_zh": "最少設立1個控制中心，並須視乎倉庫設計的複雜程度增設控制中心。"
+    },
+    "fire_detection": {
+     "cond": "fd_uncovered",
+     "applicability_zh": "設於自動固定裝置沒有覆蓋的範圍。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "每層須設有足夠的消防栓和喉轆。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間。建築物如沒有該等樓梯，消防栓須設置在令消防處處長滿意的位置。須設置喉轆以確保處所每一部分均有喉轆膠喉可達，而膠喉的長度不會超過30米。"
+    },
+    "fixed_automatic_appliance": {
+     "cond": "check",
+     "applicability_zh": "視乎佔用用途而定。"
+    },
+    "fixed_foam": {
+     "cond": "check",
+     "applicability_zh": "如消防處處長認為有需要，須提供此系統代替其他固定自動系統。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    },
+    "ring_main_fixed_pump": {
+     "cond": "yes",
+     "applicability_zh": "為此等綜合建築物內公共水管不足的範圍供水。"
+    }
+   },
+   "note_zh": "註：此等綜合建築物內的建築物須符合本守則有關同類處所的指明規定。"
+  },
+  "4.9": {
    "para": "4.9",
-   "name": "Car port",
-   "req": {
-    "emergency_lighting": "yes",
-    "exit_sign": "yes",
-    "fire_alarm": "yes",
-    "fire_detection": "ev_heat_detect",
-    "fire_hydrant_hose_reel": "yes",
-    "firemans_emergency_switch": "yes",
-    "firemans_lift": "firemans_lift_rule",
-    "portable_appliances": "yes"
+   "title_zh": "停車間",
+   "installations": {
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "所有公眾地方及通往地面的所有出路通道均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各處所的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "check",
+     "applicability_zh": "視乎風險程度而定。如須安裝此系統，每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_detection": {
+     "cond": "ev_detection",
+     "applicability_zh": "須在以下地點裝設熱力偵測器或複合式感應偵測器：(a) 如停車間的總樓面面積不超過230平方米，並裝有電動車輛充電設施，但不在花灑系統的覆蓋範圍內，便須在整個停車間安裝該等偵測器；或(b) 如停車間的總樓面面積超過230平方米，便須在裝有電動車輛充電設施但不在花灑系統覆蓋範圍內的停車間範圍安裝該等偵測器。如停車間位於住用建築物內，而該建築物沒有被強制規定安裝連接消防通訊中心的直線，則無須裝設該直線。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "check",
+     "applicability_zh": "視乎風險程度而定。"
+    },
+    "firemans_emergency_switch": {
+     "cond": "ev_charging",
+     "applicability_zh": "設於裝有電動車輛充電設施的停車間。須在車輛出入口、消防控制中心或消防處處長認為可以接納的其他位置安裝該開關掣。"
+    },
+    "firemans_lift": {
+     "cond": "check",
+     "applicability_zh": "須按照《建築物消防安全守則》的規定提供。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎風險程度而定。就裝有電動車輛充電設施的停車間而言，在裝有該設施的樓層內，每個喉轆設置地點均須額外提供一個乾粉或二氧化碳滅火筒。"
+    }
+   },
+   "alias": "car_port",
+   "note_zh": "註：(i) 設於建築物內的停車間須符合本守則有關該類建築物的指明規定。(ii) 上文(iv)、(vi)及(viii)項就裝有電動車輛充電設施的停車間訂明額外規定，該等規定不適用於樓高3層或以下的單個家庭住用建築物。"
+  },
+  "4.10": {
+   "para": "4.10",
+   "title_zh": "化學品製造╱處理廠",
+   "installations": {
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於不宜用水滅火的範圍。"
+    },
+    "automatic_fixed_water": {
+     "cond": "check",
+     "applicability_zh": "設於上文第(ii)項所指範圍以外的所有範圍，包括樓梯。"
+    },
+    "dust_detection": {
+     "cond": "check",
+     "applicability_zh": "設於所有具潛在塵埃爆炸危險的範圍。"
+    },
+    "emergency_generator": {
+     "cond": "yes",
+     "applicability_zh": "須設置發電量足以為消防裝置和消防員升降機供電的獨立發電機。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "處所範圍內各建築物均須安裝應急照明系統。此外，亦須提供應急照明系統，確保有充足照明，方便安全疏散到廠房範圍之外。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各層的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "建築物內每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。此外，環形水管系統的每個消防栓出水口均須裝有啓動裝置和聲響╱視像警報裝置各1個。"
+    },
+    "fire_control_centre": {
+     "cond": "yes",
+     "applicability_zh": "最少設立1個控制中心，並須視乎綜合建築物的布局增設控制中心。"
+    },
+    "fire_detection": {
+     "cond": "fd_uncovered",
+     "applicability_zh": "設於自動固定裝置沒有覆蓋的範圍。"
+    },
+    "fixed_automatic_appliance": {
+     "cond": "check",
+     "applicability_zh": "視乎風險程度而定。"
+    },
+    "fixed_foam": {
+     "cond": "check",
+     "applicability_zh": "視乎風險程度而定。"
+    },
+    "gas_detection": {
+     "cond": "check",
+     "applicability_zh": "設於所有具風險的範圍。"
+    },
+    "gas_extraction": {
+     "cond": "yes",
+     "applicability_zh": "獲認可適用於建築物內可能產生易燃霧氣部分的系統，用以將霧氣濃度減至低於爆炸下限。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎風險程度而定。"
+    },
+    "ring_main_fixed_pump": {
+     "cond": "yes",
+     "applicability_zh": "為此等綜合建築物內公共水管不足的範圍供水。"
+    },
+    "special_installation": {
+     "cond": "yes",
+     "applicability_zh": "由消防處處長決定。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
    }
   },
-  "hotel_low": {
+  "4.11": {
+   "para": "4.11",
+   "title_zh": "小型（容量不足140立方米）冷凍品貯存範圍（第一組）",
+   "installations": {
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎廠房和構造而定。"
+    }
+   },
+   "additional_zh": [
+    "管道和隱蔽位置內作隔音和隔熱用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "防護逃生途徑內作隔音、隔熱和裝飾用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "如擬貯存或使用香港法例第295章所界定的危險品，應通知消防處處長。"
+   ]
+  },
+  "4.12": {
+   "para": "4.12",
+   "title_zh": "大型（容量達140立方米或以上）冷凍品貯存範圍（第一組）",
+   "installations": {
+    "automatic_fixed_water": {
+     "cond": "yes",
+     "applicability_zh": "冷凍品貯存室如完全作冷凍貯存（溫度在攝氏4度以下）用途，應裝設乾式花灑或按照英國防損委員會規定的以乾式操作的花灑裝置。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "建築物本身裝設的火警警報系統的覆蓋範圍須擴大至冷凍品貯存範圍。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎廠房和構造而定。"
+    }
+   },
+   "additional_zh": [
+    "管道和隱蔽位置內作隔音和隔熱用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "防護逃生途徑內作隔音、隔熱和裝飾用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "如擬貯存或使用香港法例第295章所界定的危險品，應通知消防處處長。"
+   ]
+  },
+  "4.13": {
+   "para": "4.13",
+   "title_zh": "冷凍品貯存範圍（第二組）",
+   "installations": {
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_water": {
+     "cond": "yes",
+     "applicability_zh": "在所有範圍（包括樓梯及冷凍品貯存室）裝設自動固定裝置。冷凍品貯存室如完全作冷凍貯存（溫度在攝氏4度以下）用途，則應裝設乾式花灑或按照英國防損委員會規定的以乾式操作的花灑裝置。"
+    },
+    "emergency_generator": {
+     "cond": "yes",
+     "applicability_zh": "須設置發電量足以為消防裝置和消防員升降機供電的獨立發電機。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整個範圍均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按冷凍品貯存範圍的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示有關範圍內各層的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "每層須設有足夠的消防栓和喉轆。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間。建築物如沒有該等樓梯，消防栓須設置在令消防處處長滿意的位置。須設置喉轆以確保處所每一部分均有喉轆膠喉可達，而膠喉的長度不會超過30米。"
+    },
+    "firemans_lift_or_frs": {
+     "cond": "check",
+     "applicability_zh": "須按照《建築物消防安全守則》的規定提供。"
+    },
+    "gas_detection": {
+     "cond": "check",
+     "applicability_zh": "設於具風險的範圍。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    }
+   },
+   "additional_zh": [
+    "管道和隱蔽位置內作隔音和隔熱用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "防護逃生途徑內作隔音、隔熱和裝飾用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "如擬貯存或使用香港法例第295章所界定的危險品，應通知消防處處長。"
+   ]
+  },
+  "4.14": {
+   "para": "4.14",
+   "title_zh": "低層商業建築物",
+   "installations": {
+    "audio_visual_advisory": {
+     "cond": "avas_2000",
+     "applicability_zh": "如建築物內任何一個樓層有面積超過2 000平方米的部分作單一佔用用途，而作為購物者、觀眾或賓客的佔用人因短暫停留而面對風險，需要此等系統額外提供警報，則須在有關部分設置此等系統。"
+    },
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於不宜用水滅火的佔用部分或行業經營範圍。"
+    },
+    "emergency_generator": {
+     "cond": "yes",
+     "applicability_zh": "須設置發電量足以為消防裝置和消防員升降機供電的獨立發電機。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整幢建築物及通往地面的所有出路通道均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各層的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_detection": {
+     "cond": "fd_uncovered",
+     "applicability_zh": "設於自動固定裝置沒有覆蓋的範圍。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "每層須設有足夠的消防栓和喉轆。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間。建築物如沒有該等樓梯，消防栓須設置在令消防處處長滿意的位置。須設置喉轆以確保建築物每一部分均有喉轆膠喉可達，而膠喉的長度不會超過30米。"
+    },
+    "firemans_lift": {
+     "cond": "check",
+     "applicability_zh": "須按照《建築物消防安全守則》的規定提供。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    },
+    "sprinkler": {
+     "cond": "sprinkler_230",
+     "applicability_zh": "如建築物的總樓面面積超過230平方米，便須安裝此系統，並須覆蓋建築物所有部分，包括樓梯、公共走廊和廁所。"
+    },
+    "smoke_extraction": {
+     "cond": "smoke_compartment",
+     "applicability_zh": "須設於：(a) 防火間體積超過28 000立方米的建築物中庭，或任何屬該防火間一部分的地庫或樓層的體積超過7 000立方米；或(b) 建築物內任何體積超過7 000立方米而符合下述情況的防火間：(i) 該防火間內可開啓窗口的總面積不超過該防火間樓面面積的6.25%；以及(ii) 設定燃燒負荷量可能超過每平方米1 135兆焦耳。消防處處長如認為有需要，會在涉及下列防火間的建築圖則訂明進行熱煙測試的規定：(i) 淨空高度達12米或以上的防火間；或(ii) 形狀不規則或面積特大的防火間。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
+   },
+   "alias": "commercial_low",
+   "additional_zh": [
+    "管道和隱蔽位置內作隔音和隔熱用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "防護逃生途徑內作隔音、隔熱和裝飾用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "如擬貯存或使用香港法例第295章所界定的危險品，應通知消防處處長。"
+   ]
+  },
+  "4.15": {
+   "para": "4.15",
+   "title_zh": "高層商業建築物",
+   "installations": {
+    "audio_visual_advisory": {
+     "cond": "avas_2000",
+     "applicability_zh": "如建築物內任何一個樓層有面積超過2 000平方米的部分作單一佔用用途，而作為購物者、觀眾或賓客的佔用人因短暫停留而面對風險，需要此等系統額外提供警報，則須在有關部分設置此等系統。"
+    },
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於不宜用水滅火的佔用部分或行業經營範圍。"
+    },
+    "emergency_generator": {
+     "cond": "yes",
+     "applicability_zh": "須設置發電量足以為消防裝置和消防員升降機供電的獨立發電機。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整幢建築物及通往地面的所有出路通道均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各層的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_control_centre": {
+     "cond": "yes",
+     "applicability_zh": "最少設立1個控制中心，並須視乎建築物設計的複雜程度增設控制中心。"
+    },
+    "fire_detection": {
+     "cond": "fd_uncovered",
+     "applicability_zh": "設於自動固定裝置沒有覆蓋的範圍。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "每層須設有足夠的消防栓和喉轆。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間。建築物如沒有該等樓梯，消防栓須設置在令消防處處長滿意的位置。須設置喉轆以確保建築物每一部分均有喉轆膠喉可達，而膠喉的長度不會超過30米。"
+    },
+    "firemans_lift": {
+     "cond": "check",
+     "applicability_zh": "須按照《建築物消防安全守則》的規定提供。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    },
+    "staircase_pressurization": {
+     "cond": "press_4",
+     "applicability_zh": "須設於符合下述情況的建築物：(a) 樓梯不能自然通風；(b) 按層計房間╱單位內可開啓窗口的總面積不超過該等房間╱單位樓面面積的6.25%；(c) 體積超過28 000立方米；以及(d) 設定燃燒負荷量可能超過每平方米1 135兆焦耳。增壓樓梯數目須按載於第二部「樓梯增壓」一詞釋義下面的列表而定，惟不得超過《建築物消防安全守則》規定的樓梯總數。"
+    },
+    "sprinkler": {
+     "cond": "sprinkler_230",
+     "applicability_zh": "須覆蓋建築物所有部分，包括樓梯、公共走廊和廁所。"
+    },
+    "smoke_extraction": {
+     "cond": "smoke_compartment",
+     "applicability_zh": "須設於：(a) 防火間體積超過28 000立方米的建築物中庭，或任何屬該防火間一部分的地庫或樓層的體積超過7 000立方米；或(b) 建築物內任何體積超過7 000立方米而符合下述情況的防火間：(i) 該防火間內可開啓窗口的總面積不超過該防火間樓面面積的6.25%；以及(ii) 設定燃燒負荷量可能超過每平方米1 135兆焦耳。消防處處長如認為有需要，會在涉及下列防火間的建築圖則訂明進行熱煙測試的規定：(i) 淨空高度達12米或以上的防火間；或(ii) 形狀不規則或面積特大的防火間。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
+   },
+   "alias": "commercial_high",
+   "additional_zh": [
+    "管道和隱蔽位置內作隔音和隔熱用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "防護逃生途徑內作隔音、隔熱和裝飾用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "如擬貯存或使用香港法例第295章所界定的危險品，應通知消防處處長。"
+   ]
+  },
+  "4.16": {
+   "para": "4.16",
+   "title_zh": "綜合用途建築物",
+   "installations": {},
+   "alias": "composite",
+   "text_zh": [
+    "(i) 綜合用途建築物內各類不同用途範圍的消防裝置及設備，須符合本守則相關段落的規定。",
+    "(ii) 就非住用部分裝有花灑系統的綜合用途建築物而言，非住用部分對上和對下兩個樓層的樓梯（只限通往住用部分的樓梯）亦應裝設花灑，而花灑頭應屬快速感應型。"
+   ]
+  },
+  "4.17": {
+   "para": "4.17",
+   "title_zh": "貨櫃場和貨運站",
+   "installations": {
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於不宜用水滅火的佔用部分或行業經營範圍。"
+    },
+    "automatic_fixed_water": {
+     "cond": "check",
+     "applicability_zh": "設於上文第(ii)項所指範圍以外的所有範圍，包括樓梯、公共走廊和廁所。"
+    },
+    "emergency_generator": {
+     "cond": "yes",
+     "applicability_zh": "須設置發電量足以為消防裝置和消防員升降機供電的獨立發電機。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整幢建築物及通往地面的所有出路通道均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各層的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_control_centre": {
+     "cond": "yes",
+     "applicability_zh": "最少設立1個控制中心，並須視乎建築物設計的複雜程度增設控制中心。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "每層須設有足夠的消防栓和喉轆。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間。建築物如沒有該等樓梯，消防栓須設置在令消防處處長滿意的位置。須設置喉轆以確保處所每一部分均有喉轆膠喉可達，而膠喉的長度不會超過30米。"
+    },
+    "fixed_automatic_appliance": {
+     "cond": "check",
+     "applicability_zh": "視乎佔用用途而定。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    },
+    "staircase_pressurization": {
+     "cond": "check",
+     "applicability_zh": "須設於符合下述情況的建築物：(a) 樓梯不能自然通風；以及(b) 按層計房間╱單位內可開啓窗口的總面積不超過該等房間╱單位樓面面積的6.25%。增壓樓梯數目須按載於第二部「樓梯增壓」一詞釋義下面的列表而定，惟不得超過《建築物消防安全守則》規定的樓梯總數。"
+    },
+    "ring_main_fixed_pump": {
+     "cond": "yes",
+     "applicability_zh": "為此等綜合建築物內公共水管不足的範圍供水。"
+    },
+    "special_installation": {
+     "cond": "yes",
+     "applicability_zh": "由消防處處長決定。"
+    },
+    "smoke_extraction": {
+     "cond": "check",
+     "applicability_zh": "須設於任何體積超過7 000立方米而符合下述情況的防火間：(a) 該防火間內可開啓窗口的總面積不超過該防火間樓面面積的6.25%；以及(b) 設定燃燒負荷量可能超過每平方米1 135兆焦耳。消防處處長如認為有需要，會在涉及下列防火間的建築圖則訂明進行熱煙測試的規定：(i) 淨空高度達12米或以上的防火間；或(ii) 形狀不規則或面積特大的防火間。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
+   }
+  },
+  "4.18": {
+   "para": "4.18",
+   "title_zh": "6層以下的幕牆建築物",
+   "installations": {},
+   "text_zh": [
+    "須裝設的系統╱裝置╱設備：",
+    "視乎佔用用途遵照適用的一般規定。"
+   ]
+  },
+  "4.19": {
+   "para": "4.19",
+   "title_zh": "6層或以上的幕牆建築物",
+   "installations": {},
+   "text_zh": [
+    "須裝設的系統╱裝置╱設備：",
+    "視乎佔用用途遵照適用的一般規定。如須安裝花灑系統，系統的級數須較認可風險類別",
+    "通常要求的系統高一級，但符合現行《建築物消防安全守則》所訂標準的建築物不在此限。",
+    "例如：LH（低危險程度）改為OH1（普通危險程度第一組）；OH4（普通危險程度第四組）",
+    "改為HH（高危險程度）。"
+   ]
+  },
+  "4.20": {
+   "para": "4.20",
+   "title_zh": "危險品貯存所",
+   "installations": {
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "視乎危險品的風險程度和貯存所容積而定。"
+    },
+    "automatic_fixed_water": {
+     "cond": "check",
+     "applicability_zh": "視乎危險品的風險程度和貯存所容積而定。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各層的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "設有自動固定裝置的貯存所的每個出口均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置應可以啓動聲響警報裝置。"
+    },
+    "fixed_automatic_appliance": {
+     "cond": "check",
+     "applicability_zh": "視乎危險品的風險程度和貯存所容積而定。"
+    },
+    "fixed_foam": {
+     "cond": "check",
+     "applicability_zh": "視乎風險程度而定。"
+    },
+    "gas_detection": {
+     "cond": "check",
+     "applicability_zh": "視乎風險程度而定。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "由消防處處長決定。"
+    },
+    "special_installation": {
+     "cond": "yes",
+     "applicability_zh": "由消防處處長決定。"
+    }
+   }
+  },
+  "4.21": {
+   "para": "4.21",
+   "title_zh": "低層住用建築物（樓高3層或以下）",
+   "installations": {
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "每層須設1個，停車間增加放置的數目。"
+    }
+   },
+   "alias": "domestic_le3",
+   "additional_zh": [
+    "管道和隱蔽位置內作隔音和隔熱用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "防護逃生途徑內作隔音、隔熱和裝飾用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "如擬貯存或使用香港法例第295章所界定的危險品，應通知消防處處長。"
+   ]
+  },
+  "4.22": {
+   "para": "4.22",
+   "title_zh": "低層住用建築物（樓高3層以上）",
+   "installations": {
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "每層須設有足夠的消防栓和喉轆。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間。建築物如沒有該等樓梯，消防栓須設置在令消防處處長滿意的位置。須設置喉轆以確保建築物每一部分均有喉轆膠喉可達，而膠喉的長度不會超過30米。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    }
+   },
+   "alias": "domestic_low",
+   "additional_zh": [
+    "管道和隱蔽位置內作隔音和隔熱用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "防護逃生途徑內作隔音、隔熱和裝飾用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "如擬貯存或使用香港法例第295章所界定的危險品，應通知消防處處長。"
+   ]
+  },
+  "4.23": {
+   "para": "4.23",
+   "title_zh": "高層住用建築物",
+   "installations": {
+    "emergency_generator": {
+     "cond": "yes",
+     "applicability_zh": "須設置發電量足以為消防裝置和消防員升降機供電的獨立發電機。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "所有樓梯、通道、機房和公眾地方（包括各層的升降機門廊和庇護間）均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "提供足夠的方向指示牌和出口指示牌，以確保清楚顯示公眾地方往樓梯的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "每層須設有足夠的消防栓和喉轆。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間。建築物如沒有該等樓梯，消防栓須設置在令消防處處長滿意的位置。須設置喉轆以確保建築物每一部分均有喉轆膠喉可達，而膠喉的長度不會超過30米。"
+    },
+    "firemans_lift": {
+     "cond": "check",
+     "applicability_zh": "須按照《建築物消防安全守則》的規定提供。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    }
+   },
+   "alias": "domestic_high",
+   "additional_zh": [
+    "管道和隱蔽位置內作隔音和隔熱用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "防護逃生途徑內作隔音、隔熱和裝飾用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "如擬貯存或使用香港法例第295章所界定的危險品，應通知消防處處長。"
+   ]
+  },
+  "4.24": {
+   "para": "4.24",
+   "title_zh": "配置變壓器、電掣、發電機╱交流發電機並須獨立安裝的用戶電力設備",
+   "installations": {
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "yes",
+     "applicability_zh": "電容量超過1500千伏安的充油變壓器房須設有此裝置。"
+    },
+    "fire_detection": {
+     "cond": "fd_uncovered",
+     "applicability_zh": "設於自動固定裝置沒有覆蓋的範圍，以及須安裝火警偵測系統的建築物部分。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "由消防處處長決定。"
+    }
+   },
+   "alias": "consumer_substation"
+  },
+  "4.25": {
+   "para": "4.25",
+   "title_zh": "爆炸品工場及╱或倉庫",
+   "installations": {},
+   "text_zh": [
+    "須裝設的系統╱裝置╱設備：",
+    "管理人員須向相關的發牌當局（即礦務處處長和警務處處長）聯同建築事務監督查詢。"
+   ]
+  },
+  "4.26": {
+   "para": "4.26",
+   "title_zh": "車房",
+   "installations": {
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整個處所和所有出路通道均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各處所的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動處所內的消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_detection": {
+     "cond": "ev_detection",
+     "applicability_zh": "如車房的總樓面面積不超過230平方米，並裝有電動車輛充電設施，但不在花灑系統的覆蓋範圍內，便須在整個車房安裝熱力偵測器或複合式感應偵測器。如車房位於住用建築物內，而該建築物沒有被強制規定安裝連接消防通訊中心的直線，則無須裝設該直線。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "每層須設有足夠的消防栓和喉轆。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間。建築物如沒有該等樓梯，消防栓須設置在令消防處處長滿意的位置。須設置喉轆以確保處所每一部分均有喉轆膠喉可達，而膠喉的長度不會超過30米。"
+    },
+    "firemans_emergency_switch": {
+     "cond": "ev_charging",
+     "applicability_zh": "設於裝有電動車輛充電設施的車房。須在車輛出入口、消防控制中心或消防處處長認為可以接納的其他位置安裝該開關掣。"
+    },
+    "firemans_lift": {
+     "cond": "check",
+     "applicability_zh": "須按照《建築物消防安全守則》的規定提供。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎風險程度而定。就裝有電動車輛充電設施的車房而言，在裝有該設施的樓層內，每個喉轆設置地點均須額外提供一個乾粉或二氧化碳滅火筒。"
+    },
+    "sprinkler": {
+     "cond": "sprinkler_230",
+     "applicability_zh": "如車房的總樓面面積超過230平方米，便須安裝此系統，並須覆蓋車房所有部分，包括通往此等車房的樓梯。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
+   },
+   "alias": "garage",
+   "note_zh": "註：上文(v)、(vii)及(ix)項就裝有電動車輛充電設施的車房訂明額外規定，該等規定不適用於樓高3層或以下的單個家庭住用建築物的車房，但位於地庫的車房除外。"
+  },
+  "4.27": {
    "para": "4.27",
-   "name": "Hotel, low rise",
-   "req": {
-    "audio_visual_advisory": "avas_2000",
-    "automatic_actuating_devices": "yes",
-    "automatic_fixed_non_water": "special_risk",
-    "emergency_generator": "yes",
-    "emergency_lighting": "yes",
-    "exit_sign": "yes",
-    "fire_alarm": "yes",
-    "fire_control_centre": "yes",
-    "fire_detection": "yes",
-    "fire_hydrant_hose_reel": "yes",
-    "firemans_lift": "firemans_lift_rule",
-    "portable_appliances": "yes",
-    "staircase_pressurization": "pressurization",
-    "sprinkler": "yes",
-    "smoke_extraction": "smoke_compartment",
-    "ventilation_ac_control": "yes"
+   "title_zh": "低層旅館",
+   "installations": {
+    "audio_visual_advisory": {
+     "cond": "avas_2000",
+     "applicability_zh": "如建築物內任何一個樓層有面積超過2 000平方米的部分作單一佔用用途，而作為購物者、觀眾或賓客的佔用人因短暫停留而面對風險，需要此等系統額外提供警報，則須在有關部分設置此等系統。"
+    },
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於不宜用水滅火的佔用部分或行業經營範圍。"
+    },
+    "emergency_generator": {
+     "cond": "yes",
+     "applicability_zh": "須設置發電量足以為消防裝置和消防員升降機供電的獨立發電機。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整幢建築物及通往地面的所有出路通道均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各層的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_control_centre": {
+     "cond": "yes",
+     "applicability_zh": "最少設立1個控制中心，並須視乎建築物設計的複雜程度增設控制中心。"
+    },
+    "fire_detection": {
+     "cond": "yes",
+     "applicability_zh": "(a) 設於自動固定裝置沒有覆蓋的範圍；(b) 如某樓層有任何部分作住宿用途，則除設有花灑系統的廁所、浴室、樓梯和開敞式走廊╱露台外，整個樓層都必須安裝煙霧偵測器或複合式感應偵測器。至於電力╱機械房和廚房，可以熱力偵測器代替；以及(c) 所有裝設在客房的煙霧偵測器或複合式感應偵測器必須配置專用的聲響警報基座。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "每層須設有足夠的消防栓和喉轆。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間。建築物如沒有該等樓梯，消防栓須設置在令消防處處長滿意的位置。須設置喉轆以確保處所每一部分均有喉轆膠喉可達，而膠喉的長度不會超過30米。"
+    },
+    "firemans_lift": {
+     "cond": "check",
+     "applicability_zh": "須按照《建築物消防安全守則》的規定提供。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    },
+    "staircase_pressurization": {
+     "cond": "press_2",
+     "applicability_zh": "須設於符合下述情況的建築物：(a) 樓梯不能自然通風；以及(b) 按層計房間╱單位內可開啓窗口的總面積不超過該等房間╱單位樓面面積的6.25%。增壓樓梯數目須按載於第二部「樓梯增壓」一詞釋義下面的列表而定，惟不得超過《建築物消防安全守則》規定的樓梯總數。"
+    },
+    "sprinkler": {
+     "cond": "yes",
+     "applicability_zh": "設於旅館所有部分，包括樓梯、公共走廊、廁所和浴室。"
+    },
+    "smoke_extraction": {
+     "cond": "smoke_hotel",
+     "applicability_zh": "須設於：(a) 供各客房使用的所有內部逃生途徑，不論該建築物的體積或任何一個樓層的防火間的體積。「內部逃生途徑」指從各客房外面通往增壓樓梯或自然通風樓梯、防護門廊或露天地方的通道。如通道本身裝設的可開啓窗口與露天地方相通，而該等窗口的總面積超過該通道樓面面積的6.25%，則不在此限；或(b) 防火間體積超過28 000立方米的旅館建築物中庭，或任何屬該防火間一部分的地庫或樓層的體積超過7 000立方米；或(c) 旅館建築物內任何體積超過7 000立方米而符合下述情況的防火間：(i) 該防火間內可開啓窗口的總面積不超過該防火間樓面面積的6.25%；以及(ii) 設定燃燒負荷量可能超過每平方米1 135兆焦耳。消防處處長如認為有需要，會在涉及下列防火間的建築圖則訂明進行熱煙測試的規定：(i) 淨空高度達12米或以上的防火間；或(ii) 形狀不規則或面積特大的防火間。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
    },
-   "note": "smoke or multi-sensor detection over the whole floor where any part is sleeping accommodation; guestroom detectors with sounder bases"
+   "alias": "hotel_low",
+   "note_zh": "註：(i) 獲消防處處長批准的其他煙霧偵測裝置可予接受。(ii) 開敞式走廊╱露台的安全護牆高度以上的一面須敞開，其敞開的高度須至少是該建築物面向室外的牆壁/一面的高度的50%。",
+   "additional_zh": [
+    "管道和隱蔽位置內作隔音和隔熱用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "防護逃生途徑內作隔音、隔熱和裝飾用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "如擬貯存或使用香港法例第295章所界定的危險品，應通知消防處處長。"
+   ]
   },
-  "hotel_high": {
+  "4.28": {
    "para": "4.28",
-   "name": "Hotel, high rise",
-   "req": {
-    "audio_visual_advisory": "avas_2000",
-    "automatic_actuating_devices": "yes",
-    "automatic_fixed_non_water": "special_risk",
-    "emergency_generator": "yes",
-    "emergency_lighting": "yes",
-    "exit_sign": "yes",
-    "fire_alarm": "yes",
-    "fire_control_centre": "yes",
-    "fire_detection": "yes",
-    "fire_hydrant_hose_reel": "yes",
-    "firemans_lift": "yes",
-    "portable_appliances": "yes",
-    "staircase_pressurization": "pressurization",
-    "sprinkler": "yes",
-    "smoke_extraction": "smoke_compartment",
-    "ventilation_ac_control": "yes"
+   "title_zh": "高層旅館",
+   "installations": {
+    "audio_visual_advisory": {
+     "cond": "avas_2000",
+     "applicability_zh": "如建築物內任何一個樓層有面積超過2 000平方米的部分作單一佔用用途，而作為購物者、觀眾或賓客的佔用人因短暫停留而面對風險，需要此等系統額外提供警報，則須在有關部分設置此等系統。"
+    },
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於不宜用水滅火的佔用部分或行業經營範圍。"
+    },
+    "emergency_generator": {
+     "cond": "yes",
+     "applicability_zh": "須設置發電量足以為消防裝置和消防員升降機供電的獨立發電機。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整幢建築物及通往地面的所有出路通道均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各層的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_control_centre": {
+     "cond": "yes",
+     "applicability_zh": "最少設立1個控制中心，並須視乎建築物設計的複雜程度增設控制中心。"
+    },
+    "fire_detection": {
+     "cond": "yes",
+     "applicability_zh": "(a) 設於自動固定裝置沒有覆蓋的範圍；(b) 如某樓層有任何部分作住宿用途，則除設有花灑系統的廁所、浴室、樓梯和開敞式走廊╱露台外，整個樓層都必須安裝煙霧偵測器或複合式感應偵測器。至於電力╱機械房和廚房，可以熱力偵測器代替；以及(c) 所有裝設在客房的煙霧偵測器或複合式感應偵測器必須配置專用的聲響警報基座。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "每層須設有足夠的消防栓和喉轆。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間。建築物如沒有該等樓梯，消防栓須設置在令消防處處長滿意的位置。須設置喉轆以確保處所每一部分均有喉轆膠喉可達，而膠喉的長度不會超過30米。"
+    },
+    "firemans_lift": {
+     "cond": "check",
+     "applicability_zh": "須按照《建築物消防安全守則》的規定提供。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    },
+    "staircase_pressurization": {
+     "cond": "press_2",
+     "applicability_zh": "須設於符合下述情況的建築物：(a) 樓梯不能自然通風；以及(b) 按層計房間╱單位內可開啓窗口的總面積不超過該等房間╱單位樓面面積的6.25%。增壓樓梯數目按載於第二部「樓梯增壓」一詞釋義下面的列表而定，惟不得超過《建築物消防安全守則》規定的樓梯總數。"
+    },
+    "sprinkler": {
+     "cond": "yes",
+     "applicability_zh": "設於旅館所有部分，包括樓梯、公共走廊、廁所和浴室。"
+    },
+    "smoke_extraction": {
+     "cond": "smoke_hotel",
+     "applicability_zh": "須設於：(a) 供各客房使用的所有內部逃生途徑，不論該建築物的體積或任何一個樓層的防火間的體積。「內部逃生途徑」指從各客房外面通往增壓樓梯或自然通風樓梯、防護門廊或露天地方的通道。如通道本身裝設的可開啓窗口與露天地方相通，而該等窗口的總面積超過該通道樓面面積的6.25%，則不在此限；或(b) 防火間體積超過28 000立方米的旅館建築物中庭，或任何屬該防火間一部分的地庫或樓層的體積超過7 000立方米；或(c) 旅館建築物內任何體積超過7 000立方米而符合下述情況的防火間：(i) 該防火間可開啓窗口的總面積不超過該防火間樓面面積的6.25%；以及(ii) 設定燃燒負荷量可能超過每平方米1 135兆焦耳。消防處處長如認為有需要，會在涉及下列防火間的建築圖則訂明進行熱煙測試的規定：(i) 淨空高度達12米或以上的防火間；或(ii) 形狀不規則或面積特大的防火間。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
    },
-   "note": "smoke extraction also to internal escape routes serving guestrooms"
+   "alias": "hotel_high",
+   "note_zh": "註：(i) 獲消防處處長批准的其他煙霧偵測裝置可予接受。(ii) 開敞式走廊╱露台的安全護牆高度以上的一面須敞開，其敞開的高度須至少是該建築物面向室外的牆壁/一面的高度的50%。",
+   "additional_zh": [
+    "管道和隱蔽位置內作隔音和隔熱用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "防護逃生途徑內作隔音、隔熱和裝飾用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "如擬貯存或使用香港法例第295章所界定的危險品，應通知消防處處長。"
+   ]
   },
-  "industrial_low": {
+  "4.29": {
    "para": "4.29",
-   "name": "Industrial / godown, low rise",
-   "req": {
-    "automatic_actuating_devices": "yes",
-    "automatic_fixed_non_water": "special_risk",
-    "emergency_generator": "emergency_generator_rule",
-    "emergency_lighting": "yes",
-    "exit_sign": "yes",
-    "fire_alarm": "yes",
-    "fire_control_centre": "yes",
-    "fire_detection": "yes",
-    "fire_hydrant_hose_reel": "yes",
-    "firemans_lift": "firemans_lift_rule",
-    "portable_appliances": "yes",
-    "sprinkler": "sprinkler_230",
-    "smoke_extraction": "smoke_compartment",
-    "ventilation_ac_control": "yes"
-   }
-  },
-  "industrial_high": {
-   "para": "4.30",
-   "name": "Industrial / godown, high rise",
-   "req": {
-    "automatic_actuating_devices": "yes",
-    "automatic_fixed_non_water": "special_risk",
-    "emergency_generator": "yes",
-    "emergency_lighting": "yes",
-    "exit_sign": "yes",
-    "fire_alarm": "yes",
-    "fire_control_centre": "yes",
-    "fire_detection": "yes",
-    "fire_hydrant_hose_reel": "yes",
-    "firemans_lift": "yes",
-    "portable_appliances": "yes",
-    "staircase_pressurization": "pressurization",
-    "sprinkler": "sprinkler_230",
-    "smoke_extraction": "smoke_compartment",
-    "ventilation_ac_control": "yes"
-   }
-  },
-  "institutional_low": {
-   "para": "4.31",
-   "name": "Institutional, low rise",
-   "req": {
-    "audio_visual_advisory": "avas_2000",
-    "automatic_actuating_devices": "yes",
-    "automatic_fixed_non_water": "special_risk",
-    "emergency_generator": "emergency_generator_rule",
-    "emergency_lighting": "yes",
-    "exit_sign": "yes",
-    "fire_alarm": "yes",
-    "fire_detection": "yes",
-    "fire_hydrant_hose_reel": "yes",
-    "firemans_lift": "firemans_lift_rule",
-    "portable_appliances": "yes",
-    "sprinkler": "sprinkler_230",
-    "ventilation_ac_control": "yes"
-   }
-  },
-  "institutional_high": {
-   "para": "4.32",
-   "name": "Institutional, high rise",
-   "req": {
-    "audio_visual_advisory": "avas_2000",
-    "automatic_actuating_devices": "yes",
-    "automatic_fixed_non_water": "special_risk",
-    "emergency_generator": "yes",
-    "emergency_lighting": "yes",
-    "exit_sign": "yes",
-    "fire_alarm": "yes",
-    "fire_control_centre": "yes",
-    "fire_detection": "yes",
-    "fire_hydrant_hose_reel": "yes",
-    "firemans_lift": "yes",
-    "portable_appliances": "yes",
-    "staircase_pressurization": "pressurization",
-    "sprinkler": "sprinkler_230",
-    "ventilation_ac_control": "yes"
+   "title_zh": "低層工業╱貨倉建築物",
+   "installations": {
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於不宜用水滅火的佔用部分或行業經營範圍。"
+    },
+    "emergency_generator": {
+     "cond": "yes",
+     "applicability_zh": "須設置發電量足以為消防裝置和消防員升降機供電的獨立發電機。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整幢建築物及通往地面的所有出路通道均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各層的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_control_centre": {
+     "cond": "yes",
+     "applicability_zh": "最少設立1個控制中心，並須視乎建築物設計的複雜程度增設控制中心。"
+    },
+    "fire_detection": {
+     "cond": "fd_uncovered",
+     "applicability_zh": "設於自動固定裝置沒有覆蓋的範圍。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "每層須設有足夠的消防栓和喉轆。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間。建築物如沒有該等樓梯，消防栓須設置在令消防處處長滿意的位置。須設置喉轆以確保建築物每一部分均有喉轆膠喉可達，而膠喉的長度不會超過30米。"
+    },
+    "firemans_lift_or_frs": {
+     "cond": "check",
+     "applicability_zh": "須按照《建築物消防安全守則》的規定提供。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    },
+    "sprinkler": {
+     "cond": "sprinkler_230",
+     "applicability_zh": "如建築物的總樓面面積超過230平方米，便須安裝此系統，並須覆蓋建築物所有部分，包括樓梯、公共走廊和廁所。"
+    },
+    "smoke_extraction": {
+     "cond": "smoke_compartment",
+     "applicability_zh": "設於建築物內任何體積超過7 000立方米而符合下述情況的防火間：(a) 該防火間內可開啓窗口的總面積不超過該防火間樓面面積的6.25%；以及(b) 設定燃燒負荷量可能超過每平方米1 135兆焦耳。消防處處長如認為有需要，會在涉及下列防火間的建築圖則訂明進行熱煙測試的規定：(i) 淨空高度達12米或以上的防火間；或(ii) 形狀不規則或面積特大的防火間。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
    },
-   "note": "web extract ended before the full 4.32 thresholds: check the PDF"
+   "alias": "industrial_low"
+  },
+  "4.30": {
+   "para": "4.30",
+   "title_zh": "高層工業╱貨倉建築物",
+   "installations": {
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於不宜用水滅火的佔用部分或行業經營範圍。"
+    },
+    "emergency_generator": {
+     "cond": "yes",
+     "applicability_zh": "須設置發電量足以為消防裝置和消防員升降機供電的獨立發電機。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整幢建築物及通往地面的所有出路通道均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各層的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_control_centre": {
+     "cond": "yes",
+     "applicability_zh": "最少設立1個控制中心，並須視乎建築物設計的複雜程度增設控制中心。"
+    },
+    "fire_detection": {
+     "cond": "fd_uncovered",
+     "applicability_zh": "設於自動固定裝置沒有覆蓋的範圍。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "每層須設有足夠的消防栓和喉轆。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間。建築物如沒有該等樓梯，消防栓須設置在令消防處處長滿意的位置。須設置喉轆以確保建築物每一部分均有喉轆膠喉可達，而膠喉的長度不會超過30米。"
+    },
+    "frs_stairway": {
+     "cond": "check",
+     "applicability_zh": "須按照《建築物消防安全守則》的規定提供。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    },
+    "staircase_pressurization": {
+     "cond": "press_4",
+     "applicability_zh": "設於符合下述情況的建築物：(a) 樓梯不能自然通風；(b) 按層計房間╱單位內可開啓窗口的總面積不超過該等房間╱單位樓面面積的6.25%；(c) 體積超過28 000立方米；以及(d) 設定燃燒負荷量可能超過每平方米1 135兆焦耳。增壓樓梯數目按載於第二部「樓梯增壓」一詞釋義下面的列表而定，惟不得超過《建築物消防安全守則》規定的樓梯總數。"
+    },
+    "sprinkler": {
+     "cond": "yes",
+     "applicability_zh": "設於建築物所有部分，包括樓梯、公共走廊和廁所。"
+    },
+    "smoke_extraction": {
+     "cond": "smoke_compartment",
+     "applicability_zh": "須設於建築物內任何體積超過7 000立方米而符合下述情況的防火間：(a) 該防火間內可開啓窗口的總面積不超過該防火間樓面面積的6.25%；以及(b) 設定燃燒負荷量可能超過每平方米1 135兆焦耳。消防處處長如認為有需要，會在涉及下列防火間的建築圖則訂明進行熱煙測試的規定：(i) 淨空高度達12米或以上的防火間；或(ii) 形狀不規則或面積特大的防火間。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
+   },
+   "alias": "industrial_high"
+  },
+  "4.31": {
+   "para": "4.31",
+   "title_zh": "低層社團建築物",
+   "installations": {
+    "audio_visual_advisory": {
+     "cond": "avas_2000",
+     "applicability_zh": "如建築物內任何一個樓層有面積超過2 000平方米的部分作社團用途，而作為賓客或訪客的佔用人因短暫停留而面對風險，需要此等系統額外提供警報，則須在有關部分設置此等系統。"
+    },
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於不宜用水滅火的佔用部分或行業經營範圍。"
+    },
+    "emergency_generator": {
+     "cond": "eg_institutional",
+     "applicability_zh": "設於醫院、療養院和監獄，或視乎風險所需而提供。設置的獨立發電機發電量須足以為消防裝置和消防員升降機供電。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整幢建築物及通往地面的所有出路通道均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各層的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_detection": {
+     "cond": "yes",
+     "applicability_zh": "(a) 設於自動固定裝置沒有覆蓋的範圍；(b) 如某樓層有任何部分作住宿用途，則除設有花灑系統的廁所、浴室、樓梯和開敞式走廊╱露台外，整個樓層都必須安裝煙霧偵測器或複合式感應偵測器。至於電力╱機械房和廚房，可以熱力偵測器代替；以及(c) 所有裝設在學生宿舍睡房的煙霧偵測器或複合式感應偵測器必須配置專用的聲響警報基座。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "每層須設有足夠的消防栓和喉轆。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間。建築物如沒有該等樓梯，消防栓須設置在令消防處處長滿意的位置。須設置喉轆以確保建築物每一部分均有喉轆膠喉可達，而膠喉的長度不會超過30米。"
+    },
+    "firemans_lift": {
+     "cond": "check",
+     "applicability_zh": "須按照《建築物消防安全守則》的規定提供。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    },
+    "sprinkler": {
+     "cond": "sprinkler_230",
+     "applicability_zh": "如建築物的總樓面面積超過230平方米，便須安裝此系統，並須覆蓋建築物所有部分，包括樓梯、公共走廊、廁所和浴室。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
+   },
+   "alias": "institutional_low",
+   "note_zh": "註：(i) 獲消防處處長批准的其他煙霧偵測裝置可予接受。(ii) 開敞式走廊╱露台的安全護牆高度以上的一面須敞開，其敞開的高度須至少是該建築物面向室外的牆壁/一面的高度的50%。",
+   "additional_zh": [
+    "管道和隱蔽位置內作隔音和隔熱用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "防護逃生途徑內作隔音、隔熱和裝飾用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "如擬貯存或使用香港法例第295章所界定的危險品，應通知消防處處長。",
+    "就醫院和療養院內指定作疏散用途的升降機而言，防護規格必須與消防員升降機的規格完全相同，但升降機機廂內部的樓面面積和最低額定負載此兩項除外。"
+   ]
+  },
+  "4.32": {
+   "para": "4.32",
+   "title_zh": "高層社團建築物",
+   "installations": {
+    "audio_visual_advisory": {
+     "cond": "avas_2000",
+     "applicability_zh": "如建築物內任何一個樓層有面積超過2 000平方米的部分作社團用途，而佔用人作為賓客或訪客因短暫停留而面對風險，需要此等系統額外提供警報，則須在有關部分設置此等系統。"
+    },
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於不宜用水滅火的佔用部分或行業經營範圍。"
+    },
+    "emergency_generator": {
+     "cond": "yes",
+     "applicability_zh": "須設置發電量足以為消防裝置和消防員升降機供電的獨立發電機。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整幢建築物及通往地面的所有出路通道均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各層的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_control_centre": {
+     "cond": "yes",
+     "applicability_zh": "最少設立1個控制中心，並須視乎建築物設計的複雜程度增設控制中心。"
+    },
+    "fire_detection": {
+     "cond": "yes",
+     "applicability_zh": "(a) 設於自動固定裝置沒有覆蓋的範圍；(b) 如某樓層有任何部分作住宿用途，則除設有花灑系統的廁所、浴室、樓梯和開敞式走廊╱露台外，整個樓層都必須安裝煙霧偵測器或複合式感應偵測器。至於電力╱機械房和廚房，可以熱力偵測器代替；以及(c) 所有裝設在學生宿舍睡房的煙霧偵測器或複合式感應偵測器必須配置專用的聲響警報基座。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "每層須設有足夠的消防栓和喉轆。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間。建築物如沒有該等樓梯，消防栓須設置在令消防處處長滿意的位置。須設置喉轆以確保建築物每一部分均有喉轆膠喉可達，而膠喉的長度不會超過30米。"
+    },
+    "firemans_lift": {
+     "cond": "check",
+     "applicability_zh": "須按照《建築物消防安全守則》的規定提供。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    },
+    "staircase_pressurization": {
+     "cond": "press_hospital",
+     "applicability_zh": "須設於符合下述情況的醫院和療養院：(a) 樓梯不能自然通風；以及(b) 按層計房間╱單位內可開啓窗口的總面積不超過該等房間╱單位樓面面積的6.25%。增壓樓梯數目須按載於第二部「樓梯增壓」一詞釋義下面的列表而定，惟不得超過《建築物消防安全守則》規定的樓梯總數。"
+    },
+    "sprinkler": {
+     "cond": "yes",
+     "applicability_zh": "須設於建築物所有部分，包括樓梯、公共走廊、廁所和浴室。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
+   },
+   "alias": "institutional_high",
+   "note_zh": "註：(i) 獲消防處處長批准的其他煙霧偵測裝置可予接受。(ii) 開敞式走廊╱露台的安全護牆高度以上的一面須敞開，其敞開的高度須至少是該建築物面向室外的牆壁/一面的高度的50%。",
+   "additional_zh": [
+    "管道和隱蔽位置內作隔音和隔熱用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "防護逃生途徑內作隔音、隔熱和裝飾用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "如擬貯存或使用香港法例第295章所界定的危險品，應通知消防處處長。",
+    "就醫院和療養院內指定作疏散用途的升降機而言，防護規格必須與消防員升降機的規格完全相同，但升降機機廂內部的樓面面積和最低額定負載此兩項除外。"
+   ]
+  },
+  "4.33": {
+   "para": "4.33",
+   "title_zh": "廚房（住用處所內的廚房除外）",
+   "installations": {},
+   "alias": "kitchen",
+   "text_zh": [
+    "須裝設的系統╱裝置╱設備及應用範圍：",
+    "(i) 廚房通常須備有所在建築物的防火和安全設施，並須按消防處處長可能作出的規",
+    "定，增設特別設備或符合特別規定；",
+    "(ii) 視乎風險程度，裝設認可的人手操作手提器具。"
+   ]
+  },
+  "4.34": {
+   "para": "4.34",
+   "title_zh": "升降機機房",
+   "installations": {
+    "fire_detection": {
+     "cond": "check",
+     "applicability_zh": "如升降機所在建築物部分須設置火警偵測系統，則所有升降機機房亦須裝設此系統。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    }
+   },
+   "alias": "lift_machine_room"
+  },
+  "4.35": {
+   "para": "4.35",
+   "title_zh": "出口不通往防護逃生途徑的升降機",
+   "installations": {
+    "automatic_actuating_devices": {
+     "cond": "yes",
+     "applicability_zh": "(a) 所有不通往本守則第1.2段所定義的防護逃生途徑的升降機門口外，須安裝煙霧偵測器或複合式感應偵測器，作為自動啓動裝置。(b) 設於建築物內，但以下建築物除外：(i) 裝有花灑的建築物；或"
+    }
+   }
+  },
+  "4.36": {
+   "para": "4.36",
+   "title_zh": "機械機房（第一組）",
+   "installations": {
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "須於各機械機房內及所有出路通道設置應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各機械機房的所有出路通道。"
+    },
+    "fire_detection": {
+     "cond": "fd_uncovered",
+     "applicability_zh": "設於自動固定裝置沒有覆蓋的範圍，以及須安裝火警偵測系統的建築物部分。"
+    },
+    "gas_detection": {
+     "cond": "check",
+     "applicability_zh": "設於可能產生易燃霧氣的範圍。"
+    },
+    "gas_extraction": {
+     "cond": "yes",
+     "applicability_zh": "獲認可適用於建築物內可能產生易燃霧氣部分的系統，用以將霧氣濃度減至低於爆炸下限。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎風險程度而定。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
+   },
+   "alias": "plant_room_group1"
+  },
+  "4.37": {
+   "para": "4.37",
+   "title_zh": "機械機房（第二組）",
+   "installations": {
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於不宜用水滅火的佔用部分或行業經營範圍。"
+    },
+    "emergency_generator": {
+     "cond": "yes",
+     "applicability_zh": "須設置發電量足以為消防裝置和消防員升降機供電的獨立發電機。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整幢建築物及所有出路通道均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各層的所有出路通道。"
+    },
+    "fire_detection": {
+     "cond": "fd_uncovered",
+     "applicability_zh": "設於自動固定裝置沒有覆蓋的範圍。"
+    },
+    "fixed_automatic_appliance": {
+     "cond": "check",
+     "applicability_zh": "視乎風險程度而定。"
+    },
+    "gas_detection": {
+     "cond": "check",
+     "applicability_zh": "設於可能產生易燃霧氣的範圍。"
+    },
+    "gas_extraction": {
+     "cond": "yes",
+     "applicability_zh": "獲認可適用於建築物內可能產生易燃霧氣部分的系統，用以將霧氣濃度減至低於爆炸下限。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎風險程度而定。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
+   },
+   "alias": "plant_room_group2"
+  },
+  "4.38": {
+   "para": "4.38",
+   "title_zh": "客運總站╱車站",
+   "installations": {},
+   "alias": "transport_terminal",
+   "text_zh": [
+    "須裝設的系統╱裝置╱設備：",
+    "消防處處長會視乎客運站╱分站的大小和複雜程度作個別考慮。有關規定大致取決於客運",
+    "站╱分站的各種用途，並以本守則內同類用途的段落為依歸。另會就認為有需要的範圍（如乘",
+    "客流動範圍）附加額外規定。"
+   ]
+  },
+  "4.39": {
+   "para": "4.39",
+   "title_zh": "石油化工綜合建築物",
+   "installations": {
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於不宜用水滅火的範圍。"
+    },
+    "automatic_fixed_water": {
+     "cond": "check",
+     "applicability_zh": "設於上文第(ii)項所指範圍以外的所有範圍，包括樓梯、公共走廊和廁所。"
+    },
+    "dust_detection": {
+     "cond": "check",
+     "applicability_zh": "設於所有具潛在塵埃爆炸危險的範圍。"
+    },
+    "emergency_generator": {
+     "cond": "yes",
+     "applicability_zh": "須設置發電量足以為消防裝置和消防員升降機供電的獨立發電機。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "綜合建築物內各建築物均須安裝應急照明系統。此外，亦須提供應急照明系統以確保有充足照明，方便安全疏散到綜合建築物範圍之外。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各層的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "建築物內每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。此外，環形水管系統的每個消防栓出水口均須裝有啓動裝置和聲響╱視像警報裝置各1個。"
+    },
+    "fire_control_centre": {
+     "cond": "yes",
+     "applicability_zh": "最少設立1個控制中心，並須視乎綜合建築物的布局增設控制中心。"
+    },
+    "fire_detection": {
+     "cond": "fd_uncovered",
+     "applicability_zh": "設於自動固定裝置沒有覆蓋的範圍。"
+    },
+    "fixed_automatic_appliance": {
+     "cond": "check",
+     "applicability_zh": "視乎風險程度而定。"
+    },
+    "fixed_foam": {
+     "cond": "check",
+     "applicability_zh": "視乎風險程度而定。"
+    },
+    "gas_detection": {
+     "cond": "check",
+     "applicability_zh": "設於所有具風險的範圍。"
+    },
+    "gas_extraction": {
+     "cond": "yes",
+     "applicability_zh": "獲認可適用於建築物內可能產生易燃霧氣部分的系統，用以將霧氣濃度減至低於爆炸下限。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎風險程度而定。"
+    },
+    "ring_main_fixed_pump": {
+     "cond": "yes",
+     "applicability_zh": "為此等綜合建築物內公共水管不足的範圍供水。"
+    },
+    "special_installation": {
+     "cond": "yes",
+     "applicability_zh": "由消防處處長決定。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
+   },
+   "note_zh": "註：此等綜合建築物內的建築物須符合本守則有關同類處所的指明規定。"
+  },
+  "4.40": {
+   "para": "4.40",
+   "title_zh": "鐵路調車場",
+   "installations": {
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於不宜用水滅火的範圍。"
+    },
+    "automatic_fixed_water": {
+     "cond": "check",
+     "applicability_zh": "設於上文第(i)項所指範圍以外的所有範圍，包括樓梯、公共走廊和廁所。"
+    },
+    "emergency_generator": {
+     "cond": "yes",
+     "applicability_zh": "須設置發電量足以為消防裝置供電的獨立發電機。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "車場內各建築物均須安裝應急照明系統。此外，亦須提供應急照明系統以確保有充足照明，方便安全疏散到車場範圍之外。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "環形水管系統的每個消防栓設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_control_centre": {
+     "cond": "yes",
+     "applicability_zh": "最少設立1個控制中心，並須視乎車場的布局增設控制中心。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "每層須設有足夠的消防栓和喉轆。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間。建築物如沒有該等樓梯，消防栓須設置在令消防處處長滿意的位置。須設置喉轆以確保處所每一部分均有喉轆膠喉可達，而膠喉的長度不會超過30米。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    },
+    "ring_main_fixed_pump": {
+     "cond": "yes",
+     "applicability_zh": "為車場內公共水管不足的範圍供水。"
+    },
+    "special_installation": {
+     "cond": "yes",
+     "applicability_zh": "由消防處處長決定。"
+    },
+    "smoke_extraction": {
+     "cond": "check",
+     "applicability_zh": "須設於任何體積超過7 000立方米而符合下述情況的防火間：(a) 該防火間內可開啓窗口的總面積不超過該防火間樓面面積的6.25%；以及(b) 設定燃燒負荷量可能超過每平方米1 135兆焦耳。消防處處長如認為有需要，會在涉及下列防火間的建築圖則訂明進行熱煙測試的規定：(i) 淨空高度達12米或以上的防火間；或(ii) 形狀不規則或面積特大的防火間。"
+    }
+   },
+   "note_zh": "註：車場內的建築物須符合本守則有關同類處所的指明規定。"
+  },
+  "4.41": {
+   "para": "4.41",
+   "title_zh": "庇護層 (Refuge Floor)",
+   "installations": {},
+   "alias": "refuge_floor",
+   "text_zh": [
+    "須裝設的系統╱裝置╱設備及應用範圍：",
+    "(i) 根據本守則有關段落的規定須在建築物內裝設的消防裝置及設備，亦須視乎情況裝",
+    "設在庇護層。",
+    "(ii) 須設置獨立供水的外部水簾系統，以防護所有外牆開口。系統須由快速開啓閥或",
+    "集水閥門自動操作，並設有人手操作控制。快速開啓閥或集水閥門由與水簾系統",
+    "安裝在同一地點的認可熱力偵測器或花灑系統操作。",
+    "(iii) 露天屋頂即使設計為庇護層，亦不必安裝花灑或水簾系統。"
+   ]
+  },
+  "4.42": {
+   "para": "4.42",
+   "title_zh": "行車隧道",
+   "installations": {
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於不宜用水滅火的範圍。"
+    },
+    "cctv": {
+     "cond": "yes",
+     "applicability_zh": "裝置該系統以便清楚觀察整條隧道的情況。"
+    },
+    "smoke_extraction_dynamic": {
+     "cond": "yes",
+     "applicability_zh": "長逾230米的隧道須安裝機械式排煙系統。此系統可納入隧道的通風系統。"
+    },
+    "emergency_generator": {
+     "cond": "yes",
+     "applicability_zh": "須設置發電量足以為消防裝置供電的獨立發電機。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整條隧道均須安裝應急照明系統。"
+    },
+    "emergency_power_socket": {
+     "cond": "yes",
+     "applicability_zh": "在隧道兩旁每隔100米安裝。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "安裝指示牌顯示行人跨管設施和疏散通道的位置。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "每個喉轆設置地點均須裝有啓動裝置和視像警報裝置各1個。啓動裝置必須可以啓動消防泵和隧道控制中心內的聲響╱視像警報裝置。"
+    },
+    "fire_control_centre": {
+     "cond": "yes",
+     "applicability_zh": "須設立1個控制中心。該中心可納為隧道控制中心的一部分。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "雙管隧道須設有足夠的消防喉轆，確保隧道每一部分均有喉轆膠喉可達，而膠喉的長度不會超過30米。須每隔50米設置消防喉轆和每隔100米設置消防栓。每個消防栓設置地點須設有一個雙出水口的消防栓或兩個單出水口的消防栓。消防栓須裝有彈弓式接頭，兩個出水口同時操作時，可以每分鐘輸水不少於4 000公升（每秒66.7公升），運行壓力不少於170千帕斯卡。單管隧道須設有足夠的消防栓和喉轆，確保隧道每一部分均有滅火喉和喉轆膠喉可達，而滅火喉和喉轆膠喉的長度不超過30米。須每隔50米設置消防栓和喉轆。"
+    },
+    "firemans_communication": {
+     "cond": "yes",
+     "applicability_zh": "由消防處處長決定。"
+    },
+    "fixed_foam": {
+     "cond": "check",
+     "applicability_zh": "設於隧道中央部分集水坑的最低點，尤其是在海底隧道內。"
+    },
+    "gas_detection": {
+     "cond": "yes",
+     "applicability_zh": "氣體偵測系統須能偵測一氧化碳並發出警報。"
+    },
+    "pedestrian_cross_passage": {
+     "cond": "yes",
+     "applicability_zh": "須在雙管隧道內每隔100米設置行人跨管設施。單管隧道則須設置小型行人隧道，供疏散用途。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎風險程度而定。"
+    }
+   }
+  },
+  "4.43": {
+   "para": "4.43",
+   "title_zh": "船塢",
+   "installations": {
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "emergency_generator": {
+     "cond": "yes",
+     "applicability_zh": "須設置發電量足以為消防裝置供電的獨立發電機。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "船塢內所有建築物均須安裝應急照明系統。此外，亦須提供應急照明系統以確保有充足照明，方便安全疏散到船塢範圍之外。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "環形水管系統的每個消防栓設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_control_centre": {
+     "cond": "yes",
+     "applicability_zh": "最少設立1個控制中心，並須視乎船塢的布局增設控制中心。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    },
+    "ring_main_fixed_pump": {
+     "cond": "yes",
+     "applicability_zh": "為船塢內公共水管不足的範圍供水。"
+    },
+    "special_installation": {
+     "cond": "yes",
+     "applicability_zh": "由消防處處長決定。"
+    }
+   }
+  },
+  "4.44": {
+   "para": "4.44",
+   "title_zh": "電力分站╱電掣站",
+   "installations": {
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "設於不宜用水滅火的佔用部分或行業經營範圍。"
+    },
+    "automatic_fixed_water": {
+     "cond": "check",
+     "applicability_zh": "視乎風險程度而定。"
+    },
+    "emergency_generator": {
+     "cond": "yes",
+     "applicability_zh": "須設置發電量足以為消防裝置和消防員升降機供電的獨立發電機。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整幢建築物及通往地面的所有出路通道均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各層的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "yes",
+     "applicability_zh": "每個喉轆設置地點均須裝有啓動裝置和聲響警報裝置各1個。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。啓動裝置必須可以啓動消防泵和聲響╱視像警報裝置。"
+    },
+    "fire_control_centre": {
+     "cond": "yes",
+     "applicability_zh": "最少設立1個控制中心，並須視乎建築物設計的複雜程度增設控制中心。"
+    },
+    "fire_detection": {
+     "cond": "fd_uncovered",
+     "applicability_zh": "設於自動固定裝置沒有覆蓋的範圍。"
+    },
+    "fire_hydrant_hose_reel": {
+     "cond": "yes",
+     "applicability_zh": "每層須設置足夠的消防栓和喉轆。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間。建築物如沒有該等樓梯，消防栓須設置在令消防處處長滿意的位置。須設置喉轆以確保處所每一部分均有喉轆膠喉可達，而膠喉的長度不會超過30米。"
+    },
+    "firemans_lift_or_frs": {
+     "cond": "check",
+     "applicability_zh": "須按照《建築物消防安全守則》的規定提供。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎佔用用途而定。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
+   },
+   "alias": "substation"
+  },
+  "4.45": {
+   "para": "4.45",
+   "title_zh": "電話配線設備、電腦裝置及同類裝置",
+   "installations": {
+    "automatic_actuating_devices": {
+     "cond": "check",
+     "applicability_zh": "配合須自動啓動的設備。"
+    },
+    "automatic_fixed_non_water": {
+     "cond": "check",
+     "applicability_zh": "如沒有安裝用水作滅火劑的自動固定裝置，便須提供此裝置。"
+    },
+    "automatic_fixed_water": {
+     "cond": "check",
+     "applicability_zh": "如沒有安裝不含水的滅火劑自動固定裝置，便須提供此裝置。"
+    },
+    "emergency_lighting": {
+     "cond": "yes",
+     "applicability_zh": "整幢建築物及通往地面的所有出路通道均須安裝應急照明系統。"
+    },
+    "exit_sign": {
+     "cond": "yes",
+     "applicability_zh": "須按建築物的樓梯設計，提供足夠的方向指示牌和出口指示牌，以確保清楚顯示建築物內各處所的所有出路通道。"
+    },
+    "fire_alarm": {
+     "cond": "check",
+     "applicability_zh": "視乎風險程度而定。如有需要，須遵照現行《設計手冊：暢通無阻的通道》的規定，提供視像火警信號。"
+    },
+    "fire_detection": {
+     "cond": "fd_uncovered",
+     "applicability_zh": "設於自動固定裝置沒有覆蓋的範圍。"
+    },
+    "fixed_automatic_appliance": {
+     "cond": "check",
+     "applicability_zh": "視乎設備的風險程度而定。"
+    },
+    "portable_appliances": {
+     "cond": "yes",
+     "applicability_zh": "視乎風險程度而定。"
+    },
+    "ventilation_ac_control": {
+     "cond": "yes",
+     "applicability_zh": "建築物內如裝設通風╱空調控制系統，該系統須能停止指定防火間內由機械引發的氣流。"
+    }
+   },
+   "alias": "telecom_computer",
+   "note_zh": "註：如只備有 1 個照明器而燈絲出現故障，可能造成危險。）(r) 應急照明系統的所有照明器須以防火物料製造，並符合英國歐盟標準 60598-2-22的規定和安裝在固定位置。5.10 出口指示牌規格內置照明裝置指示牌符合英國標準 5499：第 10 部的規定的內置照明裝置指示牌，獲核准作為出口指示牌和方向指示牌，供一般情況使用。該等指示牌須接連主電力供應和應急電力供應。假如建築物沒有安裝應急發電機，該等指示牌須按照英國標準 5266：第 1 部的規定安裝充電池。自身發光指示牌符合英國標準 5499：第 2 部的規定或消防處處長接納的其他標準的自身發光指示牌，獲核准作為出口指示牌和方向指示牌，但只限用於單一業權或中央管理的處所，例如：(a) 根據第 5.1 段的規定須安裝聲響／視像警報系統的處所(b) 政府建築物(c) 體育館和運動場(d) 旅館和附服務設施的住宅(e) 第 3.1 段界定的社團建築物(f) 博物館、展覽廳、圖書館和禮拜場所(g) 辦公建築物(h) 車房(i) 客運碼頭和貨運站(j) 隧道(k) 臨時示範單位(l) 消防處處長不時批准的其他處所或建築物如屬以氚氣或其他輻射源發光的自身發光指示牌，須在指示牌的下方角落以不能抹掉的標記註明輻射危險和使用限期（月／年），以資識別。指示牌背面須設有輻射管理局規定的標籤，以指示或警告使用者適當的棄置方法。在任何處所安裝自身發光指示牌，必須遵從輻射管理局的各項規定。出口指示牌的規定須按建築物的樓梯設計，提供足夠的出口指示牌，以確保清楚顯示建築物內各層的所有出路通道。文字出口指示牌、圖形符號與文字並用的出口指示牌，以及圖形符號出口指示牌均可接受。新建建築物方面，整個發展項目須裝設同一類型的出口指示牌，以確保統一。文字出口指示牌指示牌須具圖 1 所示的中英文字樣，字體高度不少於 125 毫米。英文字形須為「Helvetica」或「Marigold」或「Modified Garamond」，一如範例所示。至於中文字體的筆畫，豎筆不得幼於 15 毫米，橫筆不得幼於 10 毫米。字形：Helvetica 字形：Marigold 字形：Modified Garamond圖 1圖形符號與文字並用的出口指示牌（圖 2）須符合有關文字出口指示牌的所有規定。此外，中英文字樣之間須加入不小於 125 毫米 x 125 毫米的圖形符號。圖 3 顯示符號的詳細比例。圖 2圖形符號出口指示牌指示牌須具有不小於 125 毫米 x 125 毫米的圖形符號。圖 3 顯示符號的詳細比例。（大小︰ a≧125 毫米，b≧10 毫米）圖 3方向指示牌的規定如出口的正上方沒有設置指示牌，或處所內通常有人佔用的部分不能清楚看見出口，須按建築物的樓梯設計設置方向指示牌，以確保清楚顯示建築物內各層的所有出路通道。方向指示牌的圖樣須如圖 4 所示。符合圖 4 大部分規定的指示牌亦可接受。圖 4顏色字體與圍繞字體的半透明背景須採用以下的顏色對比：顏色 對比顏色綠色 白色白色 綠色內置照明裝置指示牌和自身發光指示牌以白色圖形或文字為佳；整幢建築物宜選用劃一的顏色配搭。出口指示牌和方向指示牌的擺放位置，須在樓面之上 2 至 2.5 米（由指示牌底部起計），出口指示牌須設置於出口門道正上方。如實際上不可行，應徵詢消防處處長的意見。5.11 火警警報系統規格註： 本段只適用於系統內的人手操作火警警報裝置。人手操作的火警警報系統必須符合英國標準 5839：第 1 部有關章節（加上切合香港情況的適當修訂）的規定。單靠人手操作的系統（如手鈴、哨子、轉動式銅鑼等）並不屬本守則適用範圍，但如處所（例如校舍）現有的聲響系統有特定的信號，只用以通知處所佔用人發生火警，便可在消防處處長的批准下，使用該聲響系統作為人手操作的火警警報系統。符合消防處處長接納標準的手動啓動裝置，可與自動火警偵測系統互相接連。該類手動啓動裝置須按照適用標準安裝，在處所內安裝的位置載於本守則有關個別類型處所的部分。該等裝置須處於完工樓面以上 0.9 米至 1.2 米之間，屬易於使用、光度充足和不會受阻擋的顯眼位置。此外，須在每個消防喉轆設置地點，特別是每個樓層出口（或入口門廊，如該等門廊只可通往樓層出口）旁邊（距離不得超過 2 米），以及每個通往地面露天地方或最終的安全地方的樓梯出口旁邊，設置手動啓動裝置。假如建築物設有管理員辦事處或管理處，則須在該等地點提供 1 個手動啓動裝置和覆示裝置控制板，以顯示主板的共通火警警報信號和共通故障信號。假如建築物設有火警偵測系統，人手操作的火警警報系統須連接火警偵測系統，並以直線連接消防通訊中心。根據現行《設計手冊：暢通無阻的通道》的規定，除聲響警報裝置外，亦須提供視像警報信號，作為火警警報系統的一部分。視像警報信號須為紅色閃燈，標明「FIREALARM（火警）」（中英文字樣的高度分別不得少於 15 毫米和 10 毫米，可標示於固定在視像警報信號附近的指示牌或刻在燈罩）。視像警報信號的設計須符合美國國家防火協會標準 72 的規定，並須使用紅色閃燈，或符合英國標準 5839：第 1 部（加上切合香港情況的適當修訂）的規定。所有視像火警警報系統除了可使用電池提供的直流電和後備電源外，也可以使用交流電和應急發電機輔助電源或未流經總掣的電源。根據英國標準 5839 的規定安裝的視像火警警報系統，視像警報信號必須為紅色閃燈，最低光度定值達 15 燭光。至於相隔距離，基本規定是在所有須受防護的範圍內，視力正常的人可以看到閃燈。按照安裝的一般指引，每 1 個消防喉轆和火警鐘掣附近必須裝有 1 盞閃燈，而在每個隔室內亦須最少安裝 1 盞。閃燈與閃燈之間的距離不得超過60 米。5.12 消防控制中心規格一個一般設於建築物正面地面層的房間╱隔室，以毗連主要入口為佳。房間須有牆壁與建築物其餘部分分隔，而分隔牆壁須最少有 1 小時的耐火效能。房間須能容納建築物內防火系統的輔助設備、記錄器、信號顯示器等。須由受過訓練的人員持續駐守／在發生緊急事故時迅速前往處理有關狀況。視乎情況，安裝防火和救生系統的現場終端╱覆示裝置連同系統的測試設備。電力由必要電源電路供應（正常和應急電源）。如處所發生緊急事故，消防控制中心可能被徵用為消防處的指揮單位。5.13 火警偵測系統規格系統須按照英國標準 5839：第 1 部（加上切合香港情況的適當修訂）的規定或消防處處長接納的其他標準安裝，並須安裝直線，連接消防通訊中心或消防處處長同意的其他處所。偵測頭可以屬偵測熱力或偵測煙霧的類型；在同一系統內也可同時安裝這兩種偵測器。儘管如何選擇往往取決於情況所需，但在計劃階段必須與消防處磋商。在建築物使用初期，須監察系統的操作情況，以「找出」任何導致系統發出假警報╱警鐘誤鳴的偵測器。5.14 消防栓╱喉轆系統規格(a) 消防栓所有消防栓須按照英國標準 5041：第 1 部的適用規定裝配，並須髹上紅色。消防栓須由不易腐蝕的金屬製造，每個出水口均須為陰性彈弓式出水口，符合英國標準 336 的規定，而且須由輪式螺旋開關掣個別操作，並以逆時針轉動方向開啓螺旋開關掣。開關掣的轉輪上須以中英文清楚刻上開啓方向。消防栓出水口接頭的中心點距離完工樓面不得少於 800 毫米或超過 1 200 毫米。消防栓須設置在規定樓梯的入口門廊或規定樓梯圍封間的顯眼位置，惟不得設置在規定樓梯圍封間的中央位置。如在牆壁凹進處安裝消防栓，出水口和開關掣的任何部分與四周牆壁和任何圍封間門框之間需有足夠空間，確保消防栓的使用和接頭的裝配，不受任何阻礙。消防栓如非裝置在牆壁凹進處，便須受到妥善保護，以防損毀。無論消防栓是否裝置在牆壁凹進處，都可把其設於箱內，以防遭受干擾或盜竊。該箱應裝有向外拉開的不可上鎖手柄，箱的大小和設計以不妨礙使用消防栓為原則。消防栓如裝置在有門的凹進處，該門須註有最少 50 毫米高的「FIRE HYDRANT（消防栓）」字樣。消防栓不得完全阻塞、局部阻塞或間接阻塞任何門口，或任何出路通道（令出路通道不符合規定闊度）。消防栓毗連的門扇在開啓時，不得遮蔽消防栓所處位置。如高架水缸的靜水壓和流量足以提供固定消防泵的規定效能，則該水缸可直接供水予消防栓系統，無須配備固定消防泵。(b) 消防喉轆消防喉轆的設計須以膠喉經由喉轆絞盤上的喉管和可能需要使用的接駁箱，永久接駁到供水管或消防栓供水管。消防喉轆膠喉的內徑不得少於 19 毫米，可承受的爆破壓力不得少於 2 700 千帕斯卡；在高至 2 000 千帕斯卡的壓力下，亦不得出現滲水孔或有滲漏跡象。每條消防喉轆膠喉不得超過 30 米長，並能繞在直徑不少於 150 毫米的絞盤上。在繞經有銳角的障礙位時，亦不應扭結。裝上喉嘴的喉轆膠喉噴出的水柱不得少於 6 米長。每個消防喉轆的供水壓力不得超過 1 200 千帕斯卡及喉轆的額定操作壓力。喉嘴孔口的直徑不得少於 4.5 毫米，並裝上簡單的雙向開關掣以噴射或關上水柱。雙向開關掣不得裝有彈簧。消防喉轆來水掣須屬香港水務監督認可的閘型水閥。關閉水閥時，須以順時針方向轉動手輪。香港水務監督認可的簡單雙向球形水閥亦可用以代替閘型水閥。消防喉轆絞盤必須髹上紅色。組裝須堅固紮實，並能抵受操作時的一般碰撞和壓力。消防喉轆用的上水喉管及相連喉管的標稱內徑不得少於 40 毫米；供水予個別喉轆的喉管的標稱內徑不得少於 25 毫米。安裝消防喉轆時，須把來水掣和喉嘴放在毗連位置，並不得高於完工樓面 1 350毫米。除另有指明外，處所內任何部分都必須有消防喉轆喉嘴可達。如屬隱蔽式消防喉轆，來水掣和喉嘴可裝置在牆壁凹進處易見而方便取用的位置，距離牆壁表面不得多於 500 毫米。消防喉轆喉嘴應放置在上了鎖而前面裝有玻璃的箱內。玻璃板須以不厚於 1.5 毫米的易碎玻璃製造，其大小和設計以不妨礙使用消防喉轆為原則。此外，須在該箱附近放置 1 把長約 300 毫米的鐵錘或膠錘，以便在緊急時打破玻璃取用消防喉轆。消防喉轆一般應裝置在建築物內有人佔用的單位╱範圍，以便建築物佔用人用以滅火。不過，如建築物劃分為多個小單位，可把消防喉轆裝置在樓層有人佔用的單位╱範圍外面的公共地方，按照第四部有關段落的規定提供保護。設於逃生路線的消防喉轆可屬固定或配有搖台類型，並可裝置在牆壁凹進處。喉轆如以搖台盛載，其建造方式是，在不用消防喉轆時，喉轆的外表面須與牆壁齊平；需使用時，喉轆可暢順地搖出走廊或通道。如屬固定類型的消防喉轆，須裝上合適的導環，以便暢順拉出喉轆膠喉。如在裝有消防喉轆的牆壁凹進處裝上門扇，門上須安裝向外拉開的手柄，而打開門扇時，門扇不得阻塞逃生途徑，亦不得妨礙消防喉轆的操作，更不得妨礙膠喉向兩面拉出。門扇須註有最少 50 毫米高的「FIRE HOSE REEL（消防喉轆）」字樣。門扇不得裝上門鎖。該等凹進處的大小和設計以不妨礙使用消防喉轆為原則。消防喉轆毗連牆壁的顯眼處須貼上告示，說明使用消防喉轆的方法。如消防喉轆位於裝了門扇的牆壁凹進處，告示須貼在門的外表面，緊貼「消防喉轆」四字之下。須適當加工告示，使告示不會過度褪色變形。告示須清晰標示下列標準字句。中英文字樣最少 5 毫米高，可選擇白底紅字或紅底白字。除標準告示外，亦可附圖說明消防喉轆的構造和使用方法。TO OPERATE FIRE HOSE REEL使用消防喉轆(1) BREAK GLASS OF THE FIRE ALARM CALL POINT. (or)打爛火警鐘玻璃ACTUATE FIRE ALARM CALL POINT.按動火警鐘掣(2) OPEN CONTROL VALVE BEFORE RUNNING OUT HOSE.先開啓來水掣，再拉出膠喉(3) TURN ON WATER AT NOZZLE AND DIRECT JET AT BASE OF FIRE.將喉咀掣開啓，然後射向火之底部(NOT SUITABLE FOR ELECTRICAL FIRES)不適用於電火手動火警鐘掣的中心點須位於消防喉轆附近顯眼而方便使用的位置，並須處於完工樓面以上 900 毫米至 1 200 毫米之間。建築物內任何手動火警鐘掣一經按動，不論該火警鐘掣位於哪個區域，固定消防泵須開始操作。如平台設有連接位於其上的 1 幢或多幢建築物的共用樓梯，則按動該等建築物任何手動火警鐘掣後，相關建築物的固定消防泵和平台的消防泵均須開始操作。按動平台任何手動火警鐘掣後，平台的固定消防泵須開始操作。在消防控制中心或建築物主要入口須設有獨立顯示裝置，顯示被按動的手動火警鐘掣裝置在哪一樓層。如高架水缸的靜水壓足夠使喉轆系統發揮其設計的功能，則該水缸可直接供水予喉轆系統或部分系統。(c) 供水缸須設置供水缸貯存備用水源作滅火用途。（參照第 5.26 段）(d) 固定消防泵固定消防泵以電力發動為佳。如不以電力發動，則除設置手動火警鐘掣外，還須在消防泵旁邊增設其他人手發動消防泵裝置，並須在顯眼處展示發動指南。固定消防泵一經發動，須能持續運行，直至安裝在消防泵附近的控制板上的開關由人手關上為止。此外，亦可在每個固定消防泵旁邊裝設鎖止按鈕。消防泵經鎖止按鈕或消防泵控制板上其他控制開關關上後，控制板上須顯示狀態信號，並將共通故障信號複傳至消防控制主板，直至按鈕／開關復原為止。固定消防泵須能在下列情況下提供足夠流量：(1) 工業╱貨倉建築物內任何 3 個消防栓出水口（每個出水口每分鐘 450 公升流量，運行壓力不少於 350 千帕斯卡）同時操作，總流量不少於每分鐘 1 350公升。(2) 非工業╱貨倉建築物內任何 2 個消防栓出水口（每個出水口每分鐘 450 公升流量，運行壓力不少於 350 千帕斯卡）同時操作，總流量不少於每分鐘900 公升。任何消防栓出水口的壓力無論如何不得超過 850 千帕斯卡。每分鐘輸出 450 公升水量時，任何消防栓出水口的運行壓力不得少於 350 千帕斯卡。須裝置一式兩個固定消防泵，用作主水泵和後備水泵。消防泵的發動裝置線路須經選擇開關接駁，以選擇發動主水泵或後備水泵。如主水泵因電力或機械問題在15 秒內仍未能操作，則須發動後備水泵代替主水泵。在電力供應轉換時，主水泵須維持在操作狀況。固定消防泵發動機╱引擎的額定功率須比驅動系統達至額定流量所需的水力高出 20%。每個消防泵都須經常注滿水，並在抽水的一邊安裝閘閥，以及在出水的一邊安裝開關閥和止回閥。如有需要，亦須在其他地點安裝止回閥，以防止水流回水缸。每個固定消防泵的狀況（包括「電源開啓」、「操作中」、「故障」）和供水缸的狀況（包括「正常水位」、「低水位」）須予監察，並在水泵控制板上顯示。有關資料亦須複傳至消防控制中心或設於建築物主要入口的狀況板。在存水量降至正常水位以下超過 10%之前，須發出「低水位」警報。所有固定消防泵須放置於泵房內。泵房除用作放置消防供水裝置和設備外，不得作其他用途。泵房須經由符合《建築物消防安全守則》有關逃生路徑的規定的出口、出口通道及／或規定樓梯進入。使用豎梯進入泵房的方法，不予接受。該泵房須以最少 50 毫米高的「FIXED FIRE PUMP（消防泵）」中英文字樣標明，並須適當上鎖，以防有人擅自干擾消防泵。門口的大小須足以讓有關人員輕易通過，以及移走和更換泵房內的設備。泵房內須有足夠的淨空間和淨空高度（樓面至樓底的淨空高度不少於 2 米），以便檢查、維修和保養工作安全進行。在每組固定消防泵和驅動器（不包括裝有的上水泵和穩壓泵）的兩邊，即消防泵和驅動器較長的其中一邊，以及朝驅動器末端的一邊，須最少有 450 毫米的淨空間。若兩台固定消防泵緊靠在一起安裝，兩者可共用該不少於 450 毫米的淨空間。消防泵控制板前方須最少有 600 毫米的淨空間。消防泵控制板的開關掣、按鈕和顯示燈須安裝在完工樓面以上 300 毫米至 2 000 毫米之間的位置。控制板和相關供電設施宜置於入口附近。若供水缸所處位置高於最低的一個消防栓或喉轆，須為固定消防泵安裝附有 1 個止回閥和 2 個開關閥的旁通裝置。該旁通裝置須有助於旁通功能，而其尺寸須跟固定消防泵出水管的尺寸一樣。(e) 中途泵如建築物內最高的消防栓與最低的消防入水掣之間的高度超過 60 米，有需要時，上水喉管系統須配備中途泵，以維持流量和壓力。當消防車輛以固定的 800 千帕斯卡壓力向消防入水掣的上游方向輸水入消防入水掣時，中途泵須能為下列建築物提供足夠流量如下：(1) 工業╱貨倉建築物— 如建築物只裝設 1 條上水喉管，總流量不得少於每分鐘 1 350 公升。（即任何 3 個消防栓出水口，各自的流量是每分鐘 450 公升，運行壓力不少於 350 千帕斯卡。）— 如建築物裝設 2 條或以上的上水喉管，總流量不得少於每分鐘 2 700公升。（即任何 6 個消防栓出水口，各自的流量是每分鐘 450 公升，運行壓力不少於 350 千帕斯卡，而每條上水喉管只供不超過 3 個消防栓出水口使用。）(2) 住用建築物— 總流量不得少於每分鐘 900 公升。（即任何 2 個消防栓出水口，各自的流量是每分鐘 450 公升，運行壓力不少於 350 千帕斯卡。）(3) 其他建築物— 如建築物只裝設 1 條上水喉管，總流量不得少於每分鐘 900 公升。（即任何 2 個消防栓出水口，各自的流量是每分鐘 450 公升，運行壓力不少於 350 千帕斯卡。）— 如建築物裝設 2 條或以上的上水喉管，總流量不得少於每分鐘 1 800公升。（即任何 4 個消防栓出水口，各自的流量是每分鐘 450 公升，運行壓力不少於 350 千帕斯卡，而每條上水喉管只供不超過 2 個消防栓出水口使用。）任何消防栓出水口的壓力無論如何不得超過 850 千帕斯卡。每分鐘輸出 450 公升水量時，任何消防栓出水口的運行壓力不得少於 350 千帕斯卡。須裝置一式兩個中途泵，用作主水泵和後備水泵。可使用 1 套中途泵（包括主水泵及後備水泵）為系統內所有上水喉管提供所需流量和壓力。如主水泵未能操作，則須在 15 秒內發動後備水泵代替主水泵。主中途泵可由 2 個或 3 個相同流量及壓力的水泵並聯組成，順序發動，在 30 秒內達到所需壓力和流量。在此情況下，只須配備 1 個後備水泵，並須把後備水泵與上述主水泵並聯。後備水泵須與主水泵完全相同，並能在任何主水泵發生故障時自動啓動。中途泵發動機╱引擎的額定功率須比驅動系統達至額定流量所需的水力高出20%。所有中途泵須經常注滿水，並由電力驅動。一經發動，中途泵須能持續運行，直至由人手關上為止。須在消防入水掣旁邊裝設適當的開關按鈕及顯示水泵狀況的顯示燈（包括每個水泵的「電源開啓」、「操作中」、「故障」顯示燈）和警報器，以便消防人員控制中途泵。如建築物的平台建有 1 幢或多幢樓宇，開關按鈕須裝設在最接近供該（等）樓宇使用的樓梯的消防入水掣旁邊。須以最少 5 毫米高的「INTERMEDIATE BOOSTER PUMP CONTROL（中途泵開關掣）」中英文字樣標明開關按鈕。每個中途泵的狀況（包括「電源開啓」、「操作中」、「故障」）須予監察，並在水泵控制板上顯示。有關資料亦須複傳至消防控制中心或設於建築物主要入口的狀況板。所有中途泵須放置於泵房內。泵房除用作放置消防供水裝置和設備外，不得作其他用途，並須適當上鎖，以防有人擅自干擾中途泵。泵房須經由符合《建築物消防安全守則》有關逃生路徑的規定的出口、出口通道及／或規定樓梯進入。使用豎梯進入泵房的方法，不予接受。該泵房須以最少 50 毫米高的「INTERMEDIATEBOOSTER FIRE PUMP（中途泵）」中英文字樣標明。門口的大小須足以讓有關人員輕易通過，以及移走和更換泵房內的設備。泵房內須有足夠的淨空間和淨空高度（樓面至樓底的淨空高度最少 2 米），以便安裝、維修和保養工作安全進行。在每組中途泵和驅動器的兩邊，即中途泵和驅動器較長的其中一邊，以及朝驅動器末端的一邊，須最少有 450 毫米的淨空間。若兩台中途泵緊靠在一起安裝，兩者可共用該不少於 450 毫米的淨空間。中途泵控制板前方須最少有 600 毫米的淨空間。中途泵控制板的開關掣、按鈕和顯示燈須安裝在完工樓面以上 300 毫米至 2 000 毫米之間的位置。控制板和相關供電設施宜位於入口附近。如中途泵在布置上可兼具規定的固定消防泵和中途泵功能，中途泵亦可用作固定消防泵。於日後檢查及／或保養中途泵時，須提供配套作測試其流量和壓力。(f) 上水喉管、喉管和閥門工業╱貨倉建築物內上水喉管的標稱內徑不得少於 100 毫米。每條上水喉管須為每層 2 個消防栓出水口供水。其他類型建築物內上水喉管的標稱內徑不得少於 80 毫米。每條上水喉管須為每層 1 個消防栓出水口供水。每條上水喉管須在地面層配備 1 個標準消防入水掣。如消防入水掣與消防栓出水口之間裝有中途泵，則須設有旁通裝置，以便中途泵一旦發生故障，從消防入水掣輸入的水可繞過中途泵。每條上向和下向的喉管須經常注滿水，並在適當地點裝有標稱尺寸不少於 25 毫米的放氣閥，防止空氣困在裝置內。每條上水喉管須接連 1 個獨立的消防入水掣。如系統設有超過 1 條上水喉管，有關入水掣須互相連接。可使用總喉管把消防入水掣和上水喉管連接起來。在可行的情況下，總喉管的位置應盡量靠近消防入水掣，距離地面最高 30 米。工業╱貨倉建築物內總喉管的標稱內徑不得少於 150 毫米，其他類型建築物內總喉管的標稱內徑不得少於 100 毫米。工業╱貨倉建築物每道樓梯均須設有 1 條上水喉管，並連接獨立的消防入水掣，各入水掣須如上文所述互相連接。減壓閥必須附有旁通裝置，以便一旦失靈，可以隔離作所需的維修或更換。該旁通裝置在任何情況下均不得作永久供水之用。每個減壓閥在上游一端須配備開關閥、隔濾器和壓力計，在下游一端則須配備開關閥和壓力計。消防處處長可因應建築物設計要求增設上水喉管。除每個喉轆的控制閥外，所有可能切斷消防栓及／或喉轆供水的開關閥均須上鎖，確保閥門處於正確操作位置。(g) 消防入水掣每個消防入水掣須裝設在建築物外面的顯眼位置，以上水喉管所在的樓梯附近為佳。消防入水掣須予適當標明、圍封和保護，以免受腐蝕或被濫用。消防入水掣任何部分與入水掣圍封間四周相距不得少於 100 毫米。消防入水掣須設於消防人員易於使用的位置。消防入水掣接頭的中心點距離地面不得少於 600 毫米或超過 1 000 毫米。接頭須屬消防處處長認可的標準款式。每個消防入水掣後面須裝有 1 個止回閥。入水掣圍封間內須設置壓力計，連接在入水掣下游和止回閥上游之間。每個消防入水掣須附加刻有凸出或凹陷中英文字樣的金屬識別牌。每個入水掣箱須附有耐用標籤，以不少於 10 毫米的英文字樣和不少於 15 毫米的中文字樣標示固定消防泵和中途泵（如適用）供水的樓層。標籤上的字樣須為白底紅字或紅底白字。每個消防入水掣圍封間的正面須以最少 50 毫米高的「FS INLET（消防入水掣）」中英文字樣永久標明。5.15 消防裝置防火電纜規格消防裝置的防火電纜須符合《裝置及設備之檢查、測試及保養守則》附錄 8 的規定。5.16 消防員升降機及消防和救援樓梯間消防員升降機及消防和救援樓梯間的設計和建造須符合下列守則的規定：(a) 機電工程署署長發出的《升降機及自動梯設計及構造實務守則》；以及(b) 建築事務監督發出的《建築物消防安全守則》。5.17 認可的自動操作固定器具規格本段涵蓋以獨立裝置形式操作的器具。雖然如此，如得到消防處處長同意，可在一個隔室內安裝多個器具，並安排在啓動其中一個器具時，可令隔室內所有器具自動操作。所有器具必須經消防處處長認可。5.18 固定泡沫系統規格須按照美國國家防火協會標準 11 或消防處處長接納的其他同等標準安裝系統。請參照英國標準 5041：第 5 部的規定。強烈建議在系統的設計階段徵詢消防處的意見，尤應注意不同泡劑能否共同使用，以及考慮把其他消防設備整合至系統內。如系統擬供僱員使用，須提供全面而持續的訓練計劃。5.19 氣體偵測系統規格只有少數類型的處所需裝設此系統。每套系統在設計上須能因應潛在風險範圍偵測出特定氣體有否泄漏或濃度是否過高。設計系統時，須徵詢消防處的意見。每套系統須：(a) 持續監察潛在風險範圍；(b) 自動操作；(c) 如情況許可，停止受影響工序；(d) 適當時啓動／關閉通風╱排氣系統；(e) 連接處所的火警警報系統。5.20 認可的人手操作手提器具規格沙桶必須：(a) 以耐用物料製造；(b) 附有頂蓋；(c) 容量不少於 9 公升；(d) 表面為紅色，並附有適當的中英文標籤，標明桶內的沙供滅火用；(e) 只盛載乾沙；以及(f) 最少填滿容量的 80%。其他人手操作手提器具須經消防處處長認可。請參閱香港法例第 95B 章《消防（裝置及設備）規例》的規定。5.21 樓梯增壓A. 設計和文件提交A.1 裝置須由香港法例第 409 章下屬屋宇裝備、消防或機械工程界別的註冊專業工程師設計。A.2 所有向消防處提交的文件，其內每張圖則和計算書均須由註冊專業工程師核證，證明完全符合本守則的規定。A.3 所有測試及運作報告須由註冊專業工程師作見證人和核證。A.4 提交的所有圖則，須採用消防處發出的消防處通函所載的形式，一式兩份，包括所有設計細則，例如已獲批核的消防註解和防火間圖則、設計計算書、示意圖、平面圖、截面圖和立面圖、模式表（mode table）、監控板設計圖等。A.5 提交的文件須包括用作全面說明裝置不同操作模式的所有必需簡圖，操作模式最少包括「正常」、「火警」和「電力中斷」。A.6 系統的設計須符合英國標準 5588「建築物設計、建造及使用的防火措施」：第 4部：1998（加上切合香港情況的適當修訂）的規定，但須留意以下特定規定：(a) 英國標準 5588：第 4 部：1998 第 11.2 款詳述增壓機器圍封間的最低耐火效能應與裝置所防護的樓梯、防護的隔室或所在的隔室的最低耐火效能一樣，以較高者為準。(b) 樓梯增壓系統須根據下列準則設計為單嘴或多嘴噴射系統：(i) 如建築物總高度少於 11 米，可裝置單嘴或多嘴噴射系統。(ii) 如建築物總高度達 11 米或以上，只可裝置多嘴噴射系統，而各供氣口之間的距離不得超過 12 米。(iii) 對於建有多於 1 層庇護層的建築物，第(i)和第(ii)項準則同樣適用，但高度的計算方法，是量度較低層庇護層的樓面與上一層庇護層樓面之間的距離。A.7 所有相關的放氣點和啓動裝置須位於公用地方或非消防員升降機門廊。B. 基本考慮因素B.1 在每道具備增壓功能的樓梯須安裝 1 個系統。B.2 應時刻確保防火間的隔火功能。B.3 管道的建造不得低於暖氣及通風系統承辦商協會所訂的 DW144 規格或隨後修訂的規格。不得使用闊度超過 1 米的扁圓管道，亦不得使用鋁片。B.4 系統內所有管道，包括屋宇建築管道、道槽或其他類型管道，均須根據暖氣及通風系統承辦商協會所訂的 DW143 規格或隨後修訂的規格進行壓力測試。如有需要，在糾正任何過量流失後，須重新測試管道。須記錄所有測試結果，並由測試人員和 1 名獨立見證人在記錄上簽署。（參照《裝置及設備之檢查、測試及保養守則》第 2.21(ii)條）B.5 在一般情況下，不得在管道或道槽內設置防火閘、防煙閘或其他阻礙物。B.6 在一般情況下，建築物內任何消防裝置一旦啓動，所有系統須自動啓動。（參照「E. 啓動和控制」）B.7 須在消防控制板上裝設遙控開關取代掣，控制所有系統。（參照「E. 啓動和控制」）B.8 入風安排應符合英國標準 5588：第 4 部第 6.2 款的規定。B.9 為了防止樓梯「超壓」，須提供放壓系統。下列任何一種或多種放壓方法均可採用：(i) 在風機操作時自動開啓外部出口門。註： 如屬單嘴噴射系統，而系統的供氣口與出口門位於同一樓層，則不得使用此消除「超壓」的方法。(ii) 當壓力超過最高設計壓力時，氣壓放壓口即自動開啓。放壓閥設置的地點和排列須不影響樓梯的耐火效能和最低設計壓力。(iii) 裝置由差壓感應器啓動的排風機。壓力降至低於指明水平時，排風機會停止操作。(iv) 安裝送風機旁通裝置，通過啓動調制旁通風閘改變流入樓梯的空氣流量。調制旁通風閘由可以感應樓梯與建築物其他部分差壓的差壓感應器控制。B.10 樓梯增壓系統覆蓋的所有樓層須備有低阻的空氣流通途徑，使設計經門流出的空氣流量，可經門排出露天地方。C. 建築設計和建造方面的考慮因素C.1 建造樓梯圍封間時，須盡量減少空氣泄漏途徑的數量和面積。C.2 須安裝告示牌，註明建築物內設有樓梯增壓系統，並標示其操作狀況。告示牌的規格如下：(a) 告示牌須如圖 5 所示，以雙語展示「Staircase Pressurization Class A/B*」和「樓梯增壓 A/B 類*」字樣，字體高度不少於 50 毫米，並須為紅色，背景則為白色或不鏽鋼。*按所安裝的樓梯增壓系統種類註明屬 A 類還是 B 類。(b) 告示牌須裝有紅色指示燈（如圖 5 所示）。當保護樓梯的樓梯增壓系統的送風機正在運作，指示燈須亮起。(c) 告示牌須附有應急照明或內置照明裝置，並設有應急電力供應。(d) 告示牌須設於每道有樓梯增壓系統保護的樓梯，並牢牢固定於下列位置的當眼處：i) 最終出口外面；以及ii) 頂層出口裏面和外面。(e) 至於安裝了樓梯增壓系統又同時設有庇護層的建築物，告示牌須牢牢固定於庇護層樓梯出入口裏面和外面的顯眼位置。告示牌規格圖 5：告示牌樣本D. 套裝門D.1 為進出任何增壓樓梯而設的所有套裝門（即門扇、門框和金屬附件），必須達到建築事務監督滿意的水平。D.2 不得裝上防止煙霧泄漏的封邊膠條。D.3 所有門扇、關門器、金屬附件等須適合在氣溫攝氏 35 度和相對濕度 100%的環境下持續使用。D.4 安裝的套裝門須具防煙作用，門框與建築結構的接縫，須以符合英國標準 476：第 23 部規定的物料密封。D.5 所有門扇須配備自動關門器，確保圍封間的完整性。關門器須屬「門扇、門框及五金器具」測試組合的一部分，並已通過英國標準 476：第 22 部所載的測試。關門器須屬不能拆散的設計，即沒有使用可拆除的鎖針或螺栓等零件。D.6 在調校關門器時，開啓門扇所需的力度必須符合設計計算書所容許的力度。D.7 應注意門扇關閉後門扇下方完工的門檻必須耐磨，即採用水磨石或類似飾面。D.8 所有套裝門、關門器、開門掣等組件的檢查和測試屬《裝置及設備之檢查、測試及保養守則》第 2.21(i)條所述認可測試的一部分。D.9 這些組件在《裝置及設備之檢查、測試及保養守則》第 2.21(ii)條第 4 段所述的每年保養證書檢查中，必須再行檢查和測試。E. 啓動和控制E.1 所有系統須能自動啓動，並保持在操作狀態。系統須能以人手重置，並由聲響和視像顯示裝置加以監察。當某區域的自動火警警報板向消防通訊中心發出「火警」信號時，須能同時直接啓動所有系統。E.2 如指定增壓樓梯毗連的建築物或建築物部分沒有裝置煙霧偵測系統，須在通往樓梯的門外或樓梯入口門廊外的 1 米範圍內裝設煙霧偵測器，以啓動增壓系統。E.3 處於「火警」狀態時，增壓系統不得受與之連接的建築物管理系統或自動系統控制或影響。如建築物管理系統或自動系統發生故障或關閉，增壓系統亦須繼續操作。不過，上述兩個系統可在有需要時監察增壓系統的操作。E.4 不得使用多路傳輸裝置或同類裝置傳遞樓梯增壓系統的啓動信號，除非上述裝置已獲消防處認可的測試機關批准或認證。E.5 所有樓梯增壓系統須設有控制板，並裝設在消防控制板旁邊。控制板須具備下列設施：(a) 在控制板上，所有樓梯增壓系統的開關須與排煙系統或同類系統的開關排放在一起。每部風機均須設有開關。(b) 所有開關須使用劃一的操作方式╱方向。(c) 顯示燈須由可感應有關樓梯增壓系統是否操作正常的裝置（例如氣流開關或氣壓開關等）開啓。顯示燈須顯示所有系統組件（包括電控氣閘和電控防火防煙閘）的操作情況。(d) 手動取代裝置須屬手動重置型。控制板上亦須裝有聲響和視像顯示裝置，以監察手動取代裝置的狀態。如樓梯增壓控制板所在位置通常無人當值，則顯示裝置須安裝在公眾地方。啓動手動取代裝置後，須能通過樓梯增壓控制板個別操控所有樓梯增壓系統。(e) 須清楚標記（白底紅字，字體高度不少於 3 毫米）所有開關和顯示器的操作方法及所屬系統。(f) 另須以高度不少於 6 毫米的字體，標明只有獲授權人員才可使用控制器。(g) 所有標籤須永久耐用、字體清晰和安裝穩固（黏貼式標籤效果有欠理想），並須以刻字或類似方式刻上中英文字樣。(h) 樓梯增壓控制板旁邊須附有 1 張顯示各樓梯增壓系統的簡圖。E.6 每個樓梯增壓風機的入風管道均須裝設探針式煙霧偵測器。每當偵測器感應到有煙霧通過系統，其所屬的樓梯增壓系統須予關閉。須裝設可重啓樓梯增壓系統的取代開關掣。F. 電動和自動控制裝置F.1 樓梯增壓系統內的所有設備須由必要電源供電。F.2 選擇電纜布線路徑時，須防止電纜在建築物任何部分發生火警時遭受損毀，並減低機械、電力或物理方面的外在因素導致損毀的可能性。F.3 所有控制器、起動器、繼電器等須適合在氣溫攝氏 250 度的環境下持續操作不少於 1 小時。所有電力電纜須屬防火電纜。非防火類型的控制電纜，須以金屬導管系統套封，方可布線。然而，下列情況可予接受：(a) 如主配電板屬已通過測試的開關櫃，並根據英國歐盟標準 61439 的規格由厚度不少於 2 毫米的鋼片製造，而裝設主配電板房間（包括自掩門）的耐火效能不少於 2 小時，房內亦沒有放置其他設備，則主配電板無需額外保護。此外，電線、電纜或其他電力設備亦無需額外保護。(b) 以(a)項所載方法製造和安裝的支配電板及╱或電動機控制中心，同樣可予接受。(c) 放置樓梯增壓風機的機房不得作其他用途。(d) 增壓空間內的壓力感應器只適用於一般大氣環境，即氣溫不低於攝氏 37 度和相對濕度為 100%。F.4 壓力感應器及有關設備須屬工業工序級別，符合英國歐盟標準 60654-1。屬商用級別的暖氣、通風和空調控制裝置均不予接受。G. 備用或雙重設備G.1 在具休眠風險的處所，即旅館、醫院、療養院和消防處處長指定的處所，如裝有單一道增壓樓梯，須同時裝設雙重的風機和發動機。G.2 如建築物裝有多於 1 道增壓樓梯，每道增壓樓梯的單一風機均須使用完整裝上傳動皮帶及／或接線的雙重發動機。G.3 除具休眠風險的處所外，其他處所如每道增壓樓梯所需空氣總量是由兩套或以上獨立供氣裝置共同供應（例如上下兩部機器），則無需加裝任何雙重設備。G.4 上述規定根據英國標準 5588：第 4 部第 6.4 款制定。5.22 裝有固定水泵的環形水管系統規格請參照英國標準 5041、5306：第 1 部和 5908 的規定。系統應指定作滅火用途。不過，如供水充足，以系統作清潔用途亦具好處，可有效測試系統。水管可鋪設在地面或地底，但必須防止水管遭受損毀。系統須最少由 2 個水源供水，並須達到消防處處長和水務監督滿意的水平（參照第 5.30段）。水泵屬固定類型，可以自動和人手起動。消防泵須經常注滿水，並須裝置一式兩個，用作主水泵和後備水泵。消防處處長可因應個別工程，批准將供水予其他系統的消防泵用作此系統的後備水泵。消防栓出水口須按照消防處標準款式製造。或須按照消防處處長的規定，在選定或全部消防栓出水口裝設消防喉轆。使用的水管須屬認可類型，符合水務署發出的消防水管標準規定。5.23 排煙系統(i) 機械式系統A. 設計和文件提交A.1 設計人須為香港法例第 409 章所指的註冊專業工程師，屬屋宇裝備、消防或機械工程界別。A.2 設計人須負責向消防處提交所有文件，並須代表設計公司╱機構在每張圖則和所有計算書上簽署，證明已親自查核上述文件。A.3 提交的所有圖則，須採用消防處發出的消防處通函所載的形式。A.4 提交的文件須包括用作全面說明裝置不同操作模式的所有必需簡圖，操作模式最少包括「正常」、「火警」和「電力中斷」，並須提供詳細書面描述。A.5 提交的文件須包括有關處理煙霧設備的溫度定值詳細內容、證書等，以證明符合第 B.20 項的規定。可就個別設備或整個系統提交詳細內容。B. 基本考慮因素B.1 所有系統在各方面應盡量簡單。每個系統須由排氣和供應╱補充空氣裝置組成。B.2 應時刻確保防火間的隔火功能。B.3 所有系統須具「故障安全防護」設計，確保煙霧可暢通無阻地通過系統。B.4 系統的布置，須使煙霧流動方向與出口╱逃生路線的方向大致相反。B.5 須盡量防止煙霧流入出口╱逃生路線，即煙霧應逆向流動，離開上述路線。B.6 空氣╱煙霧的流動途徑，須能對防火間內所有範圍產生「清除」或「對流」效果。B.7 煙霧須不用流動超過 30 米便可到達最接近的排煙系統入口。每 500 平方米（以樓面面積計）須設置最少 1 個排煙口。中庭和隧道屬例外情況，須就個別工程項目議定不同規定。旅館也屬例外情況，須符合本段第 G.2(2)項的規定。B.8 排煙口須設在有關空間內的高位置，並且分布合理。B.9 非機械推動的補充空氣須盡量以短而直接的路線流動。B.10 補充空氣須由低位置流入及／或以其他能避免過早與熱氣混合的方式流入。B.11 下列是根據格柵的自由面積計算的最高流速：(a) 非機械推動的補充空氣進氣口：每秒 3 米(b) 機械推動的補充空氣進氣口：每秒 6 米(c) 排煙格柵或排煙口：每秒 6 米B.12 一般來說，最低供應或補充空氣率須為排煙率的 80%。如使用機械方法供應空氣或補充空氣，須使用 1 個獨立系統或一般空調系統將空氣全部轉換成外間空氣，惟系統須符合第 B.10 項的規定，即具正壓管道系統、特別進氣口和低位置供氣點等。如第 B.2 項所述，應時刻確保防火間的隔火功能。B.13 須為每個中庭或地庫隔室及╱或消防處另行指定的地點裝設獨立的系統。（參照「D. 地庫」）B.14 管道的建造不得低於暖氣及通風系統承辦商協會所訂的 DW144 規格或隨後修訂的規格。不得使用闊度超過 1 米的扁圓管道，亦不得使用鋁片，並須小心確保在防火閘或防煙閘突然關閉以致氣壓改變時，管道不會受破壞。B.15 按照基本原則，煙霧控制系統的管道內，不得設置防火閘、防煙閘或其他阻礙物。不過，如多個隔室同時使用 1 個排煙╱供氣系統，則每個隔室都需裝有電動防火和防煙閘；而主要排煙氣窗和供應空氣的主要進氣窗，亦可能需裝有電動防火和防煙閘。整個防火和防煙閘組合須經測試，證實能在氣溫攝氏 250 度的環境下維持有效操作不少於 1 小時。B.16 如排煙系統的管道貫穿多於 1 個隔室，則系統所防護的隔室內按第 B.15 項設置的防火和防煙閘外的管道，以及位於防護隔室外面的管道，均須包上 1 層不少於30 分鐘隔熱時效的隔熱物料，以符合屋宇署發出的《建築物消防安全守則》的規定。此外，該等管道部分須具英國標準 476：第 24 部所訂的耐火效能，或完全由符合英國標準 476：第 20 部所訂的耐火結構圍封，其耐火效能須相等於防護隔室或管道所在隔室的耐火效能，以較高者為準。上述耐火管道的建造材料，除須具備耐火功能外，亦須能抵受意外撞擊而不損壞。因此，有關管道須通過英國歐盟標準 1128 訂明的硬物衝擊測試，能抵受硬物從不少於 1 米的高度掉下所產生的衝擊。此外，亦可採用完全保護耐火管道表面的方法，防止管道受到意外撞擊而損壞。如在防護隔室內裝設排煙╱補充空氣風機，則該系統，包括風機、發動機、驅動裝置、電力裝置、連接風機的管道和隔室邊緣等，均應以具有不少於 1 小時耐火效能的物料加以保護。B.17 系統內所有在防護防火間外面的管道，包括屋宇建築管道、道槽或其他類型管道，均須根據暖氣及通風系統承辦商協會所訂的 DW143 規格或隨後修訂的規格進行壓力測試。不得使用壓敏膠布作封口用途。如管道系統因過度滲漏而經過修補，須視乎需要重新測試，直至結果令人滿意為止。B.18 用作排煙的道槽不得作其他用途。B.19 如裝設排煙風機，則所有排煙風機均須直接接駁至室外，接駁管道包括軟駁喉須以不可燃物料製造。B.20 處理煙霧的設備須適合在氣溫攝氏 250 度的環境下持續操作不少於 1 小時。這類設備包括風機、發動機、驅動裝置、氣閘操作裝置、管道、軟管（最好不要使用）等。B.21 為了盡量避免煙霧回流，排煙出口在任何方向均須與任何建築物的所有進氣口或其他開口相距不少於 5 米。不得讓煙霧排入逃生途徑或露天的消防員專用樓梯。排煙出口的高度，須以其底部距離周圍水平面不少於 3 米為準。如高度在 6 米以下，則不得向下方排煙。不得在簷篷或屋簷下設置排煙口。B.22 供「一般」用途的系統亦可作排煙用途，但在排煙模式下，系統的建造和操作必須符合本守則的規定。B.23 所有系統須可自動啓動。（參照「K. 控制和啓動」）B.24 須在消防控制板上裝設遙控開關取代掣，控制所有系統。（參照「K. 控制和啓動」）B.25 除非另有說明，否則系統須由覆蓋該範圍的煙霧偵測器裝置啓動。為了減低發生假警報的機會，在適當情況下宜使用交叉區域煙霧偵測器系統。如裝有花灑系統，排煙系統亦須由覆蓋該範圍的花灑供水主喉上的水流開關啓動。此外，排煙系統還須由有關範圍╱樓層內其他偵測╱防護系統的操作啓動，但不包括人手操作火警警報系統。B.26 用作分隔不同防煙間的煙幕系統須符合英國歐盟標準 12101：第 1 部的規定，煙幕物料亦須符合英國標準 476：第 20 部的規定。B.27 如以消防工程學角度釐定排煙率，集煙間的面積最大不應超過 2 000 平方米，而且釐定方法應獲消防處處長批准。C. 中庭C.1 按需要再作說明。D. 地庫D.1 符合以下各項詳載的所有規定：(i) B. 基本考慮因素(ii) K. 控制和啓動(iii) L. 電動和自動控制裝置(iv) M. 備用或雙重設備D.2 須為每個隔室裝設獨立的排煙系統。每個系統須按照範圍比例和排煙╱供氣量，由最少 2 套獨立機器和管道組成。D.3 較大隔室內通常無人佔用的細小獨立範圍（如水泵房），可連接排煙系統，而覆蓋有關範圍的所有管道須在分隔牆位置裝上防火閘。此項規定不適用於須設有獨立系統的消防裝置房間。D.4 最低排煙率須不低於隔室總容積每小時換氣 8 次的風量。就 7 000 立方米或以下的隔室而言，設計容積須一律視作 7 000 立方米。D.5 應急電力供應須足以同時供電給 2 個毗連而總電力負荷最高的隔室內所有與排煙系統有關的系統。「毗連」指在任何方向相連。E. 電池房和充電設施E. 1 有關排煙系統的詳細要求載於這兩項特別設施的個別規定。F. 商業建築物F. 1 符合以下各項詳載的所有規定：(i) B. 基本考慮因素(ii) K. 控制和啓動(iii) L. 電動和自動控制裝置(iv) M. 備用或雙重設備F. 2 任何地庫均須符合本守則「D. 地庫」的規定。F. 3 最低排煙率須不低於隔室總容積每小時換氣 8 次的風量。就 7 000 立方米或以下的隔室而言，設計容積須一律視作 7 000 立方米。F. 4 跨區排煙╱補充空氣系統可供多至 10 個「地面以上」獨立防火間共用，但須足以完全排放任何一區的煙量。F. 5 應急電力供應除須符合地庫和中庭的規定外，還須足以同時供電給任何一個「地面以上」防火間內所有與排煙系統有關的系統。G. 旅館G.1 一般規定1. 符合以下各項詳載的所有規定：(i) B. 基本考慮因素(ii) K. 控制和啓動(iii) L. 電動和自動控制裝置(iv) M. 備用或雙重設備2. 任何地庫均須符合本守則「D. 地庫」的規定。3. 任何中庭、商業或購物範圍均須符合本守則有關章節詳載的規定。G.2 內部逃生途徑須符合下列規定：(1) 最低排煙率須不低於「內部逃生途徑」隔室總容積每小時換氣 10 次的風量。(2) 沿走廊裝設的進氣口和排煙口，相互距離不得超過 10 米。(3) 任何一個排煙╱補充空氣系統最多可供 10 個地面以上獨立防火間的內部逃生途徑共用，但須足以同時完全排放任何兩個此等防火間的煙量。須時刻保持防火間防止火勢蔓延的功能。H. 工業╱倉庫建築物H.1 符合以下各項詳載的所有規定：(i) B. 基本考慮因素(ii) K. 控制和啓動(iii) L. 電動和自動控制裝置(iv) M. 備用或雙重設備H.2 任何地庫均須符合本守則「D. 地庫」的規定。H.3 最低排煙率須不少於隔室總容積每小時換氣 8 次的風量。就 7 000 立方米或以下的隔室而言，設計容積須一律視作 7 000 立方米。H.4 在火警危險比正常為高的工業工序中，應提供適當的煙罩、擋板或屏障，以阻止煙霧擴散。H.5 任何一個排煙╱補充空氣系統最多可供 10 個地面以上獨立防火間共用，但須足以完全排放任何一個防火間的煙量。須時刻保持防火間防止火勢蔓延的功能。I. 公眾娛樂場所I.1 按需要再作說明。J. 隧道J.1 按需要再作說明。K. 控制和啓動K.1 所有系統須能自動啓動，並保持在操作狀態。系統須能以人手重置，並由聲響和視像顯示裝置加以監察。當某區域自動火警警報板向消防通訊中心發出「火警」信號時，須能同時直接啓動所有系統。K.2 處於「火警」狀態時，排煙系統不得受與之連接的建築物管理系統或自動系統控制或影響，但上述兩個系統可在有需要時監察排煙系統的操作。K.3 不得使用多路傳輸裝置或同類裝置傳遞自動火警警報板發出的啓動排煙系統信號，除非上述裝置已獲消防處認可的測試機構批准或認證。K.4 所有排煙系統須設有控制板，並裝設在火警控制板旁邊。控制板須具備下列設施：(a) 在控制板上，所有排煙系統的開關須與樓梯增壓系統或同類系統的開關排放在一起。如排煙系統同時備有送風機和排風機，則每部風機均須設有開關。(b) 所有開關須使用劃一的操作方式╱方向。(c) 顯示燈須由可感應有關排煙╱空氣處理系統是否操作正常的裝置（例如氣流開關或氣壓開關等）開啓。顯示燈須顯示所有系統組件（包括電控氣閘和電控防火防煙閘）的操作情況。(d) 手動取代裝置須屬手動重置型。控制板上亦須裝有聲響和視像顯示裝置，以監察手動取代裝置的狀態。如排煙控制板所在位置通常無人當值，則顯示裝置須安裝在公眾地方。啓動手動取代裝置後，須能通過排煙控制板個別操控所有排煙系統。(e) 須清楚標記（白底紅字，字體高度不少於 3 毫米）所有開關和顯示器的操作方法及所屬系統。(f) 另須以高度不少於 6 毫米的字體，標明只有獲授權人員才可使用控制器。(g) 所有標籤須永久耐用、字體清晰和安裝穩固（黏貼式標籤效果有欠理想），並須以刻字或類似方式刻上中英文字樣。(h) 排煙控制板旁邊須附有 1 張顯示各排煙系統的簡圖。L. 電動和自動控制裝置L.1 所有系統須盡量簡單；不得使用複雜和未經試驗的電子裝置。L.2 排煙和輔助空氣補充系統內所有設備須由必要電源供電。L.3 選擇電纜布線路徑時，須防止電纜在建築物任何部分發生火警時遭受損毀，並減低機械、電力或物理方面的外在因素導致損毀的可能性。L.4 所有電線、控制器、起動器、繼電器等須適合在氣溫攝氏 250 度的環境下持續操作 1 小時。如使用氣動控制裝置，該等裝置須具相同額定時效。所有由建築物主要和輔助電源接駁至該等系統的電線亦須符合此項規定。然而，下列情況可予接受：(a) 如主配電板屬已通過測試的開關櫃，並根據英國歐盟標準 61439 的規格由厚度不少於 2 毫米的鋼片製造，而裝設主配電板房間（包括自掩門）的耐火效能不少於 2 小時，房內亦沒有放置其他設備，則主配電板無需額外保護。此外，電線、電纜或其他電力設備亦無需額外保護。(b) 以(a)項所載方法製造和安裝的支配電板及╱或電動機控制中心，同樣可予接受。L.5 氣動系統的管道或組件不可以聚氯乙烯或同類材料製造。L.6 所採用的控制裝置和設備須屬工業用級別。一般商業用級別的暖氣、通風和空調控制裝置均不予接受。M. 備用或雙重設備M.1 所有通常會有人休眠的處所內，均須安裝雙重的風機、發動機、驅動裝置、起動器等設備，並備有自動變換設施，以防其中一部設備因任何原因不能操作。每套風機╱發動機╱驅動裝置組合須能由必要電源供電操作（如第 L.2 項所述的規定）。要符合這項要求，須把兩個電力供應的線路分別駁入風機房，然後再連接至控制風機╱發動機╱驅動裝置組合的配電板。此配電板亦須置於風機房內。M.2 處所如採用具雙重用途的系統，須設有上文第 M.1 項所述的雙重設備。(ii) 靜態式系統A. 隔煙屏障(a) 隔煙屏障可屬永久固定裝置或只在啓動才操作的類型。(b) 隔煙屏障須主要以煙霧不能穿過的不可燃物料建造；如按英國標準 476：第 20 至第 23 部的規定測試，須具不少於 1 小時的耐火效能。(c) 如隔煙屏障由多個獨立組件組成，須小心確保接合點或接口位具抗煙效能。使用彈性物料時尤為必需。(d) 就「地面以下」的隔室而言，隔煙屏障須伸延至該隔室最低的橫樑、阻隔物、窗口頂部或通風口頂部以下 800 毫米。就「地面以上」的隔室而言，隔煙屏障須伸延至該隔室最低的橫樑、阻隔物、窗口頂部或通風口頂部以下 500 毫米。(e) 處於火警狀態時，隔煙屏障的最低部分須在完工樓面以上不少於 2 000 毫米。(f) 如屬非永久固定裝置，隔煙屏障的活動部件和任何操作機件須適宜於氣溫攝氏 35 度和相對濕度 100%的環境下操作，但長期有空調的空間則不在此限。如該空間用作任何特別工序，有關部件和機件須適宜於可能遇到的最差環境下操作。(g) 所有可移動的隔煙屏障須具「故障安全防護」設計，即在遇到電力中斷或任何其他故障時，會下降至「隔煙屏障放下」的位置。(h) 凡穿越隔煙屏障的設施，必須設有隔火╱隔煙裝置。(i) 煙幕系統須符合英國歐盟標準 12101：第 1 部和英國標準 476：第 20 部的規定。(j) 煙霧區的面積不應超過 2 000 平方米。天花板下方每個集煙間的面積不得超過 500 平方米。(k) 集煙間周邊與建築物裝有用作散煙出口的窗口、屏板或外露氣窗的外牆之間橫向距離不超過 30 米，而集煙間其中一邊須連接外牆。B. 排煙口(a) 排煙口須永久開啓或在系統啓動時自動開啓。(b) 排煙口的總有效空氣動力面積須不少於排煙系統覆蓋範圍樓面面積的2%，其中不少於一半須由自動啓動裝置操作。(c) 如設有永久排煙口，須在建築物內該排煙口之上或旁邊永久展示載有以下中英文字句的告示：THIS OPENING IS A SMOKE DISCHARGEDO NOT COVER OR CLOSE此乃排煙口不得遮蓋或關閉(d) 字體高度須不少於 25 毫米，白底紅字。須在排煙口每 3 平方米面積，或每隔不超過 4 米距離展示 1 個告示牌，兩者以數目較少者為準。(e) 開啓式排煙口可在脫扣裝置啓動後由引力開啓，或由其他合適的機械或電力裝置（操作裝置）開啓。(f) 開啓式排煙口須配備高質素的機械和操作裝置，至少配合本段第 A. (f)項所載的環境狀況。(g) 開啓式排煙口的操作裝置須由具備不少於 2 年製造此等裝置經驗且有信譽的認可製造商製造。(h) 排煙口和操作裝置須符合英國歐盟標準 12101：第 2 部的規定。(i) 所有排煙口須具「故障安全防護」設計。(j) 設計人如認為有需要，可為自動開啓的排煙口提供快速脫扣啓動裝置。該等裝置的安裝位置，須離防護隔室通道的地面不超過 1 800 毫米。監控板上須裝設聲響和視像顯示裝置，以作監察。(k) 所有排煙口須備有上文第(c)項所載的告示，但字句稍有不同：THIS OPENING IS A SMOKE DISCHARGEDO NOT COVER OR OBSTRUCT此乃排煙口不得遮蓋或阻塞C. 啓動和操作(a) 具有永久固定式隔煙屏障和永久開啓式排煙口的系統，無須安裝啓動裝置。(b) 所有其他系統須由按照消防處規定安裝的煙霧偵測器啓動。(c) 建議利用交叉區域煙霧偵測系統，以減少發生假警報，尤其是在工業環境下。(d) 煙霧偵測器裝置的偵測區域劃分，可由設計人酌情決定以 1 個裝置覆蓋 1個或數個防煙間。D. 電動和自動控制裝置(a) 因操作需要而安裝的自動操作裝置╱啓動器，以及偵測器裝置，如以電力操作，必須備有認可的輔助電源，即電池或應急發電機；如屬氣動式，則須備有氣壓貯存器，足以供應所有部件同時操作所需的雙倍能量。5.24 花灑系統規格此等系統的設計和安裝，須符合由英國防損委員會編訂並包含英國歐盟標準 12845 的「自動花灑裝置規定」（加上切合香港情況的適當修訂）或符合消防處處長接納的其他標準。為免生疑問，系統是以喉管進入建築物之處作為起點計算。（見第 5.30 段——供水）5.25 街道消防栓系統規格所有街道消防栓的安裝必須符合水務署的《水管敷設手冊》或消防處處長接納的其他標準。如情況許可，消防栓應交錯地裝設於行車道兩旁，而消防栓之間的距離應為 100 米。在可能的情況下，有關建築物的範圍內應安裝最少 2 個街道消防栓，並且應安裝在距離受防護建築物不少於 6 米的位置。街道消防栓須屬認可的標準款式，1 個 65 毫米出水口操作時，每分鐘的出水量不得少於 2 000 公升（每秒 33.3 公升），而出水口的最低運行壓力須為 170 千帕斯卡。最低出水量應以 1 個系統有 2 個 65 毫米消防栓出水口同時出水計算，即每分鐘總出水量不少於 4 000 公升（每秒 66.7 公升）。輸水時間最低限度須達 60 分鐘。如不能達到以上最低標準，可用其他方法增大水源，例如使用地下水缸和水泵。這視乎受防護物業的大小、性質和所有可供使用的水源而定。5.26 供水缸規格任何由供水缸供水的系統，其供水水缸的容量必須足夠。水缸的水源供應須獲水務監督和消防處處長批准。就消防栓／喉轆系統而言，按最大樓層的樓面面積計算，所需提供的最少有效存水量如下：消防栓／喉轆系統、花灑系統、水簾系統等消防裝置的供水缸，其有效存水量的計算方法載於《裝置及設備之檢查、測試及保養守則》附錄12。其他由供水缸供水的系統，其供水缸的最低有效容量須能供系統維持規定的操作時間和水流量。下行總水管與固定消防泵之間，須設置非鐵質止回閥。5.27 通風╱空調控制系統規格「通風╱空調系統」指下述的機械通風系統：任何使用風機和管道以機械方式推動空氣流入、環繞其中或排出任何建築物或其部分的送風系統，包括為調控環境而設的系統，而該系統設有裝置，把建築物或其部分的室內空氣的溫度及／或濕度降低或提高至低於或高於室外空氣的溫度／濕度，但下列所載各項則例外。下列機械通風系統可豁免依循此等規定：(a) 任何屬於消防裝置一部分並只為防火或滅火而裝設的機械通風系統，即樓梯增壓系統和排煙系統。(b) 個別（獨立或分體式）不連接通風管道系統的直膨式房間冷卻機。(c) 符合下列所有準則的小型機械通風系統：(1) 所有空氣分配管道系統均設置於同一隔室內。(2) 每個空氣分配管道系統處理的氣流率不超過每秒 1 000 公升。(d) 處理有毒氣體或油脂╱空氣混合物的機械通風系統，即煙櫥通風、廚房通風和有毒氣體╱爆炸性氣體處理系統等的機械通風系統。(e) 所有空氣均由低位流入及╱或由高位排出（空氣不會循環）的機械通風系統。樓面面積（建築） 所需存水量不超過 230 平方米 9 000 公升（9 立方米）超過 230 平方米但不超過 460 平方米 18 000 公升（18 立方米）超過 460 平方米但不超過 920 平方米 27 000 公升（27 立方米）超過 920 平方米 36 000 公升（36 立方米）(f) 對外直接機械通風（即通風系統不供其他範圍共用）的個別機房和個別廁所。此項規定的目的，是在發生火警時，減低受影響隔室內的空氣流動。換言之，煙霧可上升至天花板水平，形成一層煙層，不會因空氣流入而有所擾動。須採用下列任何一種取代控制方法：方法「甲」 — 如隔室╱單位備有煙霧偵測器的自動火警警報系統或自動花灑系統，在該系統啓動後，所有供該隔室通風用的風機須全部關上。方法「乙」 — 供隔室╱單位通風的排氣及╱或回風管道，須安裝適用於空氣管道的煙霧偵測器，此等煙霧偵測器在感應煙霧後，會自動關閉覆蓋隔室╱單位的機械通風系統的所有風機。方法「丙」 — 取代控制裝置可安排至完全關掉建築物內的所有風機，而非只是個別隔室╱單位內的風機，但這會為建築物使用者帶來不便。取代控制裝置須由建築物的火警警報系統啓動。方法「丁」 — 在樓板／假天花下的適當位置安裝煙霧偵測器（每個煙霧偵測器的覆蓋空間為樓面淨面積 250 平方米）。煙霧偵測器一啓動，便會關閉受影響隔室內的所有風機。除了方法「甲」、「乙」、「丙」和「丁」外，中央火警控制板須設有手動取代開關掣，以便建築物營運者的工程人員或消防人員可在發生緊急事故時，關閉建築物內所有機械通風系統的風機。註： (a) 建築物如裝有中央機械新鮮空氣供應及╱或排氣系統，須符合以下其中一項要求：(1) 須關掉中央新鮮空氣供應及╱或排氣系統；或(2) 無須關掉中央新鮮空氣供應及╱或排氣系統，但可啓動受影響隔室╱單位的電動防煙閘，從而使該隔室╱單位與中央系統新鮮空氣╱排氣隔絕。(b) 如所使用的多路傳輸系統是在消防處認可設備╱系統名單之列，可獲准以多路傳輸自動火警警報或建築物自動系統關掉機械通風系統。5.28 水霧系統規格須按照消防處處長接納的標準安裝此等系統。應參照美國國家防火協會標準 750 的規定。必須事先獲消防處處長批准，方可使用此等系統，而所使用的水霧系統必須列於認可名單內。系統的防護目標和安裝設計必須由 1 名合資格人士批簽。該名人士應為香港法例第 409章所指的註冊專業工程師，屬屋宇裝備、消防或機械工程界別，或具備消防處處長接納的資格，例如系統製造商。水霧系統是否獲接納，會按個別工程項目考慮。初步來說，此類系統只限用於防護機械機房。5.29 噴水系統規格須按照消防處處長接納的標準安裝此等系統。須為噴水系統提供獨立水缸，容量最少可供系統操作 30 分鐘。5.30 供水規格所有需要用水的固定系統最少須由 2 個水源供水，並須達到消防處處長和水務監督滿意的水平。英國防損委員會規定所列的各種水源均可接受，惟下列兩項除外：(a) 配備壓力水缸、引力水缸或高架私用貯水池的街喉；(b) 配備自動水泵的街喉。不過，街喉的水源在制水期間可能斷絕。因此，除非街喉是 24 小時供水，否則須由街喉供水予貯水缸，確保有 30 分鐘用水的存水量。供水缸須設有自動注水的裝置。如水缸設於建築物高層，並需由一式兩個的主上水泵和後備上水泵送水到水缸，則水泵的供水量須能於 6 小時內注滿水缸。輸送泵須由必要電源驅動。裝置及設備之檢查、測試及保養守則裝置及設備之檢查、測試及保養守則引言根據《建築物條例》第 21(6)(d)條的規定，如建築物的圖則經消防處處長按該條例第 16(1)(b)(ii)條所述予以證明，但臨時佔用許可證或佔用許可證的申請人沒有向建築事務監督交出由消防處處長以訂明表格發出的證明書，證明消防處處長信納上述圖則所顯示的消防裝置及設備已予裝設，並處於有效操作和令人滿意的狀況，建築事務監督可拒絕發出許可證。《裝置及設備之檢查、測試及保養守則》是根據香港法例第 95 章《消防條例》的《消防（裝置及設備）規例》第 10 條公布。本守則載明檢查和測試裝置及設備的類別和性質，並就如何進行檢查和測試發出指引。如要令消防處處長滿意，裝置及設備一般必須通過此等檢查和測試。本守則所載的規則並非一成不變。個別建築物須通過的檢查和測試，或會因特殊因素和環境而有所改變。在某些情況下，消防處處長在滿意裝置及設備前，或會要求進行額外檢查或測試。第一部 總則1.1 消防處視察人員會與認可人士和註冊消防裝置承辦商安排進行檢查和認可測試。1.2 應以訂明表格向消防處處長申請進行初步檢查和測試。表格須由註冊消防裝置承辦商和認可人士／香港法例第 409 章下屬屋宇裝備、消防或機械工程界別的註冊專業工程師（如適用）簽署。1.3 只有在消防裝置及設備安裝妥當，並由註冊消防裝置承辦商證明其處於有效操作狀態後，認可人士方可遞交申請。註冊消防裝置承辦商就該項申請簽署的表格，會作為香港法例第 95B 章《消防（裝置及設備）規例》第 9 條所指的證明書。註冊消防裝置承辦商如發出在要項上屬虛假或具誤導性的證明書，即可能干犯了第 95B 章第 9 條所指的罪行。1.4 附錄 1 至附錄 7 涵蓋的消防裝置及設備，須按照該等附錄載列的測試及運作核對表進行檢查和測試。此外，註冊消防裝置承辦商向消防處提交訂明表格時，須夾附所有必要的證明文件。1.5 本守則沒有涵蓋的消防裝置及設備，須按照製造商的建議或經消防處處長同意的其他可接受國際標準予以檢查、測試和保養。1.6 收到申請後，消防處視察人員會按訂明表格所載的電話號碼與認可人士（而非註冊消防裝置承辦商）聯絡，並安排一個雙方都方便的日期進行檢查。認可人士是工程的統籌人，在檢查當日應該出席，並且有責任聯絡和通知註冊消防裝置承辦商有關安排。1.7 消防處視察人員會以另一份訂明表格記錄檢查結果，並即場填妥和簽署表格。認可人士和註冊消防裝置承辦商亦須在該表格上簽署，確認他們知悉檢查結果。1.8 如有小規模項目需要再作檢查，認可人士應在糾正問題後，與消防設備課高級屋宇裝備督察安排重檢日期。只有在檢查後收到拒絕信的情況下，認可人士才須以訂明表格再次正式申請檢查。1.9 如視察人員人手許可且不影響已預約的檢查，視察人員會於方便的日期進行重檢。1.10 如檢查結果令人滿意，消防處會在消防證書（F.S. 172）備妥後，盡快致電通知認可人士領取證書。如未能以電話聯絡認可人士，則會發信通知對方證書已可領取。1.11 如消防裝置需接駁政府總水管，水務監督會檢查和批核有關消防裝置，並在接駁工程完成後，把完工證明書直接送交建築事務監督，另給予申請人證明書副本。1.12 建築物獲發臨時佔用許可證或佔用許可證後，最少每 12 個月須由註冊消防裝置承辦商對建築物內的消防裝置進行保養、檢查和核證一次。註冊消防裝置承辦商每次保養或檢查任何處所內的任何消防裝置，均須向消防處處長遞交消防裝置及設備證書（F.S. 251）。註冊消防裝置承辦商須遵守有關保養、檢查和維修消防裝置的法定規定，以及檢驗、測試和核證用作消防裝置的氣瓶的法定規定，有關規定的摘要載於附錄 10。1.13 就認可檢查時而言：(i) 建築物如裝有聲響╱視像警報系統、固定裝置、水基系統、偵測系統、火警警報系統、煙霧控制系統等，須在消防控制中心／消防控制室內顯眼處放置清晰可閱並已壓膜或裝裱的相關消防裝置竣工系統簡圖；如沒有消防控制中心／消防控制室，則須放置在建築物主要入口／管理員櫃枱（視乎何者適用而定）旁邊的狀況板附近。竣工系統簡圖亦須在相應的泵房內展示（如適用）。(ii) 樓層如有多於一個分區／層開關閥，須在每個分區／層開關閥旁邊設置區域分布圖，顯示同一樓層上各個花灑區域的分界。(iii) 用水作滅火劑的固定裝置或其他水基系統（如適用），若其常開的開關閥屬於一旦關上即會令供水中斷而阻礙系統正常操作之開關閥，該等開關閥須裝上掛鎖和附有耐久的警告標籤，以防受到干擾；以及(iv) 所有水泵須裝上名牌，標明設定的流量和壓力。1.14 註冊消防裝置承辦商在證明消防裝置及設備處於有效操作狀態一事上應負上最終責任。消防裝置及設備的裝設和規格須遵從下述各項：(i) 《最低限度之消防裝置及設備守則》的適當版本內適用於在建築物／處所安裝的消防裝置及設備的規定；以及(ii) 消防處處長發布並適用於在建築物／處所安裝的消防裝置及設備的相關規定及／或通函。消防裝置及設備之所有檢查、測試和保養（認可測試除外）須按下列各項進行：(i) 《裝置及設備之檢查、測試及保養守則》；(ii) 消防處處長不時發布的相關通函；以及(iii) 消防處處長發布的年檢核對表所載的相關規定（不論建築圖則何時提交審批）。核對表上所有適用的項目，均須按照規定予以檢查／測試／保養。認可檢查和年檢以外的檢查、測試和保養，須採用年檢的同一標準。消防處處長發布的相關年檢核對表上適用的項目，均須按照規定予以檢查／測試／保養。1.15 註冊消防裝置承辦商應在徵詢擁有人或建築物管理處的意見後，應把消防裝置及設備的年檢證書連同消防裝置及設備列表張貼在建築物顯眼處。1.16 如建築物的消防裝置（包括消防栓／喉轆系統、花灑系統、火警警報系統、街道消防栓系統、噴水系統、排煙系統、樓梯增壓系統、消防乾喉系統、具休眠風險的處所的火警偵測系統）需通宵關閉或連續關閉超過 24 小時，註冊消防裝置承辦商須按照訂明的報告程序通知消防處。註冊消防裝置承辦商須通知住戶／佔用人／物業管理公司採取預防措施，以降低因任何消防裝置故障或關閉作檢查、保養、改裝或維修工程期間的風險。註冊消防裝置承辦商須遵守的程序和採取的措施載於附錄 9。1.17 如消防裝置或設備（如樓梯增壓系統等）除了在火警時發揮效用外，通常處於閒置或備用狀態，認可人士、香港法例第 409 章下屬屋宇裝備、消防或機械工程界別的註冊專業工程師（如適用）和註冊消防裝置承辦商應建議裝置的擁有人或其代理人，每隔不多於 3 個月啓動和檢查該等消防裝置或設備一次，以確保該等裝置或設備發揮正確功能，操作程序無誤。`第二部 檢查、測試及保養2.1 聲響╱視像警報系統(i) 認可測試須在模擬警報狀況下測試系統，以驗證系統的聲響和視像火警信號與警報指示是否妥善操作，功能正常，達到消防處處長滿意的程度。(ii)檢查、測試和保養系統須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。擁有人或其代理人應每周檢查所有聲響和視像信號。在火警演習時亦應檢查系統。2.2 自動啓動裝置(i) 認可測試須測試防火閘、屋頂通風口或類似裝置的啓動裝置，以確定閘門╱設備在裝置驅動下可在指明時間內達至完全封閉或隔室分隔的設計目的。須按照載於附錄 1 的核對表測試防火閘的自動啓動裝置。至於其他類似裝置，則須按照製造商的建議和消防處處長可能因應裝置特點訂明的其他標準進行測試。(ii)檢查、測試和保養組件和裝置須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。須在切實可行範圍內檢查、測試和保養自動操作裝置和手動控制器，確保操作正常。須測試建築物組件、其他裝置或出口不通往防護逃生途徑的升降機的操作狀況，確保可發揮預定功用。擁有人或其代理人應定期檢查防火閘或屋頂通風口，確保在手動和自動模式下均妥善操作。2.3 不含水的滅火劑自動固定裝置(i) 認可測試須按照載於附錄 2 的測試及運作核對表，以及美國國家防火協會標準 12、美國國家防火協會標準 2001 或經消防處處長同意的其他可接受國際標準所訂的測試程序，檢查和測試二氧化碳及其他淨劑滅火系統。(ii)檢查、測試和保養系統須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。2.4 用水作滅火劑的自動固定裝置裝置包括：集水花灑系統水簾系統花灑系統水霧系統噴水系統以上裝置的認可測試和保養規定分別載於其所屬章節。2.5 集水花灑系統(i) 認可測試須按照製造商的建議和消防處處長可能因應系統特點訂明的其他規定測試系統。(ii)檢查、測試和保養系統須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。2.6 水簾系統(i) 認可測試須測試系統各項性能，包括流量、操作水壓、噴水模式和啓動方式，以證明表現令人滿意，並符合消防處處長可能因應系統特點訂明的其他規定。(ii) 檢查、測試和保養系統須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。2.7 塵埃偵測系統(i) 認可測試須按照製造商的建議和消防處處長可能因應系統特點訂明的其他規定測試系統。(ii) 檢查、測試和保養系統須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。擁有人或其代理人應按照設備製造商建議並經消防處處長同意的相隔時間，對系統進行適當測試。如系統可由人手啓動，應測試人手啓動功能，確保隨後操作無誤。2.8 應急發電機(i) 認可測試完成安裝後，須全面測試建築物或處所內的消防裝置。所有系統均須接駁「正常」電源，進行測試。如以「正常」電源測試消防裝置後，結果令人滿意，則可關閉「正常」電源，而應急發電機須自動起動。當應急發電機電量充足並可接受消防裝置的負荷時，須逐一開動消防裝置，直至所有裝置都處於操作狀態，然後進行持續一小時的「同步運作」測試，其間須監察各消防裝置的性能表現。完成一小時的測試後，須檢驗應急發電機組，而所有儀器、安全裝置等須顯示發電機運作「正常」。測試應急發電機裝置的核對表載於附錄 3。(ii)檢查、測試和保養應急發電機須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。須檢查用於燃燒、冷卻和通風的空氣供應充足程度，以及排氣管道的狀況，確保並無阻塞。須核實電池狀況，並須把應急發電機房關緊上鎖。此外，所有發電機每月應由擁有人或其代理人在負載狀況下運轉一次，運轉時間不少於 30 分鐘。發電機運轉期間，應檢查所有操作情況，接着應測試所有自動和人手操作的起動裝置和安全控制裝置的功能。應備有日誌，存放在機房、管理處或建築物主管房間內，由擁有人或其代理人更新。應在操作、維修保養或測試期間即時進行記錄，並應詳細記錄發電機、電池、壓縮機等的所有操作資料、故障及所採取的補救行動、例行維修工作、保養工作和定期操作情況等。記錄的資料應包括日期、時間、計時錶讀數、工作人員╱主管的姓名及簽署等。消防處處長或會要求就個別裝置進行其他日常測試和保養工作。完成測試後，須重新注滿燃料缸。2.9 應急照明系統(i) 認可測試須按照英國標準 5266：第 1 部和英國歐盟標準 1838 或消防處處長可能因應設備特點訂明的方式進行測試。(ii) 檢查、測試和保養所有應急照明系統須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。擁有人或其代理人應安排進行下列保養程序：中央供電應急照明系統：a. 應按照英國歐盟標準 50172，每月以不多於 10%的額定時間進行一次功能測試。b. 每月應以 10 小時放電率對應急照明系統的電池進行放電測試一次，測試時間為 1 分鐘，並應把測試結果記錄於記錄冊內。測試完成後，每個鉛酸電池的載荷電壓不應低於 2.01伏特，每個鎳鎘電池的載荷電壓不應低於 1.25 伏特。c. 每 12 個月應以百分百的額定時間進行測試一次，並把測試結果記錄在記錄冊內。d. 照明裝置於測試期間應保持規定的照明光度，測試後電力供應應回復正常。e. 如使用自動測試工具，應符合上文 a 至 d 項的規定。獨立電池的應急照明系統：a. 應按照英國歐盟標準 50172，每月以不多於 10%的額定時間進行一次功能測試。b. 每 12 個月應以百分百的額定時間進行測試一次，並把測試結果記錄在記錄冊內。c. 照明裝置於測試期間應保持規定的照明光度，測試後電力供應應回復正常。d. 如使用自動測試工具，應符合上文 a 至 c 項的規定。2.10 出口指示牌(i) 認可測試須按照英國標準 5266：第 1 部或消防處處長可能因應設備特點訂明的方式進行測試。(ii) 檢查、測試和保養所有出口指示牌須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。所有出口指示牌均須予以檢查和測試，以確保主要電源切斷後仍能正常操作，且電池（如有）處於可接受的狀態。此外，凡測試應急照明系統，均應同時測試出口指示牌。2.11 火警警報系統(i) 認可測試如須按照消防處處長所訂的適當標準測試整個系統，必須同時測試手動火警鐘掣和自動火警警鐘。啓動手動火警鐘掣時，所有或指定範圍內的警鐘、其他聲響╱視像火警信號、直通電話線和消防栓╱花灑水泵等須一同啓動。須在建築物╱處所的隱蔽位置檢查是否聽到警鐘聲。測試火警警報系統的測試及運作核對表載於附錄 4。(ii) 檢查、測試和保養系統須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。如須按照適當標準測試整個系統，應同時測試手動火警鐘掣。請注意香港法例第 279A 章《教育規例》第 38 條有關在學校進行火警警報測試和防火演習的規定。2.12 消防控制中心(i) 認可測試在按照本守則其他章節所載的適當標準或守則測試各個消防系統時，須把消防控制板納入測試項目中。須就耐火效能對圍封房間進行目視檢查，查看房間圍封作隔火用途的完整性。檢查期間，有關物料╱結構的耐火效能應由認可人士確認。須根據房間設計和固定保安裝置，檢查消防控制板是否易於看見和到達。(ii) 檢查、測試和保養擁有人或其代理人應對消防控制中心內的供電、照明等設施和整潔情況進行日常檢查。2.13 火警偵測系統(i) 認可測試須按照英國標準 5839-1「建築物的火警偵測與火警警報系統」（加上切合香港情況的適當修訂），測試火警偵測系統。火警偵測系統的測試及運作核對表載於附錄 4。(ii) 檢查、測試和保養裝置須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。應每兩周或按照經消防處處長同意的時間和相隔時間測試直線連接線路一次。2.14 消防栓╱喉轆系統(i) 認可測試須按照載於附錄 5 的核對表測試系統。(ii) 檢查、測試和保養裝置須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。擁有人或其代理人應定期檢查消防栓╱消防喉轆喉嘴、開關掣、裝置等，以確保時刻保持完好，沒有損壞或被濫用作其他用途。2.15 消防裝置防火電纜(i) 認可測試防火電纜的測試會納入消防裝置的認可測試中。如有要求，須出示證明書，證明電纜符合相關標準。(ii) 檢查、測試和保養防火電纜屬消防裝置不可或缺的部分。註冊消防裝置承辦商檢查相關消防裝置時，須同時檢查和保養防火電纜，以確保安全和狀況令人滿意。2.16 消防員升降機(i) 認可測試註冊升降機工程師須按照機電工程署署長發出的《升降機工程及自動梯工程實務守則》和《升降機及自動梯設計及構造實務守則》的規定，測試消防員升降機。(ii) 檢查、測試和保養須按照機電工程署署長發出的《升降機工程及自動梯工程實務守則》和《升降機及自動梯設計及構造實務守則》的規定，保養消防員升降機，使升降機時刻保持在有效操作狀態。2.17 認可的自動操作固定器具(i) 認可測試這些滅火器具不論是獨立操作類型還是火警信號啓動類型，均須按照製造商的建議或消防處處長可能因應器具特點訂明的其他規定進行測試。除使用磅秤外，也可參考壓力計或其他量錶的讀數（這些量錶或屬器具的一部分，與器具一併安裝），檢查器具盛載的滅火劑的重量。(ii) 檢查、測試和保養裝置須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。2.18 固定泡沫系統(i) 認可測試須按照製造商就系統各組件╱設備所提供的建議，並按照適當的國際標準或消防處處長可能因應系統特點訂明的其他規定進行測試程序。(ii) 檢查、測試和保養裝置須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。2.19 氣體偵測系統(i) 認可測試測試系統時，須以足夠分量的氣體流過偵測點，以確定偵測器能正常啓動，以及所有附屬警報程序均能有效操作。須按照製造商的建議和適當的國際標準或消防處處長因應系統特點所訂的標準進行測試。(ii) 檢查、測試和保養裝置須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。2.20 認可的人手操作手提器具(i) 認可測試除目視檢查外，無須進行特定測試。須由第三級註冊消防裝置承辦商檢查並證明器具處於有效操作狀態。(ii)檢查、測試和保養器具須時刻保持在有效操作狀態，並且最少每 12 個月由第三級註冊消防裝置承辦商檢查一次。須按照適當標準和製造商的建議定期測試認可的人手操作手提器具。認可的人手操作手提器具保養指引載於附錄 11。上述指引亦載於《防火通告第十一號──各種滅火筒之適當用途及保養方法》。(iii)保養標籤所有認可的人手操作手提器具經保養後，均須附有或貼有標籤，格式須依照附錄 11 的樣本。此保養標籤的用途，是在保養器具後提供和更新器具的所有相關資料。標籤不得貼在器具表面原有的製造商標籤上面，以免遮蓋器具的名稱、型號和參考編號。須使用不能去掉的永久墨水填寫標籤。註冊消防裝置承辦商須注意，只可裝設已獲消防處認可和刊載於香港特別行政區政府憲報的器具。除非可輕易辨識器具為已獲認可和刊於憲報，否則消防處不會發出消防證書（F.S. 172）。填寫滅火筒、滅火氈、沙桶和固定式滅火器保養標籤須知1. 公司名稱應在所提供的空白位置上填寫公司名稱或蓋上公司印章。如公司名稱並不適用，應填上「不適用」，不應留空。2. 註冊編號應填上負責保養該器具的第三級消防裝置承辦商的註冊編號。3. 證書編號應填上有關消防裝置及設備證書（F.S. 251）的編號。4. 是次檢查日期該日期是指完成檢查該器具的日期，應與證書（F.S. 251）所示日期相同。5. 下次檢查日期該日期是指 12 個月後的日期，應由最後一次檢查日期起計。如該滅火筒或固定式滅火器在是次檢查日期起計的 12 個月內須進行壓力測試，則應填寫壓力測試日期。例： 是次檢查日期 ：2003 年 9 月 5 日上次壓力試日期 ：1999 年 7 月 10 日（每 5 年須進行壓力測試一次）下次檢查日期 ：2004 年 7 月 10 日（非 2004 年 9 月 5 日）6. 上次壓力試日期應在新標籤上填上去年標籤所示日期。進行保養檢查時，如去年的標籤已破爛或所示日期模糊不清，則應檢視滅火筒或固定式滅火器的表面狀況，決定是否須在此次檢查中進行壓力測試。如滅火筒或固定式滅火器的表面所示的製造年份超過 5 年，而且並無壓力測試記錄，則應進行壓力測試，而非只更換該滅火筒或固定式滅火器的配件或滅火劑。（就滅火氈和沙桶而言，應填上「不適用」。）7. 產品製造年份根據獲消防處接納的各國標準，滅火筒或固定式滅火器的表面須永久標示或蓋印製造年份，因此製造年份可從表面查看得知。滅火筒或固定式滅火器的表面所示數字如只有 2個數位，即代表製造年份的最後 2 位數字，例如 99 代表 1999 年出廠。如屬根據馬來西亞標準 MS1179：1990 製造的非高壓（25 巴以下）滅火筒或固定式滅火器，其表面只須清楚標示製造年份，但如屬根據英國歐盟標準-3 製造的馬來西亞製品，則其表面會永久標示或蓋印製造年份。（就滅火氈和沙桶而言，應填上「不適用」。）8. 保養結果如果在是次檢查中不能完全根據本守則內的指引完成保養程序並達到令人滿意的結果，是次檢查不應作「合格」論。應在「不合格」的方格內以兩條對角直線畫成交叉，例： ，以示不合格。欠妥事項必須詳列於相關的消防裝置及設備證書（F.S. 251）第三部分內。註：除消防發牌規定或新建築物消防規定另有訂明外，如該器具簇新，無需裝配或加入滅火劑即可使用，且其表面所示的製造年份並未超過 1 年，則無須具備消防裝置及設備證書（F.S. 251）。擁有人須保留有關的購買單據，供日後證明之用。如該器具的製造年份已超過 12 個月（即 1 年），或需裝配和加入滅火劑，則應經註冊消防裝置承辦商檢查，並獲發消防裝置及設備證書（F.S. 251），以證明其功能。2.21 樓梯增壓(i) 認可測試1. 如配合其他系統操作是預設操作模式其中一環，在認可檢查進行前，須確保所有此等系統發揮正確功能。2. 「完工」的定義包括配備所有必需的永久標籤、指示牌、詳盡的操作和保養手冊及圖表、竣工繪圖記錄等。3. 須確保已進行《最低限度之消防裝置及設備守則》第 5.21 段第 B.4 項規定的測試，並予以記錄和核證。4. 所有系統須已完工並經過測試，而且按香港法例第 409 章下屬屋宇裝備、消防或機械工程界別的註冊專業工程師亦信納系統發揮正確功能，方可在消防處視察人員在場下進行最後整體測試和示範。須提交整套按照附錄 6 填妥的測試及運作核對表和測試及功能操作檢查記錄（參見本款第 7 段）。所有測試及運作核對表和報告須由註冊專業工程師作見證人和核證，以核實有關裝置是根據消防處的規定操作。5. 須根據英國標準 5588：第 4 部和測試及運作核對表進行認可測試。進行認可測試時，註冊專業工程師必須在場。6. 除皮氏靜壓計、斜管壓力計、U 形測量儀器及同類的簡單儀器外，所有用於測試的儀器、量計等均須：a. 每款備有兩套；b. 就每個經校準的測試儀器備有有效的校準證明書，證明其準確程度在正負百分之五的範圍內；c. 按照適當的英國標準或其他獲認可的同等國際或國家標準（如有並適用者）製造；以及d. 已在測試日期前 3 個月內由認可的測試或校準實驗室校準。進行測試時，由實驗室發出的校準證明書須可供查核。7. 須就所有測試和測試結果備存詳盡完整的記錄，最少包括下列各項：a. 系統建造時的壓力測試記錄──參見《最低限度之消防裝置及設備守則》第 5.21 段第 B.4 項；b. 所有使用儀器的廠名、產品編號、種類和擁有人名稱，以及校準證明書的副本；c. 實際的量度數據；d. 上述(c)項的修正量度數據；e. 最終的空氣流量值；f. 每個經檢查的裝置的廠名、產品編號、種類和用途；g. 測試日期和時間；h. 每項測試的操作人員╱測試人員或監督人員和任何見證人的簽署；以及i. 註冊專業工程師驗收簽署。(ii) 檢查、測試和保養1. 如屬只在緊急情況下操作的專用系統，擁有人或其代理人應最少每 3 個月啓動系統一次，並檢查系統以確保所有功能和操作程序正確（參見下文第 3 段）。2. 如屬持續以低動力操作並在緊急情況下加強動力的兩用系統，擁有人或其代理人應最少每 6 個月啓動系統的緊急操作模式一次，並檢查系統以確保所有緊急功能和操作程序正確（參見下文第 3 段）。3. 定期啓動檢查最少應包括下列程序：a. 以人手開關掣啓動系統；b. 檢查顯示燈是否發出正確信號；c. 檢查樓梯，確保所有門均關上，尤其是以磁力保持開啓狀態的門；d. 徹底檢查風機房，包括：(i) 新鮮空氣的進氣口沒有碎屑，而前面範圍亦無任何阻塞；(ii) 過濾器（如有裝設）正確安裝，仍具過濾功能；(iii) 檢查軟接管有否損蝕；(iv) 發動機操作正常（例如沒有過熱等）；(v) 風機驅動皮帶的張力和定位準確，或其他驅動裝置運作正確；(vi) 風機軸承令人滿意；(vii) 電氣設備令人滿意（接觸器沒有發出雜聲等）；(viii) 記錄發動機每相的電流量；(ix) 沒有顯著的漏氣情況；(x) 開關樓梯的入口門，以檢查放壓裝置或風機旁通閘（順帶檢查壓力感應器）的操作情況；(xi) 檢查機房，確保沒有碎屑、存放物料等；以及(xii) 檢查風機房入口門的自動關門裝置；e. 應檢查整條樓梯，確保各出口均能排氣，而且壓力感應器清潔無阻；f. 關上人手開關掣，恢復自動操作模式；g. 順序記錄工作，並填寫和簽署記錄簿。4. 除上述所列外，最少每 12 個月須由註冊消防裝置承辦商啓動系統一次，進行本守則第2.21(i)條所述的全面測試，並將消防裝置及設備證書（F.S. 251）送交消防處處長；以及5. 擁有人或其代理人應為每個系統備存記錄簿，完整記錄本款第 1 至第 4 段載列的工作和檢查結果，並由監督人員和見證人簽署。記錄應最少保留 7 年，並可在任何合理時間內應要求提交消防處處長查閱。2.22 裝有固定水泵的環形水管系統(i) 認可測試須測試系統各項性能，包括測試水泵操作、街道消防栓的流量和操作水壓等，以及進行消防處處長可能因應系統特點訂明的其他測試和檢查，以證明表現令人滿意。(ii) 檢查、測試和保養裝置須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。擁有人或其代理人應每月測試固定水泵的自動和人手起動裝置。應檢驗系統的喉管和消防栓出水口，確保狀況良好。2.23 排煙系統如須進行熱煙測試，須遵守下列各項：a. 測試要點：(i) 模擬熱氣煙羽的溫度，應維持在低於天花板花灑溫度定值攝氏 10 度左右，以免花灑意外啓動，或損壞建築物結構和終飾；(ii) 測試火焰的熱量最少須達 1 兆瓦或消防處處長同意的水平；(iii) 如得到消防處處長同意，可使用非污染的工業用甲基化酒精；(iv) 如得到消防處處長同意，可使用以油作為燃料的製煙機所產生的無毒煙霧；(v) 可參考澳洲標準 AS 4391-1999 或其他同等國際標準進行測試。b. 熱煙測試期間須採取的安全措施：(i) 應提供足夠的安全措施，以免在測試期間火勢蔓延；(ii) 現場應設有數量充足的滅火筒；(iii) 如認為有需要，可召喚消防車輛候命。c. 熱煙測試期間，如排煙系統符合下列各點，便屬可以接受：(i) 應維持預設的無煙淨空高度；(ii) 低位補充新鮮空氣和高位抽走空氣的形成模式，須使煙霧的流動途徑能對防煙間內所有範圍產生「清除」效果。補充的新鮮空氣不應影響煙霧層的穩定度；(iii) 排煙系統在接到火警警報信號後應立即啓動；(iv) 煙霧明顯沒有擴散到毗連的防煙間；(v) 應觀察不到懸垂煙幕的偏離度超出預設限度；(vi) 煙霧層下的「死角」明顯沒有煙霧積聚；(vii) 不應有煙霧通過建築物開口或新鮮空氣的進氣窗，重新流入建築物。d. 熱煙測試施工說明書須與消防處議定。A. 機械式排煙系統(i) 認可測試1. 如配合其他系統操作是預設操作模式其中一環，在消防處進行最後檢查前，須確保所有此等系統發揮正確功能。2. 「完工」的定義包括配備所有必需的永久標籤、指示牌、詳盡的操作和保養手冊及圖表、竣工繪圖記錄等。3. 須確保已進行《最低限度之消防裝置及設備守則》第 5.23 段第 B.17 項規定的測試，並予以記錄和核證。4. 所有系統須已完工並經過測試，而且按香港法例第 409 章下屬屋宇裝備、消防或機械工程界別的註冊專業工程師亦信納系統發揮正確功能，方可在消防處視察人員在場下進行最後整體測試和示範。須提交整套測試及功能操作檢查記錄（參見本款第 6 段）。所有測試及運作報告須由註冊專業工程師作見證和核證，以核實有關裝置是根據消防處的規定操作。5. 除皮氏靜壓計、斜管壓力計、U 形測量儀器及同類的簡單儀器外，所有用於測試的儀器、量計等均須：a. 每款備有兩套；b. 就每個經校準的測試儀器備有有效的校準證明書，證明其準確程度在正負百分之五的範圍內；c. 按照適當的英國標準或其他獲認可的同等國際或國家標準（如有並適用者）製造；以及d. 已在測試日期前 3 個月內由認可的測試或校準實驗室校準。進行測試時，由實驗室發出的校準證明書須可供查核。6. 須就所有測試和測試結果備存詳盡完整的記錄，最少包括下列各項：a. 系統建造時的壓力測試記錄──參見《最低限度之消防裝置及設備守則》第 5.23 段第 B.17 項；b. 所有使用儀器的廠名、產品編號、種類和擁有人名稱，以及校準證明書的副本；c. 實際的量度數據；d. 上述(c)項的修正量度數據；e. 最終的空氣流量值；f. 每個經檢查的裝置的廠名、產品編號、種類和用途；g. 測試日期和時間；h. 每項測試的操作人員╱測試人員或監督人員和任何見證人的簽署；以及i. 註冊專業工程師驗收簽署。(ii) 檢查、測試和保養1. 如屬只在緊急情況下操作的專用系統，擁有人或其代理人應最少每 3 個月啓動系統一次，並檢查系統以確保所有功能和操作程序正確。2. 如屬持續以低動力操作並在緊急情況下加強動力的兩用系統，擁有人或其代理人應最少每 6 個月啓動系統的排煙模式一次，並依照上文第 1 段檢查。3. 如屬混合式系統，每次檢查的相隔時間應以較短者為準。4. 除上述所列外，最少每 12 個月須由註冊消防裝置承辦商啓動系統一次，進行本守則第 2.23(A)(i)條所述的全面測試，並將消防裝置及設備證書（F.S. 251）送交消防處處長。5. 擁有人或其代理人應確保不時進行所有例行的加油、潤滑等工作，確保系統操作可靠。6. 擁有人或其代理人應定期保養所安裝的任何防火╱防煙閘。7. 擁有人或其代理人應為所有系統備存記錄簿，完整記錄根據本款第 1 至第 6 段規定進行的工作和檢查結果，並由監督人員和見證人簽署。B. 靜態式排煙系統(i) 認可測試1. 完成安裝後，須由註冊消防裝置承辦商檢查整個系統。如裝置設有固定的屏障及╱或排煙口，須確保所有屏障和排煙口妥為安裝，所有標籤均已齊備並貼牢。2. 如系統沒有固定的屏障和排煙口，須先在非操作狀態下檢查所有裝置，再操作啓動系統和檢查所有裝置，確保操作正確。3. 所有組件須重校至非操作狀態，然後拔除所有電源供應，並再次檢查所有裝置，確保所有裝置均正確發揮「故障安全防護」功能，即所有裝置均處於「火警」狀態。4. 確保已附有所有標籤和指示。(ii)檢查、測試和保養1. 每年須由註冊消防裝置承辦商檢查系統一次，確保系統在有效操作狀態。2. 根據本守則第 2.23(B)(i)條所訂進行檢查，當中包括所有啓動程序、告示檢查等。2.24 花灑系統(i) 認可測試應按照英國防損委員會編訂的「自動花灑裝置規定」（加上切合香港情況的適當修訂）或消防處處長可能因應系統特點訂明的其他標準和規定測試系統。(ii) 檢查、測試和保養裝置須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。2.25 街道消防栓系統(i) 認可測試街道消防栓須屬認可的標準款式，而且在根據英國標準 1042 的規定進行測試時，以一個 65 毫米出水口運作，每分鐘的出水量須不少於 2 000 公升（每秒 33.3 公升），出水口的最低運行壓力達 170 千帕斯卡。上文所述的最低出水量和運行壓力，應以 1 個系統有 2 個 65 毫米消防栓出水口同時出水計算，即每分鐘總出水量不少於 4 000 公升（每秒 66.7 公升）。須按照附錄 7 所載的核對表測試系統。(ii) 檢查、測試和保養裝置須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。2.26 供水缸(i) 認可測試除目視檢查和量度有效存水量以確定符合消防處處長的規定外，無須對供水缸進行特定測試。(ii) 檢查、測試和保養擁有人或其代理人應時刻保持供水缸注滿，並定期檢查有否漏水。2.27 通風╱空調控制系統(i) 認可測試須測試通風╱空調控制系統的取代控制裝置，確保警報發出時操作正常，達到消防處處長滿意的程度。(ii) 檢查、測試和保養裝置須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。最少每 6 個月應測試取代控制系統的操作一次，並由擁有人或其代理人將結果記入日誌內。日誌應存放於處所內，並在需要時供消防處處長查閱。2.28 水霧系統(i) 認可測試須按照美國國家防火協會標準 750 有關水霧防火系統的所有技術規定，以及消防處處長可能因應系統特點訂明的其他規定測試系統。(ii)檢查、測試和保養裝置須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。完成水霧系統的初始安裝後，如需改動、維修或保養系統，須由合資格人士批簽。該名人士應為香港法例第 409 章所指的註冊專業工程師，屬屋宇裝備、消防或機械工程界別，或具備消防處處長接納的資格，例如系統製造商。所有安裝、維修和保養工程須由註冊消防裝置承辦商進行和核證。2.29 噴水系統(i) 認可測試須按照美國國家防火協會標準 15 有關固定噴水防火系統的所有技術規定，以及消防處處長可能因應系統特點訂明的其他規定測試系統。(ii) 檢查、測試和保養裝置須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。2.30 供水(i) 認可測試須檢查消防系統的單源或雙源供水管是否固定連接。如裝有上水泵，須測試上水泵能否有效操作。(ii) 檢查、測試和保養擁有人或其代理人應定期檢查供水喉管系統有否漏水。上水泵須時刻保持在有效操作狀態，並且最少每 12 個月由註冊消防裝置承辦商檢查一次。第三部 雜項3.1 本守則只涉及檢查、測試及保養建築物內設有的消防裝置及設備。有關建築物內須提供何種裝置及設備的一般規定，載於消防處處長公布的另一份守則，名為《最低限度之消防裝置及設備守則》。3.2 為免生疑問，特此聲明，消防處處長有絕對酌情權，可就任何個別個案，更改本守則的任何規定，特別是可就任何裝置或設備，要求進行有別於本守則所述的檢查或測試，不論是進行額外的檢查和測試，還是以其他檢查和測試取代本守則所列的檢查和測試。附錄一覽表附錄 1 防火閘啓動裝置和操作測試及運作核對表 16–18附錄 2 二氧化碳╱淨劑滅火系統測試及運作核對表 19–23附錄 3 應急發電機測試及運作核對表 24–28附錄 4 火警偵測和火警警報系統測試及運作核對表 29–46附錄 5 消防栓和喉轆系統測試及運作核對表 47–59附錄 6 樓梯增壓系統測試及運作核對表 60–66附錄 7 街道消防栓系統測試及運作核對表 67–72附錄 8 消防裝置的防火電纜最低規定 73–76附錄 9 因檢查、保養、改進或維修而關閉消防裝置 77–84附錄 10 有關保養、檢查和維修消防裝置及檢驗、測試和核證用作消防裝置的氣瓶的法定規定 85附錄 11 各類認可的自動操作固定器具、滅火筒、滅火氈和沙桶的適當用途和保養方法須知 86–98附錄 12 消防裝置的供水缸有效水量量度方法 99防火閘啓動裝置和操作測試及運作核對表I. 檔案資料項目 ............................................................... 消防處檔號 .........................................................地址 ............................................................... 位置 .............................................................................................................................................. ...................................................................................................................................................... 製造商名稱 ........................................................II. 類型單鋼捲閘 [ ]雙鋼捲閘 [ ]推上型連提柄 [ ]滑動擋閘 [ ]有機械齒輪裝置 [ ]III. 安裝 是 否 備註3.1 如設有自動關閉裝置，是否不會妨礙人手開關防火閘？ [ ] [ ] …………………………3.2 如設有煙霧偵測器用以啓動防火閘，牆壁開口兩邊是否都設有煙霧偵測器？ [ ] [ ] …………………………3.3 煙霧偵測器的裝設是否在切實可行範圍內符合英國標準 5839-1 的規定（加上切合香港情況的適當修訂）？ [ ] [ ] …………………………3.4 是否設有標示充足資料的永久標示牌？ [ ] [ ] …………………………3.5 牆壁開口兩邊是否都設有手動控制器？ [ ] [ ] …………………………IV. 防火閘的操作",
+   "additional_zh": [
+    "管道和隱蔽位置內作隔音和隔熱用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "防護逃生途徑內作隔音、隔熱和裝飾用途的所有襯層均須達英國標準476：第7部表面火焰蔓延率第1或第2級或同等的國際標準，或使用認可的抗火產品把水平提高至同等標準。",
+    "如擬貯存或使用香港法例第295章所界定的危險品，應通知消防處處長。第五部規格5.1 聲響╱視像警報系統5.2 自動啓動裝置5.3 不含水的滅火劑自動固定裝置5.4 用水作滅火劑的自動固定裝置5.5 集水花灑系統5.6 水簾系統5.7 塵埃偵測系統5.8 應急發電機5.9 應急照明系統5.10 出口指示牌5.11 火警警報系統5.12 消防控制中心5.13 火警偵測系統5.14 消防栓╱喉轆系統5.15 消防裝置防火電纜5.16 消防員升降機及消防和救援樓梯間5.17 認可的自動操作固定器具5.18 固定泡沫系統5.19 氣體偵測系統5.20 認可的人手操作手提器具5.21 樓梯增壓5.22 裝有固定水泵的環形水管系統5.23 排煙系統5.24 花灑系統5.25 街道消防栓系統5.26 供水缸5.27 通風╱空調控制系統5.28 水霧系統5.29 噴水系統5.30 供水5.1 聲響╱視像警報系統規格本段內容不包括火警鐘、警笛、警號等自動或人手操作火警警報系統不可或缺的組成部分。只須在整個指定樓層及／或與樓梯相通的範圍內各處，提供聲響／視像警報。聲響播放一套口述或音樂錄音╱信號，或直接通過廣播系統，通知員工及其他佔用人發生緊急事故及所需採取的行動。在特別處所如醫院、療養院、戲院內，可廣播協定的聲響信號，預先警告員工發生緊急事故，員工不一定需要即時採取行動。聲響系統應設有應急電力供應。視像按照第 5.10 段的規定設置一套閃動式方向指示牌和閃動式出口指示牌，並輔以低位置方向指示牌，以便：(a) 通過啓動相應樓層及╱或範圍及出口的閃動式方向指示牌和閃動式出口指示牌，顯示須疏散的樓層及╱或範圍；以及(b) 通過低位置方向指示牌顯示疏散路線。高位置閃動式方向指示牌的底部須在完工樓面以上 2 至 2.5 米之間的位置。低位置方向指示牌的下方邊緣須在不高於完工樓面 200 毫米的位置。低位置方向指示牌必須是內置照明裝置類型並符合英國標準 5499：第 4 部的規定，或屬自身發光類型並符合英國標準 5499：第 4 部或消防處處長接納的其他標準的規定。每個隔室／單位的閃動式方向指示牌和閃動式出口指示牌須能同步運作。5.2 自動啓動裝置規格(a) 用於隔火╱防止火勢蔓延的自動啓動裝置本段涵蓋的組件包括防火門、防火閘、防火幕，以及其他在火警發生時能自動隔火╱防止火勢蔓延的裝置。本段內容不包括自動火警偵測系統和滅火系統。以上裝置的建造和安裝必須符合消防處處長及╱或屋宇署署長（視何者屬適當而定）接納的標準。根據建築事務監督發出的《建築物消防安全守則》，防火閘的建造、安裝和裝配均須達到建築事務監督滿意的水平。防火閘的操作，在設計、安裝、測試和保養方面均須達到消防處處長滿意的水平。除非得到消防處處長同意，否則所有防火閘均須在牆壁開口內外兩邊設置煙霧偵測器和手動控制器，分別供自動和人手操作用途。偵測器應盡量按照英國標準5839：第 1 部「建築物的火警偵測與火警警報系統」的規定安裝。如牆壁開口高度超過 2.5 米，垂直式捲閘的關閘時間須在 15 至 60 秒內。如牆壁開口高度在 2.5 米或以下，則關閘時間不得少於 8 秒。捲閘底部下橫檔降至一半高度的時間不得少於捲閘總關閘時間的一半。如以橫向式防火閘防護牆壁開口，捲閘須能夠在 60 秒內封閉開口。無論如何，捲閘的移動速度不得超過每秒 0.2 米或設備製造商訂明的安全限制。若牆壁開口甚大，橫向式防火閘須用超過 60 秒才能封閉開口，則須先得到消防處處長批准。在此情況下，可能需另外安裝能使橫向式防火閘在火警初期自動啓動的裝置。(b) 出口不通往防護逃生途徑的升降機的自動啓動裝置煙霧偵測器須安裝於每個不通往防護逃生途徑的升降機門口外面 1.5 米範圍內，並且盡量按照英國標準 5839：第 1 部「建築物的火警偵測與火警警報系統」的規定安裝。任何樓層的任何一個煙霧偵測器一經啓動，須如機電工程署公布的《升降機及自動梯設計及構造實務守則》（簡稱《升降機守則》）所訂明，能立即啓動相關升降機機廂的「返回主層操作」。自動啓動裝置的火警信號，須傳送至建築物管理處、管理員櫃枱及／或消防控制中心等地點的獨立警報信號板。自動啓動裝置不得啓動建築物的火警警報系統或與消防通訊中心連接。自動啓動裝置的啓動功能，不得取代《升降機守則》規定須予裝設的消防員升降機開關或升降機返回主層的手動操作開關。(c) 其他裝置的自動啓動裝置此等裝置的規格，須符合本守則或消防處處長接納的其他標準所訂明的相關規定。5.3 不含水的滅火劑自動固定裝置規格須按照消防處處長接納的標準，安裝二氧化碳、淨劑、化學乾粉或同類滅火系統。安裝上述系統時，可配備人手╱自動操作的合成裝置，當中可具備或不具備遙控功能。此類系統最基本須具備 1 個或以上的貯存器連排放閥、偵測頭、喉管和噴嘴。如擬將此系統用於處所╱隔室內作全浸沒系統，或需加裝自動啓動裝置（參照第 5.2段），以確保該處所或隔室與建築物的其他部分完全隔離。5.4 用水作滅火劑的自動固定裝置裝置可包括：集水花灑系統水簾系統花灑系統水霧系統噴水系統以上裝置的規格分別載於其所屬段落。5.5 集水花灑系統規格在容易發生火警的範圍，如預計火勢蔓延速度可能比一般消防花灑頭逐步啓動的速度快，則可能需裝設集水花灑系統。設計有關系統時，須徵詢消防處的意見。5.6 水簾系統規格一般事項(i) 須按照消防處處長接納的標準安裝此系統。庇護層(Refuge Floor)的水簾系統（不包括屋頂／平屋頂上的庇護層）(ii) 須在所有庇護層內安裝水簾系統，以覆蓋所有外牆開口。以水簾所覆蓋的外牆開口面積每平方米計，水簾的流量須維持在每分鐘不少於 10 公升。水簾噴頭之間的距離，不得超過 2.4 米。供水的流量和壓力須足以達至所需的噴灑密度，而所有水簾噴頭的出口壓力不得低於 0.35 巴。供水量須足以供系統操作 30 分鐘。(iii) 集水閥門須裝設於接近水簾系統入水掣的位置。須在庇護層內消防處處長接納的地點裝設人手操作裝置，並在裝置附近展示操作指示。",
+    "須為每幢建築物的水簾系統提供獨立水缸，容量最少可供系統操作 30 分鐘。若建築物內有 2 層庇護層，須以外牆開口面積較大的庇護層計算水缸容量。若建築物內有 3 層或以上庇護層，則按個別情況考慮水缸容量。",
+    "如高架水簾水缸的靜水壓和流量達到規定效能，則該水缸可直接供水予水簾系統，無須配置水簾泵。操作",
+    "水簾系統須以消防處處長認可的自動和人手方式操作。",
+    "自動操作系統一般須由消防處處長認可的先導式花灑或熱力偵測器啓動。控制閥和系統覆蓋範圍的每個出口門，均須設有人手操作裝置並提供操作指示。水簾泵",
+    "水簾泵以電力發動為佳。電動機的輸出功率須不少於驅動水簾泵以達至額定流量和壓力所需水力的 120%。水簾泵一經發動，須能持續運行，直至水簾泵附近控制板上的開關由人手關上為止。除控制板上的開關掣外，亦可在每個水簾泵旁邊裝設鎖止按鈕。",
+    "須裝置一式兩個水簾泵，用作主水泵和後備水泵。如主水泵因電力或機械問題在15 秒內仍未能操作，則須發動後備水泵作為主水泵。水簾泵須經常注滿水，並在出水的一邊安裝止回閥。如有需要，亦須在其他地點安裝止回閥，以防止水流回水缸。",
+    "每個水簾泵的狀況（包括「電源開啓」、「操作中」、「故障」）和供水缸的狀況（包括「正常水位」、「低水位」）須予監察，並在水簾泵控制板上顯示。有關資料亦須複傳至消防控制中心或設於建築物主要入口的狀況板，以及上水泵控制板（只適用於設有上水泵裝置的系統）。在存水量降至正常注滿量以下超過 10%之前，須發出「低水位」警報。",
+    "所有水簾泵須放置於適當的圍封間內。圍封間須在設計上只供放置消防設備之用，位置遠離任何出口或有關處所的正常通道，並適當上鎖，以防止有人擅自干擾水簾泵。圍封間須以最少 50 毫米高的「DRENCHER PUMP （水簾泵）」中英文字樣標明。水簾中途泵",
+    "如裝置內最高的水簾頭與該裝置供水的最低水簾入水掣之間的高度超過 60 米，有需要時，須以水簾中途泵維持流量和壓力。當消防車輛以固定的 800 千帕斯卡壓力向水簾入水掣的上游方向輸水入水簾入水掣時，水簾中途泵須能為裝置提供足夠流量和壓力。須設有旁通裝置，以便水簾中途泵一旦發生故障，從水簾入水掣輸入的水可繞過水簾中途泵。",
+    "如水簾中途泵在布置上可兼具規定的水簾泵和水簾中途泵功能，水簾中途泵亦可用作水簾泵。",
+    "水簾中途泵以電力發動為佳。電動機的輸出功率須不少於驅動水簾中途泵以達至額定流量和壓力所需水力的 120%。須裝置一式兩個水簾中途泵，用作主水泵和後備水泵。如主水泵未能操作，須在 15 秒內發動後備水泵作為主水泵。須在相應的水簾入水掣旁邊裝設適當的開關按鈕及顯示水泵在操作中的顯示燈和警報器，以便消防人員控制水簾中途泵。另須以最少 5 毫米高的「DRENCHERINTERMEDIATE BOOSTER PUMP CONTROL（水簾中途泵開關）」中英文字樣標明。",
+    "所有水簾中途泵須放置於適當的圍封間內。圍封間須在設計上只供放置消防設備之用，位置遠離任何出口或有關處所的正常通道，並適當上鎖，以防止有人擅自干擾水簾中途泵。該圍封間須以最少 50 毫米高的「DRENCHER INTERMEDIATEBOOSTER PUMP（水簾中途泵）」中英文字樣標明。",
+    "如裝有水簾中途泵的話，每個水簾中途泵的狀況（包括「電源開啓」、「操作中」、「故障」）須予監察，並在水簾泵控制板上顯示。有關資料亦須複傳至消防控制中心或設於建築物主要入口的狀況板。水簾入水掣",
+    "每個水簾入水掣須裝設在相應建築物外面的顯眼位置。水簾入水掣須予適當標明、圍封和保護，以免受腐蝕或被濫用。水簾入水掣任何部分與入水掣圍封間四周相距不得少於 100 毫米。水簾入水掣須設於消防人員易於使用的位置。",
+    "水簾入水掣接頭的中心點距離地面不得少於 600 毫米或超過 1 000 毫米。接頭須屬消防處處長認可的標準款式。每個水簾入水掣後面須裝有 1 個止回閥。水簾入水掣圍封間內須安裝壓力計，連接入水掣下游的一端和止回閥上游的一端。",
+    "每個水簾入水掣須附加刻有凸出或凹陷中英文字樣的金屬識別牌。每個水簾入水掣圍封間的正面須以最少 50 毫米高的「DRENCHER INLET（水簾入水掣）」中英文字樣永久標明。喉管、閥門和設備",
+    "須以掛鎖把所有能夠切斷水簾噴嘴供水的開關閥鎖上，以確保閥門處於正確的操作位置。有關隔火用的水簾系統的規格，須參考庇護層水簾系統的規格，惟供水須足夠操作所需，操作時間須與規定的耐火效能相同。5.7 塵埃偵測系統規格只有少數類型的處所需裝設此系統。系統類型視乎處所作何種工業╱行業╱用途而定。設計每個所需系統時，須徵詢消防處的意見並得到消防處批准。每個系統須：(a) 自動操作；(b) 停止受影響的工序；(c) 適當時啓動放壓氣口；(d) 連接處所的火警警報系統。5.8 應急發電機規格(a) 一般事項應急發電機組須能在冷卻的情況下起動，並能在起動程序啓動後 15 秒內提供達至最高額定必要負荷的電力。應急發電機組須能在合適環境下持續操作。一般的合適環境指溫度介乎攝氏 5 度與 40 度之間，相對濕度為 100%，高度為實際裝置地點的高度。應急發電機組內每一個基本設備部分均須符合相關英國標準或同等的其他國家或國際標準最新版本的規定，並須完全符合現行《工程及科技學會布線規例》（IET Wiring Regulations）（英國標準 7671）的規定。應急發電機組須在製造商廠房完成裝配和測試程序，並以完整機身送到裝置地點。原動機的類型沒有規定，但須能在 15 秒內起動，並且性能可靠。不得使用電油、火水及類似的高度揮發性液體燃料。應急發電機組的最低連續滿荷定值，不得低於與發電機連接的所有消防裝置和消防員升降機同時運作的耗電量。在任何負荷狀況下，須保持輸出電壓和頻率，使所有消防裝置順利操作。應急發電機組須設置於應急發電機房內。應急發電機房入口須設有「EMERGENCY GENERATOR（應急發電機）」和「NOSMOKING（不准吸煙）」的中英文告示牌，字體高度不少於 120 毫米。須為每部應急發電機組設置告示牌，並固定在應急發電機房和總掣房內的顯眼位置，以標明與應急發電機連接的消防裝置和消防員升降機的必要負荷。告示牌上中英文字樣的高度分別不得少於 15 毫米和 8 毫米，詳情如下：如須安裝應急發電機，每幢建築物均須設置獨立應急發電機。如發展項目建於平台上且有多幢住宅樓宇，上述規定可獲特別處理。在此情況下，應急發電機必須足以同時應付以下的必要負荷：(i) 整個平台和 1 幢樓宇的所有消防裝置和消防員升降機；以及(ii) 另外 3 幢樓宇的所有消防員升降機、出口指示牌和應急照明系統。無論如何，1 部應急發電機最多只可為 4 幢樓宇和 1 個平台供電。如需接駁任何非消防裝置的負荷至應急發電機，須得到消防處處長批准。(b) 燃料貯存發電機須配備燃料貯存系統，所貯存燃料須能供發電機持續滿荷操作不少於 6 小時。(c) 安裝須在發電機周圍保留足夠空間（不少於 600 毫米），以便維修和清潔。通風須足以應付燃燒過程和冷卻空氣所需。如需使用風機送風，則須在應急發電機組運作時同時開動風機。須在沒有任何阻塞的情況下直接輸入外部空氣或排出廢氣，即不得裝置防火閘、防煙閘或調節風閘。如輸入及╱或排出空氣的管道並非完全建在發電機房內，而需經過毗連的隔室或單位，則管道的耐火效能須相等於發電機房或所經隔室的規定耐火效能，兩者以較大者為準。燃燒後排出的廢氣不得對公眾造成滋擾，並須符合環境保護署署長的指引和規定。(d) 操作如主電力供應在某一個或多個相位出現故障或電壓降至正常電壓 70%以下超過1 秒，應急發電機組須自動起動，而將全部負荷轉移到應急發電機的程序亦須自動進行。假如原動機未能起動，則須再次嘗試起動。如原動機仍然未能起動，則須自動鎖定起動程序，並在現場和消防控制板發出聲響╱視像警報。起動系統須維持鎖定狀態，直至系統經人手重置為止。起動系統須能容許應急發電機進行 4 次起動程序。如在應急發電機起動期間主電力供應恢復正常，應急發電機起動程序仍不可中斷，但負荷轉移程序須停止。EMERGENCY GENERATOR應急發電機————————LOADING OF FIRE SERVICE INSTALLATIONS ANDFIREMAN’S LIFT(S)消防裝置及消防升降機負荷XXXX kVA / XXXX kWWARNING: DO NOT OVERLOAD THE GENERATOR警告：切勿引致發電機過量負荷如主電力在應急發電機開動期間再次中斷超過 0.5 秒，則須啓動負荷轉移程序。消防控制板須設有聲響裝置和顯示燈，顯示應急發電機正在運行；如沒有消防控制板，則須在應急發電機房外面裝設顯示燈，顯示發電機正在運行。消防控制板須顯示共通發電機故障和發電機處於手動模式的聲響和視像警報。5.9 應急照明系統規格所有處所的應急照明系統須符合英國標準 5266：第 1 部和英國歐盟標準 1838 的規定（加上切合香港情況的適當修訂），惟出口指示牌則須符合本守則第 5.10 段的規定。應急照明系統須設有應急電力供應。應急電力供應須由應急發電機或獨立充電池提供。電力供應中斷時，逃生途徑的應急照明系統須自動開啓，不受照明系統開關或其他控制裝置干擾。充電池與充電電流來源的連接方式，須確保在任何情況下電池均不會向輔助照明電路以外的裝置放電。用於電池充電的整流器應僅供此種用途，並應予調節，使電池在正常情況下不會大幅放電。假如電力供應中斷，所有保齡球場、商業建築物、旅館建築物和社團建築物的應急照明系統須在 5 秒內啓動。任何佔用範圍，不論面積大小，均應設置應急照明系統，而樓面位置的水平照明度不得少於 2 米燭光。該範圍的總面積如超過 8 平方米，須設置最少 2 個應急照明燈具。戲院、劇院等處所戲院╱劇院及其他作娛樂用途的指明處所的應急照明系統另須符合以下準則：(a) 電池應急照明系統的設計和安裝須符合英國標準 5266：第 1 部《應急照明—場所應急照明守則》和英國歐盟標準 1838《照明的應用—應急照明》（加上切合香港情況的適當修訂）或消防處處長接納的其他標準的規定。(b) 須使用強力充電池；不得使用任何類型的乾電池。(c) 除非得到消防處處長同意，否則電池須裝置於發牌當局和建築事務監督批准的專用房間內。(d) 不得裝置、貯存或使用放在賽璐珞容器內的電池。(e) 須供應比所需總電池能量多出 12½%的能量（以安培時而非伏特為計算單位），即 100% + 12½% = 112½%。(f) 所有用於應急照明電路的電池須經常注滿電量，並能夠提供足夠電量，維持不少於 2 小時的規定照明光度。(g) 電池須使用設有主電源輸入和適當輸出的自動涓流充電機。充電機須裝有電度錶、調節器和指示燈。假如應急照明系統沒有連接應急發電機，充電機須能夠在12 小時內將電池完全重新充電。(h) 一旦主要照明系統發生故障，應急照明系統須自動開啓。(i) 如主要照明系統發生故障，除非電池電量足夠維持不少於 4 小時的指定照明光度，否則公眾人士須在 1 小時內離開建築物，而在未全面恢復一般照明和應急照明系統未重新充電前，不得再進入該建築物。(j) 電池須將電量輸至主配電板，並自該處將電量分配到以下 4 個支配電板：出口照明系統樓梯照明系統觀眾席照明系統舞台照明系統(k) 配電的電路須由符合機電工程署公布的《電力（線路）規例工作守則》規定的保險絲或小型斷路器妥善保護。(l) 主配電板須設置圖表，詳細顯示應急照明系統的配電情況和電路布線。(m) 應急照明系統的布線必須採用符合英國標準 5266：第 1 部《應急照明—場所應急照明守則》和英國歐盟標準 1838《照明的應用—應急照明》或消防處處長接納的其他標準的防火電纜。(n) 應急照明系統提供的最低樓面照明度須為：樓梯 不少於 2 米燭光夜總會、餐廳、舞廳或公眾人士可在內自由走動並放有可移動裝置和設備的處所不少於 1 米燭光戲院和劇院 不少於 0.5 米燭光照明度須以任何兩個應急照明器之間的中間點計算。可酌情容許照明度低於規定10%。所有讀數須以照明錶量度。(o) 各照明裝置須有一致的流明輸出量和亮光分布特點，向各主要方向發出同等照明強度的亮光。各照明裝置應安裝在適當位置，以免眩光損害視力。除非另有指明和獲特別批准，否則各照明裝置的安裝位置不得低於 2 米。(p) 在處所的任何位置讓眼睛適應亮光的時間不得超過 5 秒。(q) 所有裝置須備有最少 2 個照明器。（"
+   ]
   }
  },
  "composite_rule": {
   "para": "4.16",
-  "text": "Each part complies with the paragraph for its own use. Where the non-domestic part is sprinklered, sprinklers in staircases serving the domestic part extend two further floors (fast-response heads)."
+  "text_zh": "(ii) 就非住用部分裝有花灑系統的綜合用途建築物而言，非住用部分對上和對下兩個樓層的樓梯（只限通往住用部分的樓梯）亦應裝設花灑，而花灑頭應屬快速感應型。",
+  "text": "Each use complies with its own paragraph. If the non-domestic part is sprinklered, the staircases (only those leading to the domestic part) on the floors immediately above and below the non-domestic part are also sprinklered, with fast-response heads."
  },
- "fs_tank_unverified": {
-  "_note": "From memory, NOT read from the 2022 Code (the web extract did not reach Part V). Confirm before use.",
-  "hydrant_hose_reel_litres_by_largest_floor_m2": [
+ "fs_tank": {
+  "para": "5.26",
+  "basis_zh": "就消防栓／喉轆系統而言，按最大樓層的樓面面積計算，所需提供的最少有效存水量如下：",
+  "_note": "The table that follows is an image in the PDF and is missing from the uploaded text. The values below are from memory and remain UNVERIFIED.",
+  "hydrant_hose_reel_litres_by_largest_floor_m2_unverified": [
    [
     230,
     9000
@@ -355,5 +2285,5 @@
    ]
   ]
  },
- "other_paragraphs_not_encoded": "4.1 aircraft maintenance, 4.2 audio/visual production, 4.5 battery rooms / EV charging, 4.6 boiler rooms, 4.7 bowling alleys, 4.8 bulk fuel, 4.10 chemical plants, 4.11-4.13 cold stores, 4.17-4.20, 4.24-4.25, 4.33-4.45 (cinemas, theatres, PPE, schools, petrol filling stations, etc.): read the PDF directly."
+ "hydrant_flow_zh": "5.25: 2 個 65 毫米消防栓出水口同時出水，總出水量不少於每分鐘 4 000 公升，運行壓力不少於 170 千帕斯卡，輸水時間最低限度 60 分鐘 (street / private hydrant system)"
 }

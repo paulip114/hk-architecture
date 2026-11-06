@@ -5,7 +5,7 @@ Data: `energy.json`. Tool: `../tools/energy_check.py` (reads `energy`).
 ## Who controls what
 | Control | Law / guidance | Applies to | Checked by |
 | --- | --- | --- | --- |
-| OTTV of walls and roofs | B(EE)R Cap. 123M; PNAP APP-67 (Sept 2025) | commercial and hotel buildings; residents' recreational facilities (RRF) of residential developments | BD (AP submits) |
+| OTTV of walls and roofs | B(EE)R Cap. 123M; OTTV Code 1995; PNAP APP-67 (Sept 2025) | commercial and hotel buildings; residents' recreational facilities (RRF) of residential developments | BD (AP submits) |
 | RTTV, VLT, external reflectance | PNAP APP-156 (Sept 2025) + BD Guidelines | domestic buildings (not hotels, guesthouses, RCHEs) | BD; prerequisite for APP-151 GFA concessions |
 | Building services (lighting, A/C, electrical, lift & escalator) | BEEO Cap. 610; BEC 2024 | 13 building types in Sch. 4 (new buildings); major retrofitting works | EMSD (REA / developer declarations) |
 | Energy audit | BEEO; EAC 2024 | commercial buildings and commercial parts of composite buildings | EMSD, every ≤ 10 years |
@@ -20,18 +20,36 @@ Data: `energy.json`. Tool: `../tools/energy_check.py` (reads `energy`).
   - The Appendix A summary sheet before consent (B(A)R reg 10).
   - Before the OP: final OTTVs on the GBP and an OTTV Report with Forms OTTV1–4, record plans and test certificates (paras 7–8).
 
-## OTTV formula (OTTV Code 1995) – constants unverified
+## OTTV method (OTTV Code 1995, verified)
+Source: BD *Code of Practice for Overall Thermal Transfer Value in Buildings 1995*, uploaded to the project. Tables 1–9 are in `energy.json` under `ottv_code`.
 ```
-Wall OTTV = [Σ Aw·Uw·α·TDeq + Σ Af·Uf·ΔT + Σ Af·SC·ESM·SF] / Σ(Aw + Af)
-Roof OTTV = [Σ Ar·Ur·α·TDeq + Σ As·Us·ΔT + Σ As·SC·ESM·SF] / Σ(Ar + As)
+OTTVw = [Σ Aw·U·α·TDEQw + Σ Afw·SC·ESM·SF] / (Aw + Afw)       para 5
+OTTVr = [Σ Ar·U·α·TDEQr + Σ Afr·SC·SF] / (Ar + Afr)           para 6 (SF horizontal = 264, no ESM)
+Tower / podium OTTV = (G + H) / (E + F)                        Form OTTV 4
 ```
-- Aw / Ar: opaque wall / roof area. Af / As: window / skylight area.
-- α: absorptivity. TDeq: equivalent temperature difference, set by density in kg/m².
-- ΔT: indoor–outdoor temperature difference. SC: shading coefficient. ESM: external shading multiplier. SF: solar factor by orientation.
-- The structure follows the Code and matches the inputs on the APP-67 Appendix A sheet (U values, SC, absorptivity, density, WWR).
-- **The TDeq, ΔT and SF numbers in `energy.json` are placeholders.** The OTTV Code PDF could not be reached. The tool reports OTTV results as CHECK until `ottv_constants.verified` is set true after copying the Code's tables.
-- Calibration against BD's published sample sheet (NT2022007OTTV): the placeholders give 73.6 W/m² against the reported 61.9 W/m². Same order, not exact.
-- Not yet confirmed whether the limit applies to the overall figure or to walls and roof separately. The tool compares the overall figure and flags walls alone if they exceed the limit.
+- **No conduction term for glazing.** Solar gain through glass carries the whole window load.
+- The limit applies to the **average over all walls and roofs of the tower or podium**, not to any single wall or roof (para 3.2).
+- TDEQw (Table 5): set by orientation (16 points) and wall density (< 22, 23–199, 200–379, 380–569, ≥ 570 kg/m²). Heavy walls get a low TDEQ.
+- TDEQr (Table 9): 18.60 / 16.88 / 13.37 / 9.75 / 7.90 across the same density bands.
+- SF (Table 8):
+  - N 104, NE 138, E 168, SE 197, S 191, SW 202, W 175, NW 138
+  - NNE 121, ENE 153, ESE 183, SSE 194, SSW 197, WSW 189, WNW 157, NNW 121
+  - horizontal 264
+- ESM: overhang Table 6 by OPF = A/B; sidefin Table 7 by SPF = C/D. Use the next larger factor. Where a window has both, take the smaller ESM.
+- U (para 7.1): 1 / (Ri + Σx/k + Ra + Ro), using Table 1 (k), Table 2 (Ri, Ro) and Table 3 (air gaps).
+  - Ri depends on the absorptivity of the **internal** surface: walls 0.120 if α ≥ 0.5, else 0.299.
+  - Ro: wall 0.044, roof 0.055.
+- Excluded from the calculation (4.1):
+  - refuge floor walls
+  - car park walls and roofs
+  - lightwells ≤ 21 m² on plan
+  - walls on roofs
+- Party walls are always included (4.2). Internal blinds and shading from neighbours are ignored (1.8).
+- Podium (Code definition): the part within 15 m above ground, or the B(P)R 20(3) / s.42 height. APP-67 allows a notional 20 m.
+- The original 1995 limits were tower 35 / podium 80. APP-67 has since cut them to 20 / 40.
+- Self-test: `python3 tools/energy_check.py --selftest` re-creates the Code's Appendix A East tower facade (Form OTTV 3).
+  - Result: **41.61 W/m²**, E 1,968.96 m², G 81,921.03 W, all exactly as printed.
+  - W1 and W4 U-values from layers also match (1.51, 0.41).
 
 ## RTTV (APP-156 para 6)
 - **Wall ≤ 12.5 W/m², roof ≤ 3.5 W/m²** from 31 Dec 2025. Earlier limits: 14 / 4.
