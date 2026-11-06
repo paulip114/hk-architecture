@@ -17,6 +17,7 @@
   <a href="#what-it-covers">What it covers</a> ·
   <a href="#use-it-with-an-ai-agent">AI agents</a> ·
   <a href="docs/reference.md">Reference</a> ·
+  <a href="#source-documents">Sources</a> ·
   <a href="benchmark/README.md">Benchmark</a> ·
   <a href="https://github.com/paulip114/hk-architecture/issues">Issues</a>
 </p>
@@ -28,7 +29,7 @@ It is built for architects and Authorized Persons (APs), and for AI agents such 
 > [!IMPORTANT]
 > **Every output is a draft.** The tools do not sign or submit anything, and they do not replace an Authorized Person or Registered Architect. Check results against the current official text and the signed contract before relying on them.
 
-繁體中文簡介：這是一套香港建築師工作用的知識庫和命令列工具，涵蓋《建築物（規劃）規例》、消防、規劃、地契、入則程序、造價及合約。所有輸出都是草稿，必須由認可人士（AP）覆核及簽署。本專案公開原始碼，但並非開源軟件：可作非商業及學術用途，商業用途須先取得許可。
+繁體中文簡介：這是一套香港建築師工作用的知識庫和命令列工具，涵蓋《建築物（規劃）規例》、消防、規劃、地契、入則程序、環評、鐵路保護、大廈管理、升降機、造價及合約。所有輸出都是草稿，必須由認可人士（AP）覆核及簽署。本專案公開原始碼，但並非開源軟件：可作非商業及學術用途，商業用途須先取得許可。
 
 ## See it in action
 
@@ -59,7 +60,7 @@ python3 tools/cost_estimate.py examples/demo_practice.json             # order o
 python3 tools/fs_lookup.py "travel distance"                           # search the Fire Code
 ```
 
-On Windows, use `python` in place of `python3` and `.venv\Scripts\python` in place of `.venv/bin/python`, and run `$env:PYTHONUTF8=1` in PowerShell first, because some tools otherwise crash when printing a report ([#50](https://github.com/paulip114/hk-architecture/issues/50)).
+On Windows, use `python` in place of `python3` and `.venv\Scripts\python` in place of `.venv/bin/python`.
 
 Exit code `1` means the check found a failure, not that the tool crashed. Copy a file from [`examples/`](examples/) to start your own project; all the demo schemes are fictional.
 
@@ -73,7 +74,7 @@ python3 -m venv .venv
 .venv/bin/python tools/ifc_model.py examples/demo_practice.json -o model.ifc
 ```
 
-Run the tests with `python3 -m unittest discover -s tests`, and the BIM tests with `python3 -m unittest discover -s bim/tests`. Tests that need the drawing packages are skipped if they are not installed. CI installs those packages and runs both sets on Python 3.9 and 3.13.
+Run the tests with `python3 -m unittest discover -s tests`, and the BIM tests with `python3 -m unittest discover -s bim/tests`. Tests that need the drawing packages are skipped if they are not installed. CI installs those packages and runs both sets on Linux with Python 3.9 and 3.13, and on Windows with Python 3.13.
 
 ## What it covers
 
@@ -92,6 +93,15 @@ The tools follow a project from appointment to Final Certificate:
 
 The [`bim/`](bim/README.md) folder adds pyRevit, Dynamo and Grasshopper scripts. The tools themselves are in [`tools/`](tools/), and [`docs/reference.md`](docs/reference.md) lists every file and input field.
 
+The repo also holds rules, templates and guides that go beyond the tools. A tool's `PASS` does not cover these unless the document says so:
+
+| Topic | Where |
+| --- | --- |
+| EIA, railway protection, building management, and lifts and escalators | [`statutes/`](statutes/) |
+| Minor works, unauthorized building works, MBIS and MWIS, and checklist and letter templates | [`submission/`](submission/README.md) |
+| Building (Administration) and Building (Construction) Regulations notes | [`bcr-bar/`](bcr-bar/bcr-bar-rules.md) |
+| Design statements, architectural movements and masters, and massing methods | [`design/`](design/README.md) |
+
 <details>
 <summary><strong>See the full workflow</strong>: seven stages across design, statutory and contract duties</summary>
 <br>
@@ -101,6 +111,9 @@ The [`bim/`](bim/README.md) folder adds pyRevit, Dynamo and Grasshopper scripts.
 <details>
 <summary><strong>See the knowledge graph</strong>: how skills, tools, data tables, rules and official sources connect</summary>
 <br>
+
+This graph follows the tools, so it leaves out rule documents with no tool, such as those in [`statutes/`](statutes/).
+
 <a href="docs/knowledge-graph.png"><img src="docs/knowledge-graph.png" alt="Knowledge graph of the repo: 12 skills, 21 tools plus the BIM scripts, data tables, rule documents and official sources, grouped by domain. Other domains feed into bpr_check.py."></a>
 </details>
 
@@ -133,19 +146,33 @@ Rule documents and data tables mark facts by how they were checked. Some tools r
 - Parts of Cap. 499, Cap. 344, Cap. 618, Cap. 121 and Cap. 124, PNAP APP-24, and the LandsD small house, NT land exchange and ex-gratia notes, as listed in [`statutes/`](statutes/)
 - LAO PN 3/2020 and 3/2020A, Basic Law Art. 120-123, Cap. 150, Cap. 515 and Cap. 648 lease and rent provisions
 - PNAP APP-151 cap and prerequisites, and the APP-152 figures used by `sbd_check.py`
-- Technical Memorandum Table 1, BA form numbers, and Barrier Free Design Manual Divisions 15 to 20
+- Technical Memorandum Table 1, BA form numbers, and Barrier Free Design Manual Divisions 15 to 20 and Chapter 5
 - The FSD supply tank table (para 5.26) and Building Energy Code 2024 tables used by the tools
+- FS Code 2011 Part F, and the OTTV Code 1995 tables used by `energy_check.py`
 - Cap. 1 s.71 day counting, Cap. 221 Schedule 8 fine levels, the Cap. 123 MBIS and MWIS notice gaps, and the Cap. 123Q section outline
 
 **Still partial or unverified:**
+- Other Parts of FS Code 2011, whose tables were taken from the Code's text but do not all have a separate check on record
 - The validation schemes for minor works, which are not in Cap. 123N
 - Cap. 123P inspection scope and the MWIS forms, which have not been compared line by line
-- Barrier Free Design Manual Chapter 5
+- Barrier Free Design Manual Chapter 6
 - The current LandsD administrative fee, and the FSD Part II pressurization table
 - SFBC 2025 clauses and periods, which were checked against a pre-launch copy and need rechecking against the final form
 - The HKIA appointment agreement, which is not available
 
-The list above is a summary. Each rule document gives the details, [`docs/document-library.md`](docs/document-library.md) lists the source documents and where to get them, and the [open issues](https://github.com/paulip114/hk-architecture/issues) track what remains. Laws and practice notes change, so always check the current version.
+The list above is a summary. Each rule document gives the details, and the [open issues](https://github.com/paulip114/hk-architecture/issues) track what remains. Laws and practice notes change, so always check the current version.
+
+## Source documents
+
+The rules were checked against legislation, codes and guidelines that this repo does not publish. [`docs/document-library.md`](docs/document-library.md) lists each document, its version date and where to get it.
+
+These documents depend on each other, so a change to one can affect others:
+
+<p align="center"><img src="docs/assets/document-dependencies.svg" alt="Dependencies between the source documents. Land and lease documents, town planning documents and site-specific controls lead to building plan approval under the Buildings Ordinance, Cap. 123, as do the design regulations and codes. Cost and contract, construction and after-completion documents follow in practice. Cap. 123 and Cap. 123A are marked as not in the local library." width="100%"></p>
+
+For every document and link, with the evidence for each, download [`docs/document-dependency-graph.html`](docs/document-dependency-graph.html) and open it in a browser, because GitHub shows only its source. The same data is in [`docs/document-dependencies.json`](docs/document-dependencies.json). It is a draft for AP review, and some links are inferred from practice and marked as such.
+
+The Buildings Ordinance and some other documents that the library cites are not in the local library yet, as tracked in [#57](https://github.com/paulip114/hk-architecture/issues/57).
 
 ## Contributing
 

@@ -320,7 +320,7 @@ def cmd_run(a):
             (ws / "input.json").write_text(json.dumps(t.get("input", {}), ensure_ascii=False, indent=1), encoding="utf-8")
             start, status, out = time.time(), "ok", ""
             try:
-                p = subprocess.run(a.agent_cmd, shell=True, cwd=ws, input=prompt, capture_output=True, text=True, timeout=a.timeout)
+                p = subprocess.run(a.agent_cmd, shell=True, cwd=ws, input=prompt, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=a.timeout)
                 out = p.stdout + ("\n[stderr]\n" + p.stderr if p.stderr else "")
                 if p.returncode:
                     status = f"exit {p.returncode}"
@@ -479,4 +479,6 @@ def main():
 
 
 if __name__ == "__main__":
+    for stream in (sys.stdout, sys.stderr):
+        stream.reconfigure(encoding="utf-8")  # reports contain Chinese and symbols
     main()

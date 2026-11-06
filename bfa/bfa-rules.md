@@ -62,5 +62,16 @@ Source: Design Manual: Barrier Free Access 2008, **2025 Edition (June 2025)**, B
 
 Divisions 15–20 were read on 2026-11-06. `bfa_check.py` checks the Division 15 and 19 dimensions. Divisions 16, 17, 18, 20 and the Division 19 items not listed in its docstring are for manual checking.
 
+## Chapter 5, building services (read on 2026-11-07)
+- **Mandatory, fire alarms (para 5.2):** where fire alarms are provided in areas required to be accessible, they give audible and visible signals. The visual alarm is a flashing red light labelled "Fire Alarm" in English and Chinese, in a prominent position, for the building categories in Table 2. It is not required in exit staircases and their smoke lobbies, or in the areas para 5.2.3(b) lists, generally staff-only and back-of-house areas and domestic units. Manual call points in wheelchair-accessible places must be prominent and accessible.
+- **Best practice only:**
+  - Controls (para 5.1): 450-1200 mm above floor, sockets at least 450 mm, luminous contrast at least 30%.
+  - Public telephones (para 5.3): at least one accessible in a group of two or more.
+  - Remote signage systems (para 5.4).
+  - Vertical lifting platforms (para 5.5), where a lift or ramp is impractical: entrance at least 900 mm, platform at least 1100 wide x 1500 deep, safety barriers at least 1100 mm, travel up to 7000 mm, load up to 500 kg.
+  - Drinking fountains (para 5.6): spout opening 750-900 mm.
+- **Car park bays:** the paragraphs set the width only (para 9). Figure 3 shows a 5000 mm length. The transfer zone is the 1200 mm common loading/unloading area between two 2500 mm spaces.
+- **Tool coverage:** `bfa_check.py` checks whether a visual fire alarm is provided under Table 2, but not its details. Other Chapter 5 items are for manual checking.
+
 ## Not yet verified
-- **Chapter 5, building services design requirements.** Not read ([#46](https://github.com/paulip114/hk-architecture/issues/46)).
+- **Chapter 6, elderly-friendly design guidelines.** Not read ([#70](https://github.com/paulip114/hk-architecture/issues/70)).

@@ -1,0 +1,2743 @@
+{
+ "meta": {
+  "title": "Document library dependency graph",
+  "direction": "An edge from A to B means A depends on B.",
+  "built": "2026-11-07",
+  "status": "Draft for AP review. Not legal advice. Inferred edges are marked and need confirmation.",
+  "excluded": "Citations of Cap. 614 and Cap. 1 are left out as boilerplate.",
+  "method": "Citations were scanned page by page from the local library, using OCR for the two scanned PDFs. Edges with a type and evidence were then reviewed by hand. Edges with confidence 'inferred' are not stated as a cross-reference in either document.",
+  "limits": "Some section numbers were derived from PDF page footers, so check them against the cited page. The Standard Form of Building Contract is recorded by clause location and paraphrase only."
+ },
+ "stages": [
+  {
+   "id": "S0",
+   "zh": "全程適用",
+   "en": "Throughout"
+  },
+  {
+   "id": "S1",
+   "zh": "土地與契約",
+   "en": "Land and lease"
+  },
+  {
+   "id": "S2",
+   "zh": "城市規劃",
+   "en": "Town planning"
+  },
+  {
+   "id": "S3",
+   "zh": "項目專項法例",
+   "en": "Project-specific controls"
+  },
+  {
+   "id": "S4",
+   "zh": "設計與圖則審批",
+   "en": "Design and building plans"
+  },
+  {
+   "id": "S5",
+   "zh": "成本與招標",
+   "en": "Cost and procurement"
+  },
+  {
+   "id": "S6",
+   "zh": "施工與竣工",
+   "en": "Construction and completion"
+  },
+  {
+   "id": "S7",
+   "zh": "落成後管理",
+   "en": "Occupation and upkeep"
+  }
+ ],
+ "nodes": [
+  {
+   "id": "HKIA-CODE",
+   "zh": "HKIA 專業守則",
+   "en": "HKIA Code of Professional Conduct",
+   "kind": "professional",
+   "stage": "S0",
+   "inLibrary": true,
+   "version": "18.8.2017",
+   "usedFor": "Professional duties",
+   "issue": null
+  },
+  {
+   "id": "BL",
+   "zh": "《基本法》第 120–123 條",
+   "en": "Basic Law Art. 120-123",
+   "kind": "law",
+   "stage": "S1",
+   "inLibrary": true,
+   "version": "截圖 2026-11-06",
+   "usedFor": "Land administration rules",
+   "issue": null
+  },
+  {
+   "id": "Cap.150",
+   "zh": "新界土地契約（續期）條例",
+   "en": "NT Leases (Extension) Ordinance",
+   "kind": "law",
+   "stage": "S1",
+   "inLibrary": true,
+   "version": "24.8.2025",
+   "usedFor": "Land administration rules",
+   "issue": 44
+  },
+  {
+   "id": "Cap.515",
+   "zh": "地租（評估及徵收）條例",
+   "en": "Government Rent (Assessment and Collection) Ordinance",
+   "kind": "law",
+   "stage": "S1",
+   "inLibrary": true,
+   "version": "22.5.2025",
+   "usedFor": "Land administration rules",
+   "issue": null
+  },
+  {
+   "id": "Cap.648",
+   "zh": "延長政府租契條例",
+   "en": "Extension of Government Leases Ordinance",
+   "kind": "law",
+   "stage": "S1",
+   "inLibrary": true,
+   "version": "22.5.2025",
+   "usedFor": "Land administration rules",
+   "issue": null
+  },
+  {
+   "id": "Cap.124",
+   "zh": "收回土地條例",
+   "en": "Lands Resumption Ordinance",
+   "kind": "law",
+   "stage": "S1",
+   "inLibrary": true,
+   "version": "24.8.2025",
+   "usedFor": "Resumption coverage",
+   "issue": 45
+  },
+  {
+   "id": "Cap.128B",
+   "zh": "土地註冊費用規例（截圖）",
+   "en": "Land Registration Fees Regulations",
+   "kind": "subsidiary",
+   "stage": "S1",
+   "inLibrary": true,
+   "version": "截圖 2026-11-06",
+   "usedFor": "Land Registry fees",
+   "issue": null
+  },
+  {
+   "id": "Cap.128",
+   "zh": "土地註冊條例",
+   "en": "Land Registration Ordinance",
+   "kind": "law",
+   "stage": "S1",
+   "inLibrary": false,
+   "version": null,
+   "usedFor": null,
+   "issue": null
+  },
+  {
+   "id": "LAO-3/2020",
+   "zh": "LAO PN 3/2020",
+   "en": "Design, Disposition and Height Clause under Lease",
+   "kind": "practice-note",
+   "stage": "S1",
+   "inLibrary": true,
+   "version": "27.4.2020",
+   "usedFor": "Land administration rules (DDH clause)",
+   "issue": null
+  },
+  {
+   "id": "LAO-3/2020A",
+   "zh": "LAO PN 3/2020A",
+   "en": "DDH Clause under Lease (Site Coverage)",
+   "kind": "practice-note",
+   "stage": "S1",
+   "inLibrary": true,
+   "version": "11.8.2021",
+   "usedFor": "Land administration rules (DDH clause)",
+   "issue": null
+  },
+  {
+   "id": "LAO-4/2018",
+   "zh": "LAO PN 4/2018",
+   "en": "Lease building plans checking",
+   "kind": "practice-note",
+   "stage": "S1",
+   "inLibrary": false,
+   "version": null,
+   "usedFor": null,
+   "issue": null
+  },
+  {
+   "id": "JPN 1",
+   "zh": "JPN 1",
+   "en": "Joint Practice Note No. 1",
+   "kind": "practice-note",
+   "stage": "S1",
+   "inLibrary": false,
+   "version": null,
+   "usedFor": null,
+   "issue": null
+  },
+  {
+   "id": "JPN 2",
+   "zh": "JPN 2",
+   "en": "Joint Practice Note No. 2",
+   "kind": "practice-note",
+   "stage": "S1",
+   "inLibrary": false,
+   "version": null,
+   "usedFor": null,
+   "issue": null
+  },
+  {
+   "id": "JPN 5",
+   "zh": "JPN 5",
+   "en": "Joint Practice Note No. 5",
+   "kind": "practice-note",
+   "stage": "S1",
+   "inLibrary": false,
+   "version": null,
+   "usedFor": null,
+   "issue": null
+  },
+  {
+   "id": "JPN 7",
+   "zh": "JPN 7",
+   "en": "Joint Practice Note No. 7",
+   "kind": "practice-note",
+   "stage": "S1",
+   "inLibrary": false,
+   "version": null,
+   "usedFor": null,
+   "issue": null
+  },
+  {
+   "id": "Cap.131",
+   "zh": "城市規劃條例",
+   "en": "Town Planning Ordinance",
+   "kind": "law",
+   "stage": "S2",
+   "inLibrary": true,
+   "version": "2.11.2023",
+   "usedFor": "Planning rules",
+   "issue": null
+  },
+  {
+   "id": "TPB-30D",
+   "zh": "TPB PG-30D",
+   "en": "Publication of applications and comments",
+   "kind": "guideline",
+   "stage": "S2",
+   "inLibrary": true,
+   "version": "10.2026",
+   "usedFor": "Planning rules",
+   "issue": null
+  },
+  {
+   "id": "TPB-31B",
+   "zh": "TPB PG-31B",
+   "en": "Owner's consent / notification",
+   "kind": "guideline",
+   "stage": "S2",
+   "inLibrary": true,
+   "version": "9.2023",
+   "usedFor": "Planning rules",
+   "issue": null
+  },
+  {
+   "id": "TPB-35E",
+   "zh": "TPB PG-35E",
+   "en": "Extension of time for commencement",
+   "kind": "guideline",
+   "stage": "S2",
+   "inLibrary": true,
+   "version": "3.2026",
+   "usedFor": "Planning rules",
+   "issue": null
+  },
+  {
+   "id": "TPB-36C",
+   "zh": "TPB PG-36C",
+   "en": "Class A and Class B amendments",
+   "kind": "guideline",
+   "stage": "S2",
+   "inLibrary": true,
+   "version": "12.2023",
+   "usedFor": "Planning rules",
+   "issue": null
+  },
+  {
+   "id": "RCN",
+   "zh": "Rural Covering Notes",
+   "en": "Master Schedule of Notes",
+   "kind": "guideline",
+   "stage": "S2",
+   "inLibrary": true,
+   "version": "2005（已確認最新）",
+   "usedFor": "Planning rules",
+   "issue": null
+  },
+  {
+   "id": "Cap.28",
+   "zh": "土地（雜項條文）條例",
+   "en": "Land (Miscellaneous Provisions) Ordinance",
+   "kind": "law",
+   "stage": "S1",
+   "inLibrary": false,
+   "version": null,
+   "usedFor": null,
+   "issue": null
+  },
+  {
+   "id": "Cap.499",
+   "zh": "環境影響評估條例",
+   "en": "Environmental Impact Assessment Ordinance",
+   "kind": "law",
+   "stage": "S3",
+   "inLibrary": true,
+   "version": "11.4.2025",
+   "usedFor": "EIA coverage",
+   "issue": null
+  },
+  {
+   "id": "Cap.519",
+   "zh": "鐵路條例",
+   "en": "Railways Ordinance",
+   "kind": "law",
+   "stage": "S3",
+   "inLibrary": true,
+   "version": "1.9.2023",
+   "usedFor": "Railway protection coverage",
+   "issue": null
+  },
+  {
+   "id": "Cap.276",
+   "zh": "地下鐵路（收回土地及有關規定）條例",
+   "en": "MTR (Land Resumption and Related Provisions) Ordinance",
+   "kind": "law",
+   "stage": "S3",
+   "inLibrary": true,
+   "version": "12.8.2021",
+   "usedFor": "Railway protection coverage",
+   "issue": null
+  },
+  {
+   "id": "PNAP APP-24",
+   "zh": "PNAP APP-24",
+   "en": "Railway Protection",
+   "kind": "practice-note",
+   "stage": "S3",
+   "inLibrary": true,
+   "version": "12.2022",
+   "usedFor": "Railway protection coverage",
+   "issue": null
+  },
+  {
+   "id": "Cap.121",
+   "zh": "建築物條例（新界適用）條例",
+   "en": "Buildings Ordinance (Application to the NT) Ordinance",
+   "kind": "law",
+   "stage": "S3",
+   "inLibrary": true,
+   "version": "2.8.2012",
+   "usedFor": "Small House and NT coverage",
+   "issue": 43
+  },
+  {
+   "id": "Cap.123",
+   "zh": "建築物條例",
+   "en": "Buildings Ordinance",
+   "kind": "law",
+   "stage": "S4",
+   "inLibrary": false,
+   "version": null,
+   "usedFor": null,
+   "issue": 57
+  },
+  {
+   "id": "Cap.123A",
+   "zh": "建築物（管理）規例",
+   "en": "Building (Administration) Regulations",
+   "kind": "subsidiary",
+   "stage": "S4",
+   "inLibrary": false,
+   "version": null,
+   "usedFor": null,
+   "issue": 57
+  },
+  {
+   "id": "Cap.123F",
+   "zh": "建築物（規劃）規例",
+   "en": "Building (Planning) Regulations",
+   "kind": "subsidiary",
+   "stage": "S4",
+   "inLibrary": true,
+   "version": "17.9.2026",
+   "usedFor": "B(P)R rules and bpr_check.py",
+   "issue": null
+  },
+  {
+   "id": "Cap.123Q",
+   "zh": "建築物（建造）規例",
+   "en": "Building (Construction) Regulation",
+   "kind": "subsidiary",
+   "stage": "S4",
+   "inLibrary": true,
+   "version": "24.6.2021",
+   "usedFor": "B(C)R section outline",
+   "issue": null
+  },
+  {
+   "id": "Cap.123M",
+   "zh": "建築物（能源效率）規例",
+   "en": "Building (Energy Efficiency) Regulation",
+   "kind": "subsidiary",
+   "stage": "S4",
+   "inLibrary": false,
+   "version": null,
+   "usedFor": null,
+   "issue": null
+  },
+  {
+   "id": "FS-CODE",
+   "zh": "消防安全守則 2011",
+   "en": "Code of Practice for Fire Safety in Buildings 2011",
+   "kind": "code",
+   "stage": "S4",
+   "inLibrary": true,
+   "version": "2024 版",
+   "usedFor": "Fire safety rules and tools",
+   "issue": null
+  },
+  {
+   "id": "MIN-FSI",
+   "zh": "最低消防裝置守則",
+   "en": "Codes of Practice for Minimum FSI and Equipment",
+   "kind": "code",
+   "stage": "S4",
+   "inLibrary": true,
+   "version": "9.2022",
+   "usedFor": "fsi_check.py and the supply tank table",
+   "issue": null
+  },
+  {
+   "id": "Cap.95",
+   "zh": "消防條例",
+   "en": "Fire Services Ordinance",
+   "kind": "law",
+   "stage": "S4",
+   "inLibrary": false,
+   "version": null,
+   "usedFor": null,
+   "issue": null
+  },
+  {
+   "id": "BEC",
+   "zh": "建築物能源效率守則",
+   "en": "Building Energy Code",
+   "kind": "code",
+   "stage": "S4",
+   "inLibrary": true,
+   "version": "2024 版",
+   "usedFor": "Energy rules",
+   "issue": null
+  },
+  {
+   "id": "Cap.610",
+   "zh": "建築物能源效益條例",
+   "en": "Buildings Energy Efficiency Ordinance",
+   "kind": "law",
+   "stage": "S4",
+   "inLibrary": false,
+   "version": null,
+   "usedFor": null,
+   "issue": 57
+  },
+  {
+   "id": "ARCADIS",
+   "zh": "Arcadis 造價報告",
+   "en": "Quarterly Construction Cost Review",
+   "kind": "commercial",
+   "stage": "S5",
+   "inLibrary": true,
+   "version": "2026 Q2",
+   "usedFor": "cost/hk_cost_rates.json",
+   "issue": null
+  },
+  {
+   "id": "SFBC",
+   "zh": "標準建築合約",
+   "en": "Standard Form of Building Contract (Private)",
+   "kind": "commercial",
+   "stage": "S5",
+   "inLibrary": true,
+   "version": "2025 預發佈版",
+   "usedFor": "Contract rules",
+   "issue": null
+  },
+  {
+   "id": "Cap.652",
+   "zh": "建造業付款保障條例",
+   "en": "Construction Industry Security of Payment Ordinance",
+   "kind": "law",
+   "stage": "S5",
+   "inLibrary": false,
+   "version": null,
+   "usedFor": null,
+   "issue": null
+  },
+  {
+   "id": "Cap.609",
+   "zh": "仲裁條例",
+   "en": "Arbitration Ordinance",
+   "kind": "law",
+   "stage": "S5",
+   "inLibrary": false,
+   "version": null,
+   "usedFor": null,
+   "issue": null
+  },
+  {
+   "id": "Cap.623",
+   "zh": "合約（第三者權利）條例",
+   "en": "Contracts (Rights of Third Parties) Ordinance",
+   "kind": "law",
+   "stage": "S5",
+   "inLibrary": false,
+   "version": null,
+   "usedFor": null,
+   "issue": null
+  },
+  {
+   "id": "Cap.618",
+   "zh": "升降機及自動梯條例",
+   "en": "Lifts and Escalators Ordinance",
+   "kind": "law",
+   "stage": "S6",
+   "inLibrary": true,
+   "version": "14.3.2024",
+   "usedFor": "Lifts and escalators coverage",
+   "issue": null
+  },
+  {
+   "id": "Cap.344",
+   "zh": "建築物管理條例",
+   "en": "Building Management Ordinance",
+   "kind": "law",
+   "stage": "S7",
+   "inLibrary": true,
+   "version": "13.7.2025",
+   "usedFor": "Building management coverage",
+   "issue": null
+  },
+  {
+   "id": "Cap.123N",
+   "zh": "建築物（小型工程）規例",
+   "en": "Building (Minor Works) Regulation",
+   "kind": "subsidiary",
+   "stage": "S7",
+   "inLibrary": true,
+   "version": "31.3.2022",
+   "usedFor": "Minor works rules",
+   "issue": null
+  },
+  {
+   "id": "Cap.123P",
+   "zh": "建築物（檢驗及修葺）規例",
+   "en": "Building (Inspection and Repair) Regulation",
+   "kind": "subsidiary",
+   "stage": "S7",
+   "inLibrary": true,
+   "version": "31.3.2022",
+   "usedFor": "MBIS and MWIS rules",
+   "issue": null
+  },
+  {
+   "id": "Cap.502",
+   "zh": "消防安全（商業處所）條例",
+   "en": "Fire Safety (Commercial Premises) Ordinance",
+   "kind": "law",
+   "stage": "S7",
+   "inLibrary": false,
+   "version": null,
+   "usedFor": null,
+   "issue": null
+  },
+  {
+   "id": "Cap.572",
+   "zh": "消防安全（建築物）條例",
+   "en": "Fire Safety (Buildings) Ordinance",
+   "kind": "law",
+   "stage": "S7",
+   "inLibrary": false,
+   "version": null,
+   "usedFor": null,
+   "issue": null
+  },
+  {
+   "id": "Cap.406",
+   "zh": "電力條例",
+   "en": "Electricity Ordinance",
+   "kind": "law",
+   "stage": "S7",
+   "inLibrary": true,
+   "version": "1.7.2022",
+   "usedFor": "Not used",
+   "issue": null
+  }
+ ],
+ "edges": [
+  {
+   "from": "Cap.123",
+   "to": "Cap.131",
+   "type": "gate",
+   "confidence": "documented",
+   "evidence": "Cap. 131 s.12(5)（PDF p.46）、s.16(7)（p.61）",
+   "note": "違反規劃圖是 BO s.16(1)(d) 的拒批理由；s.16 許可範圍內不算違反。條文見於 Cap. 131，BO 原文未在文件庫。",
+   "citations": null
+  },
+  {
+   "from": "Cap.123",
+   "to": "MIN-FSI",
+   "type": "gate",
+   "confidence": "documented",
+   "evidence": "MIN-FSI para 1.4（PDF p.10）",
+   "note": "圖則沒有消防處處長證明書時，建築事務監督可按 BO s.16(1)(b) 拒批。",
+   "citations": null
+  },
+  {
+   "from": "Cap.123",
+   "to": "Cap.519",
+   "type": "gate",
+   "confidence": "documented",
+   "evidence": "Cap. 519 s.27（PDF p.32）",
+   "note": "工程與鐵路計劃不相容時，建築事務監督可管制圖則和開工。",
+   "citations": null
+  },
+  {
+   "from": "Cap.123",
+   "to": "Cap.276",
+   "type": "gate",
+   "confidence": "documented",
+   "evidence": "Cap. 276 s.15（PDF p.21）",
+   "note": "工程與地鐵工程不相容時，建築事務監督可管制圖則和開工。",
+   "citations": null
+  },
+  {
+   "from": "Cap.123",
+   "to": "Cap.121",
+   "type": "gate",
+   "confidence": "documented",
+   "evidence": "Cap. 121 s.3（PDF p.7）",
+   "note": "BO 適用於新界，但受 Cap. 121 第 3 部的豁免規限。",
+   "citations": null
+  },
+  {
+   "from": "Cap.131",
+   "to": "Cap.519",
+   "type": "gate",
+   "confidence": "documented",
+   "evidence": "Cap. 131 s.13A（PDF p.54）",
+   "note": "按 Cap. 519 批准的計劃，視為已根據 Cap. 131 批准。",
+   "citations": 4
+  },
+  {
+   "from": "Cap.648",
+   "to": "Cap.131",
+   "type": "gate",
+   "confidence": "documented",
+   "evidence": "Cap. 648 s.13（PDF p.19）",
+   "note": "續期租契隱含契諾：發展和用途都要符合 Cap. 131。",
+   "citations": 2
+  },
+  {
+   "from": "Cap.648",
+   "to": "Cap.123",
+   "type": "gate",
+   "confidence": "documented",
+   "evidence": "Cap. 648 s.13（PDF p.19）",
+   "note": "續期租契隱含契諾：建築物要符合 BO 及其附屬法例。",
+   "citations": 2
+  },
+  {
+   "from": "Cap.123F",
+   "to": "Cap.123",
+   "type": "authority",
+   "confidence": "documented",
+   "evidence": "Cap. 123 sub. leg. F（PDF p.1）",
+   "note": "BO 的附屬法例。",
+   "citations": 10
+  },
+  {
+   "from": "Cap.123Q",
+   "to": "Cap.123",
+   "type": "authority",
+   "confidence": "documented",
+   "evidence": "Cap. 123 sub. leg. Q（PDF p.1）",
+   "note": "BO 的附屬法例。",
+   "citations": 3
+  },
+  {
+   "from": "Cap.123N",
+   "to": "Cap.123",
+   "type": "authority",
+   "confidence": "documented",
+   "evidence": "Cap. 123 sub. leg. N（PDF p.1、p.12）",
+   "note": "BO 的附屬法例。",
+   "citations": 5
+  },
+  {
+   "from": "Cap.123P",
+   "to": "Cap.123",
+   "type": "authority",
+   "confidence": "documented",
+   "evidence": "Cap. 123 sub. leg. P（PDF p.1）",
+   "note": "BO 的附屬法例。",
+   "citations": 5
+  },
+  {
+   "from": "Cap.123A",
+   "to": "Cap.123",
+   "type": "authority",
+   "confidence": "documented",
+   "evidence": "Cap. 123N s.2 引作 Cap. 123 sub. leg. A",
+   "note": "BO 的附屬法例；原文未在文件庫。",
+   "citations": null
+  },
+  {
+   "from": "Cap.123M",
+   "to": "Cap.123",
+   "type": "authority",
+   "confidence": "documented",
+   "evidence": "Cap. 123F reg 2 引作 Cap. 123 sub. leg. M",
+   "note": "BO 的附屬法例；原文未在文件庫。",
+   "citations": null
+  },
+  {
+   "from": "Cap.121",
+   "to": "Cap.123",
+   "type": "authority",
+   "confidence": "documented",
+   "evidence": "Cap. 121 s.3、s.4 起（PDF p.3、p.7）",
+   "note": "把 BO 延伸到新界並訂明豁免。",
+   "citations": 18
+  },
+  {
+   "from": "BEC",
+   "to": "Cap.610",
+   "type": "authority",
+   "confidence": "documented",
+   "evidence": "BEC para 1.1（PDF p.7）",
+   "note": "根據 Cap. 610 第 9 部發出。",
+   "citations": 2
+  },
+  {
+   "from": "TPB-30D",
+   "to": "Cap.131",
+   "type": "authority",
+   "confidence": "documented",
+   "evidence": "PG-30D para 1（PDF p.1）",
+   "note": "申請公布和提交意見的指引。",
+   "citations": 1
+  },
+  {
+   "from": "TPB-31B",
+   "to": "Cap.131",
+   "type": "authority",
+   "confidence": "documented",
+   "evidence": "PG-31B para 1.3（PDF p.2）",
+   "note": "解釋 s.12A(25) 和 s.16(8) 的「現行土地擁有人」。",
+   "citations": 14
+  },
+  {
+   "from": "TPB-35E",
+   "to": "Cap.131",
+   "type": "authority",
+   "confidence": "documented",
+   "evidence": "PG-35E（PDF p.1）",
+   "note": "s.16A 延長開展發展期限。",
+   "citations": 1
+  },
+  {
+   "from": "TPB-36C",
+   "to": "Cap.131",
+   "type": "authority",
+   "confidence": "documented",
+   "evidence": "PG-36C para 1（PDF p.1）",
+   "note": "s.16、s.17、s.17B 許可的 A 類和 B 類修訂。",
+   "citations": 5
+  },
+  {
+   "from": "RCN",
+   "to": "Cap.131",
+   "type": "authority",
+   "confidence": "documented",
+   "evidence": "RCN（PDF p.1、p.4）",
+   "note": "法定圖則《註釋》範本，詞義沿用 Cap. 131 s.1A。",
+   "citations": 2
+  },
+  {
+   "from": "PNAP APP-24",
+   "to": "Cap.519",
+   "type": "authority",
+   "confidence": "documented",
+   "evidence": "APP-24（PDF p.1–2）",
+   "note": "鐵路保護安排的法律依據。",
+   "citations": 3
+  },
+  {
+   "from": "PNAP APP-24",
+   "to": "Cap.276",
+   "type": "authority",
+   "confidence": "documented",
+   "evidence": "APP-24（PDF p.1–2）",
+   "note": "鐵路保護安排的法律依據。",
+   "citations": 3
+  },
+  {
+   "from": "PNAP APP-24",
+   "to": "Cap.123",
+   "type": "authority",
+   "confidence": "documented",
+   "evidence": "APP-24（PDF p.1、p.3）",
+   "note": "保護區屬 BO 附表 5 的第 3 號地區。",
+   "citations": 5
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.123F",
+   "type": "authority",
+   "confidence": "documented",
+   "evidence": "FS Code（PDF p.2、p.20）",
+   "note": "提供符合 B(P)R 41 至 41D 的方法。",
+   "citations": 29
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.123Q",
+   "type": "authority",
+   "confidence": "documented",
+   "evidence": "FS Code（PDF p.2、p.21）",
+   "note": "提供符合 B(C)R s.35 的方法。",
+   "citations": 5
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.123",
+   "type": "authority",
+   "confidence": "documented",
+   "evidence": "FS Code（PDF p.12）",
+   "note": "BO 訂立總體目標，規例訂目的，守則訂符合方法。",
+   "citations": 19
+  },
+  {
+   "from": "MIN-FSI",
+   "to": "Cap.95",
+   "type": "authority",
+   "confidence": "documented",
+   "evidence": "MIN-FSI（PDF p.95）",
+   "note": "檢查和測試連到消防條例的規例。",
+   "citations": 2
+  },
+  {
+   "from": "Cap.128B",
+   "to": "Cap.128",
+   "type": "authority",
+   "confidence": "documented",
+   "evidence": "截圖標題和第 7 項",
+   "note": "土地註冊條例的附屬規例。",
+   "citations": null
+  },
+  {
+   "from": "FS-CODE",
+   "to": "MIN-FSI",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "FS Code cl. A4.2（PDF p.14）及另外 14 處",
+   "note": "緊急照明、標誌等條款要符合 MIN-FSI。",
+   "citations": 15
+  },
+  {
+   "from": "MIN-FSI",
+   "to": "FS-CODE",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "MIN-FSI（PDF p.10、p.14 起，共 34 處）",
+   "note": "受保護走廊、樓梯數量等沿用 FS Code。",
+   "citations": 34
+  },
+  {
+   "from": "MIN-FSI",
+   "to": "Cap.123F",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "MIN-FSI para 1.4（PDF p.10）",
+   "note": "消防通道按 B(P)R 41B 至 41D。",
+   "citations": 1
+  },
+  {
+   "from": "MIN-FSI",
+   "to": "Cap.123",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "MIN-FSI（PDF p.9、p.11）",
+   "note": "「建築物」的定義；引用標準以圖則提交時的現行版本為準。",
+   "citations": 5
+  },
+  {
+   "from": "BEC",
+   "to": "Cap.123M",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "BEC（PDF p.16、p.71）",
+   "note": "OTTV 要求與 Cap. 123M 相同。",
+   "citations": 3
+  },
+  {
+   "from": "BEC",
+   "to": "Cap.123",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "BEC（PDF p.18）",
+   "note": "適用情況以上蓋工程的開工同意時間劃分。條文用語未明示 BO，請 AP 確認。",
+   "citations": null
+  },
+  {
+   "from": "PNAP APP-24",
+   "to": "Cap.123A",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "APP-24 para 14（PDF p.3）",
+   "note": "保護區內的地盤勘測，要按 B(A)R reg 8(1)(l) 提交圖則並取得批准和同意。",
+   "citations": 1
+  },
+  {
+   "from": "Cap.123F",
+   "to": "Cap.124",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 123F reg 22（PDF p.28）",
+   "note": "為擴闊街道而交出或收回土地，可換取額外地積比率。",
+   "citations": 2
+  },
+  {
+   "from": "Cap.123N",
+   "to": "Cap.123A",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 123N s.2、s.62A（PDF p.13、p.72）",
+   "note": "訂明圖則內容沿用 B(A)R reg 8。",
+   "citations": 6
+  },
+  {
+   "from": "Cap.123P",
+   "to": "Cap.123N",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 123P s.5（PDF p.9、p.11）",
+   "note": "檢驗時要考慮按小型工程規例提交的圖則。",
+   "citations": 4
+  },
+  {
+   "from": "Cap.123P",
+   "to": "Cap.502",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 123P s.5（PDF p.11）",
+   "note": "檢驗時要考慮消防改善工程的標準。",
+   "citations": 2
+  },
+  {
+   "from": "Cap.123P",
+   "to": "Cap.572",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 123P s.5（PDF p.11）",
+   "note": "檢驗時要考慮消防改善工程的標準。",
+   "citations": 2
+  },
+  {
+   "from": "TPB-36C",
+   "to": "Cap.123F",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "PG-36C Annex I（PDF p.8、p.14）",
+   "note": "B(P)R reg 20、22 准許的額外地積比率或上蓋面積，屬修訂分類的情況。",
+   "citations": 1
+  },
+  {
+   "from": "TPB-36C",
+   "to": "Cap.123",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "PG-36C para 7.1（PDF p.5）",
+   "note": "修訂申請可與建築圖則同時提交。",
+   "citations": null
+  },
+  {
+   "from": "LAO-3/2020",
+   "to": "Cap.131",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "PN 3/2020 para 3(e)（PDF p.1）",
+   "note": "須由城規會批准總綱圖的用地，一般不加 DD 條款。",
+   "citations": null
+  },
+  {
+   "from": "LAO-3/2020",
+   "to": "Cap.123",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "PN 3/2020（PDF p.3）",
+   "note": "上蓋面積的計算連到 BO s.42 的修改安排。",
+   "citations": 2
+  },
+  {
+   "from": "LAO-3/2020",
+   "to": "LAO-4/2018",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "PN 3/2020（PDF p.2）",
+   "note": "契約圖則審查程序。",
+   "citations": null
+  },
+  {
+   "from": "LAO-3/2020",
+   "to": "JPN 5",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "PN 3/2020 para 2（PDF p.1、p.3）",
+   "note": "建築物高度管制。",
+   "citations": 5
+  },
+  {
+   "from": "LAO-3/2020",
+   "to": "JPN 1",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "PN 3/2020（PDF p.3）",
+   "note": "綠色設施的上蓋面積豁免。",
+   "citations": null
+  },
+  {
+   "from": "LAO-3/2020",
+   "to": "JPN 2",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "PN 3/2020（PDF p.3）",
+   "note": "綠色設施的上蓋面積豁免。",
+   "citations": null
+  },
+  {
+   "from": "LAO-3/2020A",
+   "to": "JPN 7",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "PN 3/2020A（PDF p.1）",
+   "note": "上蓋面積的精簡安排由 JPN 7 公布。",
+   "citations": 2
+  },
+  {
+   "from": "LAO-3/2020A",
+   "to": "Cap.121",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "PN 3/2020A para 5（PDF p.2）",
+   "note": "不適用於獲 Cap. 121 豁免的建築物。",
+   "citations": 2
+  },
+  {
+   "from": "RCN",
+   "to": "Cap.121",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "RCN（PDF p.4）",
+   "note": "部分用途參照 Cap. 121 Part III 豁免證明書。",
+   "citations": 2
+  },
+  {
+   "from": "Cap.124",
+   "to": "Cap.131",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 124 s.2 起（PDF p.5、p.6，共 35 處）",
+   "note": "補償以 Cap. 131 圖則的土地用途為準。",
+   "citations": 35
+  },
+  {
+   "from": "Cap.124",
+   "to": "Cap.519",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 124 s.2（PDF p.8）",
+   "note": "收地可用於鐵路計劃。",
+   "citations": 2
+  },
+  {
+   "from": "Cap.131",
+   "to": "Cap.124",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 131 s.4A（PDF p.19）",
+   "note": "指定用途視為 Cap. 124 的公共用途。",
+   "citations": 2
+  },
+  {
+   "from": "Cap.276",
+   "to": "Cap.124",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 276（PDF p.38–39）",
+   "note": "收地補償參照 Cap. 124。",
+   "citations": 14
+  },
+  {
+   "from": "Cap.519",
+   "to": "Cap.124",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 519 s.38、s.43（PDF p.45、p.49）",
+   "note": "收地補償參照 Cap. 124。",
+   "citations": 10
+  },
+  {
+   "from": "Cap.519",
+   "to": "Cap.276",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 519 s.45 起（PDF p.51–52）",
+   "note": "新舊鐵路安排的過渡條文。",
+   "citations": 6
+  },
+  {
+   "from": "Cap.150",
+   "to": "Cap.515",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 150 s.7（PDF p.11）",
+   "note": "續期租契的地租按 Cap. 515 徵收。",
+   "citations": 6
+  },
+  {
+   "from": "Cap.515",
+   "to": "Cap.150",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 515 s.3、s.6（PDF p.13、p.18）",
+   "note": "適用於按 Cap. 150 續期的租契。",
+   "citations": 4
+  },
+  {
+   "from": "Cap.150",
+   "to": "Cap.128",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 150 s.3（PDF p.7）",
+   "note": "登記冊按 Cap. 128 備存。",
+   "citations": 2
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.128",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 499（PDF p.40）",
+   "note": "費用證明書可在土地註冊處註冊。",
+   "citations": 4
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.344",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "FS Code Part F（PDF p.184、p.189、p.237）",
+   "note": "邊界條件要寫入公契。FS Code 只提公契，連到 Cap. 344 是我的判斷。",
+   "citations": null
+  },
+  {
+   "from": "Cap.648",
+   "to": "Cap.515",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 648 s.13（PDF p.18）",
+   "note": "延長期內的地租按 Cap. 515 繳付。",
+   "citations": 2
+  },
+  {
+   "from": "Cap.515",
+   "to": "Cap.648",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 515 s.3（PDF p.13）",
+   "note": "適用於按 Cap. 648 s.12 延長的租契。",
+   "citations": 2
+  },
+  {
+   "from": "Cap.648",
+   "to": "Cap.150",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 648 s.13（PDF p.21）",
+   "note": "計算租期時要計入 Cap. 150 s.6 的延長期。",
+   "citations": 4
+  },
+  {
+   "from": "Cap.648",
+   "to": "Cap.128",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "Cap. 648 s.9 起（PDF p.13、p.15–16）",
+   "note": "通知和備忘錄按 Cap. 128 或 Cap. 585 註冊。",
+   "citations": 9
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.131",
+   "type": "definition",
+   "confidence": "documented",
+   "evidence": "Cap. 499 附表 1（PDF p.49、p.53）",
+   "note": "保育區、海岸保護區等以 Cap. 131 圖則界定，所以規劃圖會影響是否屬指定工程項目。",
+   "citations": 8
+  },
+  {
+   "from": "Cap.131",
+   "to": "Cap.123",
+   "type": "definition",
+   "confidence": "documented",
+   "evidence": "Cap. 131 s.1A、s.4A（PDF p.9、p.19）",
+   "note": "「土地擁有人」和「建築工程」沿用 BO 定義。",
+   "citations": 12
+  },
+  {
+   "from": "Cap.131",
+   "to": "Cap.150",
+   "type": "definition",
+   "confidence": "documented",
+   "evidence": "Cap. 131（PDF p.52）",
+   "note": "短期租約定義。",
+   "citations": 2
+  },
+  {
+   "from": "Cap.131",
+   "to": "Cap.28",
+   "type": "definition",
+   "confidence": "documented",
+   "evidence": "Cap. 131（PDF p.52）",
+   "note": "未批租土地定義。",
+   "citations": 2
+  },
+  {
+   "from": "Cap.121",
+   "to": "Cap.123F",
+   "type": "definition",
+   "confidence": "documented",
+   "evidence": "Cap. 121 s.2（PDF p.3）",
+   "note": "露台、簷篷等定義。",
+   "citations": 4
+  },
+  {
+   "from": "Cap.123F",
+   "to": "Cap.123M",
+   "type": "definition",
+   "confidence": "documented",
+   "evidence": "Cap. 123F reg 2（PDF p.12）",
+   "note": "定義。",
+   "citations": 1
+  },
+  {
+   "from": "Cap.123Q",
+   "to": "Cap.618",
+   "type": "definition",
+   "confidence": "documented",
+   "evidence": "Cap. 123Q（PDF p.37）",
+   "note": "升降機相關設備的定義。",
+   "citations": 2
+  },
+  {
+   "from": "BEC",
+   "to": "Cap.618",
+   "type": "definition",
+   "confidence": "documented",
+   "evidence": "BEC（PDF p.11–14，共 15 處）",
+   "note": "升降機和自動梯定義。",
+   "citations": 15
+  },
+  {
+   "from": "BEC",
+   "to": "FS-CODE",
+   "type": "definition",
+   "confidence": "documented",
+   "evidence": "BEC（PDF p.11）",
+   "note": "消防員升降機定義。",
+   "citations": 1
+  },
+  {
+   "from": "Cap.618",
+   "to": "Cap.123",
+   "type": "definition",
+   "confidence": "documented",
+   "evidence": "Cap. 618 s.2（PDF p.17）",
+   "note": "「建築物」定義；另有過渡條文。",
+   "citations": 8
+  },
+  {
+   "from": "Cap.618",
+   "to": "Cap.344",
+   "type": "definition",
+   "confidence": "documented",
+   "evidence": "Cap. 618 附表（PDF p.187、p.195）",
+   "note": "「管理委員會」定義。",
+   "citations": 4
+  },
+  {
+   "from": "Cap.344",
+   "to": "Cap.128",
+   "type": "definition",
+   "confidence": "documented",
+   "evidence": "Cap. 344 s.2（PDF p.18）",
+   "note": "土地註冊處定義。",
+   "citations": 2
+  },
+  {
+   "from": "Cap.276",
+   "to": "Cap.123",
+   "type": "definition",
+   "confidence": "documented",
+   "evidence": "Cap. 276（PDF p.4）",
+   "note": "「建築事務監督」和「建築工程」定義。",
+   "citations": 9
+  },
+  {
+   "from": "Cap.519",
+   "to": "Cap.123",
+   "type": "definition",
+   "confidence": "documented",
+   "evidence": "Cap. 519 s.2（PDF p.5）",
+   "note": "「建築物」定義。",
+   "citations": 12
+  },
+  {
+   "from": "LAO-3/2020A",
+   "to": "LAO-3/2020",
+   "type": "amends",
+   "confidence": "documented",
+   "evidence": "PN 3/2020A（PDF p.1）",
+   "note": "更改及補充 PN 3/2020 para 7(a)(i)，要一併閱讀。",
+   "citations": null
+  },
+  {
+   "from": "Cap.123",
+   "to": "Cap.499",
+   "type": "workflow",
+   "confidence": "inferred",
+   "evidence": "Cap. 499 s.9(1)（PDF p.18）是獨立的許可要求",
+   "note": "指定工程項目沒有環境許可證不得建造或營運。Cap. 499 與建築審批互不引用，兩者是並行關卡。",
+   "citations": null
+  },
+  {
+   "from": "Cap.515",
+   "to": "BL",
+   "type": "workflow",
+   "confidence": "inferred",
+   "evidence": "《基本法》第 121、122 條；Cap. 515 s.3（PDF p.13）",
+   "note": "3% 應課差餉租值的地租與第 121 條相同，但 Cap. 515 沒有引用《基本法》。",
+   "citations": null
+  },
+  {
+   "from": "Cap.150",
+   "to": "BL",
+   "type": "workflow",
+   "confidence": "inferred",
+   "evidence": "《基本法》第 120 條",
+   "note": "第 120 條承認跨越 1997 年的租契。Cap. 150 沒有引用《基本法》。",
+   "citations": null
+  },
+  {
+   "from": "Cap.648",
+   "to": "BL",
+   "type": "workflow",
+   "confidence": "inferred",
+   "evidence": "《基本法》第 123 條",
+   "note": "第 123 條處理沒有續期權的租契到期安排。Cap. 648 沒有引用《基本法》。",
+   "citations": null
+  },
+  {
+   "from": "Cap.344",
+   "to": "Cap.128B",
+   "type": "workflow",
+   "confidence": "inferred",
+   "evidence": "截圖第 4 項",
+   "note": "公契要註冊，費用見 Cap. 128B。Cap. 344 沒有引用此規例。",
+   "citations": null
+  },
+  {
+   "from": "Cap.123F",
+   "to": "Cap.131",
+   "type": "workflow",
+   "confidence": "inferred",
+   "evidence": "按 repo planning-rules.md",
+   "note": "設計要同時符合規劃圖的限制。",
+   "citations": null
+  },
+  {
+   "from": "Cap.123F",
+   "to": "LAO-3/2020",
+   "type": "workflow",
+   "confidence": "inferred",
+   "evidence": "按 repo lands-rules.md",
+   "note": "設計要同時符合契約限制。",
+   "citations": null
+  },
+  {
+   "from": "ARCADIS",
+   "to": "Cap.123F",
+   "type": "workflow",
+   "confidence": "inferred",
+   "evidence": "按 repo cost-rules.md",
+   "note": "造價估算要有初步方案的面積。",
+   "citations": null
+  },
+  {
+   "from": "SFBC",
+   "to": "ARCADIS",
+   "type": "workflow",
+   "confidence": "inferred",
+   "evidence": "實務次序",
+   "note": "招標前通常先有估算，兩份文件互不引用。",
+   "citations": null
+  },
+  {
+   "from": "SFBC",
+   "to": "Cap.123",
+   "type": "workflow",
+   "confidence": "inferred",
+   "evidence": "實務次序",
+   "note": "施工通常要在圖則批准和開工同意後才可進行。",
+   "citations": null
+  },
+  {
+   "from": "Cap.618",
+   "to": "Cap.123Q",
+   "type": "workflow",
+   "confidence": "inferred",
+   "evidence": "Cap. 123Q 反向引用 Cap. 618",
+   "note": "設計時定下升降機要求，施工和竣工時按 Cap. 618 取得許可。",
+   "citations": null
+  },
+  {
+   "from": "Cap.344",
+   "to": "Cap.123",
+   "type": "workflow",
+   "confidence": "inferred",
+   "evidence": "Cap. 344 沒有引用 BO",
+   "note": "落成後才進入大廈管理階段。",
+   "citations": null
+  },
+  {
+   "from": "Cap.123N",
+   "to": "Cap.344",
+   "type": "workflow",
+   "confidence": "inferred",
+   "evidence": "實務次序",
+   "note": "落成後的小型工程通常由業主或業主立案法團發起。",
+   "citations": null
+  },
+  {
+   "from": "SFBC",
+   "to": "Cap.652",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "SFBC 付款保障附表（PDF p.99 起）",
+   "note": "合約附有配合 Cap. 652 的條款修訂。以條款位置記錄，不引述內容。",
+   "citations": 1
+  },
+  {
+   "from": "SFBC",
+   "to": "Cap.609",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "SFBC cl. 41.4（PDF p.93、p.98）",
+   "note": "仲裁按 Cap. 609 進行。",
+   "citations": 3
+  },
+  {
+   "from": "SFBC",
+   "to": "Cap.623",
+   "type": "technical",
+   "confidence": "documented",
+   "evidence": "SFBC cl. 42（PDF p.95、p.98）",
+   "note": "合約處理 Cap. 623 第三者權利的適用。",
+   "citations": 5
+  }
+ ],
+ "mentions": [
+  {
+   "from": "BEC",
+   "to": "Cap.598",
+   "count": 1,
+   "pages": [
+    41
+   ]
+  },
+  {
+   "from": "Cap.121",
+   "to": "Cap.322",
+   "count": 2,
+   "pages": [
+    11
+   ]
+  },
+  {
+   "from": "Cap.121",
+   "to": "Cap.547",
+   "count": 1,
+   "pages": [
+    4
+   ]
+  },
+  {
+   "from": "Cap.123F",
+   "to": "Cap.106",
+   "count": 1,
+   "pages": [
+    15
+   ]
+  },
+  {
+   "from": "Cap.123F",
+   "to": "Cap.123H",
+   "count": 1,
+   "pages": [
+    13
+   ]
+  },
+  {
+   "from": "Cap.123F",
+   "to": "Cap.123I",
+   "count": 1,
+   "pages": [
+    14
+   ]
+  },
+  {
+   "from": "Cap.123F",
+   "to": "Cap.295",
+   "count": 1,
+   "pages": [
+    59
+   ]
+  },
+  {
+   "from": "Cap.123F",
+   "to": "Cap.349",
+   "count": 2,
+   "pages": [
+    32,
+    52
+   ]
+  },
+  {
+   "from": "Cap.123F",
+   "to": "Cap.459",
+   "count": 1,
+   "pages": [
+    62
+   ]
+  },
+  {
+   "from": "Cap.123F",
+   "to": "Cap.59",
+   "count": 1,
+   "pages": [
+    52
+   ]
+  },
+  {
+   "from": "Cap.123F",
+   "to": "Cap.613",
+   "count": 1,
+   "pages": [
+    62
+   ]
+  },
+  {
+   "from": "Cap.123N",
+   "to": "Cap.4",
+   "count": 1,
+   "pages": [
+    42
+   ]
+  },
+  {
+   "from": "Cap.123N",
+   "to": "Cap.583",
+   "count": 4,
+   "pages": [
+    13,
+    20,
+    32,
+    87
+   ]
+  },
+  {
+   "from": "Cap.123Q",
+   "to": "Cap.449",
+   "count": 1,
+   "pages": [
+    36
+   ]
+  },
+  {
+   "from": "Cap.124",
+   "to": "Cap.2",
+   "count": 1,
+   "pages": [
+    45
+   ]
+  },
+  {
+   "from": "Cap.124",
+   "to": "Cap.358",
+   "count": 1,
+   "pages": [
+    8
+   ]
+  },
+  {
+   "from": "Cap.124",
+   "to": "Cap.358AL",
+   "count": 1,
+   "pages": [
+    8
+   ]
+  },
+  {
+   "from": "Cap.124",
+   "to": "Cap.370",
+   "count": 2,
+   "pages": [
+    8
+   ]
+  },
+  {
+   "from": "Cap.124",
+   "to": "Cap.97",
+   "count": 2,
+   "pages": [
+    6
+   ]
+  },
+  {
+   "from": "Cap.131",
+   "to": "Cap.177",
+   "count": 1,
+   "pages": [
+    83
+   ]
+  },
+  {
+   "from": "Cap.131",
+   "to": "Cap.201",
+   "count": 1,
+   "pages": [
+    52
+   ]
+  },
+  {
+   "from": "Cap.131",
+   "to": "Cap.370",
+   "count": 1,
+   "pages": [
+    54
+   ]
+  },
+  {
+   "from": "Cap.131",
+   "to": "Cap.430",
+   "count": 1,
+   "pages": [
+    55
+   ]
+  },
+  {
+   "from": "Cap.131",
+   "to": "Cap.563",
+   "count": 1,
+   "pages": [
+    34
+   ]
+  },
+  {
+   "from": "Cap.131",
+   "to": "Cap.630",
+   "count": 4,
+   "pages": [
+    77,
+    78,
+    82,
+    93
+   ]
+  },
+  {
+   "from": "Cap.276",
+   "to": "Cap.1015",
+   "count": 1,
+   "pages": [
+    6
+   ]
+  },
+  {
+   "from": "Cap.276",
+   "to": "Cap.127",
+   "count": 1,
+   "pages": [
+    38
+   ]
+  },
+  {
+   "from": "Cap.276",
+   "to": "Cap.28",
+   "count": 2,
+   "pages": [
+    9
+   ]
+  },
+  {
+   "from": "Cap.276",
+   "to": "Cap.370",
+   "count": 1,
+   "pages": [
+    38
+   ]
+  },
+  {
+   "from": "Cap.276",
+   "to": "Cap.65",
+   "count": 1,
+   "pages": [
+    34
+   ]
+  },
+  {
+   "from": "Cap.344",
+   "to": "Cap.155",
+   "count": 3,
+   "pages": [
+    62,
+    206,
+    207
+   ]
+  },
+  {
+   "from": "Cap.344",
+   "to": "Cap.17",
+   "count": 1,
+   "pages": [
+    20
+   ]
+  },
+  {
+   "from": "Cap.344",
+   "to": "Cap.32",
+   "count": 3,
+   "pages": [
+    90,
+    91
+   ]
+  },
+  {
+   "from": "Cap.344",
+   "to": "Cap.41",
+   "count": 4,
+   "pages": [
+    75
+   ]
+  },
+  {
+   "from": "Cap.344",
+   "to": "Cap.553",
+   "count": 2,
+   "pages": [
+    30
+   ]
+  },
+  {
+   "from": "Cap.344",
+   "to": "Cap.588",
+   "count": 1,
+   "pages": [
+    13
+   ]
+  },
+  {
+   "from": "Cap.344",
+   "to": "Cap.6",
+   "count": 1,
+   "pages": [
+    131
+   ]
+  },
+  {
+   "from": "Cap.344",
+   "to": "Cap.622",
+   "count": 1,
+   "pages": [
+    22
+   ]
+  },
+  {
+   "from": "Cap.344",
+   "to": "Cap.7",
+   "count": 1,
+   "pages": [
+    66
+   ]
+  },
+  {
+   "from": "Cap.406",
+   "to": "Cap.406G",
+   "count": 1,
+   "pages": [
+    56
+   ]
+  },
+  {
+   "from": "Cap.406",
+   "to": "Cap.409",
+   "count": 1,
+   "pages": [
+    44
+   ]
+  },
+  {
+   "from": "Cap.406",
+   "to": "Cap.59",
+   "count": 1,
+   "pages": [
+    24
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.107",
+   "count": 1,
+   "pages": [
+    55
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.119",
+   "count": 1,
+   "pages": [
+    50
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.123",
+   "count": 4,
+   "pages": [
+    18,
+    19
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.127",
+   "count": 3,
+   "pages": [
+    18,
+    60,
+    62
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.132",
+   "count": 3,
+   "pages": [
+    48,
+    50,
+    70
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.132BU",
+   "count": 1,
+   "pages": [
+    70
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.153",
+   "count": 1,
+   "pages": [
+    54
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.170",
+   "count": 1,
+   "pages": [
+    56
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.177",
+   "count": 2,
+   "pages": [
+    36,
+    37
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.208",
+   "count": 4,
+   "pages": [
+    18,
+    50,
+    55,
+    73
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.219",
+   "count": 1,
+   "pages": [
+    40
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.285",
+   "count": 1,
+   "pages": [
+    67
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.295",
+   "count": 2,
+   "pages": [
+    68,
+    76
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.311",
+   "count": 1,
+   "pages": [
+    47
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.313",
+   "count": 1,
+   "pages": [
+    54
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.336",
+   "count": 3,
+   "pages": [
+    31,
+    34
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.344",
+   "count": 2,
+   "pages": [
+    50
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.353",
+   "count": 1,
+   "pages": [
+    51
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.354",
+   "count": 2,
+   "pages": [
+    49,
+    65
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.354C",
+   "count": 1,
+   "pages": [
+    49
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.358",
+   "count": 1,
+   "pages": [
+    18
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.358AL",
+   "count": 1,
+   "pages": [
+    18
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.368",
+   "count": 1,
+   "pages": [
+    54
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.370",
+   "count": 1,
+   "pages": [
+    18
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.374",
+   "count": 1,
+   "pages": [
+    51
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.476",
+   "count": 4,
+   "pages": [
+    18,
+    52,
+    73
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.51",
+   "count": 2,
+   "pages": [
+    63,
+    75
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.53",
+   "count": 1,
+   "pages": [
+    54
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.548",
+   "count": 1,
+   "pages": [
+    55
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.548E",
+   "count": 1,
+   "pages": [
+    55
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.565",
+   "count": 1,
+   "pages": [
+    52
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.59",
+   "count": 1,
+   "pages": [
+    67
+   ]
+  },
+  {
+   "from": "Cap.499",
+   "to": "Cap.81",
+   "count": 1,
+   "pages": [
+    53
+   ]
+  },
+  {
+   "from": "Cap.515",
+   "to": "Cap.116",
+   "count": 28,
+   "pages": [
+    10,
+    11,
+    12,
+    21,
+    28,
+    29
+   ]
+  },
+  {
+   "from": "Cap.515",
+   "to": "Cap.123",
+   "count": 2,
+   "pages": [
+    32
+   ]
+  },
+  {
+   "from": "Cap.515",
+   "to": "Cap.126",
+   "count": 1,
+   "pages": [
+    47
+   ]
+  },
+  {
+   "from": "Cap.515",
+   "to": "Cap.155",
+   "count": 1,
+   "pages": [
+    39
+   ]
+  },
+  {
+   "from": "Cap.515",
+   "to": "Cap.17",
+   "count": 3,
+   "pages": [
+    37,
+    43
+   ]
+  },
+  {
+   "from": "Cap.515",
+   "to": "Cap.227",
+   "count": 1,
+   "pages": [
+    53
+   ]
+  },
+  {
+   "from": "Cap.515",
+   "to": "Cap.336",
+   "count": 2,
+   "pages": [
+    20,
+    47
+   ]
+  },
+  {
+   "from": "Cap.515",
+   "to": "Cap.7",
+   "count": 2,
+   "pages": [
+    43,
+    51
+   ]
+  },
+  {
+   "from": "Cap.519",
+   "to": "Cap.106",
+   "count": 1,
+   "pages": [
+    8
+   ]
+  },
+  {
+   "from": "Cap.519",
+   "to": "Cap.127",
+   "count": 1,
+   "pages": [
+    49
+   ]
+  },
+  {
+   "from": "Cap.519",
+   "to": "Cap.130",
+   "count": 1,
+   "pages": [
+    21
+   ]
+  },
+  {
+   "from": "Cap.519",
+   "to": "Cap.2",
+   "count": 1,
+   "pages": [
+    48
+   ]
+  },
+  {
+   "from": "Cap.519",
+   "to": "Cap.28",
+   "count": 2,
+   "pages": [
+    23
+   ]
+  },
+  {
+   "from": "Cap.519",
+   "to": "Cap.370",
+   "count": 1,
+   "pages": [
+    49
+   ]
+  },
+  {
+   "from": "Cap.519",
+   "to": "Cap.374",
+   "count": 1,
+   "pages": [
+    27
+   ]
+  },
+  {
+   "from": "Cap.618",
+   "to": "Cap.1105",
+   "count": 3,
+   "pages": [
+    171,
+    185,
+    193
+   ]
+  },
+  {
+   "from": "Cap.618",
+   "to": "Cap.115",
+   "count": 1,
+   "pages": [
+    136
+   ]
+  },
+  {
+   "from": "Cap.618",
+   "to": "Cap.123D",
+   "count": 1,
+   "pages": [
+    154
+   ]
+  },
+  {
+   "from": "Cap.618",
+   "to": "Cap.123E",
+   "count": 1,
+   "pages": [
+    154
+   ]
+  },
+  {
+   "from": "Cap.618",
+   "to": "Cap.327",
+   "count": 4,
+   "pages": [
+    26,
+    154
+   ]
+  },
+  {
+   "from": "Cap.618",
+   "to": "Cap.374",
+   "count": 1,
+   "pages": [
+    27
+   ]
+  },
+  {
+   "from": "Cap.618",
+   "to": "Cap.409",
+   "count": 3,
+   "pages": [
+    176,
+    185,
+    193
+   ]
+  },
+  {
+   "from": "Cap.618",
+   "to": "Cap.449",
+   "count": 1,
+   "pages": [
+    30
+   ]
+  },
+  {
+   "from": "Cap.618",
+   "to": "Cap.57",
+   "count": 1,
+   "pages": [
+    17
+   ]
+  },
+  {
+   "from": "Cap.618",
+   "to": "Cap.59",
+   "count": 3,
+   "pages": [
+    19,
+    147
+   ]
+  },
+  {
+   "from": "Cap.618",
+   "to": "Cap.6",
+   "count": 2,
+   "pages": [
+    188,
+    196
+   ]
+  },
+  {
+   "from": "Cap.618",
+   "to": "Cap.622",
+   "count": 1,
+   "pages": [
+    148
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.121",
+   "count": 1,
+   "pages": [
+    28
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.123J",
+   "count": 1,
+   "pages": [
+    183
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.13",
+   "count": 1,
+   "pages": [
+    230
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.172",
+   "count": 4,
+   "pages": [
+    16,
+    18,
+    27
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.243",
+   "count": 2,
+   "pages": [
+    33,
+    245
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.279",
+   "count": 1,
+   "pages": [
+    33
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.279A",
+   "count": 1,
+   "pages": [
+    187
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.295",
+   "count": 1,
+   "pages": [
+    188
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.349",
+   "count": 2,
+   "pages": [
+    33,
+    242
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.374",
+   "count": 1,
+   "pages": [
+    154
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.376",
+   "count": 1,
+   "pages": [
+    242
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.447",
+   "count": 2,
+   "pages": [
+    33,
+    246
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.459",
+   "count": 1,
+   "pages": [
+    33
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.509",
+   "count": 1,
+   "pages": [
+    187
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.573",
+   "count": 1,
+   "pages": [
+    33
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.59",
+   "count": 4,
+   "pages": [
+    26,
+    33
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.59V",
+   "count": 1,
+   "pages": [
+    37
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.95",
+   "count": 2,
+   "pages": [
+    33
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.95A",
+   "count": 1,
+   "pages": [
+    187
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.95B",
+   "count": 2,
+   "pages": [
+    183,
+    187
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "Cap.95F",
+   "count": 2,
+   "pages": [
+    186,
+    187
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "PNAP APP-153",
+   "count": 1,
+   "pages": [
+    3
+   ]
+  },
+  {
+   "from": "FS-CODE",
+   "to": "PNAP APP-156",
+   "count": 1,
+   "pages": [
+    165
+   ]
+  },
+  {
+   "from": "LAO-3/2020A",
+   "to": "Cap.123",
+   "count": 2,
+   "pages": [
+    2
+   ]
+  },
+  {
+   "from": "MIN-FSI",
+   "to": "Cap.279",
+   "count": 1,
+   "pages": [
+    100
+   ]
+  },
+  {
+   "from": "MIN-FSI",
+   "to": "Cap.295",
+   "count": 30,
+   "pages": [
+    22,
+    23,
+    24,
+    26,
+    27,
+    28
+   ]
+  },
+  {
+   "from": "MIN-FSI",
+   "to": "Cap.295B",
+   "count": 1,
+   "pages": [
+    181
+   ]
+  },
+  {
+   "from": "MIN-FSI",
+   "to": "Cap.409",
+   "count": 8,
+   "pages": [
+    77,
+    81,
+    90,
+    95,
+    97,
+    104
+   ]
+  },
+  {
+   "from": "MIN-FSI",
+   "to": "Cap.502",
+   "count": 5,
+   "pages": [
+    173,
+    177,
+    178
+   ]
+  },
+  {
+   "from": "MIN-FSI",
+   "to": "Cap.572",
+   "count": 4,
+   "pages": [
+    173,
+    177,
+    178
+   ]
+  },
+  {
+   "from": "MIN-FSI",
+   "to": "Cap.636",
+   "count": 3,
+   "pages": [
+    173,
+    177,
+    178
+   ]
+  },
+  {
+   "from": "MIN-FSI",
+   "to": "Cap.95A",
+   "count": 1,
+   "pages": [
+    176
+   ]
+  },
+  {
+   "from": "MIN-FSI",
+   "to": "Cap.95B",
+   "count": 4,
+   "pages": [
+    77,
+    95,
+    181
+   ]
+  },
+  {
+   "from": "PNAP APP-24",
+   "to": "PNAP ADM-16",
+   "count": 1,
+   "pages": [
+    3
+   ]
+  },
+  {
+   "from": "PNAP APP-24",
+   "to": "PNAP APP-102",
+   "count": 1,
+   "pages": [
+    8
+   ]
+  },
+  {
+   "from": "PNAP APP-24",
+   "to": "PNAP APP-137",
+   "count": 1,
+   "pages": [
+    10
+   ]
+  },
+  {
+   "from": "PNAP APP-24",
+   "to": "PNAP APP-39",
+   "count": 1,
+   "pages": [
+    1
+   ]
+  },
+  {
+   "from": "SFBC",
+   "to": "Cap.149",
+   "count": 1,
+   "pages": [
+    16
+   ]
+  },
+  {
+   "from": "TPB-30D",
+   "to": "Cap.486",
+   "count": 1,
+   "pages": [
+    7
+   ]
+  },
+  {
+   "from": "TPB-31B",
+   "to": "Cap.11",
+   "count": 1,
+   "pages": [
+    6
+   ]
+  },
+  {
+   "from": "TPB-31B",
+   "to": "Cap.200",
+   "count": 1,
+   "pages": [
+    6
+   ]
+  },
+  {
+   "from": "TPB-31B",
+   "to": "Cap.201",
+   "count": 1,
+   "pages": [
+    1
+   ]
+  },
+  {
+   "from": "Cap.648",
+   "to": "Cap.1015",
+   "count": 1,
+   "pages": [
+    23
+   ]
+  },
+  {
+   "from": "Cap.648",
+   "to": "Cap.190",
+   "count": 1,
+   "pages": [
+    22
+   ]
+  },
+  {
+   "from": "Cap.648",
+   "to": "Cap.558",
+   "count": 1,
+   "pages": [
+    22
+   ]
+  },
+  {
+   "from": "Cap.648",
+   "to": "Cap.585",
+   "count": 10,
+   "pages": [
+    4,
+    5,
+    13,
+    15,
+    16,
+    28
+   ]
+  },
+  {
+   "from": "SFBC",
+   "to": "Cap.282",
+   "count": 1,
+   "pages": [
+    45
+   ]
+  }
+ ]
+}
