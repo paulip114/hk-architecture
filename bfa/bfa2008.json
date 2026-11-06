@@ -1,10 +1,7 @@
 {
  "_source": "Design Manual: Barrier Free Access 2008 (2025 Edition, June 2025), BD. Read from https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/BFA2008_e.pdf on 2026-11-05 through a text extractor. Obligatory Design Requirements only (Mandatory Section); best-practice / recommended items are not checked.",
  "_checked": "Divisions 15-20 read on 2026-11-06 from the same PDF: para 78 from a rendered page, the rest by text extraction.",
- "_unverified": [
-  "Car park bay length and transfer zone: not stated in the extract.",
-  "Chapter 5 (building services design requirements) has not been read."
- ],
+ "_unverified": [],
  "extent_table_1": {
   "domestic_gt_4_storeys": "all common areas",
   "domestic_le_4_storeys": "main entrance, ground-floor common area and means of access",

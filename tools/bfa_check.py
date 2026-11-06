@@ -15,7 +15,8 @@ Usage:  python3 bfa_check.py project.json [-o report.md]   (reads the `barrier_f
   handrails[] {name, height_mm, diameter_mm, wall_clear_mm, extension_mm},
   corridors[] {name, width_mm, dead_end_turning (bool)},
   doors[] {name, clear_mm, threshold_mm, handle_mm, force_n, kind exterior|interior|fire, leading_side_mm},
-  toilets[] {name, cubicles_per_sex, accessible_per_sex, unisex (bool), size_mm [w, d], seat_mm, basin_rim_mm, flush_mm},
+  illumination[] {name, lux, kind ground_lobby|upper|sign}, escalators[] {name, tactile_both_ends (bool)},
+  toilets[] {call_bell_mm, name, cubicles_per_sex, accessible_per_sex, unisex (bool), size_mm [w, d], seat_mm, basin_rim_mm, flush_mm},
   hotel {guest_rooms, accessible_rooms},
   auditoria[] {name, fixed_seats, wheelchair_spaces, space_mm [w, d], passage_mm},
   lifts[] {name, accessible (bool, default true), car_mm [w, d], door_mm, button_mm [low, high], button_size_mm,
@@ -242,6 +243,15 @@ def run(q):
         if co.get("leg_height_mm") is not None:
             add("Div 15 para 71(2)", f"{co['name']} leg space height", f"{co['leg_height_mm']} mm", "≥ 680 mm",
                 co["leg_height_mm"] >= C["leg_height_min_mm"])
+    I = M["illumination_lux"]
+    need = {"ground_lobby": I["ground_floor_entrance_lobby_and_lift"], "upper": I["upper_lift_lobby_corridor_path_stair"], "sign": I["signs"]}
+    for il in q.get("illumination", []):
+        add("Div 16 paras 72-73", f"{il['name']} illumination", f"{il['lux']} lux", f"≥ {need[il['kind']]} lux", il["lux"] >= need[il["kind"]])
+    for tl in q.get("toilets", []):
+        if tl.get("call_bell_mm") is not None:
+            add("Div 17 para 76", f"{tl['name']} emergency call button height", f"{tl['call_bell_mm']} mm", "600-650 mm", rng(tl["call_bell_mm"], M["call_bell_button_mm"]["range"]))
+    for es in q.get("escalators", []):
+        add("Div 20 para 85", f"{es['name']} tactile warning strips", "both ends" if es.get("tactile_both_ends") else "missing", "both ends", bool(es.get("tactile_both_ends")))
     return rows
 
 

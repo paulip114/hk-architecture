@@ -63,4 +63,8 @@ Source: Design Manual: Barrier Free Access 2008, **2025 Edition (June 2025)**, B
 Divisions 15–20 were read on 2026-11-06. `bfa_check.py` checks the Division 15 and 19 dimensions. Divisions 16, 17, 18, 20 and the Division 19 items not listed in its docstring are for manual checking.
 
 ## Not yet verified
-- **Chapter 5, building services design requirements.** Not read ([#46](https://github.com/paulip114/hk-architecture/issues/46)).
+- **Div 16 illumination:** ground floor entrance lobby and lift 120 lux; upper lift lobbies, corridors, accessible paths and staircases 85 lux; sign surfaces 120 lux.
+- **Div 17 call bells:** weatherproof push button below the vertical grab rail, 600–650 mm above floor, with an "Emergency Call" notice in English, Chinese and Braille.
+- **Div 20 escalators and conveyors:** not part of a barrier-free route. Tactile warning strips at both ends.
+- **Chapter 5, read 2026-11-06:** only 5.2 fire alarm systems has an obligatory section: audible and visible signals where alarms are provided in accessible areas, and a flashing red light labelled "Fire Alarm 火警" in the buildings Table 2 specifies, not in exit staircases. 5.1 controls, 5.3 telephones, 5.4 remote signage and 5.5 lifting platforms are best practice, for example controls at 450–1200 mm. The tool checks only whether `visual_fire_alarm` is provided.
+- **Car park bay length:** Para 9 and Figures 3–4 give widths only, so the Manual does not set a length.

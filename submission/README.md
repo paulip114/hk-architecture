@@ -33,7 +33,6 @@ Hong Kong Buildings Department procedures from plan submission to occupation per
 ## Open items (⚠️)
 - Cap. 1 s.71 day counting is checked (version 31.7.2026), but `tools/submission_timeline.py` does not move last days that fall on holidays or warning days.
 - Technical Memorandum for Supervision Plans (TCP grades, supervision streams).
-- Validation schemes: Cap. 123N does not mention them. See `minor-works.md`.
 - Cap. 123P prescribed inspection scope and the MWIS forms have not been compared line by line with `mbis-mwis.md`.
 - FSD certificate form number for OP; other departmental certificates by name.
 - Fine levels in dollars (Cap. 221 Sch. 8).

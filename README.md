@@ -138,9 +138,7 @@ Rule documents and data tables mark facts by how they were checked. Some tools r
 - Cap. 1 s.71 day counting, Cap. 221 Schedule 8 fine levels, the Cap. 123 MBIS and MWIS notice gaps, and the Cap. 123Q section outline
 
 **Still partial or unverified:**
-- The validation schemes for minor works, which are not in Cap. 123N
 - Cap. 123P inspection scope and the MWIS forms, which have not been compared line by line
-- Barrier Free Design Manual Chapter 5
 - The current LandsD administrative fee, and the FSD Part II pressurization table
 - SFBC 2025 clauses and periods, which were checked against a pre-launch copy and need rechecking against the final form
 - The HKIA appointment agreement, which is not available
