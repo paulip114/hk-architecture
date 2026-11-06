@@ -64,4 +64,4 @@ The tool maps Table 8.1 work types to these rows (`work_type_to_tm_row`: piles, 
 
 ## Notes on sources
 - BO s.37 is "Limitation of public liability", not a supervision provision. An earlier version of this document cited it wrongly.
-- The BA form names come from `../submission/forms.json`. BD's online forms list could not be read automatically on 2026-11-06, so check the form numbers against it before you use them ([#23](https://github.com/paulip114/hk-architecture/issues/23)).
+- The BA form numbers in `../submission/forms.json` were checked against [BD's forms list](https://www.bd.gov.hk/en/resources/forms/form_nbw.html) on 2026-11-07. All 24 match.
