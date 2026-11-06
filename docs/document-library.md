@@ -24,6 +24,7 @@ Links were checked on 2026-11-06. The eLegislation site needs a browser, so thos
 | Cap. 499 Environmental Impact Assessment Ordinance | 11.4.2025 | `Cap 499 Consolidated version...pdf` | [eLegislation](https://www.elegislation.gov.hk/hk/cap499) | EIA coverage |
 | Cap. 515 Government Rent (Assessment and Collection) Ordinance | 22.5.2025 | `Cap 515 Consolidated version...pdf` | [eLegislation](https://www.elegislation.gov.hk/hk/cap515) | Land administration rules |
 | Cap. 519 Railways Ordinance | 1.9.2023 | `Cap 519 Consolidated version...pdf` | [eLegislation](https://www.elegislation.gov.hk/hk/cap519) | Railway protection coverage |
+| Cap. 648 Extension of Government Leases Ordinance | 22.5.2025 | Not in the local folder: read from Department of Justice open data | [eLegislation](https://www.elegislation.gov.hk/hk/cap648) | Land administration rules |
 | Cap. 618 Lifts and Escalators Ordinance | 14.3.2024 | `Cap 618 Consolidated version...pdf` | [eLegislation](https://www.elegislation.gov.hk/hk/cap618) | Lifts and escalators coverage |
 | Basic Law Art. 120-123 | Screenshot saved 2026-11-06 | `BasicLawArticle120-123.png` | [Basic Law, Chapter V](https://www.basiclaw.gov.hk/en/basiclaw/chapter5.html) | Land administration rules |
 | Registration fees, Land Registration Fees Regulations (Cap. 128B) | Screenshot saved 2026-11-06 | `RegistrationFeeUnderTheLRFeesRegulations.png` | [Land Registry fees](https://www.landreg.gov.hk/en/services/fees.htm) | Land Registry registration fees. Not the LandsD administrative fees |
@@ -59,5 +60,5 @@ LandsD also publishes the [Appendix to PN 3/2020](https://www.landsd.gov.hk/doc/
 | Document | Needed for | Status |
 | --- | --- | --- |
 | HKIA Standard Form of Agreement and Standard Conditions of Agreement | [#26](https://github.com/paulip114/hk-architecture/issues/26) | Not published online and not available yet. Appointment rules stay unverified until it is checked |
-| LandsD administrative fee schedule | [#25](https://github.com/paulip114/hk-architecture/issues/25) | Not found yet |
+| LandsD administrative fee schedule | [#63](https://github.com/paulip114/hk-architecture/issues/63) | Not found yet |
 | Arcadis Q3 2026 review | [#30](https://github.com/paulip114/hk-architecture/issues/30) | Not yet published |

@@ -129,7 +129,9 @@ Rule documents and data tables mark facts by how they were checked. Some tools r
 **Checked against official text:**
 - Cap. 123F First and Second Schedules
 - Cap. 123 and Cap. 123A statutory periods
-- Cap. 131 periods (2.11.2023 English text)
+- Cap. 131 periods (2.11.2023), TPB guidelines PG-30D, PG-31B, PG-35E and PG-36C, and the Rural Covering Notes
+- Parts of Cap. 499, Cap. 344 and Cap. 618, and PNAP APP-24, as listed in [`statutes/`](statutes/)
+- LAO PN 3/2020 and 3/2020A, Basic Law Art. 120-123, Cap. 150, Cap. 515 and Cap. 648 lease and rent provisions
 - PNAP APP-151 cap and prerequisites, and the APP-152 figures used by `sbd_check.py`
 - Technical Memorandum Table 1, BA form numbers, and Barrier Free Design Manual Divisions 15 to 20
 - The FSD supply tank table (para 5.26) and Building Energy Code 2024 tables used by the tools
@@ -139,7 +141,7 @@ Rule documents and data tables mark facts by how they were checked. Some tools r
 - The validation schemes for minor works, which are not in Cap. 123N
 - Cap. 123P inspection scope and the MWIS forms, which have not been compared line by line
 - Barrier Free Design Manual Chapter 5
-- Parts of the planning and land administration rules, and the FSD Part II pressurization table
+- The current LandsD administrative fee, and the FSD Part II pressurization table
 - SFBC 2025 clauses and periods, which were checked against a pre-launch copy and need rechecking against the final form
 - The HKIA appointment agreement, which is not available
 
