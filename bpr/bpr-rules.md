@@ -59,7 +59,14 @@ Last compiled: 2026-11-05.
 | House void | UFS ≥ 250 m², void ≤ 5% UFS, headroom ≤ 7.0 m |
 
 ### APP-151 overall cap
-- Green and amenity features and non-mandatory plant rooms granted GFA concessions are capped at **10% of total GFA** of the development, with prerequisites (APP-152 Sustainable Building Design guidelines, BEAM Plus registration, energy-efficiency). Mandatory plant rooms and underground car parks are outside the cap. [verify exact list against current APP-151]
+Checked against PNAP APP-151, July 2025 revision, on 2026-11-06.
+
+- **Cap (para 4):** 10% of the total GFA of the development. A development with domestic and non-domestic parts, including a composite building, has a separate 10% cap for each part, based on that part's total GFA. The note does not say whether total GFA includes the concessions. `bpr_check.py` uses accountable GFA, the stricter reading; confirm with BD if the margin is tight.
+- **Subject to prerequisites and cap (Appendix A):** non-mandatory plant such as A/C and AHU rooms; other non-mandatory plant such as boiler and SMATV rooms and their ducts; balconies; non-structural prefabricated external walls; utility platforms; caretaker and management facilities; residential recreational facilities; chimney shafts; prestige entrance voids in non-domestic developments; voids in duplex flats and houses; maintenance walkways and similar projections. Use `non_mandatory_plant` or `green_feature`.
+- **Subject to prerequisites only:** wider common corridors and lift lobbies; communal sky gardens; communal podium gardens for non-residential buildings; acoustic fins; wing walls, wind catchers and funnels; noise barriers; covered landscaped and play areas; horizontal screens, covered walkways and trellises; larger lift shafts; plant for environmentally friendly systems; high headroom and voids in front of cinemas and arcades. Use `green_feature_uncapped`.
+- **Neither:** car parks and loading areas, mandatory plant, hotel concessions, ducts for mandatory plant, sunshades, projecting planters and windows, refuge floors, public transport termini, public passages and bonus GFA. Appendix A is the full list, and some of these have their own criteria.
+- **Prerequisites (para 6):** APP-152 where applicable; APP-156 for domestic or composite developments, where applicable; Hong Kong Green Building Council letter acknowledging BEAM Plus New Buildings v2.0 or above registration; target rating on the GBP (Anticipated Gold, or Silver with one specific standard, or Bronze with two); documents before consent and at OP; compliance with the cap and each feature's own criteria.
+- **Timing (para 10):** for new GBP or major revisions submitted on or after 30 June 2024, and disapproved GBP resubmitted on or after that date. GBP approved earlier refer to the August 2022 version in Appendix D.
 
 ## 6. Storey height – reg 24
 - Rooms for habitation or office: floor-to-ceiling ≥ **2.5 m**, ≥ 2.3 m to underside of beams; sloping ceilings measured at mean height, no part < 2 m.
@@ -78,9 +85,10 @@ Last compiled: 2026-11-05.
   - top of opening ≥ 2 m above floor (1.9 m for detached/semi-detached houses);
   - glass faces directly into external air.
 - Reg 31 external air: the prescribed window must either face a street ≥ 4.5 m wide, or face an uncovered, unobstructed **rectangular horizontal plane** at sill level (sill deemed 1 m above floor) of ≥ 21 m², base ≥ 2.3 m, and sides ≥ 4.5 m to any opposite wall within the site (or ≥ 2.3 m where the opposite side is the site boundary), and:
-  - (c) within the site: no building protrudes above a plane inclined from the far edge at **71½° (habitable)** or **76° (office/kitchen)**;
+  - (c) within the site: no part of the building, or any other building on the site, protrudes above a plane rising from the base of the horizontal plane (the line of the window sill, reg 31(3)(a)) at **71½° (habitable)** or **76° (office/kitchen)**;
   - (d) facing a site boundary: from where the horizontal plane meets the boundary, no building on the site protrudes above a plane inclined back toward the site at **80½° (habitable)** or **83° (office/kitchen)**.
-  - Where a service lane or street < 4.5 m runs along that boundary, the boundary is deemed 1.5 m beyond; where the lane is < 3 m, measure to its centre line.
+  - Where a service lane or street < 4.5 m runs along that boundary, the boundary is deemed 1.5 m beyond for the inclined plane (reg 31(1)(d) proviso). For the depth of the horizontal plane, measure to a line 1.5 m beyond the boundary, or to the lane's centre line where it is < 3 m wide (reg 31(2)(e)).
+  - `bpr_check.py` checks this from a room's `reg_31` input. Rooms without it are listed as CHECK.
 - Reg 32: no part of a habitable room more than **9 m** from a prescribed window (or outer edge of a verandah/balcony).
 - Reg 33: window onto an enclosed verandah counts as prescribed; combine room + verandah areas for the ratios.
 - Reg 34: an office that cannot meet reg 31 may use mechanical ventilation of ≥ 5 air changes per hour plus BA-approved artificial lighting.

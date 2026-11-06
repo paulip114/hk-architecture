@@ -18,8 +18,10 @@ Usage:  python3 bfa_check.py project.json [-o report.md]   (reads the `barrier_f
   toilets[] {name, cubicles_per_sex, accessible_per_sex, unisex (bool), size_mm [w, d], seat_mm, basin_rim_mm, flush_mm},
   hotel {guest_rooms, accessible_rooms},
   auditoria[] {name, fixed_seats, wheelchair_spaces, space_mm [w, d], passage_mm},
-  lifts[] {name, car_mm [w, d], door_mm, button_mm [low, high]}   (limits unverified),
-  counters[] {name, height_mm}                                       (limit unverified)
+  lifts[] {name, accessible (bool, default true), car_mm [w, d], door_mm, button_mm [low, high], button_size_mm,
+           handrail_mm [low, high], handrail_wall_clear_mm, detection_mm},
+  total_passenger_lifts (defaults to the number of lifts listed),
+  counters[] {name, height_mm, width_mm, leg_depth_mm, leg_height_mm}
 """
 import argparse
 import json
@@ -186,22 +188,60 @@ def run(q):
             add("Div 1 para 4", f"{au['name']} passage to spaces", f"{au['passage_mm']} mm", "≥ 1500 mm", au["passage_mm"] >= 1500)
 
     L = M["lift"]
-    for lf in q.get("lifts", []):
-        note = "limit from memory, not yet verified against Div 19"
-        if lf.get("car_mm"):
-            w, dd = sorted(lf["car_mm"])
-            ok = w >= L["car_mm"][0] and dd >= L["car_mm"][1]
-            add("Div 19", f"{lf['name']} car internal size", f"{w}×{dd} mm", "≥ 1100×1400 mm", PASS if ok else WARN, note)
-        if lf.get("door_mm") is not None:
-            add("Div 19", f"{lf['name']} door clear width", f"{lf['door_mm']} mm", "≥ 800 mm",
-                PASS if lf["door_mm"] >= L["door_mm"] else WARN, note)
+    lifts = q.get("lifts", [])
+    for lf in lifts:
+        accessible = lf.get("accessible", True)
+        # para 78(1): paras 79 and 80 apply to every passenger lift; the rest of Div 19 to the accessible lift.
+        if accessible and lf.get("car_mm"):
+            w, dd = lf["car_mm"]
+            add("Div 19 para 78(1)", f"{lf['name']} car internal size", f"{w} wide × {dd} deep mm", "≥ 1100 wide × 1200 deep mm",
+                w >= L["car_mm"]["width"] and dd >= L["car_mm"]["depth"])
+        if accessible and lf.get("door_mm") is not None:
+            add("Div 19 para 78(1)", f"{lf['name']} clear entrance width", f"{lf['door_mm']} mm", "≥ 850 mm", lf["door_mm"] >= L["door_mm"])
+        if accessible and lf.get("handrail_mm"):
+            lo, hi = lf["handrail_mm"]
+            add("Div 19 para 78(1)", f"{lf['name']} handrail height", f"{lo}-{hi} mm", "850-950 mm",
+                lo >= L["handrail_mm"][0] and hi <= L["handrail_mm"][1])
+        if accessible and lf.get("handrail_wall_clear_mm") is not None:
+            v = lf["handrail_wall_clear_mm"]
+            add("Div 19 para 78(1)", f"{lf['name']} handrail to wall", f"{v} mm", "30-50 mm",
+                L["handrail_wall_clear_mm"][0] <= v <= L["handrail_wall_clear_mm"][1])
+        if lf.get("detection_mm") is not None:
+            v = lf["detection_mm"]
+            add("Div 19 para 79(4)", f"{lf['name']} door detection device height", f"{v} mm", "500-600 mm",
+                L["detection_mm"][0] <= v <= L["detection_mm"][1])
         if lf.get("button_mm"):
             lo, hi = lf["button_mm"]
-            add("Div 19", f"{lf['name']} control buttons", f"{lo}-{hi} mm", "900-1200 mm",
-                PASS if lo >= L["button_mm"][0] and hi <= L["button_mm"][1] else WARN, note)
+            add("Div 19 para 80(1)", f"{lf['name']} control buttons", f"{lo}-{hi} mm", "900-1200 mm",
+                lo >= L["button_mm"][0] and hi <= L["button_mm"][1])
+        if lf.get("button_size_mm") is not None:
+            add("Div 19 para 80(4)", f"{lf['name']} button size", f"{lf['button_size_mm']} mm", "≥ 20 mm",
+                lf["button_size_mm"] >= L["button_size_min_mm"])
+    total_lifts = q.get("total_passenger_lifts", len(lifts))
+    if total_lifts > L["large_car_if_lifts_over"]:
+        def large(lf):
+            if not lf.get("car_mm"):
+                return False
+            short, long_ = sorted(lf["car_mm"])
+            return short >= L["large_car_mm"][0] and long_ >= L["large_car_mm"][1] and lf.get("door_mm", 0) >= L["door_mm"]
+        have = [lf["name"] for lf in lifts if large(lf)]
+        add("Div 19 para 78(2)", "Lift with larger car, more than three lifts", ", ".join(have) or "none",
+            "≥ 1 lift of 1500 × 1400 mm, entrance ≥ 850 mm, serving every floor", bool(have),
+            "Confirm that it serves every floor")
+    C = M["counter"]
     for co in q.get("counters", []):
-        add("Div 15", f"{co['name']} accessible counter height", f"{co['height_mm']} mm", "≤ 900 mm (unverified)",
-            PASS if co["height_mm"] <= M["counter"]["height_max_mm"] else WARN, "limit from memory, verify against Div 15")
+        if co.get("height_mm") is not None:
+            add("Div 15 para 70(2)(a)", f"{co['name']} accessible portion height", f"{co['height_mm']} mm", "≤ 750 mm",
+                co["height_mm"] <= C["height_max_mm"])
+        if co.get("width_mm") is not None:
+            add("Div 15 para 70(2)(a)", f"{co['name']} accessible portion width", f"{co['width_mm']} mm", "≥ 750 mm",
+                co["width_mm"] >= C["width_min_mm"])
+        if co.get("leg_depth_mm") is not None:
+            add("Div 15 para 71(2)", f"{co['name']} leg space depth", f"{co['leg_depth_mm']} mm", "400-600 mm",
+                C["leg_depth_mm"][0] <= co["leg_depth_mm"] <= C["leg_depth_mm"][1])
+        if co.get("leg_height_mm") is not None:
+            add("Div 15 para 71(2)", f"{co['name']} leg space height", f"{co['leg_height_mm']} mm", "≥ 680 mm",
+                co["leg_height_mm"] >= C["leg_height_min_mm"])
     return rows
 
 
@@ -218,8 +258,7 @@ def main():
     out = [f"# Barrier-free access check – {p.get('project', 'Untitled')}", "",
            f"**Result: {verdict}** ({fails} fail, {checks} to check, {len(rows)} items).", "",
            "> Draft for review by an Authorized Person. Obligatory Design Requirements of the Design Manual: "
-           "Barrier Free Access 2008 (2025 Ed.). Lift (Div 19) and counter (Div 15) limits are not yet verified; "
-           "a shortfall there shows as CHECK, not FAIL.", "",
+           "Barrier Free Access 2008 (2025 Ed.).", "",
            "| Clause | Item | Proposed | Limit | Result | Note |", "| --- | --- | --- | --- | --- | --- |"]
     out += ["| " + " | ".join(str(x) for x in r) + " |" for r in rows]
     md = "\n".join(out) + "\n"

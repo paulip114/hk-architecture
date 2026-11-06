@@ -53,5 +53,14 @@ Source: Design Manual: Barrier Free Access 2008, **2025 Edition (June 2025)**, B
 | 12 Bathrooms | Bath ≤ 380 high; shower ≥ 1500 × 900; seat 430–480 high; roll-in threshold ≤ 13. |
 | 13 Signs | Letter height ≥ 60 (doors), 110 (corridors), 200 (external). Braille toilet signs 900–1500; Braille exit map 800–1200 above the lift call button. |
 
-## Not yet verified (upload the full PDF)
-- **Div 15 counters, 16 illumination, 17 call bells, 18 assistive listening, 19 lifts, 20 escalators, Chapter 5.** The tool uses values from memory for lifts (car ≥ 1100 × 1400, door ≥ 800, buttons 900–1200) and counters (≤ 900 high). A shortfall shows as CHECK, not FAIL.
+| 15 Counters | Where Table 2 requires one, at least one counter with a portion ≤ 750 high and ≥ 750 wide (para 70). Leg space 400–600 deep and ≥ 680 high (para 71). At least one counter with an assistive listening system where the background is noisy or counters have screens. |
+| 16 Illumination | Ground floor entrance lobby and lift ≥ 120 lux; upper lift lobbies, corridors, accessible paths and staircases ≥ 85 lux, measured at floor level on the centre line (para 72). Signs ≥ 120 lux on the surface (para 73). |
+| 17 Call bells | Weatherproof push button below the vertical grab rail, 600–650 above floor, with a notice in English, Chinese and Braille (para 76). Alarm outside the toilet or a buzzer in the caretaker's office (para 75). |
+| 18 Assistive listening | Induction loop, infrared or similar at one or more counters and in any hall or auditorium, where Table 2 requires it (para 77). |
+| 19 Lifts | Every floor served by at least one fully complying lift with direct access to the main lift lobby. Car ≥ 1200 deep × 1100 wide, entrance ≥ 850, handrails 850–950 high and 30–50 from the wall (para 78(1)). More than three lifts: one lift of ≥ 1500 × 1400, either way round, to every floor (para 78(2)). All passenger lifts: power-operated sliding doors, closing signal, detection device 500–600 above floor (para 79); buttons 900–1200 high and ≥ 20 in size, with Braille and tactile markings (para 80). Accessible lifts: signals and indicators (paras 81–83). |
+| 20 Escalators | Not part of a barrier-free route. Tactile warning strips at both ends of escalators and passenger conveyors (para 85). |
+
+Divisions 15–20 were read on 2026-11-06. `bfa_check.py` checks the Division 15 and 19 dimensions. Divisions 16, 17, 18, 20 and the Division 19 items not listed in its docstring are for manual checking.
+
+## Not yet verified
+- **Chapter 5, building services design requirements.** Not read ([#46](https://github.com/paulip114/hk-architecture/issues/46)).

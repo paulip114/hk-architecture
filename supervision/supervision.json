@@ -1,5 +1,5 @@
 {
-  "_source": "Code of Practice for Site Supervision 2009 (2024 Edition, rev. Aug 2024), BD, paras 4.1-4.6, 8.4-8.8, Table 8.1; Technical Memorandum for Supervision Plans 2009 (TM), Tables 1 and 2. Read via automated extraction 2026-11-05/06. TM Table 1 rows were read twice with different prompts (a cell-by-cell CSV and a per-stream description) and agreed; the one cell marked uncertain could not be aligned. Check against the TM PDF before a statutory submission.",
+  "_source": "Code of Practice for Site Supervision 2009 (2024 Edition, rev. Aug 2024), BD, paras 4.1-4.6, 8.4-8.8, Table 8.1; Technical Memorandum for Supervision Plans 2009 (TM), Tables 1 and 2. Read via automated extraction 2026-11-05/06. TM Table 1 rows were read twice with different prompts (a cell-by-cell CSV and a per-stream description) and agreed; the one cell marked uncertain could not be aligned. Check against the TM PDF before a statutory submission. TM Table 1 and its Class I minor works rows checked against rendered PDF pages 28-29 on 2026-11-06; the Class I RGE cell is T2 at level 5 as published.",
   "tcp_grades": {
     "T1": {
       "role": "routine safety supervision",
@@ -317,8 +317,7 @@
       "RGE": {
         "T2": 5,
         "principal": 1
-      },
-      "uncertain": "RGE grade read as T2 at level 5; may be a column shift (T3 likely by analogy with other rows). Treated as CHECK."
+      }
     },
     "notes": {
       "1": "Levels: 1 as and when required, 2 monthly, 3 fortnightly, 4 weekly, 5 full-time during site working hours",

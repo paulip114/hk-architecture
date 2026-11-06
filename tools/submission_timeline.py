@@ -2,8 +2,9 @@
 """BD submission timeline and procedural checks (plans, consent, amendments, OP, minor works, MBIS).
 
 Reads the `submission` block of project.json and submission/periods.json.
-Dates are ISO (YYYY-MM-DD). Periods are calendar days from the start date (conservative;
-counting rules under Cap. 1 not checked). Periods were checked against Cap. 123 (version
+Dates are ISO (YYYY-MM-DD). Periods end on start date + N, because Cap. 1 s.71(1)(a) excludes the
+start day. The tool does not move a last day that falls on a public holiday, gale warning day or
+black rainstorm warning day (s.71(1)(b)), so a statutory last day can be later than shown. Periods were checked against Cap. 123 (version
 1.3.2026) and Cap. 123A (version 30.6.2024); any left unverified are marked "(unverified)".
 
 Usage: python3 submission_timeline.py project.json [-o report.md]

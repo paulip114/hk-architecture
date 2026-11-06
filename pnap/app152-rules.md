@@ -2,7 +2,7 @@
 
 Draft working rules. Data: `app152.json`. Tool: `../tools/sbd_check.py`.
 
-Source: BD PNAP APP-152, version September 2023 (first issued January 2011, last revised January 2016). Read through a text extractor on 2026-11-05, not from the PDF itself. Items listed under `_unverified` in `app152.json` must be checked against the PDF before you rely on them.
+Source: BD PNAP APP-152, version September 2023 (first issued January 2011, last revised January 2016). Checked against the PDF on 2026-11-06.
 
 ## Why it matters
 - Compliance with APP-152 is a prerequisite for the APP-151 GFA concessions for green and amenity features (and most non-mandatory plant rooms). If a scheme fails APP-152, the 10% APP-151 concession cap is lost as well, not just one item.
@@ -12,7 +12,7 @@ Source: BD PNAP APP-152, version September 2023 (first issued January 2011, last
 ## 1. Building separation (paras 3–6, Appendix B)
 - **Applies to:** sites of 20,000 m² or more, or any site where a building or group has a continuous projected façade length (Lp) of 60 m or more.
 - **Assessment zones:** low 0–20 m, middle 20–60 m, high above 60 m. Each zone is assessed separately on two projection planes at right angles (they may be 75°–105° apart).
-- **Lp limit:** Lp should not exceed 5 × U, where U is the mean width of the street canyon (use the narrowest street where the site abuts several). Low-zone parts at or below 6.67 m may be disregarded. *(Read through the extractor only: verify.)*
+- **Lp limit:** Lp should not exceed 5 × U, where U is the mean width of the street canyon (use the least U where the building abuts several streets). This is required together with Table 1 permeability, not as an alternative. Low-zone parts at or below 6.67 m may be disregarded. The limit does not apply where the site does not abut a street, or where no part of the building in the zone is within 30 m of the street centreline (Appendix B para 2.5).
 - **Minimum permeability P (Table 1):**
 
 | Tallest building H | Site < 20,000 m² with Lp ≥ 60 m (each plane) | Site ≥ 20,000 m², plane 1 | Site ≥ 20,000 m², plane 2 |
@@ -20,7 +20,7 @@ Source: BD PNAP APP-152, version September 2023 (first issued January 2011, last
 | H ≤ 60 m | 20% | 20% | 25% |
 | H > 60 m | 20% | 20% | 33.3% |
 
-  *The large-site column layout is unverified.*
+  The PNAP does not define which plane is Plane 1. `sbd_check.py` treats the first plane in the input as Plane 1.
 - P = (area of intervening space IS + permeable elements PE) ÷ area of the assessment zone.
 - At least 2/3 of P must be intervening space and at most 1/3 permeable elements.
 - IS along a site boundary or street centreline: separating distance ≥ 7.5 m, with no part of the building within 3 m of the boundary. Additional IS between façades: ≥ 15 m.
@@ -48,8 +48,8 @@ Source: BD PNAP APP-152, version September 2023 (first issued January 2011, last
 - Measure soil area on plan. Uncovered greenery counts in full. A green buffer meeting APP-151 Appendix C1 counts ×2.
 - Counted at 50%: covered greenery reachable from open space in the primary zone; water features in the primary zone or on uncovered communal roofs; grass paving (not on parking or loading areas); planters on inaccessible roofs in the primary zone.
 - Counted in full: vertical greening, measured as the elevational area of the panel, modular planter or frame (frame above 7.5 m not counted); greening on slopes steeper than 45°.
-- Not counted: covered greenery above the primary zone; removable planters.
-- "Greening features" may make up no more than 30% of the required greenery. *(The tool treats the reduced-factor items and vertical / slope greening as the features: verify.)*
+- Not counted: covered greenery above the primary zone, except the scenarios in Appendix D para 1; removable planters.
+- The greening features above (the 50% items, vertical greening and slope greening) may make up no more than 30% of the required overall greenery.
 - Recommended soil depths: trees 1.2 m, shrubs 0.6 m, grass 0.3 m. Roofs need waterproofing, irrigation and drainage, and dead load allowed for soil and trees.
 
 ## 4. Alternative approaches (Appendix E)

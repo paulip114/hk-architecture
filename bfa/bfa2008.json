@@ -1,8 +1,9 @@
 {
  "_source": "Design Manual: Barrier Free Access 2008 (2025 Edition, June 2025), BD. Read from https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/BFA2008_e.pdf on 2026-11-05 through a text extractor. Obligatory Design Requirements only (Mandatory Section); best-practice / recommended items are not checked.",
+ "_checked": "Divisions 15-20 read on 2026-11-06 from the same PDF: para 78 from a rendered page, the rest by text extraction.",
  "_unverified": [
-  "Division 15 (counters), 16 (illumination), 17 (call bells), 18 (assistive listening), 19 (lifts), 20 (escalators): the extractor stopped part-way through Division 15. Values in `lift` and `counter` below are from memory, flagged verified=false. Upload the full PDF to check them.",
-  "Car park bay length and transfer zone: not stated in the extract."
+  "Car park bay length and transfer zone: not stated in the extract.",
+  "Chapter 5 (building services design requirements) has not been read."
  ],
  "extent_table_1": {
   "domestic_gt_4_storeys": "all common areas",
@@ -45,6 +46,9 @@
             "flush_mm": [600, 1050], "rail_dia_mm": [32, 40], "folding_rail_mm": [725, 750], "per_sex_le_20": 1, "per_sex_gt_20": 2, "ref": "Div 11 paras 46-53"},
  "shower": {"compartment_mm": [1500, 900], "seat_mm": [430, 480], "threshold_mm": 13, "ref": "Div 12"},
  "sign_letter_min_mm": {"door": 60, "corridor": 110, "external": 200, "ref": "Div 13 para 66"},
- "lift": {"verified": false, "car_mm": [1100, 1400], "door_mm": 800, "button_mm": [900, 1200], "ref": "Div 19 (from memory - verify)"},
- "counter": {"verified": false, "height_max_mm": 900, "ref": "Div 15 (from memory - verify)"}
+ "lift": {"car_mm": {"width": 1100, "depth": 1200}, "door_mm": 850, "large_car_mm": [1400, 1500], "large_car_if_lifts_over": 3,
+          "button_mm": [900, 1200], "button_size_min_mm": 20, "handrail_mm": [850, 950], "handrail_wall_clear_mm": [30, 50], "detection_mm": [500, 600], "ref": "Div 19 paras 78-80"},
+ "counter": {"height_max_mm": 750, "width_min_mm": 750, "leg_depth_mm": [400, 600], "leg_height_min_mm": 680, "ref": "Div 15 paras 70-71"},
+ "illumination_lux": {"ground_floor_entrance_lobby_and_lift": 120, "upper_lift_lobby_corridor_path_stair": 85, "signs": 120, "ref": "Div 16 paras 72-73"},
+ "call_bell_button_mm": {"range": [600, 650], "ref": "Div 17 para 76"}
 }

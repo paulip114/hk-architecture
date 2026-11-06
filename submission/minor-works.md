@@ -2,7 +2,7 @@
 
 標記同 `bd-submission-process.md` 一樣：✅ 已喺 BD 網站核實（2026-11-05），⚠️ 未核實。
 
-法律依據：《建築物（小型工程）規例》Cap. 123N ⚠️（BD 頁面冇寫，未對條文）。
+法律依據：《建築物（小型工程）規例》Cap. 123N 📜（版本 31.3.2022，2026-11-06 核對）：附表 1 小型工程項目，附表 2 指定豁免工程；動工前不少於 7 日通知（第 30、33 條），完工後 14 日內交文件（第 31、32、34、35、36 條）。
 
 來源：
 - https://www.bd.gov.hk/en/building-works/minor-works/index.html
@@ -12,7 +12,7 @@
 
 ## 1. 分級 ✅
 按性質、規模、複雜程度同安全風險分三級。
-| 級別 | 項目數目（BD 網站現行） | 要委任 | 動工前 | 完工後 |
+| 級別 | 項目數目（BD 網站，附表 1 編號有廢除項，唔好用嚟引用） | 要委任 | 動工前 | 完工後 |
 | --- | --- | --- | --- | --- |
 | 第 I 級 | 58 | 訂明建築專業人士（PBP）**及** 訂明註冊承建商（PRC） | 動工前 **7 日** 交 MW01 + 訂明圖則、工程詳情、監工計劃、相片 | 完工後 **14 日內** 交 MW02 + 修訂圖則（輕微偏差）、相片 |
 | 第 II 級 | 68 | PRC | 動工前 **7 日** 交 MW03 + 訂明圖則、詳情、相片 | 完工後 **14 日內** 交 MW04 |
@@ -38,10 +38,10 @@
 | MW06-1 / -2 / -3 | 檢核計劃（小型附加設施、家居小型工程）檢查及證明，第 I / II / III 級 |
 | PR1–PR6、SP、VSR | 相片、A3/A4 圖、結構計算、監工計劃、安全檢查報告、檢核清單 |
 
-## 3. 指定豁免工程（Designated Exempted Works）⚠️
-唔需要 BD 批准亦唔需要按小型工程程序做嘅工程（例如細規模室內非結構工程）。清單見 https://www.bd.gov.hk/en/building-works/minor-works/designated-exempted-works/index.html ，未讀取。
+## 3. 指定豁免工程（Designated Exempted Works）📜
+法定依據：BO s.41(3B) 同 Cap. 123N 附表 2。呢類工程豁免 BO s.4、9、9AA、14(1) 同 21。項目清單以附表 2 為準；本文件冇逐項抄錄，引用前要睇返條文。
 
-## 4. 檢核計劃（Validation Schemes）⚠️ 細節未核實
+## 4. 檢核計劃（Validation Schemes）⚠️ 細節未核實（Cap. 123N 條文冇提及呢啲計劃，要對 BD 文件，見 [#47](https://github.com/paulip114/hk-architecture/issues/47)）
 - **家居小型工程檢核計劃**（Household Minor Works Validation Scheme）：已建成嘅指定家居小型工程（例如支架、晾衣架、小型簷篷），經 PBP / PRC 檢查及證明（如需要加固）後，可以保留。表格 MW06-3。
 - **招牌檢核計劃**（Signboard Validation Scheme）：已建成而符合條件嘅招牌。
 - **小型附加設施檢核計劃**（Minor Amenity Feature Validation Scheme）：MW06-1 / -2 / -3。✅（表格存在）

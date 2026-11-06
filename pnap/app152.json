@@ -1,10 +1,7 @@
 {
- "_source": "PNAP APP-152 Sustainable Building Design Guidelines, BD, version September 2023 (AD/NB1); first issued Jan 2011, last revised Jan 2016. Read from https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP152.pdf on 2026-11-05 through a text extractor (not the PDF itself).",
- "_unverified": [
-  "Table 1 column layout (which column is Plane 1 / Plane 2 for sites >= 20,000 m2): the extractor flagged the headers as ambiguous. Check against the PDF before relying on the 25% / 33.3% figures.",
-  "Lp limit of 5 x U (para 4(a), App B 2.2): read once through the extractor only.",
-  "Which items count as 'greening features' under the 30% cap (App D para 3): assumed to be the items with a reduction factor in the App D table."
- ],
+ "_source": "PNAP APP-152 Sustainable Building Design Guidelines, BD, version September 2023 (AD/NB1); first issued Jan 2011, last version Jan 2016. https://www.bd.gov.hk/doc/en/resources/codes-and-references/practice-notes-and-circular-letters/pnap/APP/APP152.pdf",
+ "_checked": "2026-11-06 against the PDF: Table 1 and the Appendix D greening features table from rendered pages; Lp limit from para 4(a) and Appendix B paras 2.2 and 2.4 by text extraction.",
+ "_unverified": [],
  "applicability": {
   "building_separation_site_area_m2": 20000,
   "building_separation_lp_m": 60,

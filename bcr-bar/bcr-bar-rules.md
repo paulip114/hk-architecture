@@ -2,7 +2,7 @@
 
 **Status**
 - **Cap. 123A: verified** on 2026-11-06 against the eLegislation Verified Copy, version date 30.6.2024 (`architect-kb/legislation/cap123A-2024-06-30.pdf`, uploaded by paul). Regulation numbers below are from that text.
-- **B(C)R: not verified.** Cap. 123A (reg 8(1)(bb), (bc)) cites it as the *Building (Construction) Regulation (Cap. 123 sub. leg. Q)*, so the current B(C)R is **Cap. 123Q**, which replaced the old Cap. 123B. The consequential amendments to Cap. 123A are L.N. 6 of 2020 and E.R. 1 of 2021. Its own text has not been read: upload the Cap. 123Q consolidated PDF to verify the outline below.
+- **Cap. 123Q: checked** on 2026-11-06 against the Department of Justice open data, version date 24.6.2021, in operation from 1 February 2021. It replaced the old Cap. 123B; the consequential amendments to Cap. 123A are L.N. 6 of 2020 and E.R. 1 of 2021.
 
 Both are open-book references in the HKIA Professional Assessment (PA Open Book Reference list; the list still names "CAP 123B").
 
@@ -64,21 +64,22 @@ The submission and approval process (BD plans, consent, OP, minor works, UBW, MB
 - Changes of AP, RSE, RGE or contractor are notified to the BA (reg 22).
 - Fees: reg 42 and the Schedule.
 
-## Cap. 123Q – Building (Construction) Regulation (outline, not verified)
-The current B(C)R is performance-based. It states performance requirements; the codes of practice below are the usual deemed-to-satisfy route.
+## Cap. 123Q – Building (Construction) Regulation
+The Regulation states performance requirements; the codes of practice below are the usual deemed-to-satisfy route. The section numbers are from Cap. 123Q; the descriptions are outlines, so read the section before you cite it.
 
-| Subject | What the Regulation requires (in outline) | Code of practice usually relied on |
+| Subject | Sections | Code of practice usually relied on |
 | --- | --- | --- |
-| Materials | Fit for purpose, to acceptable standards, tested where required | Structural codes; material standards they cite |
-| Loads | Dead, imposed and wind loads allowed for; imposed load values by use | Code of Practice for Dead and Imposed Loads; Wind Effects in Hong Kong 2019 |
-| Structural design | Strength, stability, serviceability, robustness; no disproportionate collapse | Structural Use of Concrete 2013; Structural Use of Steel 2011; Structural Use of Glass 2018 |
-| Excavation and lateral support | s.14 (cited in Cap. 123A reg 8(1)(bc)) | Geotechnical guidance (GEO) |
-| Site formation | s.21 stability (cited in Cap. 123A reg 8(1)(bb)) | Geotechnical guidance (GEO) |
-| Foundations | Bearing capacity, settlement, effect on adjoining land and buildings | Code of Practice for Foundations 2017 |
-| Fire safety | Fire resisting construction, means of access for firefighting, fire properties of elements | FS Code 2011 (2024 Ed.), Parts C, D, E (see `../fs-code/`) |
-| Other construction | Walls, floors, roofs, protective barriers, glass and glazing, curtain walls, windows, chimneys, ventilating systems | PNAPs |
+| Materials | s.3 | Structural codes; material standards they cite |
+| Loads | ss.4-12 (dead, imposed, wind, protective barrier, dynamic effects, notices, overloading) | Code of Practice for Dead and Imposed Loads; Wind Effects in Hong Kong 2019 |
+| Structural design | ss.13-15 (design methodology, strength and serviceability, stability) | Structural Use of Concrete 2013; Structural Use of Steel 2011; Structural Use of Glass 2018 |
+| Construction methods | s.16. Cap. 123A reg 8(1)(bc) requires ELS analyses to demonstrate compliance with s.14 | Geotechnical guidance (GEO) |
+| Site investigation and foundations | ss.17-20 | Code of Practice for Foundations 2017 |
+| Site formation and retaining walls | ss.21-25 (s.21 is cited in Cap. 123A reg 8(1)(bb)) | Geotechnical guidance (GEO) |
+| External walls and curtain walls | ss.26-32 | PNAPs |
+| Floors and roofs | ss.33-34 | PNAPs |
+| Fire resisting construction | s.35 | FS Code 2011 (2024 Ed.), Parts C, D, E (see `../fs-code/`) |
+| Protective barriers | ss.36-38 | PNAPs |
+| Lifts and escalators | ss.39-41 | PNAPs |
+| Other | s.42 ground treatment, s.43 wells, ss.44-45 chimneys and fireplaces, s.46 vermin, s.47 ducts | PNAPs |
 
 Working rule: when a structural or fire item is checked in this knowledge base, cite the code of practice clause. Compliance with the code is the deemed-to-satisfy route for the matching B(C)R performance requirement.
-
-## Still to do
-- Upload the Cap. 123Q consolidated PDF, then add section numbers to the B(C)R table and confirm its commencement date.

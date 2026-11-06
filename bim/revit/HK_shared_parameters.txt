@@ -7,7 +7,7 @@ GROUP	1	HK Area
 GROUP	2	HK Site
 GROUP	3	HK Title Block
 *PARAM	GUID	NAME	DATATYPE	DATACATEGORY	GROUP	VISIBLE	DESCRIPTION	USERMODIFIABLE	HIDEWHENNOVALUE
-PARAM	db480ef6-9c9a-5a56-805c-63cabbbe0865	HK_GFA_Category	TEXT		1	1	GFA category: accountable, not_gfa, mandatory_plant, non_mandatory_plant, green_feature, car_park_underground, car_park_above_100, car_park_above_50, refuge_floor, bicycle_parking, other_disregarded	1	0
+PARAM	db480ef6-9c9a-5a56-805c-63cabbbe0865	HK_GFA_Category	TEXT		1	1	GFA category: accountable, not_gfa, mandatory_plant, non_mandatory_plant, green_feature, green_feature_uncapped, car_park_underground, car_park_above_100, car_park_above_50, refuge_floor, bicycle_parking, other_disregarded	1	0
 PARAM	8f3e0ff4-ce4b-53f1-aa63-c7d06bcefc9e	HK_Use	TEXT		1	1	domestic or non_domestic	1	0
 PARAM	e9b85e3d-a43d-5d12-a5f4-dd90515a8a9c	HK_Floor_Count	INTEGER		1	1	Number of identical floors this Area represents (default 1)	1	0
 PARAM	04480617-73d6-54b5-bca2-e65b13bc4267	HK_Site_Area	NUMBER		2	1	Site area per B(P)R reg 23(2), m2 (plain number)	1	0

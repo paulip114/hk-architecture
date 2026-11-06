@@ -52,7 +52,8 @@ def run(q):
             lim = sep["lp_max_multiple_of_street_width"] * U
             add("para 4(a), App B 2.2", "Continuous projected facade length Lp", f"{max_lp:g} m",
                 f"≤ 5U = {lim:g} m", PASS if max_lp <= lim else FAIL,
-                "else provide permeability per Table 1 (limit read via extractor - verify)")
+                "Required with Table 1 P, not instead of it. Not applicable if no building part is within 30 m "
+                "of a street centreline (App B 2.5)")
         hkey = "h_le_60" if H <= 60 else "h_gt_60"
         t1 = D["table_1_permeability_pct"]
         for i, pl in enumerate(planes):
@@ -66,7 +67,8 @@ def run(q):
                 p = z.get("p_pct")
                 add("para 4(b), Table 1", f"{pl['name']} {zname} zone permeability", f"{p}%", f"≥ {need}%",
                     PASS if p is not None and p >= need else FAIL,
-                    "Table 1 large-site column layout unverified" if large else "")
+                    "The first plane is taken as Plane 1. The PNAP does not say which is which: "
+                    "confirm the pair chosen" if large else "")
                 if p:
                     is_share = z.get("is_pct", p) / p
                     add("App B 4.2-4.3", f"{pl['name']} {zname} zone IS share of P", f"{is_share:.0%}",
@@ -150,8 +152,7 @@ def main():
     out = [f"# PNAP APP-152 sustainable building design check – {p.get('project', 'Untitled')}", "",
            f"**Result: {verdict}** ({fails} fail, {checks} to check, {len(rows)} items).", "",
            "> Draft for review by an Authorized Person. APP-152 compliance is a prerequisite for APP-151 GFA "
-           "concessions; a FAIL here puts those concessions at risk. Unverified figures: see `_unverified` in "
-           "pnap/app152.json.", "",
+           "concessions; a FAIL here puts those concessions at risk.", "",
            "| Clause | Item | Proposed | Limit | Result | Note |", "| --- | --- | --- | --- | --- | --- |"]
     out += ["| " + " | ".join(str(x) for x in r) + " |" for r in rows]
     md = "\n".join(out) + "\n"
