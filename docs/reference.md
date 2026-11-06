@@ -84,7 +84,7 @@ Exit code 1 when any item fails.
 ## Practice: contracts, cost, site supervision, sketch drawings
 | Path | What it is |
 | --- | --- |
-| `contracts/contract-rules.md`, `contracts/sfbc.json` | HKIA/HKIS/HKICM SFBC (2005/2006 rev. 2023; 2025 Ed. noted) clause map, periods, appointment, tender, PA Paper 2 notes |
+| `contracts/contract-rules.md`, `contracts/sfbc.json` | HKIA/HKIS/HKICM SFBC (2005/2006 rev. 2023; 2025 Ed. periods checked against a pre-launch copy) clause map, periods, appointment, tender, PA Paper 2 notes |
 | `tools/contract_admin.py` | Extended Completion Date, LD (with cap and pending EOT), retention and release dates, DLP, notice checks (cl. 4.2, 25.2, 28.2), CISPO (Cap. 652) payment response / payment deadlines. Reads `contract` |
 | `cost/cost-rules.md`, `cost/hk_cost_rates.json` | Cost planning stages, Arcadis Q2 2026 HK$/m² CFA rates, TPI |
 | `tools/cost_estimate.py` | Order-of-cost estimate with low/mid/high range, allowances, escalation, fees, budget, S-curve. Reads `cost` (and `floors[]` via `from_floors`) |

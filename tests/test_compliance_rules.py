@@ -21,6 +21,8 @@ def load(name):
 bpr = load("bpr_check")
 sbd = load("sbd_check")
 bfa = load("bfa_check")
+fsi = load("fsi_check")
+energy = load("energy_check")
 
 
 def scheme(*floors):
@@ -147,6 +149,37 @@ class Reg31(unittest.TestCase):
         rows = [r for r in bpr.run(dict(scheme(floor("domestic", 1000)), rooms=[room]))[0] if r[0] == "31"]
         self.assertEqual([r[4] for r in rows], ["CHECK"])
         self.assertIn("Bedroom", rows[0][2])
+
+
+class FireServiceTank(unittest.TestCase):
+    def status(self, floor_m2, litres):
+        rows = fsi.run({"parts": [], "largest_floor_m2": floor_m2, "fs_tank_litres": litres})
+        return [r[4] for r in rows if r[0] == "para 5.26"]
+
+    def test_table_has_four_bands(self):
+        for floor_m2, need in ((230, 9000), (231, 18000), (460, 18000), (461, 27000), (920, 27000), (921, 36000)):
+            self.assertEqual(self.status(floor_m2, need), ["PASS"])
+            self.assertEqual(self.status(floor_m2, need - 1), ["FAIL"])
+
+    def test_car_port_sprinklers_apply_above_230_m2(self):
+        def required(area):
+            part = {"name": "Car port", "use": "4.9", "total_floor_area_m2": area, "provided": []}
+            rows = fsi.run({"parts": [part]})
+            return [r[4] for r in rows if "prinkler" in r[1]]
+        self.assertEqual(required(231), ["FAIL"])
+        self.assertNotIn("FAIL", required(230))
+
+
+class BuildingEnergyCode(unittest.TestCase):
+    def test_lighting_and_chiller_figures_from_the_code(self):
+        self.assertEqual(energy.E["bec_lpd_W_m2"]["classroom"], 9.1)
+        self.assertEqual(energy.E["bec_lpd_W_m2"]["storeroom_gt15"], 6.3)
+        cop = energy.E["bec_other"]["chiller_min_cop"]
+        self.assertEqual(cop["water_cooled_centrifugal_gt3000_full"], 5.9)
+        self.assertEqual(cop["air_cooled_vsd_screw_ge500_75pct"], 4.1)
+
+    def test_regenerative_braking_depends_on_speed_only(self):
+        self.assertEqual(set(energy.E["bec_other"]["lift_regenerative_braking"]) - {"_ref"}, {"speed_m_s"})
 
 
 class App152(unittest.TestCase):

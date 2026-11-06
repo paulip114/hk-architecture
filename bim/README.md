@@ -74,7 +74,7 @@ Use a GhPython component (Rhino 7) or a Python 3 Script component (Rhino 8). Pas
 
 ## What was tested, and what still needs testing in Revit and Rhino
 
-Tested here (CPython 3.13, 25 unit tests):
+Tested here (CPython 3.13, 27 unit tests):
 - Category table, First Schedule lookups and site class all match `tools/bpr_check.py`.
 - Records rebuilt from `examples/demo_composite.json` give the same GFA and the same PASS/FAIL results as the original file in `bpr_check.py`.
 - The quick check matches `bpr_check.py` for the composite formula and site coverage.
