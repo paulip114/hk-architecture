@@ -31,9 +31,9 @@ Hong Kong Buildings Department procedures from plan submission to occupation per
 - Enforcement: s.24 orders, s.33 cost + 20% surcharge, s.40 penalties; MBIS s.30B (30 years), MWIS s.30C (10 years).
 
 ## Open items (⚠️)
-- Day counting under Cap. 1 s.71.
+- Cap. 1 s.71 day counting is checked (version 31.7.2026), but `tools/submission_timeline.py` does not move last days that fall on holidays or warning days.
 - Technical Memorandum for Supervision Plans (TCP grades, supervision streams).
-- Cap. 123N (minor works) Schedule 1 item list, designated exempted works, validation scheme details. Upload Cap. 123N to verify.
-- Cap. 123P: MBIS / MWIS cycles (10 / 5 years), prescribed inspection scope. MWIS forms; whether the 2015 guidelines have been revised.
+- Validation schemes: Cap. 123N does not mention them. See `minor-works.md`.
+- Cap. 123P prescribed inspection scope and the MWIS forms have not been compared line by line with `mbis-mwis.md`.
 - FSD certificate form number for OP; other departmental certificates by name.
 - Fine levels in dollars (Cap. 221 Sch. 8).
