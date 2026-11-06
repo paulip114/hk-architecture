@@ -3,7 +3,7 @@
   "APP-67": "PNAP APP-67 Energy Efficiency of Buildings (Building (Energy Efficiency) Regulation, Cap. 123M), revised Sept 2025 (AD/NB1). Read from bd.gov.hk on 2026-11-05.",
   "APP-156": "PNAP APP-156 Design and Construction Requirements for Energy Efficiency of Residential Buildings, revised Sept 2025. Read from bd.gov.hk on 2026-11-05.",
   "BEC": "Building Energy Code 2024 Edition (Cap. 610 BEEO), values as listed in EMSD's BEC & EAC 2024 briefing (emsd.gov.hk, read 2026-11-05), not the Code text itself. Gazetted 22 Nov 2024, fully in force 23 Aug 2025.",
-  "OTTV_Code": "Code of Practice for Overall Thermal Transfer Value in Buildings 1995 (BD). NOT read: the PDF could not be reached. Formula structure from general knowledge; constants below are placeholders."
+  "OTTV_Code": "Code of Practice for Overall Thermal Transfer Value in Buildings 1995 (BD, first issue April 1995), bilingual PDF uploaded by the user 2026-11-06. Formula (paras 5-6), Tables 1-9 transcribed from the PDF and checked against its Appendix A sample (East tower facade, Form OTTV 3: 41.61 W/m²)."
  },
  "ottv_limits": {
   "current": {
@@ -58,58 +58,6 @@
    "rttv": "Energy Efficiency Report: RTTV calcs and forms, OTTV forms if any, record plans, test certs, final sheets, NVTC compliance (para 9)"
   }
  ],
- "ottv_constants": {
-  "verified": false,
-  "_warning": "PLACEHOLDER values, not from the OTTV Code 1995. Replace with the Code's tables (TDeq by wall / roof density, ΔT, solar factors by orientation) before relying on any result. Rough calibration only: BD sample sheet NT2022007OTTV (U 2.82 / 5.18, SC 0.65, α 0.75, 445 kg/m², WWR 1:1.59) reports wall OTTV 61.9 W/m²; these placeholders give 73.6 W/m² assuming glass spread evenly over N/E/S/W (orientations not on the sheet).",
-  "delta_t_K": 5,
-  "tdeq_wall_by_density": [
-   [
-    125,
-    15
-   ],
-   [
-    195,
-    12
-   ],
-   [
-    275,
-    10
-   ],
-   [
-    null,
-    7
-   ]
-  ],
-  "tdeq_roof_by_density": [
-   [
-    50,
-    24
-   ],
-   [
-    230,
-    20
-   ],
-   [
-    320,
-    16
-   ],
-   [
-    null,
-    14
-   ]
-  ],
-  "solar_factor_W_m2": {
-   "N": 67,
-   "NE": 110,
-   "E": 145,
-   "SE": 135,
-   "S": 115,
-   "SW": 160,
-   "W": 180,
-   "NW": 120,
-   "H": 320
-  }
- },
  "bec_lpd_W_m2": {
   "office_enclosed_le15": 9.0,
   "office_15_200": 8.5,
@@ -163,5 +111,905 @@
    "note": "or central BSI motor / mechanical drive works (BEC Table 10.1)"
   },
   "energy_audit": "commercial buildings and commercial portion of composite buildings (Schedule 1), Energy Audit Code, at intervals of not more than 10 years (check for later amendment)"
+ },
+ "ottv_code": {
+  "verified": true,
+  "formula": {
+   "wall": "OTTVw = [Σ(Aw·U·α·TDEQw) + Σ(Afw·SC·ESM·SF)] / Aow  (para 5; Aow = Aw + Afw)",
+   "roof": "OTTVr = [Σ(Ar·U·α·TDEQr) + Σ(Afr·SC·SF)] / Aor  (para 6; SF horizontal, no ESM)",
+   "overall": "Tower/Podium OTTV = (G + H) / (E + F)  (Form OTTV 4)",
+   "note": "No conduction term for glazing (no ΔT). Limit applies to the overall envelope average of the tower or podium, not to an individual wall or roof (para 3.2). Calculate to 2 decimal places (9.2)."
+  },
+  "original_limits_1995": {
+   "tower": 35,
+   "podium": 80,
+   "_note": "para 3.1, superseded by APP-67 (now 20 / 40)"
+  },
+  "podium_definition": "part within 15 m above ground (or the height allowed under B(P)R 20(3) / s.42 where SC exceeds the permitted %); APP-67 para 4 allows a notional 20 m",
+  "exclusions_4_1": [
+   "external wall of a refuge floor",
+   "external wall or roof of a carparking floor",
+   "external wall of a lightwell ≤ 21 m² on plan",
+   "any wall on any roof"
+  ],
+  "party_wall_4_2": "included whether or not an adjoining building exists; no shading from adjoining buildings",
+  "not_allowed_1_8": [
+   "internal shading (blinds, drapes)",
+   "reflection or shading from adjacent buildings"
+  ],
+  "orientations": [
+   "N",
+   "NNE",
+   "NE",
+   "ENE",
+   "E",
+   "ESE",
+   "SE",
+   "SSE",
+   "S",
+   "SSW",
+   "SW",
+   "WSW",
+   "W",
+   "WNW",
+   "NW",
+   "NNW"
+  ],
+  "table5_density_bands_kg_m2": [
+   22,
+   200,
+   380,
+   570
+  ],
+  "_table5_bands_text": "< 22 | 23-199 | 200-379 | 380-569 | ≥ 570 kg/m²",
+  "table5_tdeq_wall": {
+   "N": [
+    3.7,
+    3.38,
+    2.72,
+    2.05,
+    1.7
+   ],
+   "NNE": [
+    4.65,
+    4.21,
+    3.3,
+    2.36,
+    1.88
+   ],
+   "NE": [
+    5.6,
+    5.03,
+    3.86,
+    2.67,
+    2.05
+   ],
+   "ENE": [
+    6.55,
+    5.86,
+    4.44,
+    2.98,
+    2.23
+   ],
+   "E": [
+    7.5,
+    6.68,
+    5.01,
+    3.28,
+    2.4
+   ],
+   "ESE": [
+    7.05,
+    6.26,
+    4.65,
+    3.0,
+    2.15
+   ],
+   "SE": [
+    6.6,
+    5.85,
+    4.3,
+    2.71,
+    1.9
+   ],
+   "SSE": [
+    6.15,
+    5.43,
+    3.95,
+    2.43,
+    1.65
+   ],
+   "S": [
+    5.7,
+    5.01,
+    3.6,
+    2.15,
+    1.4
+   ],
+   "SSW": [
+    6.15,
+    5.42,
+    3.92,
+    2.37,
+    1.58
+   ],
+   "SW": [
+    6.6,
+    5.82,
+    4.23,
+    2.59,
+    1.75
+   ],
+   "WSW": [
+    6.55,
+    5.81,
+    4.29,
+    2.73,
+    1.93
+   ],
+   "W": [
+    6.5,
+    5.79,
+    4.35,
+    2.86,
+    2.1
+   ],
+   "WNW": [
+    5.8,
+    5.19,
+    3.94,
+    2.66,
+    2.0
+   ],
+   "NW": [
+    5.1,
+    4.59,
+    3.54,
+    2.45,
+    1.9
+   ],
+   "NNW": [
+    4.4,
+    3.98,
+    3.13,
+    2.25,
+    1.8
+   ]
+  },
+  "table9_tdeq_roof": [
+   18.6,
+   16.88,
+   13.37,
+   9.75,
+   7.9
+  ],
+  "table8_sf": {
+   "N": 104,
+   "NNE": 121,
+   "NE": 138,
+   "ENE": 153,
+   "E": 168,
+   "ESE": 183,
+   "SE": 197,
+   "SSE": 194,
+   "S": 191,
+   "SSW": 197,
+   "SW": 202,
+   "WSW": 189,
+   "W": 175,
+   "WNW": 157,
+   "NW": 138,
+   "NNW": 121,
+   "H": 264
+  },
+  "table6_esm_overhang": {
+   "columns": [
+    "N",
+    "NE/NW",
+    "S/E/W",
+    "SE/SW"
+   ],
+   "rows": [
+    [
+     0.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    [
+     0.05,
+     0.975,
+     0.969,
+     0.962,
+     0.962
+    ],
+    [
+     0.1,
+     0.951,
+     0.939,
+     0.926,
+     0.926
+    ],
+    [
+     0.15,
+     0.928,
+     0.909,
+     0.89,
+     0.89
+    ],
+    [
+     0.2,
+     0.905,
+     0.88,
+     0.856,
+     0.856
+    ],
+    [
+     0.25,
+     0.883,
+     0.853,
+     0.823,
+     0.823
+    ],
+    [
+     0.3,
+     0.861,
+     0.826,
+     0.79,
+     0.79
+    ],
+    [
+     0.35,
+     0.84,
+     0.8,
+     0.759,
+     0.759
+    ],
+    [
+     0.4,
+     0.82,
+     0.774,
+     0.729,
+     0.729
+    ],
+    [
+     0.45,
+     0.8,
+     0.75,
+     0.7,
+     0.7
+    ],
+    [
+     0.5,
+     0.781,
+     0.726,
+     0.672,
+     0.672
+    ],
+    [
+     0.55,
+     0.762,
+     0.704,
+     0.645,
+     0.645
+    ],
+    [
+     0.6,
+     0.744,
+     0.682,
+     0.62,
+     0.62
+    ],
+    [
+     0.65,
+     0.726,
+     0.661,
+     0.595,
+     0.595
+    ],
+    [
+     0.7,
+     0.71,
+     0.641,
+     0.572,
+     0.572
+    ],
+    [
+     0.75,
+     0.693,
+     0.621,
+     0.549,
+     0.549
+    ],
+    [
+     0.8,
+     0.678,
+     0.603,
+     0.528,
+     0.528
+    ],
+    [
+     0.85,
+     0.663,
+     0.585,
+     0.507,
+     0.507
+    ],
+    [
+     0.9,
+     0.648,
+     0.568,
+     0.488,
+     0.488
+    ],
+    [
+     0.95,
+     0.634,
+     0.552,
+     0.47,
+     0.47
+    ],
+    [
+     1.0,
+     0.621,
+     0.537,
+     0.453,
+     0.453
+    ]
+   ],
+   "rule": "OPF = A/B; between rows use the next larger OPF; > 1.0 not accepted"
+  },
+  "table7_esm_sidefin": {
+   "columns": [
+    "N",
+    "NE",
+    "E",
+    "SE",
+    "S",
+    "SW",
+    "W",
+    "NW"
+   ],
+   "rows": [
+    [
+     0.0,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    [
+     0.05,
+     0.955,
+     0.964,
+     0.974,
+     0.968,
+     0.962,
+     0.968,
+     0.968,
+     0.964
+    ],
+    [
+     0.1,
+     0.911,
+     0.929,
+     0.948,
+     0.937,
+     0.925,
+     0.936,
+     0.947,
+     0.929
+    ],
+    [
+     0.15,
+     0.869,
+     0.896,
+     0.923,
+     0.906,
+     0.89,
+     0.906,
+     0.922,
+     0.895
+    ],
+    [
+     0.2,
+     0.828,
+     0.863,
+     0.898,
+     0.877,
+     0.855,
+     0.876,
+     0.897,
+     0.863
+    ],
+    [
+     0.25,
+     0.789,
+     0.832,
+     0.875,
+     0.848,
+     0.822,
+     0.848,
+     0.873,
+     0.831
+    ],
+    [
+     0.3,
+     0.751,
+     0.801,
+     0.852,
+     0.821,
+     0.79,
+     0.82,
+     0.85,
+     0.8
+    ],
+    [
+     0.35,
+     0.714,
+     0.772,
+     0.829,
+     0.794,
+     0.759,
+     0.793,
+     0.828,
+     0.771
+    ],
+    [
+     0.4,
+     0.679,
+     0.743,
+     0.807,
+     0.768,
+     0.729,
+     0.767,
+     0.806,
+     0.742
+    ],
+    [
+     0.45,
+     0.645,
+     0.716,
+     0.786,
+     0.743,
+     0.7,
+     0.743,
+     0.785,
+     0.715
+    ],
+    [
+     0.5,
+     0.613,
+     0.69,
+     0.766,
+     0.719,
+     0.673,
+     0.719,
+     0.765,
+     0.689
+    ],
+    [
+     0.55,
+     0.582,
+     0.664,
+     0.746,
+     0.696,
+     0.646,
+     0.696,
+     0.746,
+     0.664
+    ],
+    [
+     0.6,
+     0.553,
+     0.64,
+     0.727,
+     0.674,
+     0.621,
+     0.674,
+     0.727,
+     0.64
+    ],
+    [
+     0.65,
+     0.525,
+     0.617,
+     0.709,
+     0.653,
+     0.596,
+     0.653,
+     0.709,
+     0.617
+    ],
+    [
+     0.7,
+     0.499,
+     0.595,
+     0.691,
+     0.632,
+     0.573,
+     0.633,
+     0.692,
+     0.595
+    ],
+    [
+     0.75,
+     0.473,
+     0.574,
+     0.674,
+     0.613,
+     0.551,
+     0.613,
+     0.675,
+     0.574
+    ],
+    [
+     0.8,
+     0.45,
+     0.554,
+     0.658,
+     0.594,
+     0.531,
+     0.595,
+     0.66,
+     0.555
+    ],
+    [
+     0.85,
+     0.428,
+     0.535,
+     0.642,
+     0.577,
+     0.511,
+     0.578,
+     0.645,
+     0.536
+    ],
+    [
+     0.9,
+     0.407,
+     0.517,
+     0.627,
+     0.56,
+     0.493,
+     0.561,
+     0.63,
+     0.519
+    ],
+    [
+     0.95,
+     0.388,
+     0.5,
+     0.613,
+     0.544,
+     0.475,
+     0.546,
+     0.617,
+     0.502
+    ],
+    [
+     1.0,
+     0.37,
+     0.484,
+     0.599,
+     0.529,
+     0.459,
+     0.531,
+     0.604,
+     0.487
+    ],
+    [
+     1.05,
+     0.354,
+     0.47,
+     0.586,
+     0.515,
+     0.444,
+     0.518,
+     0.592,
+     0.473
+    ],
+    [
+     1.1,
+     0.339,
+     0.456,
+     0.574,
+     0.502,
+     0.43,
+     0.505,
+     0.581,
+     0.46
+    ],
+    [
+     1.15,
+     0.325,
+     0.444,
+     0.562,
+     0.49,
+     0.417,
+     0.494,
+     0.57,
+     0.448
+    ],
+    [
+     1.2,
+     0.313,
+     0.432,
+     0.551,
+     0.478,
+     0.406,
+     0.483,
+     0.56,
+     0.437
+    ],
+    [
+     1.25,
+     0.302,
+     0.422,
+     0.541,
+     0.468,
+     0.395,
+     0.473,
+     0.551,
+     0.427
+    ],
+    [
+     1.3,
+     0.293,
+     0.412,
+     0.531,
+     0.458,
+     0.386,
+     0.464,
+     0.543,
+     0.418
+    ],
+    [
+     1.35,
+     0.286,
+     0.404,
+     0.522,
+     0.45,
+     0.377,
+     0.456,
+     0.535,
+     0.41
+    ],
+    [
+     1.4,
+     0.279,
+     0.396,
+     0.514,
+     0.442,
+     0.37,
+     0.449,
+     0.528,
+     0.404
+    ],
+    [
+     1.45,
+     0.274,
+     0.39,
+     0.506,
+     0.435,
+     0.364,
+     0.443,
+     0.522,
+     0.398
+    ],
+    [
+     1.5,
+     0.271,
+     0.385,
+     0.499,
+     0.429,
+     0.359,
+     0.438,
+     0.517,
+     0.394
+    ]
+   ],
+   "rule": "SPF = C/D; between rows use the next larger SPF; > 1.5 not accepted"
+  },
+  "esm_combined_rule": "overhang and sidefin: compute both, use the smaller (7.6(c))",
+  "table2_surface_resistance": {
+   "wall_ri_alpha_ge_0_5": 0.12,
+   "wall_ri_alpha_lt_0_5": 0.299,
+   "wall_ro": 0.044,
+   "roof_ri_alpha_ge_0_5": {
+    "flat": 0.162,
+    "slope_22_5": 0.148,
+    "slope_45": 0.133
+   },
+   "roof_ri_alpha_lt_0_5": {
+    "flat": 0.801,
+    "slope_22_5": 0.595,
+    "slope_45": 0.391
+   },
+   "roof_ro": 0.055,
+   "_note": "Ri chosen by the absorptivity of the internal surface (Appendix A uses 0.299 for white paint α 0.30)"
+  },
+  "table3_air_space": {
+   "widths_mm": [
+    5,
+    10,
+    20,
+    50,
+    75,
+    100
+   ],
+   "wall_alpha_ge_0_5": [
+    0.11,
+    0.123,
+    0.148,
+    0.153,
+    0.156,
+    0.16
+   ],
+   "wall_alpha_lt_0_5": [
+    0.25,
+    0.359,
+    0.578,
+    0.589,
+    0.597,
+    0.606
+   ],
+   "roof_horizontal_alpha_ge_0_5": [
+    0.11,
+    0.123,
+    0.148,
+    0.158,
+    0.166,
+    0.174
+   ],
+   "roof_horizontal_alpha_lt_0_5": [
+    0.25,
+    0.357,
+    0.572,
+    0.891,
+    1.157,
+    1.423
+   ]
+  },
+  "table1_materials": {
+   "asphalt_mastic": [
+    2350,
+    1.15
+   ],
+   "cork_board": [
+    145,
+    0.042
+   ],
+   "hardboard_hd": [
+    1010,
+    0.144
+   ],
+   "mineral_fibre_board": [
+    265,
+    0.053
+   ],
+   "plasterboard": [
+    950,
+    0.16
+   ],
+   "brick_common": [
+    1900,
+    0.95
+   ],
+   "concrete_normal": [
+    2400,
+    2.16
+   ],
+   "concrete_lightweight": [
+    1300,
+    0.44
+   ],
+   "concrete_roof_tiles_slabs": [
+    2100,
+    1.1
+   ],
+   "glass": [
+    2500,
+    1.05
+   ],
+   "mosaic_tile": [
+    2500,
+    1.5
+   ],
+   "glass_fibre_quilt": [
+    32,
+    0.035
+   ],
+   "mineral_wool_felt": [
+    50,
+    0.039
+   ],
+   "polystyrene_expanded": [
+    25,
+    0.034
+   ],
+   "polyurethane_foam": [
+    30,
+    0.026
+   ],
+   "aluminium": [
+    2800,
+    160
+   ],
+   "copper": [
+    8900,
+    200
+   ],
+   "steel": [
+    7800,
+    50
+   ],
+   "gypsum_plaster": [
+    1120,
+    0.38
+   ],
+   "gypsum_sand_plaster": [
+    1570,
+    0.53
+   ],
+   "cement_sand_render": [
+    1860,
+    0.72
+   ],
+   "cement_sand_screed": [
+    1860,
+    0.72
+   ],
+   "terrazzo": [
+    2435,
+    1.59
+   ],
+   "granite": [
+    2650,
+    2.9
+   ],
+   "marble": [
+    2500,
+    2.0
+   ],
+   "_units": "[density kg/m³, k W/m°C]"
+  },
+  "table4_absorptivity": {
+   "black_glass": 1.0,
+   "black_concrete": 0.91,
+   "red_brick": 0.88,
+   "bituminous_felt": 0.88,
+   "brown_concrete": 0.85,
+   "uncoloured_concrete": 0.65,
+   "white_marble": 0.58,
+   "white_mosaic_tiles": 0.58,
+   "light_buff_brick": 0.55,
+   "built_up_roof_white": 0.5,
+   "bituminous_felt_aluminized": 0.4,
+   "gravel": 0.29,
+   "white_glazed_brick": 0.25,
+   "polished_aluminium_reflector": 0.12,
+   "dark_grey_paint": 0.91,
+   "light_grey_oil_paint": 0.75,
+   "medium_blue_paint": 0.51,
+   "light_green_paint": 0.47,
+   "aluminium_paint": 0.4,
+   "white_semi_gloss_paint": 0.3,
+   "white_gloss_paint": 0.25,
+   "silver_paint": 0.25,
+   "white_lacquer": 0.21,
+   "_note": "subset of Table 4"
+  },
+  "sample_check": {
+   "case": "Appendix A, East (Tower), Form OTTV 3",
+   "ottv_W_m2": 41.61,
+   "gross_area_m2": 1968.96,
+   "heat_gain_W": 81921.03
+  }
  }
 }

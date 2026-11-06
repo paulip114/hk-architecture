@@ -101,7 +101,8 @@
      "portable_appliances",
      "sprinkler",
      "ventilation_ac_control"
-    ]
+    ],
+    "ev_area_sprinklered": true
    },
    {
     "name": "G/F–2/F retail podium",
@@ -127,7 +128,8 @@
      "staircase_pressurization",
      "sprinkler",
      "ventilation_ac_control"
-    ]
+    ],
+    "natural_stair_venting": false
    },
    {
     "name": "3/F–30/F flats",
@@ -139,9 +141,7 @@
      "fire_alarm",
      "fire_hydrant_hose_reel",
      "firemans_lift",
-     "portable_appliances",
-     "fire_detection",
-     "sprinkler"
+     "portable_appliances"
     ]
    }
   ]
@@ -152,56 +152,187 @@
    {
     "name": "Retail podium G/F–2/F",
     "kind": "podium",
-    "use": "shops",
-    "walls": [
+    "facades": [
      {
       "orientation": "N",
-      "opaque_m2": 180,
-      "u_wall": 2.5,
-      "absorptivity": 0.6,
-      "density_kg_m2": 420,
-      "glass_m2": 240,
-      "u_glass": 5.6,
-      "sc": 0.45
+      "opaque": [
+       {
+        "name": "N wall",
+        "area_m2": 180,
+        "absorptivity": 0.58,
+        "internal_absorptivity": 0.3,
+        "layers": [
+         {
+          "material": "mosaic_tile",
+          "thickness_m": 0.005
+         },
+         {
+          "material": "cement_sand_render",
+          "thickness_m": 0.01
+         },
+         {
+          "material": "concrete_normal",
+          "thickness_m": 0.2
+         },
+         {
+          "material": "gypsum_plaster",
+          "thickness_m": 0.01
+         }
+        ]
+       }
+      ],
+      "windows": [
+       {
+        "name": "N shopfront",
+        "area_m2": 240,
+        "sc": 0.45,
+        "opf": 0.2
+       }
+      ]
      },
      {
       "orientation": "E",
-      "opaque_m2": 220,
-      "u_wall": 2.5,
-      "absorptivity": 0.6,
-      "density_kg_m2": 420,
-      "glass_m2": 90,
-      "u_glass": 5.6,
-      "sc": 0.45,
-      "esm": 0.8
+      "opaque": [
+       {
+        "name": "E wall",
+        "area_m2": 220,
+        "absorptivity": 0.58,
+        "internal_absorptivity": 0.3,
+        "layers": [
+         {
+          "material": "mosaic_tile",
+          "thickness_m": 0.005
+         },
+         {
+          "material": "cement_sand_render",
+          "thickness_m": 0.01
+         },
+         {
+          "material": "concrete_normal",
+          "thickness_m": 0.2
+         },
+         {
+          "material": "gypsum_plaster",
+          "thickness_m": 0.01
+         }
+        ]
+       }
+      ],
+      "windows": [
+       {
+        "name": "E windows",
+        "area_m2": 90,
+        "sc": 0.45,
+        "opf": 0.4,
+        "spf": 0.3
+       }
+      ]
      },
      {
       "orientation": "S",
-      "opaque_m2": 300,
-      "u_wall": 2.5,
-      "absorptivity": 0.6,
-      "density_kg_m2": 420,
-      "glass_m2": 60,
-      "u_glass": 5.6,
-      "sc": 0.45
+      "opaque": [
+       {
+        "name": "S wall",
+        "area_m2": 300,
+        "absorptivity": 0.58,
+        "internal_absorptivity": 0.3,
+        "layers": [
+         {
+          "material": "mosaic_tile",
+          "thickness_m": 0.005
+         },
+         {
+          "material": "cement_sand_render",
+          "thickness_m": 0.01
+         },
+         {
+          "material": "concrete_normal",
+          "thickness_m": 0.2
+         },
+         {
+          "material": "gypsum_plaster",
+          "thickness_m": 0.01
+         }
+        ]
+       }
+      ],
+      "windows": [
+       {
+        "name": "S windows",
+        "area_m2": 60,
+        "sc": 0.45
+       }
+      ]
      },
      {
       "orientation": "W",
-      "opaque_m2": 160,
-      "u_wall": 2.5,
-      "absorptivity": 0.6,
-      "density_kg_m2": 420,
-      "glass_m2": 200,
-      "u_glass": 5.6,
-      "sc": 0.45
+      "opaque": [
+       {
+        "name": "W wall",
+        "area_m2": 160,
+        "absorptivity": 0.58,
+        "internal_absorptivity": 0.3,
+        "layers": [
+         {
+          "material": "mosaic_tile",
+          "thickness_m": 0.005
+         },
+         {
+          "material": "cement_sand_render",
+          "thickness_m": 0.01
+         },
+         {
+          "material": "concrete_normal",
+          "thickness_m": 0.2
+         },
+         {
+          "material": "gypsum_plaster",
+          "thickness_m": 0.01
+         }
+        ]
+       }
+      ],
+      "windows": [
+       {
+        "name": "W shopfront",
+        "area_m2": 200,
+        "sc": 0.45
+       }
+      ]
      }
     ],
     "roofs": [
      {
-      "opaque_m2": 690,
-      "u_roof": 0.6,
-      "absorptivity": 0.4,
-      "density_kg_m2": 500
+      "opaque": [
+       {
+        "name": "Podium roof (podium garden)",
+        "area_m2": 690,
+        "absorptivity": 0.65,
+        "internal_absorptivity": 0.3,
+        "layers": [
+         {
+          "material": "concrete_roof_tiles_slabs",
+          "thickness_m": 0.04
+         },
+         {
+          "material": "polystyrene_expanded",
+          "thickness_m": 0.05
+         },
+         {
+          "material": "cement_sand_screed",
+          "thickness_m": 0.05
+         },
+         {
+          "material": "concrete_normal",
+          "thickness_m": 0.2
+         },
+         {
+          "material": "gypsum_plaster",
+          "thickness_m": 0.01
+         }
+        ]
+       }
+      ]
      }
     ]
    }

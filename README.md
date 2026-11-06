@@ -108,16 +108,15 @@ Drawing tools need `pip install -r requirements-drawing.txt` (ezdxf, ifcopenshel
 | `tools/fs_lookup.py` | `fs_lookup.py "travel distance"` / `fs_lookup.py 庇護` / `fs_lookup.py 4b` / `fs_lookup.py --clause C13.4` |
 | `fs-code/part-f-rules.md`, `fs-code/part_f.json` | Part F: FSMP (maintenance, training, fire action plans), Bounding Conditions, open kitchens, lift works, Table F1 |
 | `tools/part_f_check.py` | Part F checker (reads `fire_safety_management`) |
-| `fsi/fsi-rules.md`, `fsi/fsi_schedule.json` | FSD CoP Minimum FSI (Sept 2022) Part IV schedule. **Unverified** web extract |
+| `fsi/fsi-rules.md`, `fsi/fsi_schedule.json` | FSD CoP Minimum FSI (Sept 2022) Part IV, all 45 paras with the Code's own applicability wording (Chinese text) |
 | `tools/fsi_check.py` | Minimum FSI checker (reads `fsi`) |
 | `energy/energy-rules.md`, `energy/energy.json` | OTTV (APP-67), RTTV / VLT / ER (APP-156), both Sept 2025; BEC 2024 LPD, COP, lift, retrofit triggers |
-| `tools/energy_check.py` | OTTV calculator + RTTV / BEC checks (reads `energy`). OTTV constants are placeholders until the OTTV Code 1995 is loaded |
+| `tools/energy_check.py` | OTTV calculator (OTTV Code 1995 Tables 1-9, U from layers, ESM from OPF / SPF; `--selftest` reproduces the Code's sample) + RTTV / BEC checks (reads `energy`) |
 | `examples/demo_composite_fsm_energy.json` | Demo inputs for the three tools (same fictional scheme) |
 | `examples/demo_composite_part_f_report.md`, `demo_composite_fsi_report.md`, `demo_composite_energy_report.md` | Outputs |
 
 Input blocks: see each tool's docstring (`python3 tools/<tool>.py -h`).
 
 Open items for this group:
-- Verify `fsi/fsi_schedule.json` against the FSD PDF (File2022.pdf). Encode Part V (tank sizes, design rules) and the PPE, school and special-risk paragraphs.
-- Load the OTTV Code 1995 tables (TDeq, ΔT, solar factors) into `energy.json` and set `ottv_constants.verified` to true. Confirm whether the limit applies to the overall value or to walls and roof separately.
+- FSD 5.26 tank-size table is an image missing from the uploaded text: tank check stays CHECK until it is read from the PDF. Part V design rules are not encoded.
 - Read the BEC 2024 text for the space types, electrical (copper loss, power factor, THD, metering) and A/C tables not in the EMSD briefing.

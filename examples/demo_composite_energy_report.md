@@ -1,17 +1,15 @@
 # Energy efficiency check – 示範：堅尼地城商住大廈（虛構）
 
-**Result: does not comply** (3 fail, 2 to check, 18 items).
+**Result: does not comply** (3 fail, 0 to check, 16 items).
 
-> Draft for review by an Authorized Person and the BS engineer (REA under BEEO). Limits from PNAP APP-67 / APP-156 (Sept 2025) and BEC 2024. OTTV constants are placeholders until loaded from the OTTV Code 1995.
+> Draft for review by an Authorized Person and the BS engineer (REA under BEEO). Limits from PNAP APP-67 / APP-156 (Sept 2025) and BEC 2024; OTTV method and tables from the OTTV Code 1995.
 
 | Clause | Item | Proposed | Limit | Result | Note |
 | --- | --- | --- | --- | --- | --- |
-| APP-67 para 3, 12 | OTTV limit set | current (from 31-12-2025) | tower 20 / podium 40 W/m² | INFO |  |
-| OTTV Code 1995 | OTTV constants (TDeq, ΔT, SF) | placeholders | Code tables | CHECK | results below are indicative only; load the Code's tables into energy.json |
-| APP-67 App. A | Retail podium G/F–2/F window-to-wall ratio | 0.41 | - | INFO |  |
-| B(EE)R / APP-67 | Retail podium G/F–2/F wall OTTV | 39.2 W/m² | (compare ≤ 40 W/m²) | INFO |  |
-| B(EE)R / APP-67 | Retail podium G/F–2/F roof OTTV | 3.4 W/m² | (reported) | INFO |  |
-| APP-67 para 3 | Retail podium G/F–2/F overall OTTV (podium) | 27.6 W/m² | ≤ 40 W/m² | CHECK | indicative: placeholder constants |
+| APP-67 para 3, 12 | OTTV limit set | current (from 31-12-2025) | tower 20 / podium 40 W/m² | INFO | OTTV Code 1995 tables (verified) |
+| Form OTTV 4 | Retail podium G/F–2/F walls OTTV (G/E) | 26.68 W/m² | - | INFO | E = 1450.00 m², G = 38,690.67 W, WWR 0.41 |
+| Form OTTV 4 | Retail podium G/F–2/F roofs OTTV (H/F) | 2.00 W/m² | - | INFO | F = 690.00 m² |
+| APP-67 para 3; Code 3.2 | Retail podium G/F–2/F podium OTTV (G+H)/(E+F) | 18.73 W/m² | ≤ 40 W/m² | PASS |  |
 | APP-156 para 6 | RTTV wall | 13.1 W/m² | ≤ 12.5 W/m² | FAIL | RTTV itself computed with BD Guidelines spreadsheet |
 | APP-156 para 6 | RTTV roof | 3.2 W/m² | ≤ 3.5 W/m² | PASS | RTTV itself computed with BD Guidelines spreadsheet |
 | APP-156 para 6 | Living room window VLT (prescribed window) | 52% | ≥ 50% | PASS |  |
