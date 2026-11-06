@@ -51,7 +51,7 @@ Exit code 1 when any item fails.
 - Not yet automated: reg 31 inclined-plane geometry. (Part F is now covered by `tools/part_f_check.py`.)
 - Barrier-free: Divisions 15-20 of the Design Manual not yet verified (lift and counter limits from memory, reported as CHECK).
 - APP-152: Table 1 large-site columns and the Lp ≤ 5U limit to be checked against the PDF.
-- B(C)R / B(A)R notes are unverified until the Cap. 123A / 123B PDFs are uploaded.
+- B(A)R (Cap. 123A) verified against the 30.6.2024 Verified Copy. B(C)R is Cap. 123Q and still unverified until its PDF is uploaded.
 - Part G tool is a one-room screening; CO / visibility not modelled.
 
 ## Means of escape input (`means_of_escape` block)
@@ -75,7 +75,7 @@ Exit code 1 when any item fails.
 | `tools/sbd_check.py` | APP-152 checker (reads `sustainable_design`) |
 | `bfa/bfa-rules.md`, `bfa/bfa2008.json` | Design Manual: Barrier Free Access 2008 (2025 Ed.) obligatory requirements, Tables 1-2 |
 | `tools/bfa_check.py` | Barrier-free checker (reads `barrier_free`) |
-| `bcr-bar/bcr-bar-rules.md` | Cap. 123B / 123A outline. Unverified until the official PDFs are uploaded |
+| `bcr-bar/bcr-bar-rules.md` | Cap. 123A plans, scales and statutory periods (verified); Cap. 123Q B(C)R outline (unverified) |
 | `examples/demo_composite_design.json` | Demo inputs for both tools (same fictional scheme as `demo_composite.json`) |
 | `examples/demo_composite_app152_report.md`, `demo_composite_bfa_report.md` | Outputs |
 
