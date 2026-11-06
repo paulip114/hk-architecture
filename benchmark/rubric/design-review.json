@@ -1,0 +1,12 @@
+{
+ "_note": "For an Authorized Person or Registered Architect to mark work that deterministic scoring cannot assess. Drafted without professional review: see issue #14. Scores stay separate from the ArchBench verdict.",
+ "scale": {"0": "Absent or wrong", "1": "Weak: a professional would redo it", "2": "Adequate: needs substantial markup", "3": "Good: needs ordinary review", "4": "Very good: little to change"},
+ "criteria": [
+  {"id": "site_response", "name": "Site and context", "weight": 2, "ask": "Does the scheme respond to the street, neighbours, orientation, views and microclimate? Are constraints used, not just listed?"},
+  {"id": "spatial_judgement", "name": "Spatial judgement", "weight": 3, "ask": "Do layout, circulation, section and proportions work for the people using them? Are the trade-offs sensible?"},
+  {"id": "regulatory_integration", "name": "Regulation in the design", "weight": 2, "ask": "Are escape, access, barrier-free and GFA matters resolved in the layout, rather than only reported in a separate check?"},
+  {"id": "drawing_standard", "name": "Drawing standard", "weight": 2, "ask": "Are the drawings legible, consistent, correctly annotated and at a suitable scale? Could a colleague develop them?"},
+  {"id": "communication", "name": "Written communication", "weight": 2, "ask": "Is the statement clear to its reader, specific to this scheme, and honest about assumptions and open questions?"},
+  {"id": "professional_judgement", "name": "Professional judgement", "weight": 3, "ask": "Does the work raise the right risks, know its limits and say when an AP, consultant or client decision is needed?"}
+ ]
+}

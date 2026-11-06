@@ -2,7 +2,7 @@
 
 **Result: fails the screening** (1 fail, 4 to check).
 
-> Screening only (one-zone smoke filling, single room). Not a substitute for CFD / zone modelling, hot smoke test or the FSAR. Draft for review by an Authorized Person and the fire engineer; the Building Authority must accept design fire, pre-movement time, tenability criteria and safety factor.
+> Screening only (one-zone smoke filling, single room). Not a Part G assessment or a substitute for CFD / zone modelling, hot smoke test or the FSAR. It does not assess carbon monoxide, visibility, heat exposure, smoke spread to other rooms, or flashover. Draft for review by an Authorized Person and the fire engineer; the Building Authority must accept design fire, pre-movement time, tenability criteria and safety factor.
 
 | Clause | Item | Value | Basis / limit | Result | Note |
 | --- | --- | --- | --- | --- | --- |

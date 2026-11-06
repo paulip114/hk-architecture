@@ -106,3 +106,4 @@ Also cover:
 - Smoke filling uses a one-zone model with Heskestad / Zukoski plume entrainment and energy balance, plus optional extraction.
 - RSET = detection + alarm + pre-movement + max(travel, flow).
 - It is not a substitute for CFD or the FSAR.
+- **Scope, decided 2026-11-07:** it stays a one-room screening. It does not assess carbon monoxide, visibility, heat exposure, smoke spread between rooms, or flashover, and the report says so. Those need zone or CFD models with their validation (Clause G9), which a small script should not imitate. Passing the screening shows only that a fuller assessment is worth doing.

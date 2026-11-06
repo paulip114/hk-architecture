@@ -2,7 +2,9 @@
 
 Run:  python3 -m unittest discover -s tests
 """
+import contextlib
 import importlib.util
+import io
 import json
 import os
 import shlex
@@ -160,6 +162,40 @@ class Baselines(unittest.TestCase):
             doc.header["$INSUNITS"] = 6    # declare metres while the geometry is in mm: areas are a million times out
             doc.saveas(d / "plan.dxf")
             self.assertEqual(ab.score_task(t, {"total_area_m2": 108}, d)["score"], 0.25)
+
+
+class HumanReview(unittest.TestCase):
+    def write(self, tmp, **change):
+        review = json.loads((ROOT / "benchmark" / "rubric" / "example-scores.json").read_text(encoding="utf-8"))
+        review.update(change)
+        f = Path(tmp) / "scores.json"
+        f.write_text(json.dumps(review), encoding="utf-8")
+        return f
+
+    def test_weighted_score(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            self.assertEqual(ab.human_review(self.write(tmp))["score"], 0.5)   # every criterion 2 of 4
+
+    def test_rejects_bad_marks(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            good = json.loads((ROOT / "benchmark" / "rubric" / "example-scores.json").read_text(encoding="utf-8"))["scores"]
+            for bad in (5, -1, 2.5, True):
+                with self.assertRaises(SystemExit):
+                    ab.human_review(self.write(tmp, scores={**good, "communication": bad}))
+            with self.assertRaises(SystemExit):
+                ab.human_review(self.write(tmp, reviewer=""))
+
+    def test_human_score_does_not_change_the_verdict(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            run = Path(tmp) / "r"
+            ab.cmd_baseline(type("A", (), {"which": "naive", "name": "r", "out": str(run)}))
+            f = self.write(tmp, scores={k: 4 for k in json.loads(self.write(tmp).read_text(encoding="utf-8"))["scores"]})
+            with contextlib.redirect_stdout(io.StringIO()):   # the report has Chinese, and main() is what sets UTF-8
+                ab.cmd_score(type("A", (), {"run_dir": str(run), "title": "t", "human": str(f)}))
+            s = json.loads((run / "report.json").read_text(encoding="utf-8"))
+            self.assertEqual(s["verdict"], "FAIL")
+            self.assertEqual(s["human_review"]["score"], 1.0)
+            self.assertIn("Human review", (run / "report.md").read_text(encoding="utf-8"))
 
 
 class Extract(unittest.TestCase):

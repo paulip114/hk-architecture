@@ -415,6 +415,35 @@ def cmd_baseline(a):
     finish(run_dir, a.name)
 
 
+def human_review(path):
+    """Scores a reviewer's marks against the rubric. Kept apart from the verdict, which is deterministic."""
+    rubric = json.loads((HERE / "rubric" / "design-review.json").read_text(encoding="utf-8"))
+    review = json.loads(Path(path).read_text(encoding="utf-8"))
+    for key in ("task", "reviewer", "qualification", "date", "scores"):
+        if not review.get(key):
+            raise SystemExit(f"Human review needs `{key}`")
+    rows, total, weight = [], 0, 0
+    for c in rubric["criteria"]:
+        score = review["scores"].get(c["id"])
+        if not isinstance(score, int) or isinstance(score, bool) or not 0 <= score <= 4:
+            raise SystemExit(f"Human review needs a whole score from 0 to 4 for `{c['id']}`")
+        rows.append((c["name"], score, c["weight"]))
+        total += score * c["weight"]
+        weight += c["weight"]
+    return {"task": review["task"], "reviewer": review["reviewer"], "qualification": review["qualification"], "date": review["date"],
+            "score": total / (4 * weight), "rows": rows, "comments": review.get("comments", "")}
+
+
+def human_md(h):
+    out = ["", "## Human review", "", f"{h['task']}: **{h['score']:.1%}**, by {h['reviewer']} ({h['qualification']}), {h['date']}. "
+           "This is one person's judgement and is not part of the verdict above.", "",
+           "| Criterion | Score (0-4) | Weight |", "| --- | --- | --- |"]
+    out += [f"| {n} | {s} | {w} |" for n, s, w in h["rows"]]
+    if h["comments"]:
+        out += ["", h["comments"]]
+    return "\n".join(out) + "\n"
+
+
 def finish(run_dir, title):
     s = score_run(run_dir)
     (run_dir / "report.md").write_text(report_md(s, title), encoding="utf-8")
@@ -428,7 +457,14 @@ def cmd_score(a):
     if not d.is_dir():
         raise SystemExit(f"No such run directory: {d}")
     s = finish(d, a.title or d.name)
-    sys.stdout.write("\n" + report_md(s, a.title or d.name))
+    md = report_md(s, a.title or d.name)
+    if a.human:
+        h = human_review(a.human)
+        s["human_review"] = h
+        md += human_md(h)
+        (d / "report.md").write_text(md, encoding="utf-8")
+        (d / "report.json").write_text(json.dumps(s, ensure_ascii=False, indent=1), encoding="utf-8")
+    sys.stdout.write("\n" + md)
 
 
 def cmd_compare(a):
@@ -470,6 +506,7 @@ def main():
     p = sub.add_parser("score")
     p.add_argument("run_dir")
     p.add_argument("--title")
+    p.add_argument("--human", help="reviewer's marks against benchmark/rubric/design-review.json")
     p.set_defaults(fn=cmd_score)
     p = sub.add_parser("compare")
     p.add_argument("run_dirs", nargs="+")
