@@ -8,7 +8,7 @@ description: "Check a Hong Kong building's means of escape against the Code of P
 Use when the user asks about fire escape, exit widths, travel distance, staircase numbers/widths, discharge value, refuge floors or protected lobbies for a Hong Kong scheme.
 
 ## Before starting
-1. Read `/mnt/project-files/architect-kb/README.md` and `/mnt/project-files/architect-kb/fs-code/moe-rules.md`.
+1. Read `/mnt/project-files/architect-kb/docs/reference.md` and `/mnt/project-files/architect-kb/fs-code/moe-rules.md`.
 2. For any clause the rules file does not cover, search `/mnt/project-files/architect-kb/fs-code-2011.txt` (full 2024 Edition text) and quote the clause number.
 
 ## Gather inputs

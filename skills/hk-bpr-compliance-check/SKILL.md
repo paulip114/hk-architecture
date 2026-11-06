@@ -8,7 +8,7 @@ description: "Check a Hong Kong building scheme against the Building (Planning) 
 Use when the user asks to check GFA, plot ratio, site coverage, open space, or lighting/ventilation of a Hong Kong scheme, or to test a massing option against Cap. 123F.
 
 ## Before starting
-1. Read `/mnt/project-files/architect-kb/README.md` and `/mnt/project-files/architect-kb/bpr/bpr-rules.md`.
+1. Read `/mnt/project-files/architect-kb/docs/reference.md` and `/mnt/project-files/architect-kb/bpr/bpr-rules.md`.
 2. Note which First Schedule cells are listed under `_uncertain` in `bpr/first_schedule.json`. If the result depends on one of them, say so in the report.
 
 ## Gather inputs
@@ -22,7 +22,7 @@ Ask only for what is missing (one message, a short list):
 If the user gives drawings or a Revit/Excel area schedule instead, extract these figures yourself and state any you assumed.
 
 ## Run
-1. Write the inputs to a JSON file following `examples/demo_composite.json` (field list in README).
+1. Write the inputs to a JSON file following `examples/demo_composite.json` (field list in `docs/reference.md`).
 2. Run `python3 /mnt/project-files/architect-kb/tools/bpr_check.py <file>.json -o <report>.md`.
 3. Save input and report under `/mnt/project-files/projects/<project-name>/`.
 
