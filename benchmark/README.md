@@ -64,7 +64,7 @@ python3 benchmark/archbench.py compare benchmark/runs/my-agent benchmark/runs/my
 - 每題的答案以明確數值存於 `tasks/*.json`，來源寫在 `source`。
 - `anchors.py` 用 repo 工具或基本原理重新計算。`tests/test_benchmark.py` 要求兩者相同，所以工具或規則表一改動而影響答案，測試就會失敗。
 - 判斷題（F07、D06、D08、D09、C05，以及 D07 的一項）沒有工具可以重算，`source` 註明依據。這些題目目前只由 AI 審閱，**最需要 AP 覆核**。
-- README 列為未核實的內容不當標準答案，例如 APP-151 上限基數。合約期限、TM 要求等依賴二手資料的題目，會把規則寫在題目裡，只考套用，不考背誦。
+- README 列為未核實的內容不當標準答案，例如 Cap. 123P 的巡檢週期。合約期限、TM 要求等依賴二手資料的題目，會把規則寫在題目裡，只考套用，不考背誦。
 
 ## 限制
 

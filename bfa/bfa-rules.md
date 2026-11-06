@@ -2,7 +2,7 @@
 
 Draft working rules. Data: `bfa2008.json`. Tool: `../tools/bfa_check.py`.
 
-Source: Design Manual: Barrier Free Access 2008, **2025 Edition (June 2025)**, BD. First issued December 2008; previous revision May 2024. Read through a text extractor on 2026-11-05. The extractor reached Divisions 1–14 and part of 15 only. Divisions 15–20 and Chapter 5 still need checking against the full PDF.
+Source: Design Manual: Barrier Free Access 2008, **2025 Edition (June 2025)**, BD. First issued December 2008; previous revision May 2024. Divisions 1–14 were read through a text extractor on 2026-11-05. Divisions 15–20 were read from the PDF on 2026-11-06. Chapter 5 has not been checked.
 
 ## Legal status
 - The Obligatory Design Requirements of Divisions 1–20 are given effect through the Building (Planning) Regulations (reg 72 and the Third Schedule; the Manual's numbering follows the Schedule "as far as practicable"). *The reg 72 reference was not visible in the extracted text: check in Cap. 123F.*
@@ -54,4 +54,9 @@ Source: Design Manual: Barrier Free Access 2008, **2025 Edition (June 2025)**, B
 | 13 Signs | Letter height ≥ 60 (doors), 110 (corridors), 200 (external). Braille toilet signs 900–1500; Braille exit map 800–1200 above the lift call button. |
 
 ## Not yet verified (upload the full PDF)
-- **Div 15 counters, 16 illumination, 17 call bells, 18 assistive listening, 19 lifts, 20 escalators, Chapter 5.** The tool uses values from memory for lifts (car ≥ 1100 × 1400, door ≥ 800, buttons 900–1200) and counters (≤ 900 high). A shortfall shows as CHECK, not FAIL.
+- **Div 15 counters (paras 70–71):** at least one counter with a portion ≤ 750 mm high and ≥ 750 mm wide. Leg space 400–600 mm deep and ≥ 680 mm high. At least one counter needs an assistive listening system where the background is noisy or counters have screens.
+- **Div 16 illumination (paras 72–74):** ground floor entrance lobby and lift 120 lux; upper lift lobbies, corridors, accessible paths and staircases 85 lux, at floor level along the centre line. Signs 120 lux on the sign surface.
+- **Div 17 call bells (paras 75–76):** weatherproof push button below the vertical grab rail, 600–650 mm above floor. "Emergency Call" notice in English, Chinese and Braille. The alarm goes outside the toilet or to the caretaker's office.
+- **Div 18 assistive listening (para 77):** in at least one counter where Table 2 applies, and in the hall and auditorium of such a building.
+- **Div 19 lifts (paras 78–80):** every floor reached by at least one lift with a car ≥ 1200 × 1100 mm wide, clear entrance ≥ 850 mm, and direct access to the main lift lobby. Handrails with the top of the grip at 850–950 mm and 30–50 mm wall clearance. With more than three lifts, every floor must also be reached by at least one lift with a car ≥ 1500 × 1400 mm (either way round), entrance ≥ 850 mm. All passenger lifts: sliding power-operated doors, closing signal, detection device at 500–600 mm; buttons 900–1200 mm high, at least 20 mm, with Braille and tactile marks. The tool checks car, door and button dimensions only.
+- **Div 20 escalators and conveyors (paras 84–85):** not part of a barrier-free route. Tactile warning strips at both ends.

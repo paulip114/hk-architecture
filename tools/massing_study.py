@@ -161,7 +161,7 @@ def report(spec, out_rows, details):
             L.append(f"| {b['name']} | {b['use']} | {b['storeys']} | {b['ftf_m']} | {f(float(b['plate_m2']))} | "
                      f"{f(float(b.get('footprint_m2', b['plate_m2'])))} | {st:g} | {en:g} |")
             top = en
-        key = [r for r in rows if r[0] in ("21(1)", "21(2)", "21(3)", "20", "OZP", "Lease", "APP-151", "22", "25 / Sch 2")]
+        key = [r for r in rows if r[0] in ("21(1)", "21(2)", "21(3)", "20", "OZP", "Lease", "APP-151 para 4", "22", "25 / Sch 2")]
         L += ["", "| Reg | Item | Proposed | Limit | Result | Note |", "| --- | --- | --- | --- | --- | --- |"]
         for r in key:
             L.append("| " + " | ".join(str(x) for x in r) + " |")

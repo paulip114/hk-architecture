@@ -9,7 +9,7 @@
 | 18A | Site class | B | - | INFO | 2 streets ≥ 4.5 m, frontage ≥ 40% |
 | 23(1) | Building height | 100.4 m | > 61 m | INFO | mean level of (lowest) specified street ≥ 4.5 m to mean roof height over highest usable floor |
 | OZP | Height restriction | 100.4 m | ≤ 110 m | PASS |  |
-| APP-151 | Capped concessions (non-mandatory plant + green features) | 120.00 m² (1.2%) | ≤ 10% of GFA = 987.20 m² | PASS | Also needs APP-152 SBD compliance and BEAM Plus registration |
+| APP-151 para 4 | Capped concessions – non-domestic part (non-mandatory plant + green features) | 120.00 m² (4.3%) | ≤ 10% of GFA = 276.00 m² | PASS | Also needs the para 6 prerequisites: APP-152, APP-156 (domestic / composite), BEAM Plus NB registration and target rating |
 | 21(2) | Composite: Dd/Pd + Dn/Pn | 0.974 | ≤ 1.000 | PASS | Dn = 2.760 (Pn 15); Dd = 7.112 (Pd 9.0); max domestic PR at this Dn = 7.344 |
 | 21(3) | Total accountable GFA | 9,872.00 m² | - | INFO | domestic 7,112.00 m², non-domestic 2,760.00 m²; gross built 11,080.00 m² |
 | OZP | Total PR | 9.872 | ≤ 10 | PASS |  |

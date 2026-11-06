@@ -111,7 +111,7 @@ def run(p):
     floors = p.get("floors", [])
     gfa = {"domestic": 0.0, "non_domestic": 0.0}
     gross_total = 0.0
-    capped_total = 0.0
+    capped = {"domestic": 0.0, "non_domestic": 0.0}
     exempt_lines = []
     for f in floors:
         use = f["use"]
@@ -127,19 +127,24 @@ def run(p):
             d = float(e["area_m2"]) * frac * n
             disregarded += d
             if cat in CAPPED:
-                capped_total += d
+                capped[use] += d
             exempt_lines.append((f["name"], e.get("item", cat), cat, float(e["area_m2"]) * n, d))
         f["_accountable"] = gross - disregarded
         gfa[use] += f["_accountable"]
 
     total_gfa = gfa["domestic"] + gfa["non_domestic"]
-    if capped_total:
-        cap_base = total_gfa  # APP-151: cap on total GFA of development [verify base]
-        ok = capped_total <= APP151_CAP * cap_base
-        add("APP-151", "Capped concessions (non-mandatory plant + green features)",
-            f"{fmt(capped_total)} m² ({capped_total/cap_base*100:.1f}%)",
-            f"≤ 10% of GFA = {fmt(APP151_CAP*cap_base)} m²", PASS if ok else FAIL,
-            "Also needs APP-152 SBD compliance and BEAM Plus registration")
+    # APP-151 para 4 (July 2025): 10% of total GFA of the development; in a composite building or a
+    # development with domestic and non-domestic buildings, each part is capped on its own GFA.
+    labels = {"domestic": "domestic part", "non_domestic": "non-domestic part"}
+    for part in ("domestic", "non_domestic"):
+        if capped[part]:
+            base = gfa[part]
+            ok = capped[part] <= APP151_CAP * base
+            pct = f"{capped[part] / base * 100:.1f}%" if base else "no GFA"
+            who = f" – {labels[part]}" if gfa["domestic"] and gfa["non_domestic"] else ""
+            add("APP-151 para 4", f"Capped concessions{who} (non-mandatory plant + green features)",
+                f"{fmt(capped[part])} m² ({pct})", f"≤ 10% of GFA = {fmt(APP151_CAP * base)} m²", PASS if ok else FAIL,
+                "Also needs the para 6 prerequisites: APP-152, APP-156 (domestic / composite), BEAM Plus NB registration and target rating")
 
     # --- Plot ratio (reg 21)
     btype = bldg["type"]

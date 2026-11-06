@@ -1,8 +1,8 @@
 # Barrier-free access check – 示範：堅尼地城商住大廈（虛構）
 
-**Result: does not comply** (4 fail, 0 to check, 56 items).
+**Result: does not comply** (5 fail, 0 to check, 55 items).
 
-> Draft for review by an Authorized Person. Obligatory Design Requirements of the Design Manual: Barrier Free Access 2008 (2025 Ed.). Lift (Div 19) and counter (Div 15) limits are not yet verified; a shortfall there shows as CHECK, not FAIL.
+> Draft for review by an Authorized Person. Obligatory Design Requirements of the Design Manual: Barrier Free Access 2008 (2025 Ed.).
 
 | Clause | Item | Proposed | Limit | Result | Note |
 | --- | --- | --- | --- | --- | --- |
@@ -58,7 +58,6 @@
 | Div 11 para 49 | 1/F retail toilets WC seat height | 450 mm | 380-450 mm | PASS |  |
 | Div 11 para 51 | 1/F retail toilets basin rim | 750 mm | ≤ 750 mm | PASS |  |
 | Div 11 para 50 | 1/F retail toilets flush control height | 900 mm | 600-1050 mm | PASS |  |
-| Div 19 | Lift L1 (fireman's / accessible) car internal size | 1300×1400 mm | ≥ 1100×1400 mm | PASS | limit from memory, not yet verified against Div 19 |
-| Div 19 | Lift L1 (fireman's / accessible) door clear width | 900 mm | ≥ 800 mm | PASS | limit from memory, not yet verified against Div 19 |
-| Div 19 | Lift L1 (fireman's / accessible) control buttons | 900-1200 mm | 900-1200 mm | PASS | limit from memory, not yet verified against Div 19 |
-| Div 15 | G/F management counter accessible counter height | 850 mm | ≤ 900 mm (unverified) | PASS | limit from memory, verify against Div 15 |
+| Div 19 para 78(1) | At least one accessible lift (car, door) | Lift L1 (fireman's / accessible) | ≥ 1100 × 1200 mm car, ≥ 850 mm door | PASS | This lift must reach every floor and the main lift lobby: confirm on plan |
+| Div 19 para 80 | Lift L1 (fireman's / accessible) control buttons | 900-1200 mm | 900-1200 mm | PASS |  |
+| Div 15 para 70(2)(a) | At least one counter with a low portion | lowest 850 mm | portion ≤ 750 mm high and ≥ 750 mm wide | FAIL |  |

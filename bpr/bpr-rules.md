@@ -59,7 +59,12 @@ Last compiled: 2026-11-05.
 | House void | UFS ≥ 250 m², void ≤ 5% UFS, headroom ≤ 7.0 m |
 
 ### APP-151 overall cap
-- Green and amenity features and non-mandatory plant rooms granted GFA concessions are capped at **10% of total GFA** of the development, with prerequisites (APP-152 Sustainable Building Design guidelines, BEAM Plus registration, energy-efficiency). Mandatory plant rooms and underground car parks are outside the cap. [verify exact list against current APP-151]
+Checked against PNAP APP-151 (July 2025 version, AD/NB1) on 2026-11-06.
+
+- **Cap (para 4):** green and amenity features and non-mandatory / non-essential plant rooms and services are capped at **10% of the total GFA of the development**. In a composite building, or a development with domestic and non-domestic buildings, concessions for each part are calculated separately and capped at 10% of **that part's** GFA. Appendix A lists the features subject to the cap.
+- **Outside the cap (para 5):** mandatory features and essential plant rooms; communal podium and sky gardens that improve permeability; parking and loading space; voids in front of cinemas or in shopping arcades with operational needs (non-domestic); bonus GFA or exemptions for dedication, surrender or setback under the SBD Guidelines; hotel concessions under reg 23A. In `bpr_check.py`, enter uncapped items under a category other than `non_mandatory_plant` or `green_feature`.
+- **Prerequisites (para 6):** APP-152 where applicable; APP-156 for domestic or composite developments where applicable; BEAM Plus New Buildings registration; target rating on the GBP of Anticipated Gold, or Silver plus one specific standard, or Bronze plus two (Appendix C); the para 6(e) submissions before superstructure consent and at OP; the cap; and each feature's own acceptance criteria.
+- **Cap base:** the PNAP says "total GFA" without defining it further. `bpr_check.py` uses accountable GFA, after concessions. Confirm with BD where the result is close to the limit.
 
 ## 6. Storey height – reg 24
 - Rooms for habitation or office: floor-to-ceiling ≥ **2.5 m**, ≥ 2.3 m to underside of beams; sloping ceilings measured at mean height, no part < 2 m.

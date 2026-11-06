@@ -127,10 +127,12 @@ Rule documents and data tables mark facts by how they were checked. Some tools r
 - Cap. 123F First and Second Schedules
 - Cap. 123 and Cap. 123A statutory periods
 - Cap. 131 periods (2.11.2023 English text)
+- PNAP APP-151 cap and prerequisites, APP-152 Table 1 and Lp limit
+- Barrier Free Design Manual Divisions 15-20
 
 **Still partial or unverified:**
 - Cap. 123N minor works item list, Cap. 123P inspection cycles and Cap. 123Q B(C)R
-- APP-151 cap base, and parts of APP-152 and the Barrier Free Design Manual
+- Chapter 5 of the Barrier Free Design Manual
 - SFBC 2025 clauses, which need the purchased form
 
 The list above is a summary. Each rule document gives the details, and the [open issues](https://github.com/paulip114/hk-architecture/issues) track what remains. Laws and practice notes change, so always check the current version.

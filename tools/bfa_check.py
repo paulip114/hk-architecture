@@ -18,8 +18,11 @@ Usage:  python3 bfa_check.py project.json [-o report.md]   (reads the `barrier_f
   toilets[] {name, cubicles_per_sex, accessible_per_sex, unisex (bool), size_mm [w, d], seat_mm, basin_rim_mm, flush_mm},
   hotel {guest_rooms, accessible_rooms},
   auditoria[] {name, fixed_seats, wheelchair_spaces, space_mm [w, d], passage_mm},
-  lifts[] {name, car_mm [w, d], door_mm, button_mm [low, high]}   (limits unverified),
-  counters[] {name, height_mm}                                       (limit unverified)
+  lifts[] {name, car_mm [w, d], door_mm, button_mm [low, high]},
+  counters[] {name, height_mm (lowest portion), width_mm (of that portion), leg_depth_mm, leg_height_mm},
+  illumination[] {name, lux, kind ground_lobby|upper|sign},
+  toilets[] also take call_bell_mm,
+  escalators[] {name, tactile_both_ends (bool)}
 """
 import argparse
 import json
@@ -186,22 +189,47 @@ def run(q):
             add("Div 1 para 4", f"{au['name']} passage to spaces", f"{au['passage_mm']} mm", "≥ 1500 mm", au["passage_mm"] >= 1500)
 
     L = M["lift"]
-    for lf in q.get("lifts", []):
-        note = "limit from memory, not yet verified against Div 19"
-        if lf.get("car_mm"):
-            w, dd = sorted(lf["car_mm"])
-            ok = w >= L["car_mm"][0] and dd >= L["car_mm"][1]
-            add("Div 19", f"{lf['name']} car internal size", f"{w}×{dd} mm", "≥ 1100×1400 mm", PASS if ok else WARN, note)
-        if lf.get("door_mm") is not None:
-            add("Div 19", f"{lf['name']} door clear width", f"{lf['door_mm']} mm", "≥ 800 mm",
-                PASS if lf["door_mm"] >= L["door_mm"] else WARN, note)
+    lifts = q.get("lifts", [])
+    sized = [lf for lf in lifts if lf.get("car_mm") and lf.get("door_mm") is not None]
+    def fits(lf, car):
+        w, dd = sorted(lf["car_mm"])
+        return w >= car[0] and dd >= car[1] and lf["door_mm"] >= L["door_min_mm"]
+    if sized:
+        good = [lf["name"] for lf in sized if fits(lf, L["car_min_mm"])]
+        add("Div 19 para 78(1)", "At least one accessible lift (car, door)", ", ".join(good) or "none", "≥ 1100 × 1200 mm car, ≥ 850 mm door", bool(good),
+            "This lift must reach every floor and the main lift lobby: confirm on plan")
+        if len(lifts) > L["large_required_if_lifts_gt"]:
+            big = [lf["name"] for lf in sized if fits(lf, L["large_car_min_mm"])]
+            add("Div 19 para 78(2)", "More than 3 lifts: at least one large lift", ", ".join(big) or "none", "≥ 1400 × 1500 mm car, ≥ 850 mm door", bool(big),
+                "This lift must reach every floor: confirm on plan")
+    for lf in lifts:
         if lf.get("button_mm"):
             lo, hi = lf["button_mm"]
-            add("Div 19", f"{lf['name']} control buttons", f"{lo}-{hi} mm", "900-1200 mm",
-                PASS if lo >= L["button_mm"][0] and hi <= L["button_mm"][1] else WARN, note)
+            add("Div 19 para 80", f"{lf['name']} control buttons", f"{lo}-{hi} mm", "900-1200 mm",
+                lo >= L["button_mm"][0] and hi <= L["button_mm"][1])
+    C = M["counter"]
+    counters = [c for c in q.get("counters", []) if c.get("height_mm") is not None]
+    if counters:
+        low = [c for c in counters if c["height_mm"] <= C["portion_height_max_mm"]
+               and c.get("width_mm", C["portion_width_min_mm"]) >= C["portion_width_min_mm"]]
+        unknown = [c["name"] for c in low if c.get("width_mm") is None]
+        add("Div 15 para 70(2)(a)", "At least one counter with a low portion",
+            ", ".join(c["name"] for c in low) or f"lowest {min(c['height_mm'] for c in counters)} mm", "portion ≤ 750 mm high and ≥ 750 mm wide",
+            (WARN if unknown and len(unknown) == len(low) else True) if low else False, "width of the low portion not given" if unknown else "")
     for co in q.get("counters", []):
-        add("Div 15", f"{co['name']} accessible counter height", f"{co['height_mm']} mm", "≤ 900 mm (unverified)",
-            PASS if co["height_mm"] <= M["counter"]["height_max_mm"] else WARN, "limit from memory, verify against Div 15")
+        if co.get("leg_depth_mm") is not None:
+            add("Div 15 para 71(2)", f"{co['name']} leg space depth", f"{co['leg_depth_mm']} mm", "400-600 mm", rng(co["leg_depth_mm"], C["leg_depth_mm"]))
+        if co.get("leg_height_mm") is not None:
+            add("Div 15 para 71(2)", f"{co['name']} leg space height", f"{co['leg_height_mm']} mm", "≥ 680 mm", co["leg_height_mm"] >= C["leg_height_min_mm"])
+    I = M["illumination_lux"]
+    need = {"ground_lobby": I["ground_lobby_and_lift"], "upper": I["upper_lobby_corridor_path_stair"], "sign": I["sign_surface"]}
+    for il in q.get("illumination", []):
+        add("Div 16 paras 72-73", f"{il['name']} illumination", f"{il['lux']} lux", f"≥ {need[il['kind']]} lux", il["lux"] >= need[il["kind"]])
+    for tl in q.get("toilets", []):
+        if tl.get("call_bell_mm") is not None:
+            add("Div 17 para 76", f"{tl['name']} emergency call button height", f"{tl['call_bell_mm']} mm", "600-650 mm", rng(tl["call_bell_mm"], M["call_bell_mm"]["height"]))
+    for es in q.get("escalators", []):
+        add("Div 20 para 85", f"{es['name']} tactile warning strips", "both ends" if es.get("tactile_both_ends") else "missing", "both ends", bool(es.get("tactile_both_ends")))
     return rows
 
 
@@ -218,8 +246,7 @@ def main():
     out = [f"# Barrier-free access check – {p.get('project', 'Untitled')}", "",
            f"**Result: {verdict}** ({fails} fail, {checks} to check, {len(rows)} items).", "",
            "> Draft for review by an Authorized Person. Obligatory Design Requirements of the Design Manual: "
-           "Barrier Free Access 2008 (2025 Ed.). Lift (Div 19) and counter (Div 15) limits are not yet verified; "
-           "a shortfall there shows as CHECK, not FAIL.", "",
+           "Barrier Free Access 2008 (2025 Ed.).", "",
            "| Clause | Item | Proposed | Limit | Result | Note |", "| --- | --- | --- | --- | --- | --- |"]
     out += ["| " + " | ".join(str(x) for x in r) + " |" for r in rows]
     md = "\n".join(out) + "\n"

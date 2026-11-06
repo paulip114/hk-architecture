@@ -107,5 +107,5 @@
    "desc": "地積比及上蓋面積是否符合 B(P)R"
   }
  ],
- "source": "tools/bpr_check.py (APP-151 cap base left out: README lists it as unverified)"
+ "source": "tools/bpr_check.py (APP-151 cap left out: PNAP does not define the base further)"
 }
