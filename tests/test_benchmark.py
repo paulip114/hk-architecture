@@ -2,7 +2,9 @@
 
 Run:  python3 -m unittest discover -s tests
 """
+import contextlib
 import importlib.util
+import io
 import json
 import shlex
 import subprocess
@@ -187,7 +189,8 @@ class HumanReview(unittest.TestCase):
             run = Path(tmp) / "r"
             ab.cmd_baseline(type("A", (), {"which": "naive", "name": "r", "out": str(run)}))
             f = self.write(tmp, scores={k: 4 for k in json.loads(self.write(tmp).read_text(encoding="utf-8"))["scores"]})
-            ab.cmd_score(type("A", (), {"run_dir": str(run), "title": "t", "human": str(f)}))
+            with contextlib.redirect_stdout(io.StringIO()):   # the report has Chinese, and main() is what sets UTF-8
+                ab.cmd_score(type("A", (), {"run_dir": str(run), "title": "t", "human": str(f)}))
             s = json.loads((run / "report.json").read_text(encoding="utf-8"))
             self.assertEqual(s["verdict"], "FAIL")
             self.assertEqual(s["human_review"]["score"], 1.0)
