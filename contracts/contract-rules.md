@@ -73,6 +73,6 @@ Source: CIC briefing and CMS update, read 2026-11-06. Tool: `contract_admin.py` 
 - For delay questions, walk through: Relevant Event? notice given? critical? concurrent? EOT amount, then LD and loss and expense separately.
 
 ## Open items
-- 2025 Edition clause text and numbering: needs the purchased form (copyright, not published online).
-- HKIA appointment agreement: current edition, stage percentages and standard services are not published online; check with HKIA.
+- 2025 Edition: clause references and periods are in `sfbc_2025` in `sfbc.json`, checked on 2026-11-07 against a pre-launch copy. Recheck against the final form ([#60](https://github.com/paulip114/hk-architecture/issues/60)). Under this edition the mediation period is 42 days, and Relevant Events are called listed events (clause 25.1(3), 24 paragraphs). Do not assume the 2005 periods apply without checking this table.
+- HKIA appointment agreement: current edition, stage percentages and standard services are not published online; check with HKIA ([#56](https://github.com/paulip114/hk-architecture/issues/56)).
 - 2005 form: interim certificate and honouring periods, EOT initial notice, determination notice periods and the full Relevant Events list are not in any public source found; the full text was removed from kctang.com.hk for copyright. Check against the form.
