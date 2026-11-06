@@ -8,6 +8,10 @@ Unfinished work is tracked in [GitHub issues](https://github.com/paulip114/hk-ar
 
 | Path | What it is |
 | --- | --- |
+| `statutes/eia-rules.md` | EIA Ordinance (Cap. 499): how to tell whether a scheme is affected, and what is required |
+| `statutes/railway-protection-rules.md` | Railway protection (PNAP APP-24, Cap. 519, Cap. 276): how to tell whether a site is affected, process and design limits |
+| `statutes/building-management-rules.md` | Building Management Ordinance (Cap. 344): common parts, owners' decisions and DMCs for design and A&A work |
+| `statutes/lifts-escalators-rules.md` | Lifts and Escalators Ordinance (Cap. 618): responsible person, examination and use permits |
 | `docs/document-library.md` | Source documents used to check the rules: version dates, official links and what each is used for. The documents are not in the repo |
 | `bpr/bpr-rules.md` | Building (Planning) Regulations working rules: site class, SC, PR, GFA exemptions (PNAP APP-2, APP-151), open space, lighting & ventilation |
 | `bpr/first_schedule.json` | First and Second Schedule as data, verified against official Cap. 123F (17-09-2026) |
