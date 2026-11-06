@@ -12,6 +12,9 @@ Unfinished work is tracked in [GitHub issues](https://github.com/paulip114/hk-ar
 | `statutes/railway-protection-rules.md` | Railway protection (PNAP APP-24, Cap. 519, Cap. 276): how to tell whether a site is affected, process and design limits |
 | `statutes/building-management-rules.md` | Building Management Ordinance (Cap. 344): common parts, owners' decisions and DMCs for design and A&A work |
 | `statutes/lifts-escalators-rules.md` | Lifts and Escalators Ordinance (Cap. 618): responsible person, examination and use permits |
+| `statutes/small-house-rules.md` | NT Small House Policy: eligibility, grant types, Cap. 121 limits and procedure |
+| `statutes/nt-land-exchange-rules.md` | NT land exchange: which arrangement applies, NDAs and the standard rate pilot |
+| `statutes/land-resumption-rules.md` | Cap. 124 process, statutory compensation and ex-gratia compensation |
 | `docs/document-library.md` | Source documents used to check the rules: version dates, official links and what each is used for. The documents are not in the repo |
 | `bpr/bpr-rules.md` | Building (Planning) Regulations working rules: site class, SC, PR, GFA exemptions (PNAP APP-2, APP-151), open space, lighting & ventilation |
 | `bpr/first_schedule.json` | First and Second Schedule as data, verified against official Cap. 123F (17-09-2026) |

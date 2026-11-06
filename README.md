@@ -130,7 +130,7 @@ Rule documents and data tables mark facts by how they were checked. Some tools r
 - Cap. 123F First and Second Schedules
 - Cap. 123 and Cap. 123A statutory periods
 - Cap. 131 periods (2.11.2023), TPB guidelines PG-30D, PG-31B, PG-35E and PG-36C, and the Rural Covering Notes
-- Parts of Cap. 499, Cap. 344 and Cap. 618, and PNAP APP-24, as listed in [`statutes/`](statutes/)
+- Parts of Cap. 499, Cap. 344, Cap. 618, Cap. 121 and Cap. 124, PNAP APP-24, and the LandsD small house, NT land exchange and ex-gratia notes, as listed in [`statutes/`](statutes/)
 - LAO PN 3/2020 and 3/2020A, Basic Law Art. 120-123, Cap. 150, Cap. 515 and Cap. 648 lease and rent provisions
 - PNAP APP-151 cap and prerequisites, and the APP-152 figures used by `sbd_check.py`
 - Technical Memorandum Table 1, BA form numbers, and Barrier Free Design Manual Divisions 15 to 20

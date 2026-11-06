@@ -57,6 +57,8 @@ LandsD also publishes the [Appendix to PN 3/2020](https://www.landsd.gov.hk/doc/
 
 ## Not in the library yet
 
+These were read online on 2026-11-07 for `statutes/` and have no local copy: LandsD [How to Apply for a Small House Grant](https://www.landsd.gov.hk/doc/en/small-house/NTSHP_E_text.pdf), [ex-gratia compensation pamphlet](https://www.landsd.gov.hk/doc/en/rehouse/Silver%20Pamphlet%20(ENG).pdf), and [LAO practice notes](https://www.landsd.gov.hk/en/resources/practice-notes/lao.html) 1/2025, 1/2025B, 11/2023A, 13/2023, 10/2025 and 7/2026.
+
 | Document | Needed for | Status |
 | --- | --- | --- |
 | HKIA Standard Form of Agreement and Standard Conditions of Agreement | [#26](https://github.com/paulip114/hk-architecture/issues/26) | Not published online and not available yet. Appointment rules stay unverified until it is checked |

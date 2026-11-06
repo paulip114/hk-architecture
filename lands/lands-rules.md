@@ -100,7 +100,7 @@ Programme rule of thumb (uninterrupted case, no appeal): 3 weeks + 22 weeks + 2 
 ## 9. Open items
 - Lands Department's current administrative fee was not found ([#63](https://github.com/paulip114/hk-architecture/issues/63)). The Land Registry registration fees under Cap. 128B are a separate charge.
 - Checked on 2026-11-07: PN 3/2020 (27 April 2020), PN 3/2020A (11 August 2021), Basic Law Art. 120-123, Cap. 150 (24.8.2025), Cap. 515 (22.5.2025) and Cap. 648 sections 3, 4, 11 and 12 (22.5.2025). The PN 3/2020 Appendix sketch and Cap. 648 Part 4 were not read in detail.
-- Small House Policy, NT land exchange specifics and resumption / compensation not covered.
+- Small House Policy, NT land exchange and resumption are in `../statutes/small-house-rules.md`, `nt-land-exchange-rules.md` and `land-resumption-rules.md`. No tool checks them.
 
 ## Sources
 - [LAO Practice Notes index](https://www.landsd.gov.hk/en/resources/practice-notes/lao.html)
