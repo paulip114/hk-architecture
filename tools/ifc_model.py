@@ -15,6 +15,7 @@ import math
 from pathlib import Path
 
 import ifcopenshell
+import sys
 import ifcopenshell.api
 import ifcopenshell.api.root
 import ifcopenshell.api.unit
@@ -108,4 +109,6 @@ def main():
 
 
 if __name__ == "__main__":
+    for stream in (sys.stdout, sys.stderr):
+        stream.reconfigure(encoding="utf-8")  # reports contain Chinese and symbols
     main()
