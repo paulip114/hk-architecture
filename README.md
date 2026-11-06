@@ -2,6 +2,18 @@
 
 Working knowledge and tools Claude reads before doing architect's work in this project. Every output from here is a draft for review and signature by an Authorized Person / Registered Architect.
 
+## Knowledge graph
+
+How the skills, tools, data tables, rule documents and official sources connect, by domain. Click to enlarge.
+
+![Knowledge graph of the repo: 12 skills, 21 tools plus the BIM scripts, data tables, rule documents and official sources, grouped by domain. Other domains feed into bpr_check.py.](docs/knowledge-graph.png)
+
+## Registered Architect's workflow
+
+A project from appointment to Final Certificate, across the design, statutory (AP) and contract duties, with the tools for each stage. Click to enlarge.
+
+![Workflow in seven stages from inception to completion and DLP, with parallel lanes for client and design, statutory approvals as Authorized Person, and contract and cost, plus the repo tools for each stage.](docs/architect-workflow.png)
+
 | Path | What it is |
 | --- | --- |
 | `bpr/bpr-rules.md` | Building (Planning) Regulations working rules: site class, SC, PR, GFA exemptions (PNAP APP-2, APP-151), open space, lighting & ventilation |
