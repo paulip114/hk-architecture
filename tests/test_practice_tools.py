@@ -2,6 +2,7 @@
 
 Run:  python3 -m unittest discover -s tests
 The drawing tests are skipped if ezdxf / ifcopenshell / shapely are missing (pip install -r requirements-drawing.txt).
+Pillow is deliberately not part of that skip check, so test_svg_preview fails if it is missing from the requirements.
 """
 import copy
 import importlib.util
@@ -10,6 +11,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import xml.etree.ElementTree as ET
 from datetime import date
 from pathlib import Path
 
@@ -148,6 +150,17 @@ class Drawing(unittest.TestCase):
                            capture_output=True, text=True)
         self.assertEqual(r.returncode, 1)
         self.assertIn("room outside footprint", r.stdout)
+
+    def test_svg_preview(self):
+        # ezdxf's drawing add-on imports PIL, but ezdxf only installs Pillow through its optional extras.
+        dxf, svg = self.tmp / "p.dxf", self.tmp / "p.svg"
+        r = subprocess.run([sys.executable, TOOLS / "dxf_plan.py", self.proj, "-o", dxf, "--svg", svg],
+                           capture_output=True, text=True)
+        self.assertEqual(r.returncode, 0, r.stderr)
+        root = ET.parse(svg).getroot()
+        ns = "{http://www.w3.org/2000/svg}"
+        self.assertEqual(root.tag, ns + "svg")
+        self.assertTrue(any(e.get("d") for e in root.iter(ns + "path")), "SVG has no drawn geometry")
 
     def test_takeoff_hole(self):
         import ezdxf
