@@ -3,13 +3,16 @@
 
 Reads the `submission` block of project.json and submission/periods.json.
 Dates are ISO (YYYY-MM-DD). Periods end on start date + N, because Cap. 1 s.71(1)(a) excludes the
-start day. The tool does not move a last day that falls on a public holiday, gale warning day or
-black rainstorm warning day (s.71(1)(b)), so a statutory last day can be later than shown. Periods were checked against Cap. 123 (version
+start day. A statutory period of days whose last day is a Sunday, a listed general holiday or a day in
+`warning_days` moves to the next day that is none of these (s.71(1)(b)). PNAP and BD targets do not move,
+and neither do periods in months. submission/hk_holidays.json lists general holidays; later years move for
+Sundays only. No statutory period in this tool is 6 days or less, so s.71(1)(d) does not arise. Periods were checked against Cap. 123 (version
 1.3.2026) and Cap. 123A (version 30.6.2024); any left unverified are marked "(unverified)".
 
 Usage: python3 submission_timeline.py project.json [-o report.md]
 
 submission:
+  warning_days[]: gale or black rainstorm warning days that fall on a last day
   as_of: date (default today)
   submissions[]: id, kind (GBP / structural / foundation / drainage / site_formation / A&A),
       type (first | resubmission | major_revision | amendment (reg 33, works already consented) |
@@ -39,6 +42,9 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 P = json.loads((HERE.parent / "submission" / "periods.json").read_text(encoding="utf-8"))
 PER, LIM, NMA = P["periods"], P["limits"], P["not_minor_amendment_thresholds"]
+HOLIDAYS = json.loads((HERE.parent / "submission" / "hk_holidays.json").read_text(encoding="utf-8"))
+CAP123N_PERIODS = {"mw_completion_after", "mbis_report_after_inspection"}  # Cap. 123N and Cap. 123P, though the ref cites BD
+WARNING_DAYS = set()
 PASS, FAIL, WARN, INFO = "PASS", "FAIL", "CHECK", "INFO"
 
 
@@ -53,10 +59,23 @@ def add_months(day, n):
     return dt.date(y, m, min(day.day, last))
 
 
+def is_statutory(key):
+    """Cap. 1 s.71 applies to periods set by an Ordinance or its subsidiary legislation, not to PNAP or BD targets."""
+    return PER[key].get("ref", "").startswith(("B(A)R", "BO ")) or key in CAP123N_PERIODS
+
+
+def rolled(day, warning_days=()):
+    """Cap. 1 s.71(1)(b): a last day on a public holiday or warning day moves to the next day that is neither."""
+    while day.weekday() == 6 or day.isoformat() in HOLIDAYS["general_holidays"] or day.isoformat() in warning_days:
+        day += dt.timedelta(days=1)
+    return day
+
+
 def plus(start, key):
     if PER[key].get("months"):
-        return add_months(start, PER[key]["months"])
-    return start + dt.timedelta(days=PER[key]["days"])
+        return add_months(start, PER[key]["months"])  # s.71(1)(b) follows on from "a period of days" in (a)
+    due = start + dt.timedelta(days=PER[key]["days"])
+    return rolled(due, WARNING_DAYS) if is_statutory(key) else due
 
 
 def tag(key):
@@ -79,6 +98,8 @@ def check(sub):
     out = []
     add = lambda sec, item, st, note, r="": out.append((sec, item, st, note, r))
     today = d(sub.get("as_of")) or dt.date.today()
+    WARNING_DAYS.clear()
+    WARNING_DAYS.update(sub.get("warning_days", []))
 
     # Plans
     for s in sub.get("submissions", []):
@@ -287,7 +308,7 @@ def check(sub):
 
 
 def report(rows, today, name):
-    lines = [f"# BD submission timeline: {name}", "", f"As of {today}. Draft for AP review. Periods marked (unverified) are not yet checked against Cap. 123 / Cap. 123A.", ""]
+    lines = [f"# BD submission timeline: {name}", "", f"As of {today}. Draft for AP review. Statutory last days move under Cap. 1 s.71(1)(b) for Sundays, general holidays listed to {HOLIDAYS['covered_to_year']} and any warning_days given. Periods marked (unverified) are not yet checked against Cap. 123 / Cap. 123A.", ""]
     fails = [r for r in rows if r[2] == FAIL]
     checks = [r for r in rows if r[2] == WARN]
     lines.append(f"**Summary:** {len(fails)} FAIL, {len(checks)} CHECK, {len(rows)} items.")

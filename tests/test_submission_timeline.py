@@ -64,7 +64,7 @@ class Checks(unittest.TestCase):
 
     def test_op_deemed(self):
         r = find(rows({"op": {"applied": "2026-11-01", "prereq": {}}}), "Refusal due by")[0]
-        self.assertIn("2026-11-15", r[1])
+        self.assertIn("2026-11-16", r[1])
 
     def test_ap_completion_certificate(self):
         rs = rows({"completion": {"date": "2026-10-01", "rc_cert_date": "2026-10-08", "ap_cert_date": "2026-10-16"}})
@@ -74,6 +74,34 @@ class Checks(unittest.TestCase):
     def test_demo_runs(self):
         demo = json.loads((ROOT / "examples" / "demo_submission.json").read_text(encoding="utf-8"))
         self.assertTrue(rows(demo["submission"]))
+
+
+
+class Cap1Section71(unittest.TestCase):
+    def consent_due(self, applied, **kw):
+        sub = {"consents": [{"id": "C", "applied": applied}], **kw}
+        return next(r[1] for r in rows(sub) if r[1].startswith("Consent due"))
+
+    def test_last_day_on_sunday_moves_to_monday(self):
+        # 2027-01-03 + 28 days = 2027-01-31, a Sunday
+        self.assertIn("2027-02-01", self.consent_due("2027-01-03"))
+
+    def test_last_day_on_general_holiday_moves(self):
+        # 2026-11-27 + 28 days = 2026-12-25, followed by 26 December and Sunday 27 December
+        self.assertIn("2026-12-28", self.consent_due("2026-11-27"))
+
+    def test_warning_day_moves_the_last_day(self):
+        # 2027-01-01 + 28 days = 2027-01-29, a Friday
+        self.assertIn("2027-01-29", self.consent_due("2027-01-01"))
+        self.assertIn("2027-01-30", self.consent_due("2027-01-01", warning_days=["2027-01-29"]))
+
+    def test_pnap_targets_do_not_move(self):
+        self.assertEqual(st.plus(st.d("2027-01-03"), "fast_track_aa"), st.d("2027-02-02"))
+        self.assertEqual(st.plus(st.d("2026-12-17"), "enquiry_45th_day"), st.d("2027-01-31"))
+
+    def test_holiday_list_covers_a_stated_year(self):
+        self.assertGreaterEqual(st.HOLIDAYS["covered_to_year"], 2026)
+        self.assertIn("2026-12-25", st.HOLIDAYS["general_holidays"])
 
 
 if __name__ == "__main__":
