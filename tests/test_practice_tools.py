@@ -7,6 +7,7 @@ Pillow is deliberately not part of that skip check, so test_svg_preview fails if
 import copy
 import importlib.util
 import json
+import os
 import subprocess
 import sys
 import tempfile
@@ -205,6 +206,20 @@ class Drawing(unittest.TestCase):
         log = ifcopenshell.validate.json_logger()
         ifcopenshell.validate.validate(f, log)
         self.assertEqual(log.statements, [])
+
+
+class Console(unittest.TestCase):
+    def test_every_tool_sets_utf8_output(self):
+        for path in sorted(TOOLS.glob("*.py")):
+            self.assertIn('reconfigure(encoding="utf-8")', path.read_text(encoding="utf-8"), path.name)
+
+    def test_reports_print_on_a_non_utf8_console(self):
+        env = dict(os.environ, PYTHONIOENCODING="cp1252", PYTHONUTF8="0")
+        cases = (("cost_estimate.py", "demo_practice.json"), ("bpr_check.py", "demo_composite.json"))
+        for tool, demo in cases:
+            r = subprocess.run([sys.executable, TOOLS / tool, ROOT / "examples" / demo], capture_output=True, env=env)
+            self.assertNotIn(b"UnicodeEncodeError", r.stderr, tool)
+            self.assertIn("Draft", r.stdout.decode("utf-8"), tool)
 
 
 class CLI(unittest.TestCase):

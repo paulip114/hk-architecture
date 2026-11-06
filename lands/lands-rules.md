@@ -16,7 +16,7 @@ Last compiled: 2026-11-05. Sources read: LAO PN 2/2023, 4/2021, 2/2018, 4/2014A,
 Lease term and Government rent. Check the lot's lease from the Land Registry search (IL / KIL / NKIL / STTL / TPTL / DD lot number).
 - **Basic Law Art. 120-123:** leases extending beyond 30.6.1997 continue to be protected (Art. 120). Leases granted or renewed from 27.5.1985 to 30.6.1997 with no right of renewal, extending beyond 30.6.1997 and expiring by 30.6.2047, need no additional premium from 1.7.1997 but pay annual rent of 3% of rateable value (Art. 121). Rent stays unchanged on old schedule lots, village lots, small houses and similar rural holdings held by the persons Art. 122 describes. Leases without a right of renewal expiring after 1997 are dealt with under Hong Kong law and policy (Art. 123).
 - **Cap. 150:** New Territories leases that would have expired before 30.6.1997 were extended until 30.6.2047 without additional premium (s.2, s.6). It excludes short term tenancies and leases for special purposes.
-- **Cap. 648, in force 5.7.2024:** for a lease expiring on or after 5.7.2024 with no remaining right of renewal, not a short term tenancy (s.3). A lease covered by an Extension Notice and not on a Non-extension List is extended for 50 years from the day after expiry, without additional premium (s.7, s.8, s.12). Part 4 sets approval requirements for certain land, so read it for the lot in question.
+- **Cap. 648, in force 5.7.2024:** for a lease expiring on or after 5.7.2024 with no remaining right of renewal, not a short term tenancy (s.3). A lease covered by an Extension Notice and not on a Non-extension List is extended for 50 years from the day after expiry, without additional premium (s.7, s.8, s.12). Part 4 applies where a foreign-related entity is a registered owner and the land or premises are used for a consular post or an international organization's representative office, or as staff residences. It needs the approval of the Office of the Commissioner of the Ministry of Foreign Affairs by the expiry date. For land under s.15, without approval the lease is not extended under s.12 and ends on expiry (s.18). Section 19 sets the consequences for interests under s.16, and was not read in detail.
 - **Cap. 515:** Government rent is 3% of rateable value (s.6) on leases extended by Cap. 150 s.6 or Cap. 648 s.12, and leases with an express obligation to pay that rent (s.3). Section 4 exempts certain interests of indigenous villagers.
 
 ## 2. Clauses that drive design
@@ -99,7 +99,7 @@ Programme rule of thumb (uninterrupted case, no appeal): 3 weeks + 22 weeks + 2 
 
 ## 9. Open items
 - Lands Department's current administrative fee was not found ([#63](https://github.com/paulip114/hk-architecture/issues/63)). The Land Registry registration fees under Cap. 128B are a separate charge.
-- Checked on 2026-11-07: PN 3/2020 (27 April 2020), PN 3/2020A (11 August 2021), Basic Law Art. 120-123, Cap. 150 (24.8.2025), Cap. 515 (22.5.2025) and Cap. 648 sections 3, 4, 11 and 12 (22.5.2025). The PN 3/2020 Appendix sketch and Cap. 648 Part 4 were not read in detail.
+- Checked on 2026-11-07: PN 3/2020 (27 April 2020), PN 3/2020A (11 August 2021), Basic Law Art. 120-123, Cap. 150 (24.8.2025), Cap. 515 (22.5.2025) and Cap. 648 sections 3, 4, 11, 12 and 14-18 (22.5.2025). The PN 3/2020 Appendix sketch was not read in detail.
 - Small House Policy, NT land exchange specifics and resumption / compensation not covered.
 
 ## Sources

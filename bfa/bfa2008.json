@@ -1,10 +1,7 @@
 {
  "_source": "Design Manual: Barrier Free Access 2008 (2025 Edition, June 2025), BD. Read from https://www.bd.gov.hk/doc/en/resources/codes-and-references/code-and-design-manuals/BFA2008_e.pdf on 2026-11-05 through a text extractor. Obligatory Design Requirements only (Mandatory Section); best-practice / recommended items are not checked.",
  "_checked": "Divisions 15-20 read on 2026-11-06 from the same PDF: para 78 from a rendered page, the rest by text extraction.",
- "_unverified": [
-  "Car park bay length and transfer zone: not stated in the extract.",
-  "Chapter 5 (building services design requirements) has not been read."
- ],
+ "_unverified": [],
  "extent_table_1": {
   "domestic_gt_4_storeys": "all common areas",
   "domestic_le_4_storeys": "main entrance, ground-floor common area and means of access",
@@ -32,7 +29,7 @@
  },
  "auditorium": {"spaces_le_800": 4, "per_400_over_800": 2, "space_mm": [800, 1300], "passage_mm": 1500, "ref": "Div 1 para 4"},
  "hotel": {"per_100_rooms": 2, "ref": "Div 2 para 7(2)"},
- "carpark": {"table": [[50, 1], [150, 2], [250, 3], [350, 4], [450, 5], [null, 6]], "bay_width_mm": 3500, "bay_beside_shared_mm": 2500, "shared_area_mm": 1200, "ref": "Div 3 paras 8-9"},
+ "carpark": {"table": [[50, 1], [150, 2], [250, 3], [350, 4], [450, 5], [null, 6]], "bay_width_mm": 3500, "bay_beside_shared_mm": 2500, "shared_area_mm": 1200, "bay_length_figure_mm": 5000, "ref": "Div 3 paras 8-9; length shown in Figure 3, not stated in the paragraphs"},
  "access_route": {"width_mm": 1050, "ref": "Div 4 para 12"},
  "ramp": {"width_mm": 1050, "landing_mm": [1500, 1500], "max_gradient": 12,
           "minor": [{"gradient": 10, "max_length_mm": 1500, "max_rise_mm": 150}, {"gradient": 8, "max_length_mm": 600, "max_rise_mm": 75}],
@@ -46,6 +43,7 @@
             "flush_mm": [600, 1050], "rail_dia_mm": [32, 40], "folding_rail_mm": [725, 750], "per_sex_le_20": 1, "per_sex_gt_20": 2, "ref": "Div 11 paras 46-53"},
  "shower": {"compartment_mm": [1500, 900], "seat_mm": [430, 480], "threshold_mm": 13, "ref": "Div 12"},
  "sign_letter_min_mm": {"door": 60, "corridor": 110, "external": 200, "ref": "Div 13 para 66"},
+ "visual_fire_alarm": {"ref": "Chapter 5 para 5.2.3", "note": "Flashing red light labelled Fire Alarm in English and Chinese, where Table 2 requires it. Not required in exit staircases and their smoke lobbies, or the areas listed in para 5.2.3(b)."},
  "lift": {"car_mm": {"width": 1100, "depth": 1200}, "door_mm": 850, "large_car_mm": [1400, 1500], "large_car_if_lifts_over": 3,
           "button_mm": [900, 1200], "button_size_min_mm": 20, "handrail_mm": [850, 950], "handrail_wall_clear_mm": [30, 50], "detection_mm": [500, 600], "ref": "Div 19 paras 78-80"},
  "counter": {"height_max_mm": 750, "width_min_mm": 750, "leg_depth_mm": [400, 600], "leg_height_min_mm": 680, "ref": "Div 15 paras 70-71"},

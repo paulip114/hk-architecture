@@ -101,7 +101,7 @@ Exit code 1 when any item fails.
 | `examples/demo_practice.json` | Demo for all six tools; outputs `demo_practice_*` |
 | `tests/test_practice_tools.py` | `python3 -m unittest discover -s tests` |
 | `tests/test_compliance_rules.py` | Tests for the APP-151 cap, B(P)R reg 31, the APP-152 figures and the barrier-free lift and counter limits, run by the same command |
-| `.github/workflows/tests.yml` | Runs the tests and BIM tests with the drawing packages on Python 3.9 and 3.13 |
+| `.github/workflows/tests.yml` | Runs the tests and BIM tests with the drawing packages on Linux (Python 3.9 and 3.13) and Windows (Python 3.13) |
 
 Drawing tools need `pip install -r requirements-drawing.txt` (ezdxf, ifcopenshell, shapely, pillow). Every output is a draft: contract results for the Architect / QS against the signed contract, cost for a QS to develop, supervision plan for the AP / RSE / AS, drawings marked "SKETCH – NOT FOR SUBMISSION".
 ## Fire Code Part A / Part F, FSD minimum FSI, energy efficiency
