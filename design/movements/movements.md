@@ -71,7 +71,7 @@
 - 原則：反對現代主義單一；Venturi《建築的複雜性與矛盾性》(1966)「Less is a bore」；《向拉斯維加斯學習》(1972)「裝飾棚子 decorated shed」；Rossi《城市建築》(1966) 類型學。
 - 特徵：歷史符號、拼貼、雙重譯碼（專家同大眾都讀得明）、顏色、諷喻。
 - 作品：Venturi 母親住宅 Vanna Venturi House (1964)；Charles Moore Piazza d'Italia (1978)；Michael Graves Portland Building (1982)；Philip Johnson AT&T Building (1984)。
-- 香港（可討論）：凌霄閣 (1997，Terry Farrell)；中環廣場 (1992，劉榮廣伍振民建築師事務所，待核)；力寶中心 (1988，Paul Rudolph，亦可歸晚期現代)。
+- 香港（可討論）：凌霄閣 (1997，Terry Farrell)；中環廣場 (1992，伍振民建築師事務所，現稱劉榮廣伍振民建築師事務所)；力寶中心 (1988，Paul Rudolph，亦可歸晚期現代)。
 
 ## 12. 高技派 High-Tech（1970s–）
 - 原則：技術樂觀主義；結構、機電、預製構件外露；可變、可擴展。
@@ -125,5 +125,5 @@
 古典 → 文藝復興 → 新古典／哥德復興 (19C) → 工藝美術／新藝術 (1890s) → 芝加哥學派 (1890s) → 現代主義 (1920s) → 裝飾藝術 (1930s) → 國際風格 (1932) → 粗獷主義 (1950s) → 新陳代謝 (1960) → 後現代 (1966–) → 高技派 (1977–) → 批判性地域主義 (1983) → 解構主義 (1988) → 極簡 (1990s) → 參數化 (2008) → 可持續／再用 (2010s)
 
 ## 香港例子嘅待核事項
-- 中環廣場 (1992) 建築師：常見資料寫劉榮廣伍振民建築師事務所，待核。
+- 中環廣場 (1992) 建築師：Ng Chun Man and Associates，現稱 Dennis Lau & Ng Chun Man Architects & Engineers（DLN）。來源：[Wikipedia](https://en.wikipedia.org/wiki/Central_Plaza_(Hong_Kong))、[SCMP 劉榮廣專訪](https://www.scmp.com/article/670749/dennis-lau)，兩者都係二手資料，2026-11-06 查閱。
 - 部分香港建築嘅流派歸類（藝術中心、文化中心、力寶中心）屬學術討論，答題時寫「可以歸入⋯⋯因為⋯⋯」。
