@@ -59,7 +59,7 @@ python3 tools/cost_estimate.py examples/demo_practice.json             # order o
 python3 tools/fs_lookup.py "travel distance"                           # search the Fire Code
 ```
 
-On Windows, use `python` in place of `python3` and `.venv\Scripts\python` in place of `.venv/bin/python`, and run `$env:PYTHONUTF8=1` in PowerShell first, because some tools otherwise crash when printing a report ([#50](https://github.com/paulip114/hk-architecture/issues/50)).
+On Windows, use `python` in place of `python3` and `.venv\Scripts\python` in place of `.venv/bin/python`.
 
 Exit code `1` means the check found a failure, not that the tool crashed. Copy a file from [`examples/`](examples/) to start your own project; all the demo schemes are fictional.
 
@@ -73,7 +73,7 @@ python3 -m venv .venv
 .venv/bin/python tools/ifc_model.py examples/demo_practice.json -o model.ifc
 ```
 
-Run the tests with `python3 -m unittest discover -s tests`, and the BIM tests with `python3 -m unittest discover -s bim/tests`. Tests that need the drawing packages are skipped if they are not installed. CI installs those packages and runs both sets on Python 3.9 and 3.13.
+Run the tests with `python3 -m unittest discover -s tests`, and the BIM tests with `python3 -m unittest discover -s bim/tests`. Tests that need the drawing packages are skipped if they are not installed. CI installs those packages and runs both sets on Linux with Python 3.9 and 3.13, and on Windows with Python 3.13.
 
 ## What it covers
 
@@ -133,14 +133,14 @@ Rule documents and data tables mark facts by how they were checked. Some tools r
 - Parts of Cap. 499, Cap. 344 and Cap. 618, and PNAP APP-24, as listed in [`statutes/`](statutes/)
 - LAO PN 3/2020 and 3/2020A, Basic Law Art. 120-123, Cap. 150, Cap. 515 and Cap. 648 lease and rent provisions
 - PNAP APP-151 cap and prerequisites, and the APP-152 figures used by `sbd_check.py`
-- Technical Memorandum Table 1, BA form numbers, and Barrier Free Design Manual Divisions 15 to 20
+- Technical Memorandum Table 1, BA form numbers, and Barrier Free Design Manual Divisions 15 to 20 and Chapter 5
 - The FSD supply tank table (para 5.26) and Building Energy Code 2024 tables used by the tools
 - Cap. 1 s.71 day counting, Cap. 221 Schedule 8 fine levels, the Cap. 123 MBIS and MWIS notice gaps, and the Cap. 123Q section outline
 
 **Still partial or unverified:**
 - The validation schemes for minor works, which are not in Cap. 123N
 - Cap. 123P inspection scope and the MWIS forms, which have not been compared line by line
-- Barrier Free Design Manual Chapter 5
+- Barrier Free Design Manual Chapter 6
 - The current LandsD administrative fee, and the FSD Part II pressurization table
 - SFBC 2025 clauses and periods, which were checked against a pre-launch copy and need rechecking against the final form
 - The HKIA appointment agreement, which is not available
