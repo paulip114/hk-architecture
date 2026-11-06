@@ -46,7 +46,7 @@ Working knowledge and tools Claude reads before doing architect's work in this p
 Exit code 1 when any item fails.
 
 ## Open items
-- Planning / lands: Cap. 131 text not read (eLegislation unreachable); LAO PN 3/2020 (DDH) scanned, not read. See open items in `planning/planning-rules.md` and `lands/lands-rules.md`.
+- Planning / lands: Cap. 131 checked against the 2.11.2023 consolidated text; LAO PN 3/2020 (DDH) scanned, not read. See open items in `planning/planning-rules.md` and `lands/lands-rules.md`.
 - Verify the APP-151 cap base and prerequisite list against the current PNAP.
 - Not yet automated: reg 31 inclined-plane geometry. (Part F is now covered by `tools/part_f_check.py`.)
 - Barrier-free: Divisions 15-20 of the Design Manual not yet verified (lift and counter limits from memory, reported as CHECK).
