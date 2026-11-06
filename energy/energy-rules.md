@@ -78,4 +78,5 @@ Tower / podium OTTV = (G + H) / (E + F)                        Form OTTV 4
 - Motors of 75–200 kW: IE4. Car park fans ≥ 3.7 kW: modulate to ≤ 35%.
 - Lift car fan ≤ 0.53 W per l/s. Regenerative braking for lifts ≥ 2.0 m/s or ≥ 900 kg. Escalator standby speed 0.05–0.25 m/s.
 - Major retrofitting works: ≥ 500 m² works area, a ≥ 400 A central circuit, ≥ 350 kW of A/C, or works to central BSI motor / mechanical drives.
-- Source: EMSD's BEC 2024 briefing, not the Code text. Read the Code itself for space types, duct and pipe insulation, copper loss, power factor and the full COP tables.
+- Table 5.4 was read from the Code on 2026-11-07, and all 63 space types are in `energy.json`. The short keys and the chiller figures in the tool match the Code.
+- **Not encoded:** the automatic lighting control column, Table 5.5, duct and pipe insulation (Table 6.11), the full unitary and chiller COP tables (6.12), transformer, motor and harmonic limits (Chapter 7), lift and escalator power limits (Chapter 8) and the performance-based approach (Chapter 9). Read the Code for these.

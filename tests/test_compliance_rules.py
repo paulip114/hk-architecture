@@ -219,5 +219,39 @@ class BarrierFreeDivisions15And19(unittest.TestCase):
             self.assertEqual(rows, [expected] * 4)
 
 
+
+class FsiTank(unittest.TestCase):
+    def status(self, area, litres):
+        rows = load("fsi_check").run({"largest_floor_m2": area, "fs_tank_litres": litres, "use": "x", "fs_tank_only": True})
+        return next(r[4] for r in rows if r[0] == "para 5.26")
+
+    def test_table_has_four_tiers(self):
+        for area, need in ((230, 9000), (231, 18000), (460, 18000), (920, 27000), (921, 36000)):
+            self.assertEqual(self.status(area, need), "PASS")
+            self.assertEqual(self.status(area, need - 1), "FAIL")
+
+
+    def stairs(self, **q):
+        rows = load("fsi_check").run({"use": "x", **q})
+        return next(r[4] for r in rows if r[0] == "Part II")
+
+    def test_pressurized_stairs(self):
+        self.assertEqual(self.stairs(cubical_extent_m3=28000, pressurized_stairs=0), "PASS")
+        self.assertEqual(self.stairs(cubical_extent_m3=28001, pressurized_stairs=0), "FAIL")
+        self.assertEqual(self.stairs(cubical_extent_m3=7001, pressurized_stairs=0, pressurization_kind="basement_3_levels_up"), "FAIL")
+        self.assertEqual(self.stairs(cubical_extent_m3=200000, pressurized_stairs=2, stairs_required_by_fs_code=2), "PASS")
+        self.assertEqual(self.stairs(cubical_extent_m3=200000, pressurized_stairs=3), "FAIL")
+
+
+class BecTable54(unittest.TestCase):
+    def test_table_values_and_short_keys_agree(self):
+        import json
+        e = json.loads((ROOT / "energy" / "energy.json").read_text(encoding="utf-8"))
+        t, s = e["bec_table_5_4_max_lpd_W_m2"], e["bec_lpd_W_m2"]
+        self.assertEqual(len([k for k in t if not k.startswith("_")]), 63)
+        for short, full in (("retail", "Retail"), ("car_park", "Car Park"), ("corridor", "Corridor"), ("staircase", "Staircase"), ("restaurant", "Restaurant")):
+            self.assertEqual(s[short], t[full])
+
+
 if __name__ == "__main__":
     unittest.main()

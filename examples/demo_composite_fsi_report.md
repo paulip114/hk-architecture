@@ -1,6 +1,6 @@
 # Minimum FSI check – 示範：堅尼地城商住大廈（虛構）
 
-**Result: does not comply** (1 fail, 2 to check, 40 items).
+**Result: does not comply** (2 fail, 1 to check, 40 items).
 
 > Draft for review by an Authorized Person and the FSI engineer / registered FSI contractor. Schedule from the FSD Codes of Practice for Minimum FSI (Sept 2022) Part IV, Chinese text. FSD may vary requirements (para 1.3). Part V design details are not checked.
 
@@ -45,4 +45,4 @@
 | para 4.16(ii) | Composite: sprinklers in staircases to the domestic part | 3/F–30/F flats | floors immediately above and below the sprinklered non-domestic part, fast-response heads | CHECK | (ii) 就非住用部分裝有花灑系統的綜合用途建築物而言，非住用部分對上和對下兩個樓層的樓梯（只限通往住用部分的樓梯）亦應裝設花灑，而花灑頭應屬快速感應型。 |
 | para 1.5 | Street fire hydrant distance | 60 m | ≤ 100 m | PASS |  |
 | Part IV | Hose reel coverage (longest hose run) | 30 m | ≤ 30 m | PASS |  |
-| para 5.26 (table unverified) | FH/HR fire service water tank | 18000 L | ≥ 27000 L for largest floor 950 m² | CHECK | SHORT of the remembered table: the 5.26 table is an image missing from the uploaded text |
+| para 5.26 | FH/HR fire service water tank | 18000 L | ≥ 36000 L for largest floor 950 m² | FAIL |  |

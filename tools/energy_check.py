@@ -185,7 +185,8 @@ def run(q):
                     PASS if w["er_pct"] <= v else FAIL)
 
     b = q.get("bec", {})
-    L = E["bec_lpd_W_m2"]
+    # Short keys, or the exact space type name from BEC 2024 Table 5.4.
+    L = {**E["bec_table_5_4_max_lpd_W_m2"], **E["bec_lpd_W_m2"]}
     for s in b.get("spaces", []):
         if s["type"] not in L:
             add("BEC 2024 Table 5.4", s["name"], s["type"], "space type", WARN, "not encoded: read the Code")

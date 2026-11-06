@@ -2266,24 +2266,17 @@
   "text_zh": "(ii) 就非住用部分裝有花灑系統的綜合用途建築物而言，非住用部分對上和對下兩個樓層的樓梯（只限通往住用部分的樓梯）亦應裝設花灑，而花灑頭應屬快速感應型。",
   "text": "Each use complies with its own paragraph. If the non-domestic part is sprinklered, the staircases (only those leading to the domestic part) on the floors immediately above and below the non-domestic part are also sprinklered, with fast-response heads."
  },
+ "pressurized_stairs": {
+  "_ref": "Part II definition of pressurization of staircases, read 2026-11-07. Bands are [over, not exceeding, number]; the number cannot exceed the stairs the FS Code requires.",
+  "basement_3_levels_up": [[7000, 56000, 1], [56000, 112000, 2], [112000, 168000, 3], [168000, null, 4]],
+  "other_building": [[28000, 56000, 1], [56000, 112000, 2], [112000, 168000, 3], [168000, null, 4]],
+  "hotel_hospital_sanatorium": [[0, 56000, 1], [56000, 112000, 2], [112000, 168000, 3], [168000, null, 4]]
+ },
  "fs_tank": {
   "para": "5.26",
   "basis_zh": "就消防栓／喉轆系統而言，按最大樓層的樓面面積計算，所需提供的最少有效存水量如下：",
-  "_note": "The table that follows is an image in the PDF and is missing from the uploaded text. The values below are from memory and remain UNVERIFIED.",
-  "hydrant_hose_reel_litres_by_largest_floor_m2_unverified": [
-   [
-    230,
-    9000
-   ],
-   [
-    460,
-    18000
-   ],
-   [
-    null,
-    27000
-   ]
-  ]
+  "_source": "Read from the rendered table on page 81 of the Code of Practice for Minimum FSI (September 2022), 2026-11-07. The largest floor area is gross.",
+  "hydrant_hose_reel_litres_by_largest_floor_m2": [[230, 9000], [460, 18000], [920, 27000], [null, 36000]]
  },
  "hydrant_flow_zh": "5.25: 2 個 65 毫米消防栓出水口同時出水，總出水量不少於每分鐘 4 000 公升，運行壓力不少於 170 千帕斯卡，輸水時間最低限度 60 分鐘 (street / private hydrant system)"
 }

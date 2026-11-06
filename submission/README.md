@@ -35,5 +35,5 @@ Hong Kong Buildings Department procedures from plan submission to occupation per
 - Technical Memorandum for Supervision Plans (TCP grades, supervision streams).
 - Validation schemes: Cap. 123N does not mention them. See `minor-works.md`.
 - Cap. 123P prescribed inspection scope and the MWIS forms have not been compared line by line with `mbis-mwis.md`.
-- FSD certificate form number for OP; other departmental certificates by name.
+- The FSD certificate needed for an OP application. The FSD Code names F.S. 251 as the RFSIC's certificate after maintenance or inspection, but it does not say this is the OP form.
 - Fine levels in dollars (Cap. 221 Sch. 8).

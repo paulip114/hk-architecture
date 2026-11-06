@@ -44,11 +44,14 @@ Each installation in a paragraph is one of three kinds:
   - openable windows ≤ 6.25% per floor
   - building > 28,000 m³
   - fire load > 1,135 MJ/m²
-- The number of pressurized stairs follows the Part II table, and is never more than the FS Code requires.
+- The number of pressurized stairs follows the Part II table by cubical extent, and is never more than the FS Code requires:
+  - Basements of three or more levels: over 7,000 to 56,000 m³, 1; to 112,000, 2; to 168,000, 3; over 168,000, 4.
+  - Other buildings: over 28,000 to 56,000 m³, 1; to 112,000, 2; to 168,000, 3; over 168,000, 4.
+  - Hotels, hospitals and sanatoria: up to 56,000 m³, 1; to 112,000, 2; to 168,000, 3; over 168,000, 4.
 - Hose reels: every part within 30 m of hose. Hydrants in the approach lobby or enclosure of a required staircase. One actuating point and one sounder at each hose reel, starting the pumps and the alarm.
 - Linings in ducts, concealed spaces and protected exits: BS 476 Part 7 Class 1 or 2, or equivalent.
 
-## Still unverified
-- **5.26 FH/HR tank size.** The text confirms the basis: 「按最大樓層的樓面面積計算」. The table itself is an image, missing from the uploaded text.
-  - The tool uses 9,000 / 18,000 / 27,000 L (≤ 230 / ≤ 460 / > 460 m²) from memory, and reports it as CHECK only.
-- The Part II pressurization table.
+## Not yet checked or encoded
+- **5.26 FH/HR tank size, read from the rendered PDF on 2026-11-07, is now in the tool.** By the gross area of the largest floor: up to 230 m², 9,000 L; up to 460 m², 18,000 L; up to 920 m², 27,000 L; over 920 m², 36,000 L. An earlier version of this tool used a remembered table with no 36,000 L tier.
+- FSD Circular Letter 4/2024 issued a corrigendum to the September 2022 Code. It has not been compared with these notes.
+- **Part V design rules** are not encoded, other than the 5.26 tank table.

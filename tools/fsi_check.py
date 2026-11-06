@@ -8,7 +8,8 @@ Usage:  python3 fsi_check.py project.json [-o report.md]   (reads the `fsi` bloc
 `fsi`:
   uppermost_floor_above_staircase_discharge_m   (> 30 m = high rise, Part III)
   storeys (domestic only, for the ≤ 3 storey case)
-  street_hydrant_distance_m, hose_reel_max_hose_m, fs_tank_litres, largest_floor_m2
+  street_hydrant_distance_m, hose_reel_max_hose_m, fs_tank_litres, largest_floor_m2,
+  cubical_extent_m3, pressurized_stairs, stairs_required_by_fs_code, pressurization_kind (basement_3_levels_up | other_building | hotel_hospital_sanatorium)
   parts[]: {name, use: domestic | commercial | hotel | industrial | institutional | basement | garage | car_port
             (or a para number "4.33" / alias from --list),
             total_floor_area_m2, max_single_occupancy_floor_m2, compartment_volume_m3, atrium_volume_m3,
@@ -176,13 +177,18 @@ def run(q):
         d = q["hose_reel_max_hose_m"]
         add("Part IV", "Hose reel coverage (longest hose run)", f"{d} m", f"≤ {S['hose_reel_max_hose_m']} m",
             PASS if d <= S["hose_reel_max_hose_m"] else FAIL)
+    if "cubical_extent_m3" in q and "pressurized_stairs" in q:
+        v, kind = q["cubical_extent_m3"], q.get("pressurization_kind", "other_building")
+        need = next((n for lo, hi, n in S["pressurized_stairs"][kind] if v > lo and (hi is None or v <= hi)), 0)
+        if q.get("stairs_required_by_fs_code") is not None:
+            need = min(need, q["stairs_required_by_fs_code"])
+        add("Part II", f"Pressurized staircases ({kind})", q["pressurized_stairs"], f"≥ {need} for {v:,} m³", PASS if q["pressurized_stairs"] >= need else FAIL)
     if "fs_tank_litres" in q and "largest_floor_m2" in q:
         a = q["largest_floor_m2"]
-        tab = S["fs_tank"]["hydrant_hose_reel_litres_by_largest_floor_m2_unverified"]
+        tab = S["fs_tank"]["hydrant_hose_reel_litres_by_largest_floor_m2"]
         need = next(l for lim, l in tab if lim is None or a <= lim)
-        add("para 5.26 (table unverified)", "FH/HR fire service water tank", f"{q['fs_tank_litres']} L",
-            f"≥ {need} L for largest floor {a} m²", WARN,
-            ("meets" if q["fs_tank_litres"] >= need else "SHORT of") + " the remembered table: the 5.26 table is an image missing from the uploaded text")
+        add("para 5.26", "FH/HR fire service water tank", f"{q['fs_tank_litres']} L",
+            f"≥ {need} L for largest floor {a} m²", PASS if q["fs_tank_litres"] >= need else FAIL)
     return rows
 
 
