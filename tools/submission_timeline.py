@@ -3,21 +3,23 @@
 
 Reads the `submission` block of project.json and submission/periods.json.
 Dates are ISO (YYYY-MM-DD). Periods are calendar days from the start date (conservative;
-counting rules under Cap. 1 not checked). Items whose period is not verified against the
-Ordinance are marked "(unverified)" in the report.
+counting rules under Cap. 1 not checked). Periods were checked against Cap. 123 (version
+1.3.2026) and Cap. 123A (version 30.6.2024); any left unverified are marked "(unverified)".
 
 Usage: python3 submission_timeline.py project.json [-o report.md]
 
 submission:
   as_of: date (default today)
   submissions[]: id, kind (GBP / structural / foundation / drainage / site_formation / A&A),
-      type (first | resubmission | amendment | fast_track_aa | fast_track_cladding | warehouse_2storey),
+      type (first | resubmission | major_revision | amendment (reg 33, works already consented) |
+            fast_track_aa | fast_track_cladding | warehouse_2storey),
       date, optional wr_dates[] (withdraw-and-resubmit letters), result (approved | disapproved),
       result_date, stage ("I" / "II" / "III" for staged curtailed check)
   consents[]: id, applied, concurrent (bool, BA8A), approval_date (plans), granted,
       foundation_beyond_spread_footing (bool), spread_footing_depth_m, precautionary_works (bool),
       reg8_plans_complete (bool), supervision_plan (bool)
-  commencement: date, ba10_date
+  commencement: date, ba10_date, tcp_notice_date (if supervision plan needs TCPs)
+  completion: date, rc_cert_date, ap_cert_date
   amendments[]: id, approved (bool), works_started (bool), drainage_excavation_depth_m,
       non_ldbp_pile_increase_pct, ldbp_pile_increase_pct, site_formation_level_change_m,
       retained_height_change_m, treated_as_minor (bool)
@@ -43,7 +45,16 @@ def d(s):
     return dt.date.fromisoformat(s) if s else None
 
 
+def add_months(day, n):
+    m = day.month - 1 + n
+    y, m = day.year + m // 12, m % 12 + 1
+    last = [31, 29 if y % 4 == 0 and (y % 100 or y % 400 == 0) else 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][m - 1]
+    return dt.date(y, m, min(day.day, last))
+
+
 def plus(start, key):
+    if PER[key].get("months"):
+        return add_months(start, PER[key]["months"])
     return start + dt.timedelta(days=PER[key]["days"])
 
 
@@ -72,7 +83,7 @@ def check(sub):
     for s in sub.get("submissions", []):
         sec = f"Plans {s.get('id', '')} ({s.get('kind', '')})"
         typ = s.get("type", "first")
-        key = {"first": "gbp_first", "resubmission": "gbp_resubmission", "amendment": "gbp_resubmission"}.get(typ, typ)
+        key = {"first": "gbp_first", "resubmission": "gbp_resubmission", "major_revision": "gbp_major_revision"}.get(typ, typ)
         if key not in PER:
             add(sec, "type", WARN, f"unknown type {typ}")
             continue
@@ -86,7 +97,11 @@ def check(sub):
                 f"{n} W&R; period restarts from {start}; limit generally {lim}", LIM["wr_max_times"]["ref"])
         due = plus(start, key)
         st, note = status_due(due, d(s.get("result_date")), today)
-        add(sec, f"Decision due {due} ({PER[key]['days']} d from {start})", st, note, ref(key))
+        add(sec, f"Refusal due by {due} ({PER[key]['days']} d from {start})", st,
+            note + ("; no refusal by then = deemed approval (BO s.15(1))" if key.startswith("gbp") and not s.get("result_date") else ""), ref(key))
+        if typ == "resubmission" and not s.get("result_date"):
+            add(sec, "Major revision?", INFO, f"if BA says it is a major revision (notice by {plus(start, 'major_revision_notice')}), the period is 60 d",
+                ref("major_revision_notice"))
         if typ == "first" and not s.get("result_date"):
             q = plus(start, "enquiry_45th_day")
             add(sec, f"45th-day enquiry {q}", INFO if today <= q else WARN,
@@ -125,6 +140,15 @@ def check(sub):
         due = plus(start, "consent")
         st, note = status_due(due, d(c.get("granted")), today)
         add(sec, f"Consent due {due} (28 d from {start})", st, note, ref("consent"))
+        g = d(c.get("granted"))
+        if g:
+            lapse = plus(g, "consent_lapse")
+            cm_date = d((sub.get("commencement") or {}).get("date"))
+            if cm_date and cm_date > lapse:
+                add(sec, "Consent lapse", FAIL, f"works commenced {cm_date}, after {lapse}: consent deemed revoked, renew with BA9", ref("consent_lapse"))
+            elif not cm_date:
+                add(sec, f"Commence by {lapse}", FAIL if today > lapse else INFO,
+                    "consent deemed revoked: renew with BA9" if today > lapse else "or consent is deemed revoked", ref("consent_lapse"))
 
     # Commencement
     cm = sub.get("commencement")
@@ -140,8 +164,27 @@ def check(sub):
         if start and ba10:
             gap = (start - ba10).days
             need = PER["ba10_before_commencement"]["days"]
-            add("Commencement", "BA10 notice", PASS if gap >= need else WARN,
-                f"BA10 {gap} d before commencement (practice {need} d)", ref("ba10_before_commencement"))
+            add("Commencement", "BA10 notice", PASS if gap >= need else FAIL,
+                f"BA10 {gap} d before commencement (need not less than {need} d)", ref("ba10_before_commencement"))
+        tcp = d(cm.get("tcp_notice_date"))
+        if start and tcp:
+            gap = (start - tcp).days
+            need = PER["tcp_notice_before"]["days"]
+            add("Commencement", "TCP appointment notice", PASS if gap >= need else FAIL,
+                f"{gap} d before commencement (need not less than {need} d)", ref("tcp_notice_before"))
+
+    # Completion certificates
+    cp = sub.get("completion")
+    if cp and cp.get("date"):
+        done = d(cp["date"])
+        for k, key, who in (("rc_cert_date", "rc_completion_cert", "RC certificate to AP"),
+                            ("ap_cert_date", "ap_completion_cert", "AP certificate to BA")):
+            due = plus(done, key)
+            got = d(cp.get(k))
+            if got:
+                add("Completion", who, PASS if got <= due else FAIL, f"{got}, due {due}", ref(key))
+            else:
+                add("Completion", f"{who} due {due}", FAIL if today > due else INFO, "", ref(key))
 
     # Amendments
     for a in sub.get("amendments", []):
@@ -192,7 +235,8 @@ def check(sub):
                 add("OP / TOP", "W&R", FAIL if len(wrs) > lim else PASS, f"{len(wrs)} W&R; limit generally {lim}", LIM["wr_max_times"]["ref"])
             due = plus(start, "op")
             st, note = status_due(due, d(op.get("issued")), today)
-            add("OP / TOP", f"Decision due {due}", st, note, ref("op"))
+            add("OP / TOP", f"Refusal due by {due}", st,
+                note + ("; no refusal served by then = permit deemed granted (s.21(7))" if not op.get("issued") else ""), ref("op"))
 
     # Minor works
     for m in sub.get("minor_works", []):

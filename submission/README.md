@@ -2,7 +2,7 @@
 
 Hong Kong Buildings Department procedures from plan submission to occupation permit, plus minor works, unauthorised building works and mandatory building inspection.
 
-**Verification:** each fact is marked ✅ (read on bd.gov.hk on 2026-11-05, source given) or ⚠️ (general practice knowledge, not yet checked). The Buildings Ordinance (Cap. 123) and Building (Administration) Regulations (Cap. 123A) could not be read from this environment (eLegislation blocks automated access). Upload their consolidated PDFs to `uploads/` to verify the ⚠️ items.
+**Verification:** each fact is marked ✅ (read on bd.gov.hk on 2026-11-05), 📜 (checked on 2026-11-06 against the uploaded consolidated texts: Cap. 123 version date 1.3.2026, Cap. 123A version date 30.6.2024) or ⚠️ (not yet checked).
 
 | Path | What it is |
 | --- | --- |
@@ -22,10 +22,18 @@ Hong Kong Buildings Department procedures from plan submission to occupation per
 | `../examples/demo_submission.json`, `demo_submission_report.md` | Demo input and output |
 | `../skills/hk-bd-submission-workflow/`, `../skills/hk-minor-works-ubw-mbis/` | Skills that use these files |
 
+## Verified against the Ordinance (📜)
+- Plans: 60 days first submission / major revision, 30 days other resubmissions, deemed approval (B(A)R reg 30(3), BO s.15); s.16(1) grounds.
+- Consent: 28 days (reg 32(3)); amendments to consented works 28 days (reg 33(2)); lapse after 3 months not commenced or suspended (s.20); no deemed consent without supervision plan (s.14A).
+- Notices: BA10 not less than 7 days before commencement (reg 20(1)); TCPs 7 days (reg 20(2)); AP ceasing 7 days (reg 19); change of use one month (s.25).
+- Completion: RC 7 days, AP 14 days, RSE/RGE 7 days (reg 25); water certificate (reg 25A).
+- OP: grounds of refusal (s.21(6)); deemed granted after 14 days (s.21(7), (8)); TOP rules (s.21(3)-(5)).
+- Enforcement: s.24 orders, s.33 cost + 20% surcharge, s.40 penalties; MBIS s.30B (30 years), MWIS s.30C (10 years).
+
 ## Open items (⚠️)
-- BO s.15 resubmission period (30 days), deemed approval, s.16(1) grounds, s.21 OP period (14 days), s.24 / s.40 penalties.
-- BA10 notice period, consent lapse and BA9 renewal period, BA15 notice period.
+- Day counting under Cap. 1 s.71.
 - Technical Memorandum for Supervision Plans (TCP grades, supervision streams).
-- Cap. 123N Schedule 1 item list; designated exempted works; validation scheme details.
-- MBIS / MWIS cycles; MWIS forms; whether the 2015 guidelines have been revised.
-- Departmental certificates needed for OP (FSD, EMSD, WSD, DSD) by name and form.
+- Cap. 123N (minor works) Schedule 1 item list, designated exempted works, validation scheme details. Upload Cap. 123N to verify.
+- Cap. 123P: MBIS / MWIS cycles (10 / 5 years), prescribed inspection scope. MWIS forms; whether the 2015 guidelines have been revised.
+- FSD certificate form number for OP; other departmental certificates by name.
+- Fine levels in dollars (Cap. 221 Sch. 8).

@@ -1,43 +1,269 @@
 {
-  "_note": "Statutory / administrative periods used by tools/submission_timeline.py. verified=true means read on bd.gov.hk on 2026-11-05 (source given). verified=false means general practice knowledge, not yet checked against Cap. 123 / Cap. 123A text. Day counting: calendar days, start date + N (conservative; Cap. 1 counting rules not checked).",
-  "periods": {
-    "gbp_first": {"days": 60, "label": "First submission of plans: approve or disapprove", "ref": "PNAP ADM-2 'statutory 60-day period' (BO s.15(1) text not checked)", "verified": true},
-    "gbp_resubmission": {"days": 30, "label": "Resubmission / amendment plans: approve or disapprove", "ref": "BO s.15(1)", "verified": false},
-    "enquiry_45th_day": {"days": 45, "label": "Ask whether submission is fundamentally acceptable", "ref": "PNAP ADM-2", "verified": true},
-    "consent": {"days": 28, "label": "Consent to commence (from application, or from approval date if not concurrent)", "ref": "B(A)R reg 32(3); PNAP ADM-19 para 39(c)", "verified": true},
-    "fast_track_aa": {"days": 30, "label": "Fast-track concurrent approval and consent, simple A&A works", "ref": "PNAP ADM-19 para 35", "verified": true},
-    "fast_track_cladding": {"days": 30, "label": "Fast-track curtain wall / window wall / cladding repair", "ref": "PNAP ADM-19 para 38", "verified": true},
-    "warehouse_2storey": {"days": 45, "label": "Two-storey warehouse concurrent approval and consent", "ref": "PNAP ADM-19 Appendix I", "verified": true},
-    "op": {"days": 14, "label": "Occupation permit: issue or refuse", "ref": "BO s.21", "verified": false},
-    "pre_submission_assurance": {"days": 45, "label": "Letter of assurance on pre-submission enquiry (normally)", "ref": "PNAP ADM-19 para 4", "verified": true},
-    "enquiry_service": {"days": 28, "label": "Enquiry service answer (normally four weeks)", "ref": "PNAP ADM-19 para 21", "verified": true},
-    "adm14_return": {"working_days": 2, "label": "Return substitute sheets / removed documents", "ref": "PNAP ADM-14 para 2", "verified": true},
-    "ba10_before_commencement": {"days": 7, "label": "Notify commencement (BA10) before works start", "ref": "B(A)R", "verified": false},
-    "ba15_material_change": {"days": 30, "label": "Notice of intended material change in use (BA15) before change", "ref": "BO s.25", "verified": false},
-    "mw_notice_before": {"days": 7, "label": "Class I / II minor works: notice before commencement", "ref": "BD minor works procedures page", "verified": true},
-    "mw_completion_after": {"days": 14, "label": "Minor works (all classes): certificate within N days after completion", "ref": "BD minor works procedures page", "verified": true},
-    "mw_ack": {"working_days": 4, "label": "BD acknowledgement of minor works submission (generally)", "ref": "BD minor works procedures page", "verified": true},
-    "mbis_report_after_inspection": {"days": 7, "label": "RI submits inspection report, certificate and repair proposal after inspection", "ref": "BD General Guidelines MBIS/MWIS 2015, Annex II", "verified": true},
-    "mbis_prenotice": {"days": 183, "label": "MBIS pre-notification to statutory notice (at least 6 months)", "ref": "BD General Guidelines MBIS/MWIS 2015", "verified": true},
-    "mwis_prenotice": {"days": 61, "label": "MWIS pre-notification to statutory notice (at least 2 months)", "ref": "BD General Guidelines MBIS/MWIS 2015", "verified": true}
+ "_note": "Statutory / administrative periods used by tools/submission_timeline.py. verified=true means checked against a primary source: Cap. 123 consolidated version 1.3.2026, Cap. 123A consolidated version 30.6.2024 (both uploaded 2026-11-06), or bd.gov.hk read on 2026-11-05. verified=false means not yet checked. Day counting: calendar days, start date + N (conservative; Cap. 1 counting rules not checked).",
+ "periods": {
+  "gbp_first": {
+   "days": 60,
+   "label": "Plans submitted for the first time: refusal must be notified within N days or approval is deemed",
+   "ref": "B(A)R reg 30(3)(a); BO s.15(1) (deemed approval unless refusal notified)",
+   "verified": true
   },
-  "limits": {
-    "wr_max_times": {"value": 2, "label": "Withdrawal and resubmission of the same submission, generally not more than", "ref": "PNAP ADM-22 para 2(b)", "verified": true},
-    "mbis_building_age_years": {"value": 30, "ref": "BD General Guidelines MBIS/MWIS 2015", "verified": true},
-    "mwis_building_age_years": {"value": 10, "ref": "BD General Guidelines MBIS/MWIS 2015", "verified": true},
-    "mbis_cycle_years": {"value": 10, "ref": "unverified", "verified": false},
-    "mwis_cycle_years": {"value": 5, "ref": "unverified", "verified": false},
-    "mbis_mwis_exempt_domestic_max_storeys": {"value": 3, "ref": "BD General Guidelines MBIS/MWIS 2015", "verified": true},
-    "staged_check_after": {"value": "2023-03-31", "ref": "PNAP ADM-19 para 19", "verified": true},
-    "mw_in_plans_before_op_consent_after": {"value": "2021-08-31", "ref": "PNAP ADM-19 para 41", "verified": true},
-    "concurrent_consent_max_footing_depth_m": {"value": 4.5, "ref": "PNAP ADM-19 para 34", "verified": true}
+  "gbp_resubmission": {
+   "days": 30,
+   "label": "Plans submitted again (not a major revision): refusal within N days from last submission",
+   "ref": "B(A)R reg 30(3)(c); BO s.15(1)",
+   "verified": true
   },
-  "not_minor_amendment_thresholds": {
-    "_ref": "PNAP ADM-19 Appendix G (extract)", "verified": true,
-    "drainage_excavation_depth_m": 3.0,
-    "non_ldbp_pile_increase_pct": 5,
-    "ldbp_pile_increase_pct": 15,
-    "site_formation_level_change_m": 1.0,
-    "retained_height_change_m": 1.0
+  "gbp_major_revision": {
+   "days": 60,
+   "label": "Plans submitted again, so revised as to be a major revision in BA's opinion",
+   "ref": "B(A)R reg 30(3)(b)",
+   "verified": true
+  },
+  "major_revision_notice": {
+   "days": 30,
+   "label": "BA must tell the AP/RSE/RGE that a resubmission is a major revision",
+   "ref": "B(A)R reg 30(4)",
+   "verified": true
+  },
+  "enquiry_45th_day": {
+   "days": 45,
+   "label": "Ask whether submission is fundamentally acceptable",
+   "ref": "PNAP ADM-2",
+   "verified": true
+  },
+  "consent": {
+   "days": 28,
+   "label": "Consent to commence (from application, or from approval date if not concurrent)",
+   "ref": "B(A)R reg 32(3); BO s.15(1); PNAP ADM-19 para 39(c)",
+   "verified": true
+  },
+  "amendment": {
+   "days": 28,
+   "label": "Alterations or additions to works already consented (reg 33): consent deemed after N days",
+   "ref": "B(A)R reg 33(2); BO s.15",
+   "verified": true
+  },
+  "consent_lapse": {
+   "months": 3,
+   "label": "Consent deemed revoked if works not commenced (or suspended) for this period; renew with BA9",
+   "ref": "BO s.20",
+   "verified": true
+  },
+  "fast_track_aa": {
+   "days": 30,
+   "label": "Fast-track concurrent approval and consent, simple A&A works",
+   "ref": "PNAP ADM-19 para 35",
+   "verified": true
+  },
+  "fast_track_cladding": {
+   "days": 30,
+   "label": "Fast-track curtain wall / window wall / cladding repair",
+   "ref": "PNAP ADM-19 para 38",
+   "verified": true
+  },
+  "warehouse_2storey": {
+   "days": 45,
+   "label": "Two-storey warehouse concurrent approval and consent",
+   "ref": "PNAP ADM-19 Appendix I",
+   "verified": true
+  },
+  "op": {
+   "days": 14,
+   "label": "OP / TOP: refusal must be served within N days or the permit is deemed granted",
+   "ref": "BO s.21(7) (deemed granted unless refusal served); s.21(8) if within 60 d of a s.17 performance review",
+   "verified": true
+  },
+  "pre_submission_assurance": {
+   "days": 45,
+   "label": "Letter of assurance on pre-submission enquiry (normally)",
+   "ref": "PNAP ADM-19 para 4",
+   "verified": true
+  },
+  "enquiry_service": {
+   "days": 28,
+   "label": "Enquiry service answer (normally four weeks)",
+   "ref": "PNAP ADM-19 para 21",
+   "verified": true
+  },
+  "adm14_return": {
+   "working_days": 2,
+   "label": "Return substitute sheets / removed documents",
+   "ref": "PNAP ADM-14 para 2",
+   "verified": true
+  },
+  "ba10_before_commencement": {
+   "days": 7,
+   "label": "AP furnishes RC appointment, commencement date and RC undertaking (BA10) not less than N days before commencement",
+   "ref": "B(A)R reg 20(1)",
+   "verified": true
+  },
+  "ba15_material_change": {
+   "label": "Notice of intended material change in use (BA15): one month's notice",
+   "ref": "BO s.25(1)",
+   "verified": true,
+   "months": 1
+  },
+  "mw_notice_before": {
+   "days": 7,
+   "label": "Class I / II minor works: notice before commencement",
+   "ref": "BD minor works procedures page",
+   "verified": true
+  },
+  "mw_completion_after": {
+   "days": 14,
+   "label": "Minor works (all classes): certificate within N days after completion",
+   "ref": "BD minor works procedures page",
+   "verified": true
+  },
+  "mw_ack": {
+   "working_days": 4,
+   "label": "BD acknowledgement of minor works submission (generally)",
+   "ref": "BD minor works procedures page",
+   "verified": true
+  },
+  "mbis_report_after_inspection": {
+   "days": 7,
+   "label": "RI submits inspection report, certificate and repair proposal after inspection",
+   "ref": "BD General Guidelines MBIS/MWIS 2015, Annex II",
+   "verified": true
+  },
+  "mbis_prenotice": {
+   "days": 183,
+   "label": "MBIS pre-notification to statutory notice (at least 6 months)",
+   "ref": "BD General Guidelines MBIS/MWIS 2015",
+   "verified": true
+  },
+  "mwis_prenotice": {
+   "days": 61,
+   "label": "MWIS pre-notification to statutory notice (at least 2 months)",
+   "ref": "BD General Guidelines MBIS/MWIS 2015",
+   "verified": true
+  },
+  "tcp_notice_before": {
+   "days": 7,
+   "label": "AP/RSE/RGE notifies appointment of TCPs (where supervision plan required) not less than N days before commencement",
+   "ref": "B(A)R reg 20(2)",
+   "verified": true
+  },
+  "rc_completion_cert": {
+   "days": 7,
+   "label": "RC certifies completion to the AP/RSE/RGE within N days of completion",
+   "ref": "B(A)R reg 25(1)",
+   "verified": true
+  },
+  "ap_completion_cert": {
+   "days": 14,
+   "label": "AP certifies completion to the BA within N days of completion (non-demolition)",
+   "ref": "B(A)R reg 25(2)",
+   "verified": true
+  },
+  "rse_completion_cert": {
+   "days": 7,
+   "label": "RSE/RGE certifies within N days of receiving RC certificate; AP sends on within 7 days",
+   "ref": "B(A)R reg 25(3)",
+   "verified": true
+  },
+  "ap_cease_notice": {
+   "days": 7,
+   "label": "AP/RSE/RGE who ceases to act notifies the BA within N days",
+   "ref": "B(A)R reg 19",
+   "verified": true
+  },
+  "water_cert": {
+   "days": 10,
+   "label": "Water authority issues water supply certificate for OP within N days of application",
+   "ref": "B(A)R reg 25A (WSD certificate sent with the reg 25(2) certificate)",
+   "verified": true
+  },
+  "top_expiry_grace": {
+   "days": 7,
+   "label": "After TOP expires or is revoked without OP, s.21(1) occupation ban applies after N days",
+   "ref": "BO s.21(5)",
+   "verified": true
   }
+ },
+ "limits": {
+  "wr_max_times": {
+   "value": 2,
+   "label": "Withdrawal and resubmission of the same submission, generally not more than",
+   "ref": "PNAP ADM-22 para 2(b)",
+   "verified": true
+  },
+  "mbis_building_age_years": {
+   "value": 30,
+   "ref": "BO s.30B(1); age from OP date s.30B(2)",
+   "verified": true
+  },
+  "mwis_building_age_years": {
+   "value": 10,
+   "ref": "BO s.30C(1); age from OP date s.30C(2)",
+   "verified": true
+  },
+  "mbis_cycle_years": {
+   "value": 10,
+   "ref": "unverified",
+   "verified": false
+  },
+  "mwis_cycle_years": {
+   "value": 5,
+   "ref": "unverified",
+   "verified": false
+  },
+  "mbis_mwis_exempt_domestic_max_storeys": {
+   "value": 3,
+   "ref": "BD General Guidelines MBIS/MWIS 2015",
+   "verified": true
+  },
+  "staged_check_after": {
+   "value": "2023-03-31",
+   "ref": "PNAP ADM-19 para 19",
+   "verified": true
+  },
+  "mw_in_plans_before_op_consent_after": {
+   "value": "2021-08-31",
+   "ref": "PNAP ADM-19 para 41",
+   "verified": true
+  },
+  "concurrent_consent_max_footing_depth_m": {
+   "value": 4.5,
+   "ref": "PNAP ADM-19 para 34",
+   "verified": true
+  }
+ },
+ "not_minor_amendment_thresholds": {
+  "_ref": "PNAP ADM-19 Appendix G (extract)",
+  "verified": true,
+  "drainage_excavation_depth_m": 3.0,
+  "non_ldbp_pile_increase_pct": 5,
+  "ldbp_pile_increase_pct": 15,
+  "site_formation_level_change_m": 1.0,
+  "retained_height_change_m": 1.0
+ },
+ "penalties": {
+  "_ref": "BO s.40, Cap. 123 version 1.3.2026. Fine levels per Criminal Procedure Ordinance Cap. 221 Sch. 8 (level 1 $2,000; 2 $5,000; 3 $10,000; 4 $25,000; 5 $50,000; 6 $100,000) - Cap. 221 not uploaded, levels verified=false",
+  "s40_1AA_knowingly_contravene_s14_1": {
+   "text": "$400,000 and 2 years; $20,000 per day",
+   "verified": true
+  },
+  "s40_1_occupy_without_op_s21_1": {
+   "text": "level 6 and 2 years; $5,000 per day",
+   "verified": true
+  },
+  "s40_1BA_fail_s24_order": {
+   "text": "$200,000 and 1 year; $20,000 per day",
+   "verified": true
+  },
+  "s40_1BC_fail_mbis_notice_s30B": {
+   "text": "level 5 and 1 year; $5,000 per day",
+   "verified": true
+  },
+  "s40_1BD_fail_mwis_notice_s30C": {
+   "text": "level 4 and 3 months; $2,000 per day; BA must first give a penalty notice (s.40(1BE), Sch. 7)",
+   "verified": true
+  },
+  "s40_2B_misrepresent_or_deviate": {
+   "text": "building works / prescribed inspection: $1,000,000 and 3 years; window inspection or minor works: $500,000 and 18 months",
+   "verified": true
+  }
+ }
 }
