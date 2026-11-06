@@ -142,7 +142,7 @@ Rule documents and data tables mark facts by how they were checked. Some tools r
 - Parts of the planning and land administration rules, and the fire services and energy tables
 - SFBC 2025 clauses, which need the purchased form
 
-The list above is a summary. Each rule document gives the details, [`docs/document-library.md`](docs/document-library.md) lists the source documents and where to get them, and the [open issues](https://github.com/paulip114/hk-architecture/issues) track what remains. Laws and practice notes change, so always check the current version.
+The list above is a summary. Each rule document gives the details, [`docs/document-library.md`](docs/document-library.md) lists the source documents and where to get them, [`docs/document-dependencies.json`](docs/document-dependencies.json) maps how those documents depend on each other, and the [open issues](https://github.com/paulip114/hk-architecture/issues) track what remains. Laws and practice notes change, so always check the current version.
 
 ## Contributing
 

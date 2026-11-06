@@ -9,6 +9,7 @@ Unfinished work is tracked in [GitHub issues](https://github.com/paulip114/hk-ar
 | Path | What it is |
 | --- | --- |
 | `docs/document-library.md` | Source documents used to check the rules: version dates, official links and what each is used for. The documents are not in the repo |
+| `docs/document-dependencies.json` | How the documents in the library depend on each other across project stages. An edge from A to B means A depends on B. Each edge records its type, evidence and whether it is documented or inferred. Draft for AP review |
 | `bpr/bpr-rules.md` | Building (Planning) Regulations working rules: site class, SC, PR, GFA exemptions (PNAP APP-2, APP-151), open space, lighting & ventilation |
 | `bpr/first_schedule.json` | First and Second Schedule as data, verified against official Cap. 123F (17-09-2026) |
 | Cap 123F consolidated PDF (17-09-2026) | Official text, primary B(P)R source. Not in the repo: download from eLegislation |
