@@ -100,7 +100,7 @@ Exit code 1 when any item fails.
 | `examples/demo_practice.json` | Demo for all six tools; outputs `demo_practice_*` |
 | `tests/test_practice_tools.py` | `python3 -m unittest discover -s tests` |
 
-Drawing tools need `pip install -r requirements-drawing.txt` (ezdxf, ifcopenshell, shapely). Every output is a draft: contract results for the Architect / QS against the signed contract, cost for a QS to develop, supervision plan for the AP / RSE / AS, drawings marked "SKETCH – NOT FOR SUBMISSION".
+Drawing tools need `pip install -r requirements-drawing.txt` (ezdxf, ifcopenshell, shapely, pillow). Every output is a draft: contract results for the Architect / QS against the signed contract, cost for a QS to develop, supervision plan for the AP / RSE / AS, drawings marked "SKETCH – NOT FOR SUBMISSION".
 ## Fire Code Part A / Part F, FSD minimum FSI, energy efficiency
 | Path | What it is |
 | --- | --- |
