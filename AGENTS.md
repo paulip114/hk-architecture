@@ -37,6 +37,14 @@ Keep the checking tools standard-library only and compatible with Python 3.9. On
 - If you add or rename a file or an input field, update `docs/reference.md`.
 - Do not read `benchmark/tasks/` or `benchmark/anchors.py` when you are the agent being benchmarked.
 
+## Changing the document library
+When a file in `docs/document library/` is added, updated or deleted, update these in the same pull request:
+- `docs/document-library.md`: the entry, version date and link.
+- `docs/document-dependencies.json`: the document and its edges. For a new or updated document, recheck what it cites and what cites it. Mark each new edge `documented` with its evidence, or `inferred` if neither document states the link. For a deleted document, set `inLibrary` to false if other documents still cite it. Otherwise remove it and its edges.
+- `docs/document-dependency-graph.html`: the `const G=` line holds a copy of the JSON. Replace it so both match.
+
+Git ignores the library files, so a pull request does not show these changes and no test detects them. `tests/test_document_dependencies.py` only checks that the JSON is well formed and that the page matches it. Before you finish, compare the folder with the JSON, and tell the user what you changed.
+
 ## Git
 - Work on a branch, not directly on `main`. Commit and push only when asked.
 - Several sessions may share one working tree. Before committing, check `git status` and stage only your own files by name.
