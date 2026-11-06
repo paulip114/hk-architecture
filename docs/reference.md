@@ -45,9 +45,10 @@ Unfinished work is tracked in [GitHub issues](https://github.com/paulip114/hk-ar
 - `site`: `area_m2`; either `class` ("A"/"B"/"C") or `street_widths_m` + `perimeter_m` + `frontage_on_specified_streets_m`; optional `dedicated_area_m2`.
 - `building`: `type` ("domestic" / "non_domestic" / "composite"), `height_m` (from mean street level), optional `house` (true for detached/semi-detached).
 - `limits` (optional): `max_height_m`, `ozp_max_pr_domestic`, `ozp_max_pr_non_domestic`, `ozp_max_pr_total`, `lease_max_gfa_m2`, `lease_min_gfa_m2`.
-- `floors[]`: `name`, `use`, `level_m` (lowest level above ground), `gross_area_m2`, optional `count` (typical floors), `site_coverage_m2`, `exempt[]` of `{item, area_m2, category}`. Categories: `mandatory_plant`, `non_mandatory_plant`, `green_feature`, `car_park_underground`, `car_park_above_100`, `car_park_above_50`, `refuge_floor`, `bicycle_parking`, `other_disregarded`.
+- `floors[]`: `name`, `use`, `level_m` (lowest level above ground), `gross_area_m2`, optional `count` (typical floors), `site_coverage_m2`, `exempt[]` of `{item, area_m2, category}` plus optional `serves` (`domestic` or `non_domestic`, for a capped feature serving the other part). Categories: `mandatory_plant`, `non_mandatory_plant`, `green_feature`, `green_feature_uncapped`, `car_park_underground`, `car_park_above_100`, `car_park_above_50`, `refuge_floor`, `bicycle_parking`, `other_disregarded`.
 - `open_space` (domestic/composite): `provided_m2`, `roofed_over_area_m2`, optional `rear_setback_m`, `level_below_lowest_floor_mm`.
-- `rooms[]`: `name`, `use` ("habitable"/"kitchen"/"office"/"bathroom"), `floor_area_m2`, `glass_m2`, `openable_m2`, optional `window_head_m`, `max_distance_to_window_m`, `ceiling_height_m`, `mechanical_ventilation_ach` (offices, reg 34), `external_air` (false to flag), `performance_based` (true to skip prescriptive test).
+- `rooms[].reg_31`: `{faces_street_ge_4_5m: true}`, or `plane_base_m`, `plane_depth_m`, `uncovered`, `opposite` (`building` or `boundary`), optional `lane_width_m`, and `obstructions[]` of `{name, distance_m, height_above_sill_m}`. `distance_m` runs from the window wall, or from the actual boundary towards the site when `opposite` is `boundary`. The sill is deemed to be 1 m above the floor.
+- `rooms[]`: `name`, `use` ("habitable"/"kitchen"/"office"/"bathroom"), `floor_area_m2`, `glass_m2`, `openable_m2`, optional `window_head_m`, `max_distance_to_window_m`, `ceiling_height_m`, `mechanical_ventilation_ach` (offices, reg 34), `reg_31` (see below), `performance_based` (true to skip prescriptive test).
 
 Exit code 1 when any item fails.
 
@@ -94,6 +95,8 @@ Exit code 1 when any item fails.
 | `tools/dxf_area_takeoff.py` | Area take-off from any DXF by layer, with holes and text labels |
 | `examples/demo_practice.json` | Demo for all six tools; outputs `demo_practice_*` |
 | `tests/test_practice_tools.py` | `python3 -m unittest discover -s tests` |
+| `tests/test_compliance_rules.py` | Tests for the APP-151 cap, B(P)R reg 31, the APP-152 figures and the barrier-free lift and counter limits, run by the same command |
+| `.github/workflows/tests.yml` | Runs the tests and BIM tests with the drawing packages on Python 3.9 and 3.13 |
 
 Drawing tools need `pip install -r requirements-drawing.txt` (ezdxf, ifcopenshell, shapely, pillow). Every output is a draft: contract results for the Architect / QS against the signed contract, cost for a QS to develop, supervision plan for the AP / RSE / AS, drawings marked "SKETCH – NOT FOR SUBMISSION".
 ## Fire Code Part A / Part F, FSD minimum FSI, energy efficiency

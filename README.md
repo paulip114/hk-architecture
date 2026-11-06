@@ -3,6 +3,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/paulip114/hk-architecture/actions/workflows/tests.yml"><img alt="Tests" src="https://github.com/paulip114/hk-architecture/actions/workflows/tests.yml/badge.svg"></a>
   <img alt="Python 3.9+" src="https://img.shields.io/badge/python-3.9%2B-2f7bd9">
   <img alt="21 tools" src="https://img.shields.io/badge/tools-21-ea6a34">
   <img alt="12 Claude skills" src="https://img.shields.io/badge/Claude%20skills-12-1fae7a">
@@ -127,10 +128,13 @@ Rule documents and data tables mark facts by how they were checked. Some tools r
 - Cap. 123F First and Second Schedules
 - Cap. 123 and Cap. 123A statutory periods
 - Cap. 131 periods (2.11.2023 English text)
+- PNAP APP-151 cap and prerequisites, and the APP-152 figures used by `sbd_check.py`
+- Technical Memorandum Table 1, and Barrier Free Design Manual Divisions 15 to 20
+- Cap. 1 s.71 day counting, the Cap. 123 MBIS and MWIS notice gaps, and the Cap. 123Q section outline
 
 **Still partial or unverified:**
-- Cap. 123N minor works item list, Cap. 123P inspection cycles and Cap. 123Q B(C)R
-- APP-151 cap base, and parts of APP-152 and the Barrier Free Design Manual
+- The validation schemes for minor works, which are not in Cap. 123N
+- Barrier Free Design Manual Chapter 5
 - SFBC 2025 clauses, which need the purchased form
 
 The list above is a summary. Each rule document gives the details, and the [open issues](https://github.com/paulip114/hk-architecture/issues) track what remains. Laws and practice notes change, so always check the current version.
