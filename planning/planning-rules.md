@@ -19,7 +19,7 @@ Read the **Notes** and **Explanatory Statement (ES)** together. The ES states th
 Covering Notes (common to all OZPs, from the TPB Master Schedule of Notes; urban version read):
 - **Column 1 (第一欄)** – uses always permitted. **Column 2 (第二欄)** – uses that may be permitted by TPB, with or without conditions, on application under **s16**. A use in neither column is not permitted: it needs a plan amendment (s12A) unless it is an existing use.
 - **Existing use (現有用途)**: no action is needed until there is a material change of use or redevelopment. Redevelopment must then comply (or get permission). An "existing building" is one that physically exists and complies with the relevant legislation and lease.
-- **Temporary uses** expected to last **5 years or less** are always permitted in urban areas if they comply with other legislation and the lease (rural OZPs differ: usually temporary use up to 3 years needs permission unless in Column 1) [verify per plan].
+- **Temporary uses** expected to last **5 years or less** are always permitted in urban areas if they comply with other legislation and the lease In rural OZPs, per the Rural Covering Notes: temporary use of up to 2 months is always permitted only for listed structures (carnivals, fairs, film shooting, festival celebrations, religious functions, sports events), with no site formation. Other temporary use of up to 3 years needs TPB permission, for a maximum of 3 years, even if the plan does not provide for the use. Use beyond 3 years needs permission under the terms of the plan. Temporary open storage and port back-up uses are prohibited in the zones the Notes list. Check the Notes of each plan.
 - Always permitted in all zones (unless stated): open space, roads, utilities, geotechnical, drainage and waterworks works, and uses directly related and ancillary to a permitted use.
 - Permitted uses must still comply with **lease conditions** and other legislation (Covering Notes para 2). Planning approval does not change the lease.
 - Minor boundary adjustment of zones and roads is allowed as detailed planning proceeds.
@@ -63,7 +63,7 @@ Other common Remarks: GFA to be disregarded (plant rooms, caretaker's office and
 | --- | --- | --- |
 | **s12A** – amendment of plan (改劃) | Use not in Column 1/2, or restrictions far beyond "minor relaxation". Only for an original approved plan or approved part (s12A(1)) | TPB holds a meeting to consider within **2 months after receipt** (s12A(16)). Only an **eligible person** may apply (s12A definitions): a registered owner of non-Government land in the area, a person with that owner's written consent, a person with the Director of Lands' written consent for Government land, or a public officer / public body. Applicant may attend and be heard (s12A(18)). |
 | **s16** – planning permission (規劃許可) | Column 2 use; minor relaxation of PR / BH / SC / NBA where the Remarks allow; CDA MLP; transfer of plot ratio (PG-43A) | TPB considers within **2 months of receipt** (s16(3)). Permission only to the extent the plan provides for (s16(4)); conditions as TPB thinks fit (s16(5)). |
-| **s16A** – amendment to permission | Class A amendments: the permission is read as including them, no application (s16A(1)). Class B: apply under s16A(2) (classes set by TPB Gazette notice, s16A(10); PG-36C). Others: fresh s16 | TPB considers within **2 months after receipt** (s16A(5)) |
+| **s16A** – amendment to permission | Class A amendments: the permission is read as including them, no application (s16A(1)). Class B: apply under s16A(2) (classes set by TPB Gazette notice, s16A(10); PG-36C, 19 categories). Only one accepted Class B application can apply to a permission, so put all Class B amendments in one application (PG-36C para 2.3). Others: fresh s16 | TPB considers within **2 months after receipt** (s16A(5)) |
 | **s17** – review (覆核) | Applicant aggrieved by a s16 or s16A decision | Apply **within 21 days** of notification (s17(1)), with grounds; review held on a day **not more than 3 months** after receipt, with **14 days' notice** (s17(2)). Published for comments for the first 3 weeks (s17(2B), (2D)). |
 | **s17B** – appeal to the Appeal Board | After a s17 review | Notice of appeal **within 60 days** after notification of the review decision (s17B(1)) |
 
@@ -80,9 +80,9 @@ Plan-making (for programming a s12A or tracking a draft OZP):
 - Plan submitted to the Chief Executive in Council within **5 months** after the 2-month exhibition period ends (s8(4)), with extensions by the Secretary for Development (s8(6)) [extension lengths per PlanD pamphlet: 2 months, then up to two further 2-month extensions].
 
 s16 procedure (TPB Guidance Notes, January 2026):
-1. **Anyone** may apply; owner's consent or notification is required if the applicant is not the sole "current land owner" (owner as at 6 weeks before application; consent / notice normally within 1 year before) – PG-31B.
+1. **Anyone** may apply; owner's consent or notification is required if the applicant is not the sole "current land owner" (owner as at 6 weeks before application; consent / notice generally valid for one year before the application) – PG-31B.
 2. Forms: S16-I (general), S16-II (NTEH only), S16-III (rural temporary ≤ 3 years). Plans and a supporting planning statement are optional but in practice needed; any supplementary information needs a bilingual executive summary ≤ 500 words. Non-EPASS: 1 signed form + 4 hard copies + 1 soft copy.
-3. Published for public inspection; **comments within the first 3 weeks** (PG-30D).
+3. Published for public inspection; **comments within the first 3 weeks** (PG-30D). TPB publishes a notice in two Chinese and one English daily newspaper and on its website, and normally posts a site notice as well.
 4. **Further information (FI)**: only within 2 months of receipt, or within 2 months after a deferment for FI; one batch; must not materially change the nature of the application. FI may be exempted from publication.
 5. **Deferment** request must reach the Secretary before the paper is issued (normally 7 days before the meeting) – PG-33B.
 6. Decision by the Metro Planning Committee (MPC) or Rural and New Town Planning Committee (RNTPC). Written notice about 2 weeks after the meeting. Approval conditions must be complied with (PG-20A).
@@ -91,6 +91,12 @@ s16 procedure (TPB Guidance Notes, January 2026):
 
 ### What TPB weighs in a minor relaxation (from A/K10/280 and PG-41A)
 Planning intention in the ES, planning and design merits (setbacks, public passage, greening, GIC facilities), visual impact (VIA to PG-41A), air ventilation (AVA), traffic, environmental, sewerage and drainage impacts, previous and similar applications, and public comments. A typical paper: proposal → justifications → owner's consent → background and similar applications → departmental comments → public comments → planning assessment → PlanD view with approval conditions and advisory clauses.
+
+### Extending a permission (PG-35E, March 2026)
+- Commencement usually means approval of building plans. Where a land transaction is required, it may be the date the formal basic terms offer is accepted. Each case turns on its facts.
+- Apply under s16A as a Class B amendment **at least 6 weeks before** the time limit expires. PlanD's Assistant Director normally decides Class B applications within 6 weeks; an application considered unacceptable goes to the Committee within 2 months of receipt (PG-36C). Review within 21 days of notification, and appeal within 60 days of the review decision.
+- Total extensions cannot exceed the original period for commencement.
+- A lapsed permission cannot be extended, even if the application was made in time. The permission must still be in effect when the application is considered. Otherwise a fresh s16 application is needed.
 
 ## 5. Current incentive schemes (2026)
 - **Bonus Plot Ratio Pilot Scheme (JPN 9, 1.9.2026 to 31.8.2031)**: seven areas – Cheung Sha Wan, Ma Tau Kok, Mong Kok, Sai Ying Pun & Sheung Wan, Tsuen Wan, Wan Chai, Yau Ma Tei. Eligible: site ≥ 700 m²; existing residential building(s) with OP issued ≥ 50 years before the application; redevelopment > 50% residential GFA. Bonus = **20% of the maximum domestic PR/GFA on the OZP**, land-premium free (standard rate per m² GFA set by LandsD, LAO PN 9/2026 – see `lands/lands-rules.md`). Option (i) build in situ (needs s16 if the OZP limits are exceeded; s42 BO if B(P)R exceeded) or option (ii) encash as premium credit; no hybrid.
@@ -104,13 +110,14 @@ Planning intention in the ES, planning and design merits (setbacks, public passa
 2. Check the proposed uses against Column 1 / Column 2.
 3. Check PR (domestic, non-domestic, total), BH (mPD, with JPN 5 roof-top rules), SC and NBA against the Remarks.
 4. Decide the route: none / s16 (Column 2 use or minor relaxation) / s12A.
-5. Run `tools/planning_lease_check.py` for the lease side at the same time – a lease modification normally follows planning permission.
-6. Build the programme: s16 ≈ 2 months to decision + ~2 weeks for the notice; add 3–4 months if a review is likely.
+5. Screen for other controls that no tool checks: EIA (`../statutes/eia-rules.md`) and railway protection (`../statutes/railway-protection-rules.md`).
+6. Run `tools/planning_lease_check.py` for the lease side at the same time – a lease modification normally follows planning permission.
+7. Build the programme: s16 ≈ 2 months to decision + ~2 weeks for the notice; add 3–4 months if a review is likely.
 
 ## 8. Open items
-- Cap. 131 checked (2.11.2023 English text). The Chinese text and any amendment after 2.11.2023 were not checked.
-- PG-30D, PG-31B, PG-35E, PG-36C texts not read; figures above come from the January 2026 Guidance Notes.
-- Rural Covering Notes (temporary uses) not read.
+- Checked on 2026-11-07: PG-30D (October 2026), PG-31B (September 2023), PG-35E (March 2026), PG-36C (December 2023) and the Rural Covering Notes. The Rural Covering Notes file is dated April 2005; the repo owner confirmed that it is the latest.
+- Cap. 131: the Verified Copy is dated 2.11.2023, and the Department of Justice open data still showed that as the current version on 2026-11-07. Its Chinese text gives the same 21-day, 60-day, 3-month, 14-day, 2-month and 5-month periods as §4. Only these periods were compared, not the whole Chinese text.
+- The PG-36C amendment categories are not reproduced here. Read Annex 1 for the thresholds.
 
 ## Sources
 - Cap. 131 Town Planning Ordinance, consolidated version last updated 2.11.2023 (user upload; eLegislation)
