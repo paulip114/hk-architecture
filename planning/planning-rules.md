@@ -1,15 +1,15 @@
 # Town planning (Cap. 131) – working rules for OZP and s16 checks
 
-Read this before any zoning, plot ratio / building height (OZP), s12A, s16 or s16A task. Every output from here is a draft for review by the Authorized Person and the planning consultant. Items marked **[verify]** were not checked against a primary source in this session (eLegislation and some TPB PDFs could not be reached). Quote the source documents, not this summary, in any submission.
+Read this before any zoning, plot ratio / building height (OZP), s12A, s16 or s16A task. Every output from here is a draft for review by the Authorized Person and the planning consultant. Section references and statutory periods in §4 were checked against the **consolidated Cap. 131 (last updated 2.11.2023, Verified Copy, English)** uploaded by the user. Items marked **[verify]** were not checked against a primary source (some TPB PDFs could not be reached). Quote the source documents, not this summary, in any submission.
 
-Last compiled: 2026-11-05. Sources read: TPB Guidance Notes for s16 applications (January 2026), TPB guideline index (current, post-1.9.2023), PlanD information pamphlet on the Town Planning (Amendment) Ordinance 2023, JPN 4 (Oct 2021), JPN 5 (Apr 2019), JPN 9 (Aug 2026), TPB paper A/K10/280 (Jul 2026, worked example of an R(A) s16 minor relaxation). Links at the end.
+Last compiled: 2026-11-05; Cap. 131 check 2026-11-06. Sources read: Cap. 131 (2.11.2023), TPB Guidance Notes for s16 applications (January 2026), TPB guideline index (current, post-1.9.2023), PlanD information pamphlet on the Town Planning (Amendment) Ordinance 2023, JPN 4 (Oct 2021), JPN 5 (Apr 2019), JPN 9 (Aug 2026), TPB paper A/K10/280 (Jul 2026, worked example of an R(A) s16 minor relaxation). Links at the end.
 
 ## 1. The statutory plans
 | Plan | What it does |
 | --- | --- |
 | Outline Zoning Plan (OZP, 分區計劃大綱圖) | Zones, Notes (use and development restrictions) and Explanatory Statement. Plan number `S/<area>/<n>`. Draft OZPs carry the same weight in practice once exhibited. |
 | Development Permission Area plan (DPA, 發展審批地區圖) | Interim plan in the New Territories; enforcement against unauthorised development applies. |
-| Regulated Area (新增, 2023) | Area on an OZP not previously under a DPA where the Secretary for Development can apply enforcement; development is an offence unless it is a pre-9.12.2022 use, always permitted, or has permission (new s21F). |
+| Regulated Area (新增, 2023) | Area on an OZP not previously under a DPA where the Secretary for Development can apply enforcement; development is an offence unless it is a pre-material-date use (material date 9.12.2022, s1A), permitted under the latest plan, or has s16 permission (s21F(1)). Fine $500,000 first conviction, $1,000,000 subsequent (s21F(2)). |
 | Outline Development Plan / Layout Plan (ODP / LP) | Departmental plans, not statutory; they guide land sale and lease conditions. |
 | HKPSG (香港規劃標準與準則) | Not statutory; sets reference densities and provision standards. Densities in `bpr/bpr-rules.md` §3. |
 
@@ -58,14 +58,26 @@ Other common Remarks: GFA to be disregarded (plant rooms, caretaker's office and
 - **JPN 7** (Site Coverage Restriction, Aug 2021) – SC on OZP, not read in this session [verify].
 - **JPN 6** (SBD building separation and setback) – covered in the APP-152 thread.
 
-## 4. Applications to TPB
-| Route | When | Time limit (post-1.9.2023) |
+## 4. Applications to TPB (checked against Cap. 131, 2.11.2023)
+| Route | When | Statutory time limit |
 | --- | --- | --- |
-| **s12A** – amendment of plan (改劃) | Use not in Column 1/2, or restrictions far beyond "minor relaxation" | TPB considers within **2 months** (was 3). Only owners, persons with owner's or Director of Lands' consent, or public bodies may apply; others go to an administrative register. |
-| **s16** – planning permission (規劃許可) | Column 2 use; minor relaxation of PR / BH / SC / NBA where the Remarks allow; CDA MLP; transfer of plot ratio (PG-43A) | TPB considers within **2 months of receipt** (GN para 46). |
-| **s16A** – amendment to permission | Class A amendments: no application needed. Class B: apply under s16A(2) (PG-36C). Others: fresh s16 | [verify period] |
-| **s17** – review (覆核) | Applicant dissatisfied with s16 / s16A decision | Apply in writing **within 21 days** of notification, with grounds; TPB considers within **3 months** (GN paras 50, 53) |
-| **s17B** – appeal to Town Planning Appeal Board | After a review | Lodge **within 60 days** of notification of the review decision (GN para 58) |
+| **s12A** – amendment of plan (改劃) | Use not in Column 1/2, or restrictions far beyond "minor relaxation". Only for an original approved plan or approved part (s12A(1)) | TPB holds a meeting to consider within **2 months after receipt** (s12A(16)). Only an **eligible person** may apply (s12A definitions): a registered owner of non-Government land in the area, a person with that owner's written consent, a person with the Director of Lands' written consent for Government land, or a public officer / public body. Applicant may attend and be heard (s12A(18)). |
+| **s16** – planning permission (規劃許可) | Column 2 use; minor relaxation of PR / BH / SC / NBA where the Remarks allow; CDA MLP; transfer of plot ratio (PG-43A) | TPB considers within **2 months of receipt** (s16(3)). Permission only to the extent the plan provides for (s16(4)); conditions as TPB thinks fit (s16(5)). |
+| **s16A** – amendment to permission | Class A amendments: the permission is read as including them, no application (s16A(1)). Class B: apply under s16A(2) (classes set by TPB Gazette notice, s16A(10); PG-36C). Others: fresh s16 | TPB considers within **2 months after receipt** (s16A(5)) |
+| **s17** – review (覆核) | Applicant aggrieved by a s16 or s16A decision | Apply **within 21 days** of notification (s17(1)), with grounds; review held on a day **not more than 3 months** after receipt, with **14 days' notice** (s17(2)). Published for comments for the first 3 weeks (s17(2B), (2D)). |
+| **s17B** – appeal to the Appeal Board | After a s17 review | Notice of appeal **within 60 days** after notification of the review decision (s17B(1)) |
+
+Points from the Ordinance that matter in practice:
+- **Comments**: any person may comment within the **first 3 weeks** of public inspection (s16(2F)); late comments are treated as not made (s16(2H)). Notices go in 2 Chinese and 1 English newspaper once a week during those 3 weeks and on the TPB website (s16(2D)).
+- **Further information resets the clock**: FI accepted is published again, and the application is regarded as received when the FI is received (s16(2K)(c)(ii)), unless TPB exempts the FI (s16(2L)). FI outside the TPB's Gazette-specified period must not be accepted (s16(2JA), (7A)). Same for s12A (s12A(13)–(15)) and s17 (s17(2H)–(2I)).
+- **Link to the Buildings Ordinance**: anything permitted by a s16 permission is not a contravention of an approved or draft plan for the purposes of BO s16(1)(d) and (da) (s16(7)), so BD cannot refuse plans on planning grounds for that item.
+- **Owner's consent / notification** for s12A and s16 (s12A(3), s16(2)): "current land owner" is the registered owner at the start of a period before the application that TPB specifies by Gazette notice (s16(8)). TPB may refuse to consider an application that does not comply (s16(2A)).
+- **Validity / lapsing** is not fixed by the Ordinance; it is set as a condition of each permission (s16(5)) under TPB practice (PG-26A, PG-35E).
+
+Plan-making (for programming a s12A or tracking a draft OZP):
+- Draft plan exhibited for **2 months** (s5); representations within those 2 months (s6(1)); late ones treated as not made (s6(3)).
+- TPB considers representations (s6B), may propose amendments, which are exhibited for further representations (s6C, s6D).
+- Plan submitted to the Chief Executive in Council within **5 months** after the 2-month exhibition period ends (s8(4)), with extensions by the Secretary for Development (s8(6)) [extension lengths per PlanD pamphlet: 2 months, then up to two further 2-month extensions].
 
 s16 procedure (TPB Guidance Notes, January 2026):
 1. **Anyone** may apply; owner's consent or notification is required if the applicant is not the sole "current land owner" (owner as at 6 weeks before application; consent / notice normally within 1 year before) – PG-31B.
@@ -96,11 +108,12 @@ Planning intention in the ES, planning and design merits (setbacks, public passa
 6. Build the programme: s16 ≈ 2 months to decision + ~2 weeks for the notice; add 3–4 months if a review is likely.
 
 ## 8. Open items
-- Cap. 131 text not read (eLegislation blocked in this session). Upload the consolidated Cap. 131 PDF to the project files to verify section numbers and s16A periods.
+- Cap. 131 checked (2.11.2023 English text). The Chinese text and any amendment after 2.11.2023 were not checked.
 - PG-30D, PG-31B, PG-35E, PG-36C texts not read; figures above come from the January 2026 Guidance Notes.
 - Rural Covering Notes (temporary uses) not read.
 
 ## Sources
+- Cap. 131 Town Planning Ordinance, consolidated version last updated 2.11.2023 (user upload; eLegislation)
 - [TPB Guidelines index](https://www.tpb.gov.hk/en/resources/tpb_guidelines/index.html)
 - [S16 Guidance Notes, Jan 2026](https://www.tpb.gov.hk/en/forms/Guidance_Notes/S16_GN_Eng_final_2026.pdf)
 - [Application forms and guidance notes](https://www.tpb.gov.hk/en/resources/application_forms_and_guidance_notes/index.html)

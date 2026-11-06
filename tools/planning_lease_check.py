@@ -285,12 +285,14 @@ def programme(needs):
     lines = []
     if needs["s12A"]:
         lines.append(f"- **s12A rezoning** first: TPB decision within {t['s12A_decision_months']} months of receipt, "
-                     "then plan-making (exhibition, representations, up to 5 months + extensions before CE in C). Budget 12–18 months.")
+                     f"then plan-making: {t['plan_exhibition_months']}-month exhibition for representations (s5, s6), submission to CE in C "
+                     f"within {t['ce_in_c_submission_months']} months after exhibition ends (s8(4)) plus extensions. Budget 12–18 months.")
     if needs["s16"]:
         lines.append(f"- **s16 application**: comments in the first {t['s16_comment_weeks']} weeks; decision within "
-                     f"{t['s16_decision_months']} months; notice about {t['decision_notice_weeks']} weeks later. "
-                     f"Further information only within {t['fi_window_months']} months. Refusal: s17 review within "
-                     f"{t['s17_lodge_days']} days (decided within {t['s17_decision_months']} months), then appeal within "
+                     f"{t['s16_decision_months']} months (s16(3)); notice about {t['decision_notice_weeks']} weeks later. "
+                     f"Further information only within {t['fi_window_months']} months, and accepted FI restarts the 2 months "
+                     f"unless exempted (s16(2K), (2L)). Refusal: s17 review applied for within "
+                     f"{t['s17_lodge_days']} days, heard within {t['s17_decision_months']} months (s17(2)), then appeal within "
                      f"{t['appeal_lodge_days']} days. Permission typically valid {t['s16_validity_years']} years to commence.")
     if needs["lease_mod"]:
         lo, hi = D["lands"]["premium_assessment_months"]

@@ -42,6 +42,6 @@
 
 ## Indicative programme
 
-- **s16 application**: comments in the first 3 weeks; decision within 2 months; notice about 2 weeks later. Further information only within 2 months. Refusal: s17 review within 21 days (decided within 3 months), then appeal within 60 days. Permission typically valid 4 years to commence.
+- **s16 application**: comments in the first 3 weeks; decision within 2 months (s16(3)); notice about 2 weeks later. Further information only within 2 months, and accepted FI restarts the 2 months unless exempted (s16(2K), (2L)). Refusal: s17 review applied for within 21 days, heard within 3 months (s17(2)), then appeal within 60 days. Permission typically valid 4 years to commence.
 - **Lease modification / land exchange (PN 2/2023)**, after planning permission: preliminary reply 3 wk, DLC decision / PBTO 22 wk later, premium assessment ~5.8–8.5 months (2022–24 average), BBTO acceptance 4 wk with 10% deposit, execution within 12 wk. About 43 weeks + premium time ≈ 16–18 months without appeal.
 - **Nil-premium approvals** handled during GBP checking (PN 4/2021 App A).
