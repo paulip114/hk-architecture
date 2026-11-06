@@ -1,0 +1,149 @@
+{
+ "id": "D02",
+ "stage": "3",
+ "capability": "procedure",
+ "title": "屋宇署法定期限",
+ "prompt": "案例純屬虛構。按 Cap. 123 / 123A 及 PNAP 計算各期限（日曆日）。W&R（撤回再提交）令審批期由最後一次 W&R 日重新起計。",
+ "input": {
+  "as_of": "2027-09-15",
+  "submissions": [
+   {
+    "id": "G1",
+    "kind": "GBP",
+    "type": "first",
+    "date": "2027-01-11",
+    "result": "disapproved",
+    "result_date": "2027-03-20"
+   },
+   {
+    "id": "G2",
+    "kind": "GBP",
+    "type": "resubmission",
+    "date": "2027-04-01",
+    "wr_dates": [
+     "2027-04-20"
+    ],
+    "result": "approved",
+    "result_date": "2027-05-18"
+   }
+  ],
+  "consents": [
+   {
+    "id": "C1",
+    "applied": "2027-05-25",
+    "approval_date": "2027-05-18",
+    "granted": "2027-06-18",
+    "reg8_plans_complete": true,
+    "supervision_plan": true
+   }
+  ],
+  "commencement": {
+   "date": "2027-09-30",
+   "ba10_date": "2027-09-27",
+   "tcp_notice_date": "2027-09-20"
+  },
+  "completion": {
+   "date": "2029-06-01",
+   "rc_cert_date": "2029-06-15",
+   "ap_cert_date": "2029-06-10"
+  },
+  "amendments": [
+   {
+    "id": "A1",
+    "approved": false,
+    "works_started": true,
+    "drainage_excavation_depth_m": 2.0
+   },
+   {
+    "id": "A2",
+    "approved": false,
+    "works_started": true,
+    "non_ldbp_pile_increase_pct": 25,
+    "treated_as_minor": true
+   },
+   {
+    "id": "A3",
+    "approved": false,
+    "works_started": false,
+    "site_formation_level_change_m": 0.3
+   }
+  ],
+  "op": {
+   "applied": "2029-07-01",
+   "superstructure_consent_date": "2027-06-18",
+   "first_gbp_date": "2027-01-11",
+   "prereq": {
+    "all_amendments_approved": true,
+    "plans_tally": true,
+    "stage_iii_done": true,
+    "bd106_in_plans": true,
+    "gfa_summary": true,
+    "consolidated_digital_file": true,
+    "minor_works_in_plans": true
+   }
+  }
+ },
+ "checks": [
+  {
+   "path": "g1_refusal_due",
+   "type": "date",
+   "expected": "2027-03-12",
+   "desc": "G1 拒批通知期限"
+  },
+  {
+   "path": "g1_45th_day",
+   "type": "date",
+   "expected": "2027-02-25",
+   "desc": "G1 第 45 日查詢日"
+  },
+  {
+   "path": "g1_result_after_period",
+   "type": "bool",
+   "expected": true,
+   "desc": "G1 結果是否在期限之後才發出"
+  },
+  {
+   "path": "g2_refusal_due",
+   "type": "date",
+   "expected": "2027-05-20",
+   "desc": "G2 拒批通知期限"
+  },
+  {
+   "path": "consent_due",
+   "type": "date",
+   "expected": "2027-06-22",
+   "desc": "同意書期限"
+  },
+  {
+   "path": "consent_lapses_after",
+   "type": "date",
+   "expected": "2027-09-18",
+   "desc": "未動工則同意書失效的日期"
+  },
+  {
+   "path": "ba10_latest",
+   "type": "date",
+   "expected": "2027-09-23",
+   "desc": "BA10 最遲提交日"
+  },
+  {
+   "path": "rc_cert_due",
+   "type": "date",
+   "expected": "2029-06-08",
+   "desc": "RC 完工證明期限"
+  },
+  {
+   "path": "ap_cert_due",
+   "type": "date",
+   "expected": "2029-06-15",
+   "desc": "AP 完工證明期限"
+  },
+  {
+   "path": "op_refusal_due",
+   "type": "date",
+   "expected": "2029-07-15",
+   "desc": "佔用許可證拒批期限"
+  }
+ ],
+ "source": "submission/periods.json; tools/submission_timeline.py"
+}

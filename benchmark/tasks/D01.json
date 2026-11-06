@@ -1,0 +1,149 @@
+{
+ "id": "D01",
+ "stage": "3",
+ "capability": "rule_application",
+ "title": "走火通道審查",
+ "prompt": "案例純屬虛構。按 FS Code 2011 Part B 計算佔用人數及找出不合格項。樓層面積 type 含義見 FS Code Table B1：4b_retail_low = 零售 3 m²/人，4a_office = 寫字樓 9 m²/人，1b_flats_other = 住宅 9 m²/人（人數向上取整）；出口數目及總闊度按 Table B2。每層獨立計，count 不影響每層人數。",
+ "input": {
+  "sprinklered": true,
+  "storeys_above_ground": 12,
+  "top_floor_level_m": 38,
+  "refuge_floors": [],
+  "storeys": [
+   {
+    "name": "G retail",
+    "code": "G",
+    "level": "ground",
+    "use_class": "4b",
+    "areas": [
+     {
+      "type": "4b_retail_low",
+      "usable_area_m2": 900
+     }
+    ],
+    "exit_routes_mm": [
+     1200,
+     1200
+    ],
+    "max_travel_m": 30,
+    "max_deadend_m": 10
+   },
+   {
+    "name": "1F office",
+    "code": "1F",
+    "level": "above",
+    "use_class": "4a",
+    "areas": [
+     {
+      "type": "4a_office",
+      "usable_area_m2": 620
+     }
+    ],
+    "exit_routes_mm": [
+     1100
+    ],
+    "max_travel_m": 25,
+    "max_deadend_m": 12,
+    "stair_door_separation_m": 5,
+    "max_stair_to_stair_m": 40
+   },
+   {
+    "name": "2-11F flats",
+    "code": "TYP",
+    "count": 10,
+    "level": "above",
+    "use_class": "1b",
+    "areas": [
+     {
+      "type": "1b_flats_other",
+      "usable_area_m2": 240
+     }
+    ],
+    "exit_routes_mm": [
+     1050,
+     1050
+    ],
+    "max_travel_m": 13,
+    "max_deadend_m": 20,
+    "max_within_flat_m": 16,
+    "stair_door_separation_m": 7
+   }
+  ],
+  "staircases": [
+   {
+    "name": "S1",
+    "width_mm": 1050,
+    "storeys_served": 12,
+    "serves": "above",
+    "pressurised": true,
+    "tread_mm": 225,
+    "riser_mm": 175,
+    "risers_per_flight": 17
+   },
+   {
+    "name": "S2",
+    "width_mm": 1200,
+    "storeys_served": 12,
+    "serves": "above",
+    "pressurised": true,
+    "tread_mm": 250,
+    "riser_mm": 170,
+    "risers_per_flight": 16
+   }
+  ]
+ },
+ "checks": [
+  {
+   "path": "occupants.G",
+   "type": "number",
+   "expected": 300,
+   "desc": "G 層人數"
+  },
+  {
+   "path": "occupants.1F",
+   "type": "number",
+   "expected": 69,
+   "desc": "1F 人數"
+  },
+  {
+   "path": "occupants.TYP",
+   "type": "number",
+   "expected": 27,
+   "desc": "標準層每層人數"
+  },
+  {
+   "path": "failures",
+   "type": "set",
+   "expected": [
+    "1F|exit_count",
+    "1F|exit_width",
+    "1F|stair_door_sep",
+    "G|exit_width",
+    "S1|risers",
+    "TYP|deadend"
+   ],
+   "desc": "不合格項，格式 CODE|check",
+   "weight": 3,
+   "options": [
+    "1F|deadend",
+    "1F|exit_count",
+    "1F|exit_width",
+    "1F|stair_door_sep",
+    "1F|travel",
+    "G|deadend",
+    "G|exit_count",
+    "G|exit_width",
+    "G|stair_door_sep",
+    "G|travel",
+    "TYP|deadend",
+    "TYP|exit_count",
+    "TYP|exit_width",
+    "TYP|stair_door_sep",
+    "TYP|travel",
+    "S1|risers",
+    "S2|risers"
+   ]
+  }
+ ],
+ "source": "tools/moe_check.py; fs-code/moe_tables.json"
+}

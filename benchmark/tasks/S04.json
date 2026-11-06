@@ -1,0 +1,46 @@
+{
+ "id": "S04",
+ "stage": "2",
+ "capability": "procedure",
+ "title": "城規申請時間表",
+ "prompt": "案例純屬虛構。按 Cap. 131 計算：s16 申請公眾意見期 3 星期、決定期 2 個月；s17 覆核須於通知後 21 日內提出，決定期 3 個月；上訴須於 s17 決定通知後 60 日內提出。月份按同一日號加算，日數按日曆日加算。",
+ "input": {
+  "s16_lodged": "2027-03-01",
+  "s16_notified": "2027-05-14",
+  "s17_lodged": "2027-06-01",
+  "s17_notified": "2027-09-10"
+ },
+ "checks": [
+  {
+   "path": "s16_comment_end",
+   "type": "date",
+   "expected": "2027-03-22",
+   "desc": "s16 公眾意見期結束"
+  },
+  {
+   "path": "s16_decision_by",
+   "type": "date",
+   "expected": "2027-05-01",
+   "desc": "s16 決定期限"
+  },
+  {
+   "path": "s17_lodge_by",
+   "type": "date",
+   "expected": "2027-06-04",
+   "desc": "s17 提出期限"
+  },
+  {
+   "path": "s17_decision_by",
+   "type": "date",
+   "expected": "2027-09-01",
+   "desc": "s17 決定期限"
+  },
+  {
+   "path": "appeal_lodge_by",
+   "type": "date",
+   "expected": "2027-11-09",
+   "desc": "上訴期限"
+  }
+ ],
+ "source": "planning/planning_lands.json (Cap. 131)"
+}

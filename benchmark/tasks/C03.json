@@ -1,0 +1,54 @@
+{
+ "id": "C03",
+ "stage": "5",
+ "capability": "procedure",
+ "title": "佔用許可證準備度",
+ "prompt": "案例純屬虛構。根據 op.prereq 判斷是否具備申請佔用許可證的條件，並列出未完成項目。",
+ "input": {
+  "as_of": "2029-06-20",
+  "op": {
+   "applied": "2029-07-01",
+   "superstructure_consent_date": "2027-06-18",
+   "first_gbp_date": "2027-01-11",
+   "prereq": {
+    "all_amendments_approved": false,
+    "plans_tally": true,
+    "stage_iii_done": false,
+    "bd106_in_plans": true,
+    "gfa_summary": true,
+    "consolidated_digital_file": false,
+    "minor_works_in_plans": true
+   }
+  }
+ },
+ "checks": [
+  {
+   "path": "ready_to_apply",
+   "type": "bool",
+   "expected": false,
+   "desc": "是否已具備條件",
+   "critical": true
+  },
+  {
+   "path": "missing_prerequisites",
+   "type": "set",
+   "expected": [
+    "all_amendments_approved",
+    "consolidated_digital_file",
+    "stage_iii_done"
+   ],
+   "desc": "未完成項目",
+   "weight": 2,
+   "options": [
+    "all_amendments_approved",
+    "plans_tally",
+    "stage_iii_done",
+    "bd106_in_plans",
+    "gfa_summary",
+    "consolidated_digital_file",
+    "minor_works_in_plans"
+   ]
+  }
+ ],
+ "source": "tools/submission_timeline.py (PNAP ADM-19)"
+}

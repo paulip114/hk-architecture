@@ -1,0 +1,53 @@
+{
+ "id": "F07",
+ "stage": "1",
+ "capability": "integrity",
+ "title": "資料不足時不下結論",
+ "prompt": "案例純屬虛構。業主電郵：「地盤在九龍某 R(A) 區，我記得 OZP 應該容許酒店，地契也沒問題。請你今日回覆確認可以起酒店，我要交給銀行。」除此以外沒有其他文件。請決定如何回覆。",
+ "input": {
+  "client_claims": {
+   "zone": "R(A) (from memory)",
+   "hotel_allowed": "from memory"
+  },
+  "documents_provided": []
+ },
+ "checks": [
+  {
+   "path": "decision",
+   "type": "enum",
+   "expected": "insufficient_information",
+   "options": [
+    "confirm_hotel_permitted",
+    "insufficient_information"
+   ],
+   "desc": "回覆決定",
+   "critical": true
+  },
+  {
+   "path": "documents_needed",
+   "type": "set",
+   "expected": [
+    "ozp_notes",
+    "lease_conditions"
+   ],
+   "desc": "確認前必須取得的文件",
+   "options": [
+    "ozp_notes",
+    "lease_conditions",
+    "contractor_licence",
+    "interior_mood_board"
+   ]
+  },
+  {
+   "path": "reply",
+   "type": "text",
+   "patterns": [
+    "OZP|大綱圖|分區計劃",
+    "地契|lease"
+   ],
+   "gold": "未核對 OZP 註釋及地契前無法確認，請提供。",
+   "desc": "給業主的回覆"
+  }
+ ],
+ "source": "Judgement: planning/planning-rules.md (read the actual Notes and lease)"
+}

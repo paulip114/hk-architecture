@@ -1,0 +1,116 @@
+{
+ "id": "F02",
+ "stage": "1",
+ "capability": "rule_application",
+ "title": "地盤類別判定",
+ "prompt": "案例純屬虛構。按 B(P)R reg 18A / 19(3) 判定每個地盤的類別。street_widths_m 是相鄰街道闊度，frontage 是沿指定街道的周界長度。",
+ "input": {
+  "sites": {
+   "a": {
+    "street_widths_m": [
+     9
+    ],
+    "perimeter_m": 116,
+    "frontage_on_specified_streets_m": 30
+   },
+   "b": {
+    "street_widths_m": [
+     15,
+     7.5,
+     6,
+     3
+    ],
+    "perimeter_m": 100,
+    "frontage_on_specified_streets_m": 58
+   },
+   "c": {
+    "street_widths_m": [
+     12,
+     10,
+     8
+    ],
+    "perimeter_m": 120,
+    "frontage_on_specified_streets_m": 75
+   },
+   "d": {
+    "street_widths_m": [
+     4,
+     3
+    ],
+    "perimeter_m": 60,
+    "frontage_on_specified_streets_m": 20
+   },
+   "e": {
+    "street_widths_m": [
+     12,
+     6
+    ],
+    "perimeter_m": 130,
+    "frontage_on_specified_streets_m": 50
+   }
+  }
+ },
+ "checks": [
+  {
+   "path": "class.a",
+   "type": "enum",
+   "expected": "A",
+   "options": [
+    "A",
+    "B",
+    "C",
+    "BA"
+   ],
+   "desc": "地盤 a 的類別"
+  },
+  {
+   "path": "class.b",
+   "type": "enum",
+   "expected": "B",
+   "options": [
+    "A",
+    "B",
+    "C",
+    "BA"
+   ],
+   "desc": "地盤 b 的類別"
+  },
+  {
+   "path": "class.c",
+   "type": "enum",
+   "expected": "C",
+   "options": [
+    "A",
+    "B",
+    "C",
+    "BA"
+   ],
+   "desc": "地盤 c 的類別"
+  },
+  {
+   "path": "class.d",
+   "type": "enum",
+   "expected": "BA",
+   "options": [
+    "A",
+    "B",
+    "C",
+    "BA"
+   ],
+   "desc": "地盤 d 的類別"
+  },
+  {
+   "path": "class.e",
+   "type": "enum",
+   "expected": "A",
+   "options": [
+    "A",
+    "B",
+    "C",
+    "BA"
+   ],
+   "desc": "地盤 e 的類別"
+  }
+ ],
+ "source": "tools/bpr_check.py classify_site; bpr/bpr-rules.md"
+}

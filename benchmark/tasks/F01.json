@@ -1,0 +1,84 @@
+{
+ "id": "F01",
+ "stage": "1",
+ "capability": "calculation",
+ "title": "最大可建樓面面積",
+ "prompt": "案例純屬虛構。住宅項目，以 Cap. 123F 附表、OZP 及地契三者中最嚴者定出最大樓面面積。附表地積比及上蓋面積按建築物高度所在的高度級別查表（top_band_sc_pct 為此高度級別的住宅上蓋面積百分比）。",
+ "input": {
+  "site": {
+   "area_m2": 800,
+   "street_widths_m": [
+    9
+   ],
+   "perimeter_m": 116,
+   "frontage_on_specified_streets_m": 30
+  },
+  "building": {
+   "type": "domestic",
+   "height_m": 58
+  },
+  "limits": {
+   "ozp_max_pr_domestic": 6.0
+  },
+  "lease": {
+   "max_gfa_m2": 4500
+  }
+ },
+ "checks": [
+  {
+   "path": "site_class",
+   "type": "enum",
+   "expected": "A",
+   "options": [
+    "A",
+    "B",
+    "C",
+    "BA"
+   ],
+   "desc": "地盤類別"
+  },
+  {
+   "path": "schedule_pr",
+   "type": "number",
+   "expected": 6.8,
+   "desc": "附表地積比上限"
+  },
+  {
+   "path": "schedule_max_gfa_m2",
+   "type": "number",
+   "expected": 5440,
+   "desc": "附表上限折算的 GFA"
+  },
+  {
+   "path": "ozp_max_gfa_m2",
+   "type": "number",
+   "expected": 4800,
+   "desc": "OZP 上限折算的 GFA"
+  },
+  {
+   "path": "governing_max_gfa_m2",
+   "type": "number",
+   "expected": 4500,
+   "desc": "最終可建 GFA",
+   "weight": 2
+  },
+  {
+   "path": "governing_constraint",
+   "type": "enum",
+   "expected": "lease",
+   "options": [
+    "schedule",
+    "ozp",
+    "lease"
+   ],
+   "desc": "哪一項限制最嚴"
+  },
+  {
+   "path": "top_band_sc_pct",
+   "type": "number",
+   "expected": 34,
+   "desc": "上蓋面積百分比上限"
+  }
+ ],
+ "source": "bpr/first_schedule.json; tools/bpr_check.py"
+}

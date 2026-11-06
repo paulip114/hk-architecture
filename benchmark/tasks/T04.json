@@ -1,0 +1,88 @@
+{
+ "id": "T04",
+ "stage": "4",
+ "capability": "coordination",
+ "title": "招標文件協調",
+ "prompt": "案例純屬虛構。交叉核對房間表、裝修表及門表。找出沒有裝修資料的房間、裝修表內不存在的房間，以及防火時效低於要求的門。高於要求不算問題。",
+ "input": {
+  "rooms": [
+   {
+    "id": "R01"
+   },
+   {
+    "id": "R02"
+   },
+   {
+    "id": "R03"
+   },
+   {
+    "id": "R04"
+   },
+   {
+    "id": "R05"
+   }
+  ],
+  "finishes_schedule": [
+   {
+    "room": "R01"
+   },
+   {
+    "room": "R02"
+   },
+   {
+    "room": "R03"
+   },
+   {
+    "room": "R06"
+   }
+  ],
+  "doors": [
+   {
+    "id": "D1",
+    "room": "R04",
+    "required_frp_min": 60,
+    "provided_frp_min": 60
+   },
+   {
+    "id": "D2",
+    "room": "R05",
+    "required_frp_min": 120,
+    "provided_frp_min": 60
+   },
+   {
+    "id": "D3",
+    "room": "R02",
+    "required_frp_min": 0,
+    "provided_frp_min": 30
+   }
+  ]
+ },
+ "checks": [
+  {
+   "path": "rooms_missing_finishes",
+   "type": "set",
+   "expected": [
+    "R04",
+    "R05"
+   ],
+   "desc": "沒有裝修資料的房間"
+  },
+  {
+   "path": "finishes_for_unknown_rooms",
+   "type": "set",
+   "expected": [
+    "R06"
+   ],
+   "desc": "裝修表內不存在的房間"
+  },
+  {
+   "path": "doors_under_rated",
+   "type": "set",
+   "expected": [
+    "D2"
+   ],
+   "desc": "時效不足的門"
+  }
+ ],
+ "source": "First principles (anchors.py t04)"
+}

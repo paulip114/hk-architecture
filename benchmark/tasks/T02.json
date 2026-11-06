@@ -1,0 +1,144 @@
+{
+ "id": "T02",
+ "stage": "4",
+ "capability": "calculation",
+ "title": "回標評審",
+ "prompt": "案例純屬虛構。評審規則：(1) 算術錯誤以分項之和為準（corrected sum）；(2) 須有 bond、不可有 qualification、須在 deadline 或之前收到，否則不合規；(3) 推薦 corrected sum 最低的合規標書。",
+ "input": {
+  "deadline": "2027-05-10",
+  "budget": 95000000,
+  "tenders": [
+   {
+    "id": "A",
+    "items": {
+     "prelims": 12000000,
+     "works": 89200000
+    },
+    "stated_total": 101200000,
+    "bond_provided": false,
+    "qualified": false,
+    "received": "2027-05-10"
+   },
+   {
+    "id": "B",
+    "items": {
+     "prelims": 11500000,
+     "works": 88000000
+    },
+    "stated_total": 98000000,
+    "bond_provided": true,
+    "qualified": false,
+    "received": "2027-05-10"
+   },
+   {
+    "id": "C",
+    "items": {
+     "prelims": 12000000,
+     "works": 87800000
+    },
+    "stated_total": 99800000,
+    "bond_provided": true,
+    "qualified": false,
+    "received": "2027-05-09"
+   },
+   {
+    "id": "D",
+    "items": {
+     "prelims": 10000000,
+     "works": 87000000
+    },
+    "stated_total": 97000000,
+    "bond_provided": true,
+    "qualified": false,
+    "received": "2027-05-13"
+   },
+   {
+    "id": "E",
+    "items": {
+     "prelims": 10000000,
+     "works": 86000000
+    },
+    "stated_total": 96000000,
+    "bond_provided": true,
+    "qualified": true,
+    "received": "2027-05-10"
+   }
+  ]
+ },
+ "checks": [
+  {
+   "path": "corrected.A",
+   "type": "number",
+   "expected": 101200000,
+   "desc": "A 修正後總額"
+  },
+  {
+   "path": "corrected.B",
+   "type": "number",
+   "expected": 99500000,
+   "desc": "B 修正後總額"
+  },
+  {
+   "path": "corrected.C",
+   "type": "number",
+   "expected": 99800000,
+   "desc": "C 修正後總額"
+  },
+  {
+   "path": "corrected.D",
+   "type": "number",
+   "expected": 97000000,
+   "desc": "D 修正後總額"
+  },
+  {
+   "path": "corrected.E",
+   "type": "number",
+   "expected": 96000000,
+   "desc": "E 修正後總額"
+  },
+  {
+   "path": "compliant_tenders",
+   "type": "set",
+   "expected": [
+    "B",
+    "C"
+   ],
+   "desc": "合規標書",
+   "weight": 2,
+   "options": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+   ]
+  },
+  {
+   "path": "recommended",
+   "type": "enum",
+   "expected": "B",
+   "options": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+   ],
+   "desc": "推薦",
+   "weight": 2
+  },
+  {
+   "path": "recommended_corrected_sum_hkd",
+   "type": "number",
+   "expected": 99500000,
+   "desc": "推薦標書修正後總額"
+  },
+  {
+   "path": "over_budget_by_hkd",
+   "type": "number",
+   "expected": 4500000,
+   "desc": "超出預算多少"
+  }
+ ],
+ "source": "First principles (anchors.py t02)"
+}

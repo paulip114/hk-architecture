@@ -1,0 +1,174 @@
+{
+ "id": "D04",
+ "stage": "3",
+ "capability": "procedure",
+ "title": "屋宇署表格對應",
+ "prompt": "為每個動作選出屋宇署指定表格。",
+ "input": {
+  "_purposes": {
+   "appoint_ap": "Appoint AP / RSE / RGE",
+   "apply_plans": "Apply for approval of building / street works plans; certify preparation of plans",
+   "apply_consent": "Apply for consent to commence and carry out building / street works",
+   "concurrent_consent": "Apply for concurrent consent (with approval)",
+   "renew_consent": "Apply to renew consent",
+   "notify_commence": "Appoint Registered Contractor, notify commencement, RC undertaking",
+   "apply_op": "Completion certificate for new building; apply for OP",
+   "apply_top": "Completion certificate for new temporary building or part; apply for TOP"
+  }
+ },
+ "checks": [
+  {
+   "path": "form.appoint_ap",
+   "type": "enum",
+   "expected": "BA4",
+   "options": [
+    "BA4",
+    "BA5",
+    "BA6",
+    "BA8",
+    "BA8A",
+    "BA9",
+    "BA10",
+    "BA11",
+    "BA12",
+    "BA13",
+    "BA14"
+   ],
+   "desc": "appoint_ap 用哪份表格"
+  },
+  {
+   "path": "form.apply_plans",
+   "type": "enum",
+   "expected": "BA5",
+   "options": [
+    "BA4",
+    "BA5",
+    "BA6",
+    "BA8",
+    "BA8A",
+    "BA9",
+    "BA10",
+    "BA11",
+    "BA12",
+    "BA13",
+    "BA14"
+   ],
+   "desc": "apply_plans 用哪份表格"
+  },
+  {
+   "path": "form.apply_consent",
+   "type": "enum",
+   "expected": "BA8",
+   "options": [
+    "BA4",
+    "BA5",
+    "BA6",
+    "BA8",
+    "BA8A",
+    "BA9",
+    "BA10",
+    "BA11",
+    "BA12",
+    "BA13",
+    "BA14"
+   ],
+   "desc": "apply_consent 用哪份表格"
+  },
+  {
+   "path": "form.concurrent_consent",
+   "type": "enum",
+   "expected": "BA8A",
+   "options": [
+    "BA4",
+    "BA5",
+    "BA6",
+    "BA8",
+    "BA8A",
+    "BA9",
+    "BA10",
+    "BA11",
+    "BA12",
+    "BA13",
+    "BA14"
+   ],
+   "desc": "concurrent_consent 用哪份表格"
+  },
+  {
+   "path": "form.renew_consent",
+   "type": "enum",
+   "expected": "BA9",
+   "options": [
+    "BA4",
+    "BA5",
+    "BA6",
+    "BA8",
+    "BA8A",
+    "BA9",
+    "BA10",
+    "BA11",
+    "BA12",
+    "BA13",
+    "BA14"
+   ],
+   "desc": "renew_consent 用哪份表格"
+  },
+  {
+   "path": "form.notify_commence",
+   "type": "enum",
+   "expected": "BA10",
+   "options": [
+    "BA4",
+    "BA5",
+    "BA6",
+    "BA8",
+    "BA8A",
+    "BA9",
+    "BA10",
+    "BA11",
+    "BA12",
+    "BA13",
+    "BA14"
+   ],
+   "desc": "notify_commence 用哪份表格"
+  },
+  {
+   "path": "form.apply_op",
+   "type": "enum",
+   "expected": "BA13",
+   "options": [
+    "BA4",
+    "BA5",
+    "BA6",
+    "BA8",
+    "BA8A",
+    "BA9",
+    "BA10",
+    "BA11",
+    "BA12",
+    "BA13",
+    "BA14"
+   ],
+   "desc": "apply_op 用哪份表格"
+  },
+  {
+   "path": "form.apply_top",
+   "type": "enum",
+   "expected": "BA12",
+   "options": [
+    "BA4",
+    "BA5",
+    "BA6",
+    "BA8",
+    "BA8A",
+    "BA9",
+    "BA10",
+    "BA11",
+    "BA12",
+    "BA13",
+    "BA14"
+   ],
+   "desc": "apply_top 用哪份表格"
+  }
+ ],
+ "source": "submission/forms.json"
+}

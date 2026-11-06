@@ -1,0 +1,134 @@
+{
+ "id": "C02",
+ "stage": "5",
+ "capability": "procedure",
+ "title": "合約通知期審查",
+ "prompt": "案例純屬虛構。此合約的期限：EOT 分期資料相隔 ≤ 28 日；口頭指示須於 5 日內確認；索償資料須於通知後 60 日內提交；付款回應及付款期限見 response_days、payment_days（由 served 起計）。找出逾期項目的 ref。",
+ "input": {
+  "as_of": "2029-03-01",
+  "contract": {
+   "form": "SFBCwQ.2005",
+   "contract_sum": 180000000,
+   "possession_date": "2027-01-04",
+   "completion_date": "2028-12-29",
+   "ld_per_day": 85000,
+   "retention_pct": 5,
+   "retention_limit_pct": 3,
+   "dlp_months": 12,
+   "substantial_completion_date": "2029-02-12",
+   "certified_gross_to_date": 150000000,
+   "eots": [
+    {
+     "ref": "EOT-A",
+     "event": "weather",
+     "days": 12,
+     "granted": true,
+     "particulars_dates": [
+      "2027-08-02",
+      "2027-08-25"
+     ]
+    },
+    {
+     "ref": "EOT-B",
+     "event": "late info",
+     "days": 10,
+     "granted": true,
+     "particulars_dates": [
+      "2028-01-10",
+      "2028-02-14"
+     ]
+    },
+    {
+     "ref": "EOT-C",
+     "event": "VO",
+     "days": 7,
+     "granted": false,
+     "particulars_dates": [
+      "2028-11-01"
+     ]
+    }
+   ],
+   "instructions": [
+    {
+     "ref": "AI-1",
+     "oral_date": "2028-03-01",
+     "confirmed_date": "2028-03-06"
+    },
+    {
+     "ref": "AI-2",
+     "oral_date": "2028-04-03",
+     "confirmed_date": "2028-04-10"
+    }
+   ],
+   "claims": [
+    {
+     "ref": "LE-1",
+     "notice_date": "2028-03-01",
+     "particulars_date": "2028-05-15"
+    },
+    {
+     "ref": "LE-2",
+     "notice_date": "2028-06-01",
+     "particulars_date": "2028-07-20"
+    }
+   ],
+   "cispo": true,
+   "contract_date": "2026-12-01",
+   "payment_claims": [
+    {
+     "ref": "IPA-9",
+     "served": "2028-05-31",
+     "claimed": 6000000,
+     "response_date": "2028-06-25",
+     "admitted": 5000000,
+     "paid_date": "2028-07-20",
+     "paid": 5000000,
+     "response_days": 30,
+     "payment_days": 60
+    },
+    {
+     "ref": "IPA-10",
+     "served": "2028-06-30",
+     "claimed": 4000000,
+     "response_date": "2028-07-20",
+     "admitted": 4000000,
+     "paid_date": "2028-09-10",
+     "paid": 4000000,
+     "response_days": 30,
+     "payment_days": 60
+    }
+   ]
+  }
+ },
+ "checks": [
+  {
+   "path": "late_items",
+   "type": "set",
+   "expected": [
+    "AI-2",
+    "EOT-B",
+    "IPA-10",
+    "LE-1"
+   ],
+   "desc": "逾期項目",
+   "weight": 3,
+   "options": [
+    "AI-1",
+    "AI-2",
+    "EOT-A",
+    "EOT-B",
+    "IPA-9",
+    "IPA-10",
+    "LE-1",
+    "LE-2"
+   ]
+  },
+  {
+   "path": "ipa10_payment_due",
+   "type": "date",
+   "expected": "2028-08-29",
+   "desc": "IPA-10 付款期限"
+  }
+ ],
+ "source": "tools/contract_admin.py (periods stated in the prompt)"
+}

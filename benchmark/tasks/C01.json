@@ -1,0 +1,156 @@
+{
+ "id": "C01",
+ "stage": "5",
+ "capability": "calculation",
+ "title": "延期、違約金及保固金",
+ "prompt": "案例純屬虛構。按輸入計算。Extended Completion Date = completion_date + 已批出 EOT 日數；LD = 延誤日數 × 日額；retention = min(累計認證額 × retention_pct, 合約總額 × retention_limit_pct)；實質完工證書後 14 日內發還一半；DLP 由實質完工日起計。ld_if_pending_eot_granted_hkd 是假設未批 EOT 全批後的 LD。",
+ "input": {
+  "as_of": "2029-03-01",
+  "contract": {
+   "form": "SFBCwQ.2005",
+   "contract_sum": 180000000,
+   "possession_date": "2027-01-04",
+   "completion_date": "2028-12-29",
+   "ld_per_day": 85000,
+   "retention_pct": 5,
+   "retention_limit_pct": 3,
+   "dlp_months": 12,
+   "substantial_completion_date": "2029-02-12",
+   "certified_gross_to_date": 150000000,
+   "eots": [
+    {
+     "ref": "EOT-A",
+     "event": "weather",
+     "days": 12,
+     "granted": true,
+     "particulars_dates": [
+      "2027-08-02",
+      "2027-08-25"
+     ]
+    },
+    {
+     "ref": "EOT-B",
+     "event": "late info",
+     "days": 10,
+     "granted": true,
+     "particulars_dates": [
+      "2028-01-10",
+      "2028-02-14"
+     ]
+    },
+    {
+     "ref": "EOT-C",
+     "event": "VO",
+     "days": 7,
+     "granted": false,
+     "particulars_dates": [
+      "2028-11-01"
+     ]
+    }
+   ],
+   "instructions": [
+    {
+     "ref": "AI-1",
+     "oral_date": "2028-03-01",
+     "confirmed_date": "2028-03-06"
+    },
+    {
+     "ref": "AI-2",
+     "oral_date": "2028-04-03",
+     "confirmed_date": "2028-04-10"
+    }
+   ],
+   "claims": [
+    {
+     "ref": "LE-1",
+     "notice_date": "2028-03-01",
+     "particulars_date": "2028-05-15"
+    },
+    {
+     "ref": "LE-2",
+     "notice_date": "2028-06-01",
+     "particulars_date": "2028-07-20"
+    }
+   ],
+   "cispo": true,
+   "contract_date": "2026-12-01",
+   "payment_claims": [
+    {
+     "ref": "IPA-9",
+     "served": "2028-05-31",
+     "claimed": 6000000,
+     "response_date": "2028-06-25",
+     "admitted": 5000000,
+     "paid_date": "2028-07-20",
+     "paid": 5000000,
+     "response_days": 30,
+     "payment_days": 60
+    },
+    {
+     "ref": "IPA-10",
+     "served": "2028-06-30",
+     "claimed": 4000000,
+     "response_date": "2028-07-20",
+     "admitted": 4000000,
+     "paid_date": "2028-09-10",
+     "paid": 4000000,
+     "response_days": 30,
+     "payment_days": 60
+    }
+   ]
+  }
+ },
+ "checks": [
+  {
+   "path": "extended_completion",
+   "type": "date",
+   "expected": "2029-01-20",
+   "desc": "Extended Completion Date"
+  },
+  {
+   "path": "delay_days",
+   "type": "number",
+   "expected": 23,
+   "desc": "延誤日數"
+  },
+  {
+   "path": "ld_hkd",
+   "type": "number",
+   "expected": 1955000,
+   "desc": "LD",
+   "weight": 2
+  },
+  {
+   "path": "ld_if_pending_eot_granted_hkd",
+   "type": "number",
+   "expected": 1360000,
+   "desc": "未批 EOT 全批後的 LD"
+  },
+  {
+   "path": "retention_held_hkd",
+   "type": "number",
+   "expected": 5400000,
+   "desc": "保固金",
+   "weight": 2
+  },
+  {
+   "path": "half_retention_hkd",
+   "type": "number",
+   "expected": 2700000,
+   "desc": "發還一半的金額"
+  },
+  {
+   "path": "half_retention_release_by",
+   "type": "date",
+   "expected": "2029-02-26",
+   "desc": "發還期限"
+  },
+  {
+   "path": "dlp_end",
+   "type": "date",
+   "expected": "2030-02-12",
+   "desc": "DLP 完結日"
+  }
+ ],
+ "source": "tools/contract_admin.py (rules stated in the prompt; check against the signed contract)"
+}
