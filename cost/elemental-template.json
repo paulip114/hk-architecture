@@ -1,0 +1,54 @@
+{
+ "_note": "Element headings for an elemental cost plan. General practice, unverified: a QS sets the headings and amounts. No benchmark figures are included, because the repo has no sourced data. Copy this into cost.elemental and fill it in.",
+ "current_tpi": null,
+ "cfa_m2": null,
+ "elements": [
+  {
+   "name": "Substructure",
+   "amount": 0
+  },
+  {
+   "name": "Frame and upper floors",
+   "amount": 0
+  },
+  {
+   "name": "External envelope",
+   "amount": 0
+  },
+  {
+   "name": "Internal walls and doors",
+   "amount": 0
+  },
+  {
+   "name": "Finishes and fittings",
+   "amount": 0
+  },
+  {
+   "name": "Building services",
+   "amount": 0
+  },
+  {
+   "name": "Lifts and escalators",
+   "amount": 0
+  },
+  {
+   "name": "External works",
+   "amount": 0
+  },
+  {
+   "name": "Preliminaries",
+   "amount": 0
+  }
+ ],
+ "benchmarks": [
+  {
+   "name": "Completed project name",
+   "year": 2024,
+   "cfa_m2": 0,
+   "tpi": 0,
+   "elements": {
+    "Substructure": 0
+   }
+  }
+ ]
+}

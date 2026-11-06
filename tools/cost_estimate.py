@@ -14,6 +14,10 @@ Usage:  python3 cost_estimate.py project.json [-o report.md]   (reads the `cost`
   years_to_tender_midpoint: escalation period (default 0)
   gfa_m2: accountable GFA, for HK$/m2 GFA; budget: client budget to compare (exit 1 if over)
   contract_months: optional, adds an S-curve cash flow table
+  elemental: optional elemental cost plan, see cost/elemental-template.json
+    elements[]: {name, amount} or {name, quantity, unit, rate}; cfa_m2 defaults to the estimate's CFA
+    benchmarks[]: completed projects {name, year, cfa_m2, tpi, elements {name: amount}}. Amounts are rebased by
+    current tpi / project tpi when both are given. An element outside the range of the benchmarks shows as CHECK.
 Unit rates: Arcadis Q2 2026 (see hk_cost_rates.json). They exclude site formation, external works,
 land, fees and finance, and assume no basement. Output is an order-of-cost estimate for a QS to develop.
 """
@@ -99,6 +103,40 @@ def run(p, level=None):
             "construction": cons_total, "total": total}
 
 
+def elemental_plan(c, res):
+    """Returns (rows, notes) for the elemental cost plan. Figures are all from the input: the repo has no benchmark data."""
+    e = c["elemental"]
+    cfa = e.get("cfa_m2") or res["cfa"]
+    if not cfa:
+        raise SystemExit("elemental needs cfa_m2 or an estimate with CFA")
+    now_tpi = e.get("current_tpi")
+    per = {}
+    for b in e.get("benchmarks", []):
+        k = now_tpi / b["tpi"] if now_tpi and b.get("tpi") else 1.0
+        for name, amount in b["elements"].items():
+            per.setdefault(name, []).append(amount * k / b["cfa_m2"])
+    rows, total = [], 0.0
+    for el in e["elements"]:
+        amt = el["amount"] if "amount" in el else el["quantity"] * el["rate"]
+        total += amt
+        rows.append([el["name"], amt, amt / cfa, per.get(el["name"], [])])
+    out = []
+    for name, amt, rate, seen in rows:
+        if seen:
+            lo, hi = min(seen), max(seen)
+            status = PASS if lo <= rate <= hi else WARN
+            bench = f"{lo:,.0f} – {hi:,.0f} ({len(seen)})"
+        else:
+            status, bench = INFO, "-"
+        out.append((name, amt, rate, amt / total * 100 if total else 0, bench, status))
+    gap = total - res["construction"]
+    notes = [f"Elemental total HK${total:,.0f} (HK${total / cfa:,.0f}/m² CFA {cfa:,.0f} m²) against the order-of-cost construction cost "
+             f"HK${res['construction']:,.0f}: {'+' if gap >= 0 else '-'}HK${abs(gap):,.0f} ({gap / res['construction'] * 100:+.1f}%)."]
+    if e.get("benchmarks") and not now_tpi:
+        notes.append("CHECK: no current_tpi given, so benchmarks are not rebased to today's prices.")
+    return out, notes
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("project")
@@ -138,6 +176,12 @@ def main():
             t = m / months
             f = t * t * (3 - 2 * t)
             out.append(f"| {m} | {f * 100:.0f}% | {res['construction'] * f / 1e6:,.1f} |")
+    if c.get("elemental"):
+        rows, notes = elemental_plan(c, res)
+        out += ["", "## Elemental cost plan", "", "| Element | Amount HK$ | HK$/m² CFA | % of total | Benchmark HK$/m² CFA (projects) | Result |",
+                "| --- | --- | --- | --- | --- | --- |"]
+        out += [f"| {n} | {a_:,.0f} | {r:,.0f} | {s:.1f}% | {b} | {st} |" for n, a_, r, s, b, st in rows]
+        out += [""] + [f"- {n}" for n in notes]
     md = "\n".join(out) + "\n"
     if a.output:
         Path(a.output).write_text(md, encoding="utf-8")

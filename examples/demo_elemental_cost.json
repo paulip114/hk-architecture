@@ -1,0 +1,68 @@
+{
+ "project": "Demo elemental cost plan (fictional; every figure is invented for the example)",
+ "floors": [],
+ "cost": {
+  "components": [
+   {
+    "name": "Flats",
+    "type": "dom_highrise_average",
+    "cfa_m2": 8000,
+    "rate": 27000
+   }
+  ],
+  "years_to_tender_midpoint": 0,
+  "elemental": {
+   "current_tpi": 1900,
+   "elements": [
+    {
+     "name": "Substructure",
+     "amount": 20000000
+    },
+    {
+     "name": "Frame and upper floors",
+     "quantity": 8000,
+     "unit": "m2",
+     "rate": 6000
+    },
+    {
+     "name": "External envelope",
+     "amount": 40000000
+    },
+    {
+     "name": "Building services",
+     "amount": 62000000
+    },
+    {
+     "name": "Preliminaries",
+     "amount": 25000000
+    }
+   ],
+   "benchmarks": [
+    {
+     "name": "Project A",
+     "year": 2023,
+     "cfa_m2": 9000,
+     "tpi": 1950,
+     "elements": {
+      "Substructure": 27000000,
+      "Frame and upper floors": 50000000,
+      "External envelope": 38000000,
+      "Building services": 60000000
+     }
+    },
+    {
+     "name": "Project B",
+     "year": 2025,
+     "cfa_m2": 7000,
+     "tpi": 1900,
+     "elements": {
+      "Substructure": 14000000,
+      "Frame and upper floors": 44000000,
+      "External envelope": 30000000,
+      "Building services": 54000000
+     }
+    }
+   ]
+  }
+ }
+}

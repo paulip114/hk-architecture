@@ -40,6 +40,14 @@ Design contingency 10%, construction contingency 5%, external works 3%, professi
 ## Cash flow
 Construction spend follows an S-curve. A quick check uses a cumulative spend fraction of t²(3 − 2t) for elapsed fraction t of the contract period. **[U, rule of thumb]**
 
+## Elemental cost plan
+`cost_estimate.py` reads an optional `cost.elemental` block. `elemental-template.json` has the headings, and `../examples/demo_elemental_cost.json` is a worked example.
+- It totals the elements, gives HK$/m² CFA and each share, and compares the total with the order-of-cost figure.
+- Give completed projects as `benchmarks`, with their TPI and `current_tpi`, to rebase them. An element outside the benchmark range shows as CHECK.
+- The repo has no benchmark data and no standard percentages. Use your own completed projects or a QS's data. **[U]**
+
+## Updating rates
+Each quarter, when Arcadis publishes a new review, update `hk_cost_rates.json`, `base_quarter` and the TPI values, and recheck the demo reports. On 2026-11-07 the latest review found was 2026Q2.
+
 ## Open items
-- Elemental cost plan template (by element, HK$/m² CFA) and benchmarking against completed projects.
 - Refresh the rates each quarter (next: Arcadis Q3 2026).
