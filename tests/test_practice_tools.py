@@ -71,6 +71,27 @@ class Contract(unittest.TestCase):
 
 
 class Cost(unittest.TestCase):
+    def test_elemental_plan_rebases_benchmarks(self):
+        c = {"elemental": {"current_tpi": 2000, "cfa_m2": 100, "elements": [{"name": "A", "amount": 1100}, {"name": "B", "quantity": 10, "unit": "m2", "rate": 90},
+                                                                            {"name": "C", "amount": 100}],
+                           "benchmarks": [{"name": "P", "cfa_m2": 10, "tpi": 1000, "elements": {"A": 50, "B": 50}},
+                                          {"name": "Q", "cfa_m2": 10, "tpi": 2000, "elements": {"A": 120, "B": 80}}]}}
+        rows, notes = cost_estimate.elemental_plan(c, {"construction": 2000, "cfa": 100})
+        by = {r[0]: r for r in rows}
+        self.assertEqual(by["A"][1:3], (1100, 11))
+        self.assertEqual(by["A"][4], "10 – 12 (2)")   # 50 x 2 / 10 and 120 / 10
+        self.assertEqual(by["A"][5], "PASS")
+        self.assertEqual(by["B"][1], 900)
+        self.assertEqual(by["B"][5], "PASS")
+        self.assertEqual(by["C"][5], "INFO")
+        self.assertIn("+HK$100", notes[0])
+
+    def test_elemental_flags_element_outside_range_and_missing_tpi(self):
+        c = {"elemental": {"cfa_m2": 10, "elements": [{"name": "A", "amount": 500}], "benchmarks": [{"name": "P", "cfa_m2": 10, "elements": {"A": 100}}]}}
+        rows, notes = cost_estimate.elemental_plan(c, {"construction": 500, "cfa": 10})
+        self.assertEqual(rows[0][5], "CHECK")
+        self.assertTrue(any("current_tpi" in n for n in notes))
+
     def test_mid_rates_and_totals(self):
         r = cost_estimate.run(DEMO)
         flats = [x for x in r["lines"] if x[0].startswith("1/F")][0]
