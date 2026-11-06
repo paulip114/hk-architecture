@@ -22,12 +22,12 @@
 
 **hk-architecture** turns Hong Kong building regulations, fire codes, planning rules and contract procedures into a knowledge base and command-line tools. Describe a scheme in JSON, and the tools report what passes, what fails and which clause applies. They also work out statutory deadlines, order-of-cost estimates, sketch plans and massing models.
 
-It is built for architects and Authorized Persons (APs), and for AI agents such as Claude that do this work under their review.
+It is built for architects and Authorized Persons (APs), and for AI agents such as Claude that do this work under their review. The source is available for noncommercial and academic use; [commercial use needs permission](#license).
 
 > [!IMPORTANT]
 > **Every output is a draft.** The tools do not sign or submit anything, and they do not replace an Authorized Person or Registered Architect. Check results against the current official text and the signed contract before relying on them.
 
-繁體中文簡介：這是一套香港建築師工作用的知識庫和命令列工具，涵蓋《建築物（規劃）規例》、消防、規劃、地契、入則程序、造價及合約。所有輸出都是草稿，必須由認可人士（AP）覆核及簽署。
+繁體中文簡介：這是一套香港建築師工作用的知識庫和命令列工具，涵蓋《建築物（規劃）規例》、消防、規劃、地契、入則程序、造價及合約。所有輸出都是草稿，必須由認可人士（AP）覆核及簽署。本專案公開原始碼，但並非開源軟件：可作非商業及學術用途，商業用途須先取得許可。
 
 ## See it in action
 
@@ -148,7 +148,7 @@ Before opening a pull request, run the tests and read [`AGENTS.md`](AGENTS.md).
 
 ## License
 
-Licensed under the [PolyForm Noncommercial License 1.0.0](LICENSE). The source is public, but this is not an OSI open source license.
+**This project is source-available, not open source.** You can read the code, but the [PolyForm Noncommercial License 1.0.0](LICENSE) restricts commercial use, so it does not meet the OSI definition of open source. GitHub may not show it as a standard license; the `LICENSE` file is what applies.
 
 | Allowed | Not allowed without separate permission |
 | --- | --- |
