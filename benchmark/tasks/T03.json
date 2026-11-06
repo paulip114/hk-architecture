@@ -1,0 +1,38 @@
+{
+ "id": "T03",
+ "stage": "4",
+ "capability": "domain_knowledge",
+ "title": "合約格式選擇",
+ "prompt": "只考慮 HKIA/HKIS/HKICM 私人工程合約 2005/2006 版本系列，選出適用格式。",
+ "input": {
+  "cases": {
+   "bq": "招標文件有工料清單（BQ），BQ 構成合約一部分",
+   "no_bq": "小型工程，只有圖則及規範，沒有 BQ"
+  }
+ },
+ "checks": [
+  {
+   "path": "form.bq",
+   "type": "enum",
+   "expected": "SFBCwQ.2005",
+   "options": [
+    "SFBCwQ.2005",
+    "SFBCnQ.2006",
+    "NSC.2005"
+   ],
+   "desc": "bq 案例"
+  },
+  {
+   "path": "form.no_bq",
+   "type": "enum",
+   "expected": "SFBCnQ.2006",
+   "options": [
+    "SFBCwQ.2005",
+    "SFBCnQ.2006",
+    "NSC.2005"
+   ],
+   "desc": "no_bq 案例"
+  }
+ ],
+ "source": "contracts/sfbc.json"
+}

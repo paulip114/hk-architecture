@@ -1,0 +1,148 @@
+{
+ "id": "F05",
+ "stage": "1",
+ "capability": "rule_application",
+ "title": "規劃及地契路徑",
+ "prompt": "案例純屬虛構。判斷所需申請。building_height_mpd 是按 JPN 5 計入天台結構後的建築物高度：附屬結構高度上限為主天台以上 10%（不超過 15 m），綜合大廈裝飾構築物上限 15%（不超過 7 m），超出者計入建築物高度；高度由 site_formation_level_mpd 起計。",
+ "input": {
+  "project": {
+   "site": {
+    "area_m2": 1500,
+    "class": "B"
+   },
+   "floors": [
+    {
+     "name": "P",
+     "use": "non_domestic",
+     "level_m": 0,
+     "gross_area_m2": 1200,
+     "count": 3
+    },
+    {
+     "name": "T",
+     "use": "domestic",
+     "level_m": 15,
+     "gross_area_m2": 400,
+     "count": 25
+    }
+   ]
+  },
+  "planning_lease": {
+   "ozp": {
+    "plan_no": "S/X (fictional)",
+    "zone": "R(A)",
+    "max_pr_domestic": 7.5,
+    "max_pr_total": 9.5,
+    "max_bh_mpd": 100,
+    "minor_relaxation": true,
+    "column1_uses": [
+     "Flat",
+     "Shop and Services"
+    ],
+    "column2_uses": [
+     "Hotel",
+     "Place of Recreation, Sports or Culture"
+    ],
+    "nba_m2": 0
+   },
+   "proposal": {
+    "uses": [
+     "Flat",
+     "Shop and Services",
+     "Hotel"
+    ],
+    "building_kind": "composite",
+    "site_formation_level_mpd": 6,
+    "main_roof_mpd": 103,
+    "roof_area_m2": 400,
+    "sc_pct": 80,
+    "rooftop": [
+     {
+      "name": "LMR",
+      "type": "lift",
+      "height_above_roof_m": 5.0,
+      "enclosed_covered_m2": 100
+     },
+     {
+      "name": "Plant",
+      "type": "ancillary",
+      "height_above_roof_m": 11,
+      "enclosed_covered_m2": 120
+     },
+     {
+      "name": "Crown",
+      "type": "feature",
+      "height_above_roof_m": 8
+     }
+    ]
+   },
+   "lease": {
+    "lot": "KIL 0000 (fictional)",
+    "user_allows": [
+     "Flat",
+     "Shop and Services"
+    ],
+    "max_gfa_m2": 14000,
+    "min_gfa_m2": 6000,
+    "max_sc_pct": null,
+    "gfa_exemption_clause": false,
+    "ddh_clause": false,
+    "building_covenant_months": 48
+   },
+   "lease_gfa_concessions": []
+  }
+ },
+ "checks": [
+  {
+   "path": "s16_required",
+   "type": "bool",
+   "expected": true,
+   "desc": "需要 s16 規劃許可嗎"
+  },
+  {
+   "path": "s12a_required",
+   "type": "bool",
+   "expected": false,
+   "desc": "需要 s12A 改劃嗎"
+  },
+  {
+   "path": "lease_modification_required",
+   "type": "bool",
+   "expected": true,
+   "desc": "需要修訂地契嗎"
+  },
+  {
+   "path": "column2_uses",
+   "type": "set",
+   "expected": [
+    "Hotel"
+   ],
+   "desc": "屬第二欄的擬議用途",
+   "options": [
+    "Flat",
+    "Shop and Services",
+    "Hotel"
+   ]
+  },
+  {
+   "path": "uses_outside_lease",
+   "type": "set",
+   "expected": [
+    "Hotel"
+   ],
+   "desc": "不在地契用途內的擬議用途",
+   "options": [
+    "Flat",
+    "Shop and Services",
+    "Hotel"
+   ]
+  },
+  {
+   "path": "building_height_mpd",
+   "type": "number",
+   "expected": 114,
+   "desc": "計入天台結構後的高度 (mPD)"
+  }
+ ],
+ "source": "tools/planning_lease_check.py; planning/planning_lands.json"
+}

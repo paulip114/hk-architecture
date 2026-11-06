@@ -1,0 +1,71 @@
+{
+ "id": "S02",
+ "stage": "2",
+ "capability": "rule_application",
+ "title": "上蓋面積及休憩用地",
+ "prompt": "案例純屬虛構。住宅建築，檢查地積比、上蓋面積及 reg 25 休憩用地。限值按建築物高度所在級別查 Cap. 123F 第一、第二附表；休憩用地須距後地界 ≥ 1.5 m，並低於最低樓層樓面 ≥ 150 mm。",
+ "input": {
+  "site": {
+   "area_m2": 900,
+   "class": "A"
+  },
+  "building": {
+   "type": "domestic",
+   "height_m": 44
+  },
+  "floors": [
+   {
+    "name": "T",
+    "count": 14,
+    "use": "domestic",
+    "level_m": 0,
+    "gross_area_m2": 330,
+    "site_coverage_m2": 330
+   }
+  ],
+  "open_space": {
+   "provided_m2": 150,
+   "roofed_over_area_m2": 330,
+   "rear_setback_m": 1.2,
+   "level_below_lowest_floor_mm": 150
+  }
+ },
+ "checks": [
+  {
+   "path": "pr_limit",
+   "type": "number",
+   "expected": 5.9,
+   "desc": "地積比上限"
+  },
+  {
+   "path": "sc_limit_pct",
+   "type": "number",
+   "expected": 37,
+   "desc": "上蓋面積上限 (%)"
+  },
+  {
+   "path": "required_open_space_m2",
+   "type": "number",
+   "expected": 165,
+   "desc": "所需休憩用地"
+  },
+  {
+   "path": "failures",
+   "type": "set",
+   "expected": [
+    "open_space_area",
+    "rear_distance"
+   ],
+   "desc": "不合格項",
+   "weight": 2,
+   "options": [
+    "plot_ratio",
+    "site_coverage",
+    "open_space_area",
+    "rear_distance",
+    "open_space_level"
+   ]
+  }
+ ],
+ "source": "bpr/first_schedule.json; tools/bpr_check.py"
+}

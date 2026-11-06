@@ -1,0 +1,111 @@
+{
+ "id": "F04",
+ "stage": "1",
+ "capability": "calculation",
+ "title": "樓面面積寬免計算",
+ "prompt": "案例純屬虛構。按 exempt[] 所列類別計算非住宅 accountable GFA。category 定義：mandatory_plant、non_mandatory_plant、green_feature、car_park_underground 全數不計；car_park_above_50 只寬免 50%。count 為相同樓層數。",
+ "input": {
+  "site": {
+   "area_m2": 1000,
+   "class": "B"
+  },
+  "building": {
+   "type": "non_domestic",
+   "height_m": 40
+  },
+  "floors": [
+   {
+    "name": "G",
+    "use": "non_domestic",
+    "level_m": 0,
+    "gross_area_m2": 800,
+    "site_coverage_m2": 750,
+    "exempt": [
+     {
+      "item": "AHU",
+      "area_m2": 70,
+      "category": "non_mandatory_plant"
+     }
+    ]
+   },
+   {
+    "name": "T",
+    "count": 9,
+    "use": "non_domestic",
+    "level_m": 5,
+    "gross_area_m2": 700,
+    "site_coverage_m2": 640,
+    "exempt": [
+     {
+      "item": "Switch room",
+      "area_m2": 20,
+      "category": "mandatory_plant"
+     },
+     {
+      "item": "Balcony",
+      "area_m2": 10,
+      "category": "green_feature"
+     }
+    ]
+   },
+   {
+    "name": "CP",
+    "use": "non_domestic",
+    "level_m": -4,
+    "gross_area_m2": 600,
+    "exempt": [
+     {
+      "item": "Car park (above-ground share)",
+      "area_m2": 300,
+      "category": "car_park_above_50"
+     },
+     {
+      "item": "Car park (underground)",
+      "area_m2": 200,
+      "category": "car_park_underground"
+     }
+    ]
+   }
+  ]
+ },
+ "checks": [
+  {
+   "path": "gross_area_m2",
+   "type": "number",
+   "expected": 7700,
+   "desc": "總建築面積"
+  },
+  {
+   "path": "accountable_gfa_m2",
+   "type": "number",
+   "expected": 7010,
+   "desc": "accountable GFA",
+   "weight": 3
+  },
+  {
+   "path": "car_park_above_50_disregarded_m2",
+   "type": "number",
+   "expected": 150,
+   "desc": "car_park_above_50 實際寬免面積"
+  },
+  {
+   "path": "plot_ratio",
+   "type": "number",
+   "expected": 7.01,
+   "desc": "地積比"
+  },
+  {
+   "path": "pr_limit",
+   "type": "number",
+   "expected": 10.8,
+   "desc": "附表地積比上限"
+  },
+  {
+   "path": "complies",
+   "type": "bool",
+   "expected": true,
+   "desc": "地積比及上蓋面積是否符合 B(P)R"
+  }
+ ],
+ "source": "tools/bpr_check.py (APP-151 cap base left out: README lists it as unverified)"
+}

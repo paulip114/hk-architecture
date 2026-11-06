@@ -1,0 +1,63 @@
+{
+ "id": "C04",
+ "stage": "5",
+ "capability": "rule_application",
+ "title": "承建商變更是否屬輕微修訂",
+ "prompt": "案例純屬虛構。按 PNAP ADM-19 Appendix G 摘錄判斷：drainage 挖掘深度 > 3.0 m、非 LDBP 樁數增加 > 5%、LDBP 樁數增加 > 15%、地盤平整標高改變 > 1.0 m、擋土高度改變 > 1.0 m 即不屬輕微修訂。列出不屬輕微修訂的變更。",
+ "input": {
+  "changes": [
+   {
+    "id": "X1",
+    "measure": "non_ldbp_pile_increase_pct",
+    "value": 4
+   },
+   {
+    "id": "X2",
+    "measure": "ldbp_pile_increase_pct",
+    "value": 20
+   },
+   {
+    "id": "X3",
+    "measure": "drainage_excavation_depth_m",
+    "value": 3.5
+   },
+   {
+    "id": "X4",
+    "measure": "site_formation_level_change_m",
+    "value": 0.5
+   },
+   {
+    "id": "X5",
+    "measure": "retained_height_change_m",
+    "value": 1.2
+   },
+   {
+    "id": "X6",
+    "measure": "drainage_excavation_depth_m",
+    "value": 3.0
+   }
+  ]
+ },
+ "checks": [
+  {
+   "path": "not_minor",
+   "type": "set",
+   "expected": [
+    "X2",
+    "X3",
+    "X5"
+   ],
+   "desc": "不屬輕微修訂的變更",
+   "weight": 2,
+   "options": [
+    "X1",
+    "X2",
+    "X3",
+    "X4",
+    "X5",
+    "X6"
+   ]
+  }
+ ],
+ "source": "submission/periods.json not_minor_amendment_thresholds"
+}

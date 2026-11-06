@@ -1,0 +1,43 @@
+{
+ "id": "D08",
+ "stage": "3",
+ "capability": "domain_knowledge",
+ "title": "辨識錯誤陳述",
+ "prompt": "以下陳述來自一份流程筆記。找出錯誤的陳述。",
+ "input": {
+  "statements": {
+   "a": "OP 的英文全名是 Occupancy Permit。",
+   "b": "Authorized Person 的法定中文名稱是「授權人」。",
+   "c": "一般建築圖則由消防處而非屋宇署批准。",
+   "d": "首次提交的圖則，如建築事務監督未在 60 日內通知拒批，視作批准。",
+   "e": "BA10 須在動工前不少於 7 日提交。",
+   "f": "同意書發出後如 3 個月內未動工，視作撤銷。",
+   "g": "只要是註冊建築師，毋須名列認可人士名冊也可向屋宇署入則。"
+  }
+ },
+ "checks": [
+  {
+   "path": "incorrect",
+   "type": "set",
+   "expected": [
+    "a",
+    "b",
+    "c",
+    "g"
+   ],
+   "desc": "錯誤陳述",
+   "judgement": true,
+   "weight": 3,
+   "options": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+   ]
+  }
+ ],
+ "source": "Judgement, reviewed by hand: BO s.21 (occupation permit), s.3 (AP register), s.15; submission/periods.json; submission/bd-submission-process.md"
+}

@@ -1,0 +1,93 @@
+{
+ "id": "S01",
+ "stage": "2",
+ "capability": "rule_application",
+ "title": "採光及通風審查",
+ "prompt": "案例純屬虛構。按 B(P)R 訂明的採光通風要求（regs 24, 30, 32, 36）找出不合格項。habitable 及 kitchen：玻璃 ≥ 樓面 1/10、可開啟 ≥ 1/16、窗頂 ≥ 2.0 m；habitable：最遠點距窗 ≤ 9 m、樓底 ≥ 2.5 m；bathroom：玻璃及可開啟皆 ≥ 1/10。每項用 ROOM|check 表示，check 為 glass、openable、head、distance、ceiling。剛好等於限值視為合格。",
+ "input": {
+  "site": {
+   "area_m2": 600,
+   "class": "A"
+  },
+  "building": {
+   "type": "domestic",
+   "height_m": 30
+  },
+  "floors": [],
+  "rooms": [
+   {
+    "name": "LD",
+    "use": "habitable",
+    "floor_area_m2": 30,
+    "glass_m2": 2.9,
+    "openable_m2": 1.9,
+    "window_head_m": 2.2,
+    "max_distance_to_window_m": 8,
+    "ceiling_height_m": 2.7
+   },
+   {
+    "name": "BR1",
+    "use": "habitable",
+    "floor_area_m2": 10,
+    "glass_m2": 1.1,
+    "openable_m2": 0.6,
+    "window_head_m": 2.1,
+    "max_distance_to_window_m": 4,
+    "ceiling_height_m": 2.6
+   },
+   {
+    "name": "BR2",
+    "use": "habitable",
+    "floor_area_m2": 8,
+    "glass_m2": 0.8,
+    "openable_m2": 0.5,
+    "window_head_m": 1.9,
+    "max_distance_to_window_m": 9,
+    "ceiling_height_m": 2.5
+   },
+   {
+    "name": "STUDY",
+    "use": "habitable",
+    "floor_area_m2": 12,
+    "glass_m2": 1.5,
+    "openable_m2": 0.8,
+    "window_head_m": 2.1,
+    "max_distance_to_window_m": 9.5,
+    "ceiling_height_m": 2.4
+   },
+   {
+    "name": "KIT",
+    "use": "kitchen",
+    "floor_area_m2": 6,
+    "glass_m2": 0.6,
+    "openable_m2": 0.4,
+    "window_head_m": 2.1
+   },
+   {
+    "name": "BATH",
+    "use": "bathroom",
+    "floor_area_m2": 4,
+    "glass_m2": 0.4,
+    "openable_m2": 0.3,
+    "window_head_m": 2.1
+   }
+  ]
+ },
+ "checks": [
+  {
+   "path": "failures",
+   "type": "set",
+   "expected": [
+    "BATH|openable",
+    "BR1|openable",
+    "BR2|head",
+    "LD|glass",
+    "STUDY|ceiling",
+    "STUDY|distance"
+   ],
+   "desc": "所有不合格項",
+   "weight": 3
+  }
+ ],
+ "source": "bpr/first_schedule.json; tools/bpr_check.py"
+}

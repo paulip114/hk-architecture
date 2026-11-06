@@ -1,0 +1,82 @@
+{
+ "id": "F06",
+ "stage": "1",
+ "capability": "calculation",
+ "title": "初步造價估算",
+ "prompt": "案例純屬虛構。按此次序計：building works = Σ(CFA × rate) + extras；site formation 及 external works 為 building works 的百分比；design contingency 為前述小計的百分比；construction contingency 為連 design contingency 小計的百分比；escalation 按年複利；professional fees 為連 escalation 的 construction cost 的百分比。total = construction cost + fees。",
+ "input": {
+  "floors": [],
+  "cost": {
+   "rate_level": "mid",
+   "components": [
+    {
+     "name": "Flats",
+     "type": "dom_highrise_average",
+     "cfa_m2": 6000,
+     "rate": 27000
+    },
+    {
+     "name": "Basement",
+     "type": "carpark_basement",
+     "cfa_m2": 1000,
+     "rate": 30550
+    }
+   ],
+   "extras": [
+    {
+     "name": "Demolition",
+     "amount": 5000000
+    }
+   ],
+   "allowances": {
+    "site_formation_pct": 0,
+    "external_works_pct": 3,
+    "design_contingency_pct": 8,
+    "construction_contingency_pct": 5,
+    "escalation_pct_per_year": 3,
+    "professional_fees_pct": 12
+   },
+   "years_to_tender_midpoint": 2,
+   "budget": 270000000
+  }
+ },
+ "checks": [
+  {
+   "path": "building_works_hkd",
+   "type": "number",
+   "expected": 197550000,
+   "desc": "Building works",
+   "pct": 0.5
+  },
+  {
+   "path": "construction_cost_hkd",
+   "type": "number",
+   "expected": 244794560.18,
+   "desc": "Construction cost",
+   "pct": 0.5,
+   "weight": 2
+  },
+  {
+   "path": "total_cost_hkd",
+   "type": "number",
+   "expected": 274169907.4,
+   "desc": "Total",
+   "pct": 0.5,
+   "weight": 2
+  },
+  {
+   "path": "construction_cost_per_cfa_hkd",
+   "type": "number",
+   "expected": 34970.65,
+   "desc": "每平方米 CFA 的 construction cost",
+   "pct": 0.5
+  },
+  {
+   "path": "over_budget",
+   "type": "bool",
+   "expected": true,
+   "desc": "是否超出預算"
+  }
+ ],
+ "source": "tools/cost_estimate.py (rates and order stated in the prompt)"
+}

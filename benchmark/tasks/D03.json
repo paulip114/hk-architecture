@@ -1,0 +1,128 @@
+{
+ "id": "D03",
+ "stage": "3",
+ "capability": "procedure",
+ "title": "入則程序問題審查",
+ "prompt": "案例純屬虛構。審查項目記錄，指出程序問題。非輕微修訂門檻（PNAP ADM-19 Appendix G 摘錄）：drainage 挖掘深度 > 3.0 m、非 LDBP 樁數增加 > 5%、LDBP 樁數增加 > 15%、地盤平整標高改變 > 1.0 m、擋土高度改變 > 1.0 m。修訂圖則未批不可先施工。",
+ "input": {
+  "as_of": "2027-09-15",
+  "submissions": [
+   {
+    "id": "G1",
+    "kind": "GBP",
+    "type": "first",
+    "date": "2027-01-11",
+    "result": "disapproved",
+    "result_date": "2027-03-20"
+   },
+   {
+    "id": "G2",
+    "kind": "GBP",
+    "type": "resubmission",
+    "date": "2027-04-01",
+    "wr_dates": [
+     "2027-04-20"
+    ],
+    "result": "approved",
+    "result_date": "2027-05-18"
+   }
+  ],
+  "consents": [
+   {
+    "id": "C1",
+    "applied": "2027-05-25",
+    "approval_date": "2027-05-18",
+    "granted": "2027-06-18",
+    "reg8_plans_complete": true,
+    "supervision_plan": true
+   }
+  ],
+  "commencement": {
+   "date": "2027-09-30",
+   "ba10_date": "2027-09-27",
+   "tcp_notice_date": "2027-09-20"
+  },
+  "completion": {
+   "date": "2029-06-01",
+   "rc_cert_date": "2029-06-15",
+   "ap_cert_date": "2029-06-10"
+  },
+  "amendments": [
+   {
+    "id": "A1",
+    "approved": false,
+    "works_started": true,
+    "drainage_excavation_depth_m": 2.0
+   },
+   {
+    "id": "A2",
+    "approved": false,
+    "works_started": true,
+    "non_ldbp_pile_increase_pct": 25,
+    "treated_as_minor": true
+   },
+   {
+    "id": "A3",
+    "approved": false,
+    "works_started": false,
+    "site_formation_level_change_m": 0.3
+   }
+  ],
+  "op": {
+   "applied": "2029-07-01",
+   "superstructure_consent_date": "2027-06-18",
+   "first_gbp_date": "2027-01-11",
+   "prereq": {
+    "all_amendments_approved": true,
+    "plans_tally": true,
+    "stage_iii_done": true,
+    "bd106_in_plans": true,
+    "gfa_summary": true,
+    "consolidated_digital_file": true,
+    "minor_works_in_plans": true
+   }
+  }
+ },
+ "checks": [
+  {
+   "path": "failures",
+   "type": "set",
+   "expected": [
+    "a1_started_unapproved",
+    "a2_not_minor",
+    "a2_started_unapproved",
+    "ba10_late",
+    "consent_lapsed",
+    "rc_cert_late"
+   ],
+   "desc": "所有問題",
+   "weight": 3,
+   "options": [
+    "a1_started_unapproved",
+    "a2_not_minor",
+    "a2_started_unapproved",
+    "a3_not_minor",
+    "ap_cert_late",
+    "ba10_late",
+    "consent_lapsed",
+    "rc_cert_late",
+    "tcp_notice_late",
+    "works_before_consent"
+   ]
+  },
+  {
+   "path": "lapsed_consent_renewal_form",
+   "type": "enum",
+   "expected": "BA9",
+   "options": [
+    "BA5",
+    "BA8",
+    "BA9",
+    "BA10",
+    "BA13"
+   ],
+   "desc": "同意書失效後用哪份表格續期"
+  }
+ ],
+ "source": "tools/submission_timeline.py; submission/forms.json"
+}

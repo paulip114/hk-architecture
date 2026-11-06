@@ -1,0 +1,70 @@
+{
+ "id": "F03",
+ "stage": "1",
+ "capability": "calculation",
+ "title": "綜合用途地積比",
+ "prompt": "案例純屬虛構。商住綜合大廈。先用 reg 21(2) 公式 Dd/Pd + Dn/Pn ≤ 1 求住宅地積比上限，再套用 OZP 總地積比上限。Pd、Pn 按建築物高度及地盤類別查附表。",
+ "input": {
+  "site": {
+   "area_m2": 1200,
+   "class": "B"
+  },
+  "building": {
+   "type": "composite",
+   "height_m": 72
+  },
+  "non_domestic_gfa_m2": 3600,
+  "ozp_max_pr_total": 9
+ },
+ "checks": [
+  {
+   "path": "pd",
+   "type": "number",
+   "expected": 9,
+   "desc": "Pd"
+  },
+  {
+   "path": "pn",
+   "type": "number",
+   "expected": 15,
+   "desc": "Pn"
+  },
+  {
+   "path": "dn",
+   "type": "number",
+   "expected": 3,
+   "desc": "Dn"
+  },
+  {
+   "path": "max_domestic_pr_formula",
+   "type": "number",
+   "expected": 7.2,
+   "desc": "公式得出的住宅地積比上限"
+  },
+  {
+   "path": "max_domestic_pr_final",
+   "type": "number",
+   "expected": 6,
+   "desc": "再計 OZP 後的住宅地積比上限",
+   "weight": 2
+  },
+  {
+   "path": "max_domestic_gfa_m2",
+   "type": "number",
+   "expected": 7200,
+   "desc": "最終住宅 GFA",
+   "weight": 2
+  },
+  {
+   "path": "governing_constraint",
+   "type": "enum",
+   "expected": "ozp_total",
+   "options": [
+    "reg21_formula",
+    "ozp_total"
+   ],
+   "desc": "哪一項限制最嚴"
+  }
+ ],
+ "source": "bpr/first_schedule.json; tools/bpr_check.py"
+}

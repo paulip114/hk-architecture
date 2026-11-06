@@ -1,0 +1,118 @@
+{
+ "id": "D05",
+ "stage": "3",
+ "capability": "artifact",
+ "title": "產出可量度的 DXF",
+ "prompt": "案例純屬虛構。輸出 ./plan.dxf。每個房間畫成圖層 A-ROOM 上的封閉 LWPOLYLINE，並在 label_point 放一個 TEXT 寫房間名稱（同在 A-ROOM）。座標單位是米；可用毫米繪製，但 $INSUNITS 必須與實際單位一致。回答欄位只需 total_area_m2。",
+ "input": {
+  "rooms": [
+   {
+    "name": "OFFICE",
+    "polygon": [
+     [
+      0,
+      0
+     ],
+     [
+      10,
+      0
+     ],
+     [
+      10,
+      6
+     ],
+     [
+      0,
+      6
+     ]
+    ],
+    "label_point": [
+     5,
+     3
+    ]
+   },
+   {
+    "name": "LROOM",
+    "polygon": [
+     [
+      10,
+      0
+     ],
+     [
+      16,
+      0
+     ],
+     [
+      16,
+      8
+     ],
+     [
+      13,
+      8
+     ],
+     [
+      13,
+      3
+     ],
+     [
+      10,
+      3
+     ]
+    ],
+    "label_point": [
+     14,
+     2
+    ]
+   },
+   {
+    "name": "STORE",
+    "polygon": [
+     [
+      10,
+      3
+     ],
+     [
+      13,
+      3
+     ],
+     [
+      13,
+      8
+     ],
+     [
+      10,
+      8
+     ]
+    ],
+    "label_point": [
+     11,
+     5
+    ]
+   }
+  ]
+ },
+ "checks": [
+  {
+   "id": "dxf",
+   "type": "dxf",
+   "file": "plan.dxf",
+   "layers": [
+    "A-ROOM"
+   ],
+   "expected_rooms": {
+    "OFFICE": 60,
+    "LROOM": 33,
+    "STORE": 15
+   },
+   "desc": "./plan.dxf",
+   "weight": 3
+  },
+  {
+   "path": "total_area_m2",
+   "type": "number",
+   "expected": 108,
+   "desc": "房間總面積"
+  }
+ ],
+ "source": "tools/dxf_area_takeoff.py (the scorer measures the file); areas recomputed in anchors.py"
+}

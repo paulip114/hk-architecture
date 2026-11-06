@@ -1,0 +1,114 @@
+{
+ "id": "C06",
+ "stage": "5",
+ "capability": "rule_application",
+ "title": "地盤監督人員",
+ "prompt": "案例純屬虛構。tm_requirement_excerpt 列出各監督流要求的 TCP 級別及最低巡查頻率等級（數字越大越頻密）。同一流內，較高級別可頂替較低級別，但每項要求須有各自一名 TCP，且頻率等級不得低於要求。列出未符合的要求，格式 STREAM|GRADE。",
+ "input": {
+  "geotechnical": false,
+  "works": [
+   {
+    "type": "superstructure",
+    "value": 9000,
+    "months": 18
+   }
+  ],
+  "tcps": [
+   {
+    "stream": "AS",
+    "grade": "T1",
+    "name": "Foreman",
+    "frequency_level": 5,
+    "works": [
+     "superstructure"
+    ]
+   },
+   {
+    "stream": "AS",
+    "grade": "T3",
+    "name": "Site agent",
+    "frequency_level": 3,
+    "works": [
+     "superstructure"
+    ]
+   },
+   {
+    "stream": "AS",
+    "grade": "T4",
+    "name": "PM",
+    "frequency_level": 4,
+    "works": [
+     "superstructure"
+    ]
+   },
+   {
+    "stream": "AP",
+    "grade": "T3",
+    "name": "CoW",
+    "frequency_level": 4,
+    "works": [
+     "superstructure"
+    ]
+   },
+   {
+    "stream": "AP",
+    "grade": "T4",
+    "name": "PA",
+    "frequency_level": 2,
+    "works": [
+     "superstructure"
+    ]
+   },
+   {
+    "stream": "RSE",
+    "grade": "T3",
+    "name": "RE",
+    "frequency_level": 5,
+    "works": [
+     "superstructure"
+    ]
+   }
+  ],
+  "dates": {
+   "plan_submitted": "2027-01-04",
+   "consent_application": "2027-01-04",
+   "commencement": "2027-03-01",
+   "tcp_confirmed": "2027-03-05"
+  },
+  "tm_requirement_excerpt": {
+   "AS": {
+    "T4": 4,
+    "T3": 4
+   },
+   "AP": {
+    "T4": 2,
+    "T3": 4
+   },
+   "RSE": {
+    "T5": 3,
+    "T3": 4
+   }
+  }
+ },
+ "checks": [
+  {
+   "path": "unmet_requirements",
+   "type": "set",
+   "expected": [
+    "AS|T3",
+    "RSE|T5"
+   ],
+   "desc": "未符合的要求",
+   "weight": 2,
+   "options": [
+    "AS|T3",
+    "AS|T4",
+    "AP|T3",
+    "AP|T4",
+    "RSE|T3",
+    "RSE|T5"
+   ]
+  }
+ ],
+ "source": "tools/supervision_plan.py; supervision/supervision.json (TM Table 1)"
+}
