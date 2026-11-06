@@ -68,11 +68,21 @@ python3 benchmark/archbench.py compare benchmark/runs/my-agent benchmark/runs/my
 
 ## 限制
 
-- **沒有量度：** 設計品質、美學、空間判斷、圖則的專業水準、與業主和顧問的溝通、工地判斷。這些是建築師工作的核心，但確定性評分做不到，需要 AP 用評分表人工評審。
+- **自動評分沒有量度：** 設計品質、美學、空間判斷、圖則的專業水準、與業主和顧問的溝通、工地判斷。這些是建築師工作的核心，要用下面的人工評審。工地判斷仍未涵蓋。
 - **文字題較弱：** `text` 檢查只用正規表達式找關鍵概念，有提到不等於答得好。主要判定靠結構化欄位。
 - **答案會受工具影響：** 大部分答案以 repo 工具重算，工具若有錯，答案也會錯。在 `kb` 模式下，agent 能使用同一批工具，所以分數偏高，應與 `closed` 一併看。
 - **題庫公開：** 答案就在這個資料夾，案例也固定。要做正式比較，應更換案例數值，並確保 agent 讀不到本資料夾。工作目錄雖然在 repo 之外，但有檔案權限的 agent 仍可能用絕對路徑讀取，也可能載入本機的記憶或設定。
 - **單次結果有隨機性：** 同一模型每次回答可能不同，建議重複跑並比較分布。
+
+## 人工評審
+
+設計品質不能用確定性評分，所以另外由 AP 或註冊建築師評審：
+
+1. 把 [`rubric/H01-brief.md`](rubric/H01-brief.md) 交給 agent，收集圖則和文字。
+2. 評審人按 [`rubric/design-review.json`](rubric/design-review.json) 的 6 項，每項給 0 至 4 分。格式見 [`rubric/example-scores.json`](rubric/example-scores.json)。
+3. 執行 `python3 benchmark/archbench.py score benchmark/runs/my-agent --human scores.json`。
+
+人工分數另列在報告，不影響 PASS / FAIL。評分表本身尚未經 AP 覆核（[#14](https://github.com/paulip114/hk-architecture/issues/14)）。目前只有一題，也沒有真人基準，所以分數只反映一位評審人的判斷。
 
 ## 新增題目
 

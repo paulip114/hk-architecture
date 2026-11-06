@@ -1,0 +1,9 @@
+{
+ "_note": "Format example only. These scores are not a real review.",
+ "task": "H01",
+ "reviewer": "Name of reviewer",
+ "qualification": "AP or RA, with the register number if you wish to give it",
+ "date": "YYYY-MM-DD",
+ "scores": {"site_response": 2, "spatial_judgement": 2, "regulatory_integration": 2, "drawing_standard": 2, "communication": 2, "professional_judgement": 2},
+ "comments": "What a reviewer would change, and why."
+}
