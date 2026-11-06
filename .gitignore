@@ -1,5 +1,6 @@
 fs-code-2011.txt
 *.pdf
+docs/document library/*.png
 __pycache__/
 *.pyc
 benchmark/runs/
