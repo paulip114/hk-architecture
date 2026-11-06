@@ -3,6 +3,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/paulip114/hk-architecture/actions/workflows/tests.yml"><img alt="Tests" src="https://github.com/paulip114/hk-architecture/actions/workflows/tests.yml/badge.svg"></a>
   <img alt="Python 3.9+" src="https://img.shields.io/badge/python-3.9%2B-2f7bd9">
   <img alt="21 tools" src="https://img.shields.io/badge/tools-21-ea6a34">
   <img alt="12 Claude skills" src="https://img.shields.io/badge/Claude%20skills-12-1fae7a">
