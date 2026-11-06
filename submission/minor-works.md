@@ -41,10 +41,17 @@
 ## 3. 指定豁免工程（Designated Exempted Works）📜
 法定依據：BO s.41(3B) 同 Cap. 123N 附表 2。呢類工程豁免 BO s.4、9、9AA、14(1) 同 21。項目清單以附表 2 為準；本文件冇逐項抄錄，引用前要睇返條文。
 
-## 4. 檢核計劃（Validation Schemes）⚠️ 細節未核實（Cap. 123N 條文冇提及呢啲計劃，要對 BD 文件，見 [#47](https://github.com/paulip114/hk-architecture/issues/47)）
-- **家居小型工程檢核計劃**（Household Minor Works Validation Scheme）：已建成嘅指定家居小型工程（例如支架、晾衣架、小型簷篷），經 PBP / PRC 檢查及證明（如需要加固）後，可以保留。表格 MW06-3。
-- **招牌檢核計劃**（Signboard Validation Scheme）：已建成而符合條件嘅招牌。
-- **小型附加設施檢核計劃**（Minor Amenity Feature Validation Scheme）：MW06-1 / -2 / -3。✅（表格存在）
+## 4. 檢核計劃（Validation Schemes）✅
+2026-11-06 對過 BD 網頁同 PNAP APP-155。Cap. 123N 本身冇用「檢核計劃」呢個名，但指明項目喺 Schedule 3。
+
+| 計劃 | 要喺幾時之前已存在 | 範圍 | 來源 |
+| --- | --- | --- | --- |
+| 家居小型工程（HMWVS） | 2010 年 12 月 31 日 | Cap. 123N Sch.3 Part 2 四項：冷氣機支架（貼地或非懸臂樓板，≤ 100 kg）、金屬冷氣機支架（伸出 ≤ 600 mm，≤ 100 kg）、晾衣架（伸出 ≤ 750 mm）、小型簷篷（伸出 ≤ 500 mm，非混凝土）。另有其他條件 | [BD](https://www.bd.gov.hk/en/building-works/minor-works/minor-works-items/household-minor-works-validation-scheme/index.html) |
+| 招牌 | 2013 年 9 月 2 日 | 符合小型工程項目技術規格嘅現存違例招牌；要檢查、需要時加固及證明 | [APP-155](https://www.bd.gov.hk/doc/en/building-works/signboards/signboard-validation-scheme/APP155.pdf) |
+| 小型附加設施（MAFVS） | 2020 年 9 月 1 日 | BD 清單列明嘅小型附加設施，例如支架、圍欄、閘、簷篷、棚架。要 PBP 及／或 PRC 檢查、需要時加固及證明。表格 MW06-1 / -2 / -3 | [BD](https://www.bd.gov.hk/en/building-works/minor-works/minor-amenity-feature-validation-scheme/index.html) |
+
+- **法律地位冇變：** 經檢核嘅項目仍然係違例工程，只係 BD 唔會採取執法行動，除非變成危險。唔好寫成「已批准」或「已合法化」。
+- 招牌檢核有有效期，BD 資料寫 5 年，續期細節要睇 APP-155。
 - 屬於以上計劃嘅項目，唔喺「須執法取締」僭建物之列（見 `ubw-enforcement.md`）。✅
 
 ## 5. 判斷流程

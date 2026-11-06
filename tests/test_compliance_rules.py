@@ -252,5 +252,21 @@ class BarrierFreeDivisions15And19(unittest.TestCase):
             self.assertEqual(rows, [expected] * 4)
 
 
+
+class BarrierFreeDivisions16To20(unittest.TestCase):
+    def status(self, ref, **kw):
+        rows = load("bfa_check").run({"building_type": "non_domestic", **kw})
+        return [r[4] for r in rows if r[0] == ref]
+
+    def test_illumination(self):
+        self.assertEqual(self.status("Div 16 paras 72-73", illumination=[{"name": "C", "lux": 84, "kind": "upper"}, {"name": "C", "lux": 85, "kind": "upper"},
+                                                                         {"name": "L", "lux": 119, "kind": "ground_lobby"}, {"name": "S", "lux": 120, "kind": "sign"}]),
+                         ["FAIL", "PASS", "FAIL", "PASS"])
+
+    def test_call_button_and_escalator(self):
+        self.assertEqual(self.status("Div 17 para 76", toilets=[{"name": "T", "call_bell_mm": 650}, {"name": "U", "call_bell_mm": 700}]), ["PASS", "FAIL"])
+        self.assertEqual(self.status("Div 20 para 85", escalators=[{"name": "E", "tactile_both_ends": True}, {"name": "F"}]), ["PASS", "FAIL"])
+
+
 if __name__ == "__main__":
     unittest.main()
