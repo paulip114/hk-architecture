@@ -1,0 +1,29 @@
+# This is a Revit shared parameter file.
+# Do not edit manually.
+*META	VERSION	MINVERSION
+META	2	1
+*GROUP	ID	NAME
+GROUP	1	HK Area
+GROUP	2	HK Site
+GROUP	3	HK Title Block
+*PARAM	GUID	NAME	DATATYPE	DATACATEGORY	GROUP	VISIBLE	DESCRIPTION	USERMODIFIABLE	HIDEWHENNOVALUE
+PARAM	db480ef6-9c9a-5a56-805c-63cabbbe0865	HK_GFA_Category	TEXT		1	1	GFA category: accountable, not_gfa, mandatory_plant, non_mandatory_plant, green_feature, car_park_underground, car_park_above_100, car_park_above_50, refuge_floor, bicycle_parking, other_disregarded	1	0
+PARAM	8f3e0ff4-ce4b-53f1-aa63-c7d06bcefc9e	HK_Use	TEXT		1	1	domestic or non_domestic	1	0
+PARAM	e9b85e3d-a43d-5d12-a5f4-dd90515a8a9c	HK_Floor_Count	INTEGER		1	1	Number of identical floors this Area represents (default 1)	1	0
+PARAM	04480617-73d6-54b5-bca2-e65b13bc4267	HK_Site_Area	NUMBER		2	1	Site area per B(P)R reg 23(2), m2 (plain number)	1	0
+PARAM	6b782907-d16c-558e-bc88-89d3459e32bb	HK_Building_Height	NUMBER		2	1	Building height per B(P)R reg 23(1), metres (plain number)	1	0
+PARAM	5f193f82-4cbf-5164-8acd-935f1a08667f	HK_Site_Class	TEXT		2	1	Site class A, B, C (reg 18A) or BA	1	0
+PARAM	d82ef70b-29ba-5253-ab69-dcc12d1f5bbf	HK_Building_Type	TEXT		2	1	domestic, non_domestic or composite	1	0
+PARAM	d65fd7f8-6c10-5313-a9a2-710be49b53a7	HK_OZP_Max_PR	NUMBER		2	1	Maximum total plot ratio under the OZP	1	0
+PARAM	35fde4fb-ccfd-5eeb-ba44-9efdf7084ac8	HK_Lease_Max_GFA	NUMBER		2	1	Maximum GFA under the lease, m2 (plain number)	1	0
+PARAM	69372970-ae04-584a-ad93-fa8585790e0c	HK_Dedicated_Area	NUMBER		2	1	Area dedicated or surrendered under reg 22, m2 (plain number)	1	0
+PARAM	a71afd29-6b1d-50c6-8195-21ef67f46b1d	HK_Project_Title	TEXT		3	1	Project title	1	0
+PARAM	59512f3d-1add-5ea7-8933-faf3b0dfab1d	HK_Lot_No	TEXT		3	1	Lot number	1	0
+PARAM	d1124147-5ff3-506b-87ec-8e6640654452	HK_Address	TEXT		3	1	Street address	1	0
+PARAM	af687c8e-d566-5a86-99cf-946594d23c48	HK_AP_Name	TEXT		3	1	Authorized Person	1	0
+PARAM	e18fc7a4-9bff-5e47-8ae2-6d38f4b0cd37	HK_AP_Reg_No	TEXT		3	1	AP registration number	1	0
+PARAM	91281ef5-4403-57f2-b120-c69b0ed46a39	HK_RSE_Name	TEXT		3	1	Registered Structural Engineer	1	0
+PARAM	1e19791c-b7a2-5398-a921-d9622c6b8835	HK_BD_Ref	TEXT		3	1	Buildings Department file reference	1	0
+PARAM	29f31446-f570-5f4c-98b2-d07b3463dd08	HK_Submission_Type	TEXT		3	1	Submission type	1	0
+PARAM	955f4315-2a0b-5439-a2be-ff5c38a1934e	HK_Drawing_Status	TEXT		3	1	Drawing status	1	0
+PARAM	b666f9d0-f4ef-5d54-8be8-40bd6dba8028	HK_Sheet_Scale	TEXT		3	1	Drawing scale shown in title block	1	0
