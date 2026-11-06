@@ -136,7 +136,7 @@ class Drawing(unittest.TestCase):
         self.assertEqual([f["gross_area_m2"] for f in a["floors"]], [588, 300])
         self.assertEqual(a["warnings"], [])
         out = subprocess.run([sys.executable, TOOLS / "dxf_area_takeoff.py", dxf, "--layers", "A-ROOM", "--json",
-                              self.tmp / "t.json"], capture_output=True, text=True)
+                              self.tmp / "t.json"], capture_output=True, text=True, encoding="utf-8")
         self.assertEqual(out.returncode, 0, out.stdout)
         t = json.loads((self.tmp / "t.json").read_text(encoding="utf-8"))
         self.assertAlmostEqual(sum(x["area_m2"] for x in t["areas"]),
@@ -147,7 +147,7 @@ class Drawing(unittest.TestCase):
         d["drawing"]["floors"][1]["rooms"].append({"name": "Bad", "polygon": [[26, 5], [29, 5], [29, 8], [26, 8]]})
         self.proj.write_text(json.dumps(d), encoding="utf-8")
         r = subprocess.run([sys.executable, TOOLS / "dxf_plan.py", self.proj, "-o", self.tmp / "x.dxf"],
-                           capture_output=True, text=True)
+                           capture_output=True, text=True, encoding="utf-8")
         self.assertEqual(r.returncode, 1)
         self.assertIn("room outside footprint", r.stdout)
 
@@ -155,7 +155,7 @@ class Drawing(unittest.TestCase):
         # ezdxf's drawing add-on imports PIL, but ezdxf only installs Pillow through its optional extras.
         dxf, svg = self.tmp / "p.dxf", self.tmp / "p.svg"
         r = subprocess.run([sys.executable, TOOLS / "dxf_plan.py", self.proj, "-o", dxf, "--svg", svg],
-                           capture_output=True, text=True)
+                           capture_output=True, text=True, encoding="utf-8")
         self.assertEqual(r.returncode, 0, r.stderr)
         root = ET.parse(svg).getroot()
         ns = "{http://www.w3.org/2000/svg}"

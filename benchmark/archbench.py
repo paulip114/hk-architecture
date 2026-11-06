@@ -320,7 +320,7 @@ def cmd_run(a):
             (ws / "input.json").write_text(json.dumps(t.get("input", {}), ensure_ascii=False, indent=1), encoding="utf-8")
             start, status, out = time.time(), "ok", ""
             try:
-                p = subprocess.run(a.agent_cmd, shell=True, cwd=ws, input=prompt, capture_output=True, text=True, timeout=a.timeout)
+                p = subprocess.run(a.agent_cmd, shell=True, cwd=ws, input=prompt, capture_output=True, text=True, encoding="utf-8", timeout=a.timeout)
                 out = p.stdout + ("\n[stderr]\n" + p.stderr if p.stderr else "")
                 if p.returncode:
                     status = f"exit {p.returncode}"
@@ -447,6 +447,8 @@ def cmd_compare(a):
 
 
 def main():
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")  # default Windows consoles cannot print the reports
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("list").set_defaults(fn=cmd_list)

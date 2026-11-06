@@ -4,6 +4,7 @@ Run:  python3 -m unittest discover -s tests
 """
 import importlib.util
 import json
+import os
 import shlex
 import subprocess
 import sys
@@ -188,9 +189,9 @@ class Runner(unittest.TestCase):
             script = Path(tmp) / "fake_agent.py"
             script.write_text(FAKE_AGENT, encoding="utf-8")
             run = Path(tmp) / "run"
-            cmd = f"{shlex.quote(sys.executable)} {shlex.quote(str(script))}"
+            cmd = subprocess.list2cmdline([sys.executable, str(script)]) if os.name == "nt" else shlex.join([sys.executable, str(script)])
             r = subprocess.run([sys.executable, str(ROOT / "benchmark" / "archbench.py"), "run", "--name", "fake", "--agent-cmd", cmd,
-                                "--tasks", "T01,T03,T04", "--out", str(run)], capture_output=True, text=True)
+                                "--tasks", "T01,T03,T04", "--out", str(run)], capture_output=True, text=True, encoding="utf-8")
             self.assertEqual(r.returncode, 0, r.stderr)
             s = json.loads((run / "report.json").read_text(encoding="utf-8"))
         by = {t["id"]: t for t in s["tasks"]}

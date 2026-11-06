@@ -59,7 +59,7 @@ python3 tools/cost_estimate.py examples/demo_practice.json             # order o
 python3 tools/fs_lookup.py "travel distance"                           # search the Fire Code
 ```
 
-On Windows, use `python` in place of `python3` and `.venv\Scripts\python` in place of `.venv/bin/python`, and run `$env:PYTHONUTF8=1` in PowerShell first, because some tools otherwise crash when printing a report ([#50](https://github.com/paulip114/hk-architecture/issues/50)).
+On Windows, use `python` in place of `python3` and `.venv\Scripts\python` in place of `.venv/bin/python`.
 
 Exit code `1` means the check found a failure, not that the tool crashed. Copy a file from [`examples/`](examples/) to start your own project; all the demo schemes are fictional.
 
