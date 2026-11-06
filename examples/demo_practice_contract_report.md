@@ -2,7 +2,7 @@
 
 **3 notice failures, 2 items to check** (19 items, form SFBCwQ.2005).
 
-> Draft for the Architect / QS. Clause numbers from SFBCwQ.2005 (rev. 2023); check against the signed contract, its Appendix and any special conditions. Not legal advice.
+> Draft for the Architect / QS. Clause numbers from SFBCwQ.2005 (rev. 2023). Check against the signed contract, its Appendix and any special conditions. Not legal advice.
 
 | Clause | Item | Value | Basis | Result | Note |
 | --- | --- | --- | --- | --- | --- |

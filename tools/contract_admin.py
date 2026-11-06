@@ -28,6 +28,10 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 S = json.loads((HERE.parent / "contracts" / "sfbc.json").read_text(encoding="utf-8"))
 P = S["periods"]
+FORM_NOTE = {
+    "default": "Clause numbers from SFBCwQ.2005 (rev. 2023).",
+    "SFBC.2025": "Periods used here are the same in the 2025 Edition, checked against a pre-launch copy; see sfbc_2025 in contracts/sfbc.json.",
+}
 PASS, FAIL, WARN, INFO = "PASS", "FAIL", "CHECK", "INFO"
 
 
@@ -183,8 +187,8 @@ def main():
     checks = sum(1 for r in rows if r[4] == WARN)
     out = [f"# Contract administration – {p.get('project', 'Untitled')}", "",
            f"**{fails} notice failures, {checks} items to check** ({len(rows)} items, form {p['contract'].get('form', 'SFBCwQ.2005')}).", "",
-           "> Draft for the Architect / QS. Clause numbers from SFBCwQ.2005 (rev. 2023); check against the signed "
-           "contract, its Appendix and any special conditions. Not legal advice.", "",
+           "> Draft for the Architect / QS. " + FORM_NOTE.get(p["contract"].get("form"), FORM_NOTE["default"]) +
+           " Check against the signed contract, its Appendix and any special conditions. Not legal advice.", "",
            "| Clause | Item | Value | Basis | Result | Note |", "| --- | --- | --- | --- | --- | --- |"]
     out += ["| " + " | ".join(str(x) for x in r) + " |" for r in rows]
     md = "\n".join(out) + "\n"

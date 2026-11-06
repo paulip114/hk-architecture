@@ -196,7 +196,7 @@ def run(q):
     O = E["bec_other"]
     for c in b.get("chillers", []):
         need = O["chiller_min_cop"].get(c["type"])
-        if need is None:
+        if need is None or c["type"].startswith("_"):
             add("BEC 2024 Ch. 6", c["name"], c["type"], "chiller type", WARN, "not encoded")
             continue
         add("BEC 2024 Ch. 6", f"{c['name']} COP", c["cop"], f"≥ {need}", PASS if c["cop"] >= need else FAIL)

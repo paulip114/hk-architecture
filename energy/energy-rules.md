@@ -75,7 +75,8 @@ Tower / podium OTTV = (G + H) / (E + F)                        Form OTTV 4
   - water-cooled VSD centrifugal < 1,000 kW: 5.5
   - air-cooled screw < 500 kW: 3.2
   - unitary air-cooled ≤ 7.5 kW: 2.8
-- Motors of 75–200 kW: IE4. Car park fans ≥ 3.7 kW: modulate to ≤ 35%.
-- Lift car fan ≤ 0.53 W per l/s. Regenerative braking for lifts ≥ 2.0 m/s or ≥ 900 kg. Escalator standby speed 0.05–0.25 m/s.
+- Motors: minimum efficiency by output and poles (Table 7.5.1). Car park fans ≥ 3.7 kW: modulate to ≤ 35%.
+- Lift car fan ≤ 0.53 W per l/s. Regenerative braking for lifts of ≥ 2.0 m/s (clause 8.5.5). Escalator standby speed 0.05–0.25 m/s.
 - Major retrofitting works: ≥ 500 m² works area, a ≥ 400 A central circuit, ≥ 350 kW of A/C, or works to central BSI motor / mechanical drives.
-- Source: EMSD's BEC 2024 briefing, not the Code text. Read the Code itself for space types, duct and pipe insulation, copper loss, power factor and the full COP tables.
+- Source: BEC 2024 Code text, read on 2026-11-07. `energy_check.py` covers every Table 5.4 space type, the Table 6.12b chiller COPs, the lift car fan limit and the retrofit triggers.
+- Not automated: unitary A/C and VRF COP (Table 6.12a), heat pumps (Table 6.12c), duct and pipe insulation, motor efficiency, copper loss, power factor, harmonic limits, lighting control counts, Appendix A energy calculation. Check these against the Code.

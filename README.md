@@ -131,16 +131,17 @@ Rule documents and data tables mark facts by how they were checked. Some tools r
 - Cap. 123 and Cap. 123A statutory periods
 - Cap. 131 periods (2.11.2023 English text)
 - PNAP APP-151 cap and prerequisites, and the APP-152 figures used by `sbd_check.py`
-- Technical Memorandum Table 1, and Barrier Free Design Manual Divisions 15 to 20
+- Technical Memorandum Table 1, BA form numbers, and Barrier Free Design Manual Divisions 15 to 20
+- The FSD supply tank table (para 5.26) and Building Energy Code 2024 tables used by the tools
 - Cap. 1 s.71 day counting, Cap. 221 Schedule 8 fine levels, the Cap. 123 MBIS and MWIS notice gaps, and the Cap. 123Q section outline
 
 **Still partial or unverified:**
 - The validation schemes for minor works, which are not in Cap. 123N
 - Cap. 123P inspection scope and the MWIS forms, which have not been compared line by line
-- BA form numbers against BD's current list
 - Barrier Free Design Manual Chapter 5
-- Parts of the planning and land administration rules, and the fire services and energy tables
-- SFBC 2025 clauses, which need the purchased form
+- Parts of the planning and land administration rules, and the FSD Part II pressurization table
+- SFBC 2025 clauses and periods, which were checked against a pre-launch copy and need rechecking against the final form
+- The HKIA appointment agreement, which is not available
 
 The list above is a summary. Each rule document gives the details, [`docs/document-library.md`](docs/document-library.md) lists the source documents and where to get them, and the [open issues](https://github.com/paulip114/hk-architecture/issues) track what remains. Laws and practice notes change, so always check the current version.
 

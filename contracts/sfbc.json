@@ -188,6 +188,172 @@
       "verified": false
     }
   },
+  "sfbc_2025": {
+    "_status": "Paraphrased clause references checked on 2026-11-07 against a pre-launch copy of the 2025 Edition (Private Edition), marked subject to minor revisions pending the Development Bureau's announcement on the Adjudicator Nominating Body. Recheck against the final form. Do not add the form's text to this repo.",
+    "articles": {
+      "7": "SOP Particular Conditions apply, apply with amendments, or do not apply, as selected in the Appendix",
+      "8": "BIM Particular Conditions apply, apply with amendments, or do not apply, as selected in the Appendix"
+    },
+    "appendix_defaults": {
+      "master_programme": {
+        "clause": "3.1",
+        "text": "within 42 days of acceptance of the tender"
+      },
+      "defects_liability_period": {
+        "clause": "17.3",
+        "text": "12 months from Substantial Completion of the Works, a Section or a Relevant Part"
+      },
+      "interim_certificate_period": {
+        "clause": "32.1",
+        "text": "1 calendar month"
+      },
+      "payment_period": {
+        "clause": "32.1",
+        "text": "within 14 days from the date of the certificate"
+      },
+      "retention_percentage": {
+        "clause": "32.4",
+        "pct": 10
+      },
+      "retention_limit": {
+        "clause": "32.4",
+        "pct": 10,
+        "text": "plus the Retention held for Nominated Sub-Contractors and Nominated Suppliers"
+      },
+      "final_account_period": {
+        "clause": "32.6",
+        "text": "within 12 months from Substantial Completion of the whole of the Works"
+      }
+    },
+    "periods": {
+      "oral_instruction_confirm_days": {
+        "clause": "4.2",
+        "days": 5
+      },
+      "contractor_confirmation_dissent_days": {
+        "clause": "4.2",
+        "days": 7
+      },
+      "objection_to_instruction_days": {
+        "clause": "4.3(2)",
+        "days": 7
+      },
+      "notice_to_comply_days": {
+        "clause": "4.3(3)",
+        "days": 7
+      },
+      "eot_first_notice_days": {
+        "clause": "25.1(1)",
+        "days": 28
+      },
+      "eot_second_notice_days": {
+        "clause": "25.2(1)",
+        "days": 28
+      },
+      "eot_further_particulars_interval_days": {
+        "clause": "25.2(3)(b)",
+        "days": 28
+      },
+      "eot_final_particulars_days": {
+        "clause": "25.2(3)(c)",
+        "days": 14
+      },
+      "eot_decision_days": {
+        "clause": "25.3(2)-(3)",
+        "days": 60
+      },
+      "eot_further_better_particulars_days": {
+        "clause": "25.3(3)(b)",
+        "days": 28
+      },
+      "eot_final_review_days_after_substantial_completion": {
+        "clause": "25.3",
+        "days": 90
+      },
+      "delay_recovery_proposal_days": {
+        "clause": "26.1",
+        "days": 14
+      },
+      "claim_particulars_days": {
+        "clause": "28.2",
+        "days": 60
+      },
+      "claim_further_submission_interval_days": {
+        "clause": "28.2",
+        "days": 28
+      },
+      "claim_final_days": {
+        "clause": "28.2",
+        "days": 14
+      },
+      "first_interim_certificate_latest_days_after_commencement": {
+        "clause": "32.1(1)",
+        "days": 42
+      },
+      "contractor_statement_before_certificate_days": {
+        "clause": "32.1(4)",
+        "days": 21
+      },
+      "qs_valuation_before_certificate_days": {
+        "clause": "32.1(5)",
+        "days": 7
+      },
+      "deduction_notice_days": {
+        "clause": "32.1(6)",
+        "days": 7
+      },
+      "half_retention_release_days": {
+        "clause": "32.5",
+        "days": 14
+      },
+      "final_retention_release_days": {
+        "clause": "32.5",
+        "days": 14
+      },
+      "determination_by_employer_default_continues_days": {
+        "clause": "35.1",
+        "days": 14
+      },
+      "determination_by_employer_notice_days": {
+        "clause": "35.1",
+        "days": 14
+      },
+      "determination_by_contractor_default_continues_days": {
+        "clause": "36.1(3)(a)",
+        "days": 14
+      },
+      "determination_by_contractor_notice_days": {
+        "clause": "36.1(3)(b)",
+        "days": 14
+      },
+      "determination_by_contractor_suspension_days": {
+        "clause": "36.1(1)(d)-(e)",
+        "days": 120
+      },
+      "designated_representatives_days": {
+        "clause": "41.3",
+        "days": 28
+      },
+      "mediator_agreement_days": {
+        "clause": "41.3",
+        "days": 21
+      },
+      "mediation_period_days": {
+        "clause": "41.4(1)",
+        "days": 42
+      }
+    },
+    "listed_events": {
+      "clause": "25.1(3)",
+      "count": 24,
+      "paragraphs": "(a) to (x)",
+      "note": "Called listed events, not Relevant Events, in this edition. Read the form for the wording. Topics include force majeure, weather, Architect's instructions, nominated sub-contractors and suppliers, pandemic or epidemic measures, and acts of prevention or breach by the Employer."
+    },
+    "differences_from_2005": [
+      "Mediation period is 42 days in clause 41.4(1), against 28 days in the 2005 form.",
+      "Clause 26 covers delay recovery measures, with proposals due within 14 days of instruction."
+    ]
+  },
   "cispo": {
     "_source": "CIC SOPL briefing (https://www.cic.hk/content/dam/sopl/docs/sopl-briefing-en.pdf) and CMS legal update, read 2026-11-06. Not legal advice.",
     "name": "Construction Industry Security of Payment Ordinance (Cap. 652)",
