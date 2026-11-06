@@ -32,7 +32,8 @@ Set `HK_GFA_Category` on each Area (Revit), or use the curve's layer name or the
 | --- | --- |
 | `accountable` | Counted in GFA |
 | `mandatory_plant` | 100% disregarded, reg 23(3)(b) |
-| `non_mandatory_plant`, `green_feature` | 100% disregarded, subject to the APP-151 10% cap |
+| `non_mandatory_plant`, `green_feature` | 100% disregarded, subject to the APP-151 prerequisites and 10% cap |
+| `green_feature_uncapped` | 100% disregarded, subject to the APP-151 prerequisites but not the cap, such as a sky garden or wider common corridor |
 | `car_park_underground`, `car_park_above_100` | 100% disregarded |
 | `car_park_above_50` | 50% disregarded |
 | `refuge_floor`, `bicycle_parking`, `other_disregarded` | 100% disregarded (the AP must justify) |
@@ -92,5 +93,4 @@ Not tested (no Revit or Rhino here). Try these on a copy of a model first:
 ## Rules still to confirm
 
 - The sheet list and minimum scales in `sheets.py` (1:1000 block plan, 1:500 site plan, 1:100 general building plans) are marked [verify]. Check them against Cap. 123A reg 8 and current BD e-submission requirements.
-- The APP-151 cap base (total GFA) follows `bpr_check.py`, which marks it [verify].
 - The tools do not check lease GFA definitions. These can differ from B(P)R.

@@ -1,6 +1,6 @@
 # B(P)R compliance check – 示範：堅尼地城商住大廈（虛構）
 
-**Result: the scheme does not comply** (1 fail, 0 to check, 29 items).
+**Result: the scheme does not comply** (1 fail, 2 to check, 31 items).
 
 > Draft for review and signature by an Authorized Person. Schedule figures from the official consolidated Cap. 123F (17-09-2026). Lease and OZP conditions must be checked separately.
 
@@ -9,7 +9,8 @@
 | 18A | Site class | B | - | INFO | 2 streets ≥ 4.5 m, frontage ≥ 40% |
 | 23(1) | Building height | 100.4 m | > 61 m | INFO | mean level of (lowest) specified street ≥ 4.5 m to mean roof height over highest usable floor |
 | OZP | Height restriction | 100.4 m | ≤ 110 m | PASS |  |
-| APP-151 | Capped concessions (non-mandatory plant + green features) | 120.00 m² (1.2%) | ≤ 10% of GFA = 987.20 m² | PASS | Also needs APP-152 SBD compliance and BEAM Plus registration |
+| APP-151 | Capped concessions, non-domestic part | 120.00 m² (4.3%) | ≤ 10% of the part's accountable GFA = 276.00 m² | PASS | para 4, Appendix A |
+| APP-151 para 6 | Prerequisites for these GFA concessions | not assessed | APP-152; APP-156 if domestic or composite; BEAM Plus NB v2.0+ registration; target rating on GBP | CHECK | Plus documents before consent and OP. Applies to GBP submitted on or after 30 June 2024 |
 | 21(2) | Composite: Dd/Pd + Dn/Pn | 0.974 | ≤ 1.000 | PASS | Dn = 2.760 (Pn 15); Dd = 7.112 (Pd 9.0); max domestic PR at this Dn = 7.344 |
 | 21(3) | Total accountable GFA | 9,872.00 m² | - | INFO | domestic 7,112.00 m², non-domestic 2,760.00 m²; gross built 11,080.00 m² |
 | OZP | Total PR | 9.872 | ≤ 10 | PASS |  |
@@ -35,6 +36,7 @@
 | 36 | Bathroom (bathroom) glass | 0.50 m² | ≥ 0.40 m² (1/10) | PASS |  |
 | 36 | Bathroom (bathroom) openable | 0.40 m² | ≥ 0.40 m² (1/10, opens to open air) | PASS |  |
 | 36 | Bathroom (bathroom) top of opening | 2.1 m | ≥ 2.0 m | PASS |  |
+| 31 | Prescribed windows facing into the external air | Living/dining, Bedroom 2, Kitchen | street ≥ 4.5 m or reg 31 planes | CHECK | Not assessed: add `reg_31` to each room to check them |
 
 ## GFA exemptions claimed
 

@@ -15,6 +15,7 @@ official consolidated Cap. 123F (17-09-2026).
 """
 import argparse
 import json
+import math
 import sys
 from pathlib import Path
 
@@ -26,8 +27,9 @@ PASS, FAIL, WARN, INFO = "PASS", "FAIL", "CHECK", "INFO"
 # exemption categories -> fraction of the area disregarded from GFA
 EXEMPT_FRACTION = {
     "mandatory_plant": 1.0,          # reg 23(3)(b), APP-2 para 11
-    "non_mandatory_plant": 1.0,      # APP-2 para 13, subject to APP-151 cap
-    "green_feature": 1.0,            # APP-151, subject to cap
+    "non_mandatory_plant": 1.0,      # APP-2 para 13; APP-151 App A item 2.3, prerequisites + cap
+    "green_feature": 1.0,            # APP-151 App A items ticked for prerequisites + cap
+    "green_feature_uncapped": 1.0,   # APP-151 App A items ticked for prerequisites only
     "car_park_underground": 1.0,     # APP-2 para 18(a)
     "car_park_above_100": 1.0,       # APP-2 para 18(b)(i)/(c)/(d)/(e)
     "car_park_above_50": 0.5,        # APP-2 para 18(b)(ii)
@@ -36,6 +38,7 @@ EXEMPT_FRACTION = {
     "other_disregarded": 1.0,        # anything else the AP justifies
 }
 CAPPED = {"non_mandatory_plant", "green_feature"}
+PREREQUISITE = CAPPED | {"green_feature_uncapped"}
 APP151_CAP = 0.10
 
 
@@ -111,7 +114,8 @@ def run(p):
     floors = p.get("floors", [])
     gfa = {"domestic": 0.0, "non_domestic": 0.0}
     gross_total = 0.0
-    capped_total = 0.0
+    capped = {"domestic": 0.0, "non_domestic": 0.0}
+    needs_prerequisites = False
     exempt_lines = []
     for f in floors:
         use = f["use"]
@@ -127,19 +131,32 @@ def run(p):
             d = float(e["area_m2"]) * frac * n
             disregarded += d
             if cat in CAPPED:
-                capped_total += d
+                # APP-151 para 4: each part has its own cap. `serves` covers a feature on a floor of the other use.
+                part = e.get("serves", use)
+                if part not in capped:
+                    raise SystemExit(f"Unknown serves '{part}' on floor {f['name']}: use domestic or non_domestic")
+                capped[part] += d
+            if cat in PREREQUISITE:
+                needs_prerequisites = True
             exempt_lines.append((f["name"], e.get("item", cat), cat, float(e["area_m2"]) * n, d))
         f["_accountable"] = gross - disregarded
         gfa[use] += f["_accountable"]
 
     total_gfa = gfa["domestic"] + gfa["non_domestic"]
-    if capped_total:
-        cap_base = total_gfa  # APP-151: cap on total GFA of development [verify base]
-        ok = capped_total <= APP151_CAP * cap_base
-        add("APP-151", "Capped concessions (non-mandatory plant + green features)",
-            f"{fmt(capped_total)} m² ({capped_total/cap_base*100:.1f}%)",
-            f"≤ 10% of GFA = {fmt(APP151_CAP*cap_base)} m²", PASS if ok else FAIL,
-            "Also needs APP-152 SBD compliance and BEAM Plus registration")
+    for part, amount in capped.items():
+        if not amount:
+            continue
+        # APP-151 para 4: 10% of the total GFA of the respective part. The note does not say whether that total
+        # includes the concessions; accountable GFA is used here, which is the stricter reading.
+        cap_base = gfa[part]
+        share = f" ({amount / cap_base * 100:.1f}%)" if cap_base > 0 else ""
+        add("APP-151", f"Capped concessions, {part.replace('_', '-')} part", f"{fmt(amount)} m²{share}",
+            f"≤ 10% of the part's accountable GFA = {fmt(APP151_CAP * cap_base)} m²",
+            PASS if amount <= APP151_CAP * cap_base else FAIL, "para 4, Appendix A")
+    if needs_prerequisites:
+        add("APP-151 para 6", "Prerequisites for these GFA concessions", "not assessed",
+            "APP-152; APP-156 if domestic or composite; BEAM Plus NB v2.0+ registration; target rating on GBP",
+            WARN, "Plus documents before consent and OP. Applies to GBP submitted on or after 30 June 2024")
 
     # --- Plot ratio (reg 21)
     btype = bldg["type"]
@@ -228,6 +245,7 @@ def run(p):
                 PASS if v >= 150 else FAIL)
 
     # --- Lighting & ventilation (regs 24, 30-36)
+    unconfirmed_windows = []
     for r in p.get("rooms", []):
         a = float(r["floor_area_m2"])
         use = r.get("use", "habitable")
@@ -260,10 +278,57 @@ def run(p):
         if r.get("max_distance_to_window_m") is not None and r.get("use", "habitable") == "habitable":
             d = float(r["max_distance_to_window_m"])
             add("32", f"{label} furthest point to window", f"{d} m", "≤ 9 m", PASS if d <= 9 else FAIL)
-        if r.get("external_air") is False:
-            add("31", f"{label} external air", "not confirmed", "street ≥ 4.5 m or reg 31 planes", WARN)
+        if r.get("reg_31"):
+            for row in reg_31_rows(label, use, r["reg_31"]):
+                add(*row)
+        else:
+            unconfirmed_windows.append(r.get("name", "room"))
+    if unconfirmed_windows:
+        add("31", "Prescribed windows facing into the external air", ", ".join(unconfirmed_windows),
+            "street ≥ 4.5 m or reg 31 planes", WARN, "Not assessed: add `reg_31` to each room to check them")
 
     return rows, exempt_lines, notes, total_gfa
+
+
+def reg_31_rows(label, use, w):
+    """B(P)R reg 31: does a prescribed window face into the external air? Returns (reg, item, value, limit, status, note)."""
+    if w.get("faces_street_ge_4_5m"):
+        return [("31(1)(a)", f"{label} faces a street ≥ 4.5 m wide", "yes", "street ≥ 4.5 m", PASS, "")]
+    rows = []
+    base, depth = float(w["plane_base_m"]), float(w["plane_depth_m"])
+    area = base * depth
+    rows.append(("31(2)(a)", f"{label} horizontal plane area", f"{fmt(area)} m²", "≥ 21 m²", PASS if area >= 21 - 1e-9 else FAIL, ""))
+    rows.append(("31(2)(b)", f"{label} horizontal plane base", f"{fmt(base)} m", "≥ 2.3 m", PASS if base >= 2.3 else FAIL, ""))
+    uncovered = w.get("uncovered")
+    rows.append(("31(1)(b)", f"{label} space uncovered and unobstructed", "yes" if uncovered else "not confirmed",
+                 "uncovered above the plane", PASS if uncovered else WARN, ""))
+    habitable = use == "habitable"
+    if w.get("opposite", "building") == "building":
+        rows.append(("31(2)(c)", f"{label} depth to opposite wall", f"{fmt(depth)} m", "≥ 4.5 m", PASS if depth >= 4.5 else FAIL, ""))
+        angle, ref, shift, measured = (71.5 if habitable else 76.0), "31(1)(c)", 0.0, "from the window wall"
+    else:
+        lane = w.get("lane_width_m")
+        credit = 0.0
+        if lane is not None and lane < 4.5:
+            credit = lane / 2 if lane < 3 else 1.5  # reg 31(2)(e)
+            shift = 1.5  # reg 31(1)(d) proviso
+        else:
+            shift = 0.0
+        rows.append(("31(2)(d)-(e)", f"{label} depth to boundary", f"{fmt(depth + credit)} m", "≥ 2.3 m",
+                     PASS if depth + credit >= 2.3 else FAIL, f"includes {fmt(credit)} m for the lane" if credit else ""))
+        angle, ref, measured = (80.5 if habitable else 83.0), "31(1)(d)", "from the deemed boundary, towards the site"
+    tangent = math.tan(math.radians(angle))
+    obstructions = w.get("obstructions")
+    if not obstructions:
+        rows.append((ref, f"{label} inclined plane at {angle}°", "no building parts given", "none above the plane", WARN, "List the parts that could protrude"))
+    for ob in obstructions or []:
+        x = float(ob["distance_m"]) + shift
+        h = float(ob["height_above_sill_m"])
+        limit = x * tangent
+        rows.append((ref, f"{label} inclined plane at {angle}°: {ob.get('name', 'building')}", f"{fmt(h)} m above sill",
+                     f"≤ {fmt(limit)} m at {fmt(x)} m {measured}", PASS if h <= limit + 1e-9 else FAIL,
+                     "Sill deemed 1 m above floor (reg 31(3)(b))"))
+    return rows
 
 
 def report(p, rows, exempt_lines, notes):

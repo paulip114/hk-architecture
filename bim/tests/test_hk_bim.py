@@ -43,6 +43,7 @@ class TestRulesInStep(unittest.TestCase):
     def test_exempt_fraction_matches_bpr_check(self):
         self.assertEqual(areas.EXEMPT_FRACTION, bpr_check.EXEMPT_FRACTION)
         self.assertEqual(set(areas.CAPPED), bpr_check.CAPPED)
+        self.assertEqual(set(areas.PREREQUISITE), bpr_check.PREREQUISITE)
         self.assertEqual(areas.APP151_CAP, bpr_check.APP151_CAP)
 
     def test_schedule_limits_match_bpr_check(self):
@@ -155,6 +156,23 @@ class TestFloorsAndChecks(unittest.TestCase):
         res = bpr_limits.quick_check(areas.build_floors(recs), 100, 20, "A", "non_domestic")
         cap = [r for r in res["rows"] if r[0] == "APP-151"][0]
         self.assertEqual(cap[4], "FAIL")
+
+    def test_app151_cap_is_separate_for_each_part(self):
+        recs = [areas.make_record("Flat", "20/F", 1000, "accountable", use="domestic", elevation_m=60),
+                areas.make_record("Balcony", "20/F", 150, "green_feature", use="domestic", elevation_m=60),
+                areas.make_record("Office", "2/F", 4000, "accountable", use="non_domestic", elevation_m=20)]
+        res = bpr_limits.quick_check(areas.build_floors(recs), 1000, 70, "B", "composite")
+        cap = [r for r in res["rows"] if r[0] == "APP-151"]
+        self.assertEqual([r[4] for r in cap], ["FAIL"])
+        self.assertIn("domestic part", cap[0][1])
+
+    def test_uncapped_feature_needs_prerequisites_only(self):
+        self.assertEqual(areas.normalise_category("Sky garden"), "green_feature_uncapped")
+        recs = [areas.make_record("Office", "2/F", 100, "accountable", elevation_m=20),
+                areas.make_record("Sky garden", "2/F", 50, "green_feature_uncapped", elevation_m=20)]
+        rows = bpr_limits.quick_check(areas.build_floors(recs), 100, 20, "A", "non_domestic")["rows"]
+        self.assertEqual([r for r in rows if r[0] == "APP-151"], [])
+        self.assertEqual([r[4] for r in rows if r[0] == "APP-151 para 6"], ["CHECK"])
 
 
 class TestEnvelopeAndMassing(unittest.TestCase):

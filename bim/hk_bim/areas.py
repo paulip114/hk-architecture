@@ -33,6 +33,7 @@ EXEMPT_FRACTION = {
     "mandatory_plant": 1.0,
     "non_mandatory_plant": 1.0,
     "green_feature": 1.0,
+    "green_feature_uncapped": 1.0,
     "car_park_underground": 1.0,
     "car_park_above_100": 1.0,
     "car_park_above_50": 0.5,
@@ -40,7 +41,8 @@ EXEMPT_FRACTION = {
     "bicycle_parking": 1.0,
     "other_disregarded": 1.0,
 }
-CAPPED = ("non_mandatory_plant", "green_feature")  # APP-151 10% cap
+CAPPED = ("non_mandatory_plant", "green_feature")  # APP-151 para 4 and Appendix A: 10% cap
+PREREQUISITE = CAPPED + ("green_feature_uncapped",)  # APP-151 para 6 and Appendix A
 APP151_CAP = 0.10
 ACCOUNTABLE = "accountable"
 NOT_GFA = "not_gfa"
@@ -59,13 +61,16 @@ _ALIASES = {
     "non_mandatory_plant": ["nonmandatoryplant", "nonmandatory", "acplant", "ahu",
                             "acplantroom", "非強制機房", "空調機房"],
     "green_feature": ["greenfeature", "amenityfeature", "green", "綠化設施", "環保設施",
-                      "康樂設施", "sunshade", "balcony", "utilityplatform", "露台", "工作平台"],
+                      "康樂設施", "balcony", "utilityplatform", "露台", "工作平台"],
+    "green_feature_uncapped": ["greenfeatureuncapped", "skygarden", "podiumgarden", "widercorridor",
+                               "acousticfin", "wingwall", "windcatcher", "noisebarrier", "largerliftshaft",
+                               "空中花園", "平台花園", "隔音鰭", "隔音屏障"],
     "car_park_underground": ["carparkunderground", "basementcarpark", "地庫停車場", "地下停車場"],
     "car_park_above_100": ["carparkabove100", "carparkabove", "地面停車場", "上蓋停車場"],
     "car_park_above_50": ["carparkabove50", "停車場50"],
     "refuge_floor": ["refugefloor", "refuge", "庇護層"],
     "bicycle_parking": ["bicycleparking", "bicycle", "單車停泊", "單車位"],
-    "other_disregarded": ["otherdisregarded", "other", "exempt", "disregarded", "豁免", "其他豁免"],
+    "other_disregarded": ["otherdisregarded", "other", "exempt", "disregarded", "sunshade", "豁免", "其他豁免"],
 }
 _ALIAS_INDEX = {}
 for _cat, _words in _ALIASES.items():
@@ -203,8 +208,9 @@ def accountable_of(floor):
 
 def gfa_totals(floors):
     """Return dict with domestic / non_domestic / total accountable GFA,
-    gross built area, and the APP-151 capped total."""
-    out = {"domestic": 0.0, "non_domestic": 0.0, "gross": 0.0, "capped": 0.0, "disregarded": 0.0}
+    gross built area, and the APP-151 capped totals (overall and for each part)."""
+    out = {"domestic": 0.0, "non_domestic": 0.0, "gross": 0.0, "capped": 0.0, "disregarded": 0.0,
+           "capped_domestic": 0.0, "capped_non_domestic": 0.0, "needs_prerequisites": False}
     for f in floors:
         n = int(f.get("count", 1))
         acc = accountable_of(f) * n
@@ -213,7 +219,11 @@ def gfa_totals(floors):
         out["disregarded"] += f["gross_area_m2"] * n - acc
         for e in f.get("exempt", []):
             if e["category"] in CAPPED:
-                out["capped"] += e["area_m2"] * EXEMPT_FRACTION[e["category"]] * n
+                amount = e["area_m2"] * EXEMPT_FRACTION[e["category"]] * n
+                out["capped"] += amount
+                out["capped_" + e.get("serves", f["use"])] += amount
+            if e["category"] in PREREQUISITE:
+                out["needs_prerequisites"] = True
     out["total"] = out["domestic"] + out["non_domestic"]
     return out
 

@@ -64,6 +64,7 @@ GFA_COLOURS = {
     "mandatory_plant": ((144, 202, 249), "強制機房 Mandatory plant room (reg 23(3)(b))"),
     "non_mandatory_plant": ((129, 212, 250), "非強制機房 Non-mandatory plant (APP-151 cap)"),
     "green_feature": ((165, 214, 167), "綠化及康樂設施 Green / amenity feature (APP-151 cap)"),
+    "green_feature_uncapped": ((129, 199, 132), "不計上限綠化設施 Green / amenity feature (no APP-151 cap)"),
     "car_park_underground": ((206, 147, 216), "地庫停車場 Underground car park"),
     "car_park_above_100": ((225, 190, 231), "地面以上停車場 100% Car park above ground (100%)"),
     "car_park_above_50": ((243, 229, 245), "地面以上停車場 50% Car park above ground (50%)"),

@@ -2,7 +2,7 @@
 
 **Result: does not comply** (1 fail, 0 to check, 7 items).
 
-> Draft for review by an Authorized Person. APP-152 compliance is a prerequisite for APP-151 GFA concessions; a FAIL here puts those concessions at risk. Unverified figures: see `_unverified` in pnap/app152.json.
+> Draft for review by an Authorized Person. APP-152 compliance is a prerequisite for APP-151 GFA concessions; a FAIL here puts those concessions at risk.
 
 | Clause | Item | Proposed | Limit | Result | Note |
 | --- | --- | --- | --- | --- | --- |

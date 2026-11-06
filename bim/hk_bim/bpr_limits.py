@@ -115,10 +115,15 @@ def quick_check(floors, site_area_m2, height_m, site_class, building_type,
         rows.append(("22", "Bonus PR ceiling (%s)" % base, round(actual, 3), "<= %.3f" % cap,
                      _status(actual <= cap + 1e-9)))
 
-    if t["capped"]:
-        ok = t["capped"] <= APP151_CAP * t["total"]
-        rows.append(("APP-151", "Capped concessions", round(t["capped"], 2),
-                     "<= %.2f m2 (10%% of GFA)" % (APP151_CAP * t["total"]), _status(ok)))
+    for part in ("domestic", "non_domestic"):
+        amount = t["capped_" + part]
+        if amount:
+            rows.append(("APP-151", "Capped concessions, %s part" % part.replace("_", "-"), round(amount, 2),
+                         "<= %.2f m2 (10%% of the part's GFA)" % (APP151_CAP * t[part]),
+                         _status(amount <= APP151_CAP * t[part])))
+    if t["needs_prerequisites"]:
+        rows.append(("APP-151 para 6", "Prerequisites for these GFA concessions", "not assessed",
+                     "APP-152, APP-156, BEAM Plus: see tools/bpr_check.py", "CHECK"))
 
     for f in floors:
         if f.get("site_coverage_m2") is None:
