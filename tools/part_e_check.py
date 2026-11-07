@@ -7,7 +7,7 @@ Usage:  python3 part_e_check.py project.json [-o report.md]   (reads the `part_e
 
 `part_e.elements[]`: {name, type (key in fs-code/part_e.json), required_frr (60/120/240),
   thickness_mm | size_mm | width_mm | waist_mm | protection_mm, cover_mm, continuous (bool)}
-`part_e.linings[]`: {name, location: protected_exit | use_class_3_general | use_class_5a_auditoria,
+`part_e.linings[]`: {name, location: protected_exit_all | use_class_3_general | use_class_5a_auditoria,
   euro_class (A1..F) or bs476_class ("Class 0", "Class 1", ...)}
 `part_e.products[]`: {name, test_report_lab_accredited (bool), standard}
 Elements outside the tables need a test or assessment report (E16) – flagged CHECK.

@@ -176,9 +176,13 @@ def run(q):
                 "B27.2(a)-(j)", FAIL if miss else PASS)
             if c.get("exit_width_through_other_accommodation_mm") is not None and routes:
                 v = c["exit_width_through_other_accommodation_mm"]
-                tot_req = (b5(occ) if q.get("floor_level_m", 0) >= 12 else b2(occ))[1]
-                add("B27.5(a)", "Exit width discharging through adjoining accommodation", f"{v} mm", f"≤ {tot_req/2:.0f} mm (half)",
-                    PASS if v <= tot_req / 2 else FAIL)
+                req = b5(occ) if q.get("floor_level_m", 0) >= 12 else b2(occ)
+                if req is None:
+                    add("B27.5(a)", "Exit width discharging through adjoining accommodation", f"{v} mm",
+                        "half of the required width; > 3000 persons: BA to determine", WARN)
+                else:
+                    add("B27.5(a)", "Exit width discharging through adjoining accommodation", f"{v} mm", f"≤ {req[1]/2:.0f} mm (half)",
+                        PASS if v <= req[1] / 2 else FAIL)
         if c.get("projection_room_frr_min") is not None:
             v = c["projection_room_frr_min"]
             add("C18.1(d)", "Projection room enclosure", f"{v} min", "≥ -/60/60, door with smoke seal",
