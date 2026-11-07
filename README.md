@@ -97,7 +97,7 @@ The repo also holds rules, templates and guides that go beyond the tools. A tool
 
 | Topic | Where |
 | --- | --- |
-| EIA, railway protection, building management, and lifts and escalators | [`statutes/`](statutes/) |
+| EIA, railway protection, building management, lifts and escalators, small houses, NT land exchange and land resumption | [`statutes/`](statutes/) |
 | Minor works, unauthorized building works, MBIS and MWIS, and checklist and letter templates | [`submission/`](submission/README.md) |
 | Building (Administration) and Building (Construction) Regulations notes | [`bcr-bar/`](bcr-bar/bcr-bar-rules.md) |
 | Design statements, architectural movements and masters, and massing methods | [`design/`](design/README.md) |
