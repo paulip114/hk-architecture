@@ -82,7 +82,7 @@
    "inLibrary": true,
    "version": "24.8.2025",
    "usedFor": "Land administration rules",
-   "issue": 44
+   "issue": null
   },
   {
    "id": "Cap.515",
@@ -115,7 +115,7 @@
    "inLibrary": true,
    "version": "24.8.2025",
    "usedFor": "Resumption coverage",
-   "issue": 45
+   "issue": null
   },
   {
    "id": "Cap.128B",
@@ -346,7 +346,7 @@
    "inLibrary": true,
    "version": "2.8.2012",
    "usedFor": "Small House and NT coverage",
-   "issue": 43
+   "issue": null
   },
   {
    "id": "Cap.123",
