@@ -31,4 +31,4 @@ Ask only for what is missing (one message, short list):
 - Always state: draft for review by an Authorized Person and planning / land consultants; OZP and lease figures as given by the user.
 
 ## Limits
-The tool does not read the OZP or lease itself, does not value land, and does not check rural OZP temporary-use rules, Small House policy, NBA geometry or building gaps. Flag these if relevant.
+The tool does not read the OZP or lease itself, does not value land, and does not check rural OZP temporary-use rules, Small House policy, NT land exchange rates, land resumption, NBA geometry or building gaps. Flag these if relevant; `statutes/` has guides to the Small House Policy, NT land exchange and land resumption.

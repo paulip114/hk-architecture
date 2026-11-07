@@ -12,6 +12,9 @@ Unfinished work is tracked in [GitHub issues](https://github.com/paulip114/hk-ar
 | `statutes/railway-protection-rules.md` | Railway protection (PNAP APP-24, Cap. 519, Cap. 276): how to tell whether a site is affected, process and design limits |
 | `statutes/building-management-rules.md` | Building Management Ordinance (Cap. 344): common parts, owners' decisions and DMCs for design and A&A work |
 | `statutes/lifts-escalators-rules.md` | Lifts and Escalators Ordinance (Cap. 618): responsible person, examination and use permits |
+| `statutes/small-house-rules.md` | NT Small House Policy: eligibility, grant types, Cap. 121 limits and procedure |
+| `statutes/nt-land-exchange-rules.md` | NT land exchange: which arrangement applies, NDAs and the standard rate pilot |
+| `statutes/land-resumption-rules.md` | Cap. 124 process, statutory compensation and ex-gratia compensation |
 | `docs/document-library.md` | Source documents used to check the rules: version dates, official links and what each is used for. The documents are not in the repo |
 | `docs/document-dependencies.json` | How the documents in the library depend on each other across project stages. An edge from A to B means A depends on B. Each edge records its type, evidence and whether it is documented or inferred. Draft for AP review |
 | `docs/document-dependency-graph.html` | Interactive view of `docs/document-dependencies.json`. Download it and open it in a browser. It holds a copy of the data, so update both together. Draft for AP review |
