@@ -25,7 +25,7 @@ Unfinished work is tracked in [GitHub issues](https://github.com/paulip114/hk-ar
 | `fs-code/moe-rules.md` | Means of escape rules (FS Code 2011, 2024 Ed., Part B) |
 | `fs-code/moe_tables.json` | Tables A1, B1-B4, travel distances, stair and refuge limits as data |
 | `fs-code-2011.txt` | Full FS Code text. Not in the repo (gitignored): download the Code from the BD website and save as text here |
-| `skills/` | Copies of the saved Claude skills (B(P)R check, means of escape check) |
+| `skills/` | 12 Claude skills for checks, submissions, contracts, drawings and design writing |
 | `tools/moe_check.py` | Means of escape checker: `python3 tools/moe_check.py project.json` (reads the `means_of_escape` block) |
 | `fs-code/cd-rules.md` | Fire resisting construction (Part C) and means of access / EVA (Part D) rules |
 | `fs-code/cd_tables.json` | Tables C1, D1 limits, FL / FRS / EVA dimensions as data |
