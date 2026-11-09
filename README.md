@@ -153,7 +153,6 @@ Rule documents and data tables mark facts by how they were checked. Some tools r
 
 **Still partial or unverified:**
 - Other Parts of FS Code 2011, whose tables were taken from the Code's text but do not all have a separate check on record
-- The validation schemes for minor works, which are not in Cap. 123N
 - Cap. 123P inspection scope and the MWIS forms, which have not been compared line by line
 - Barrier Free Design Manual Chapter 6
 - The current LandsD administrative fee, and the FSD Part II pressurization table
