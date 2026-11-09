@@ -1,6 +1,6 @@
 # BD submission timeline: Demo composite building, Kowloon (submission tracking)
 
-As of 2026-11-05. Draft for AP review. Periods marked (unverified) are not yet checked against Cap. 123 / Cap. 123A.
+As of 2026-11-05. Draft for AP review. Statutory last days move under Cap. 1 s.71(1)(b) for Sundays, general holidays listed to 2027 and any warning_days given. Periods marked (unverified) are not yet checked against Cap. 123 / Cap. 123A.
 
 **Summary:** 9 FAIL, 2 CHECK, 32 items.
 

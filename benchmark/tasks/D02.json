@@ -3,7 +3,7 @@
  "stage": "3",
  "capability": "procedure",
  "title": "屋宇署法定期限",
- "prompt": "案例純屬虛構。按 Cap. 123 / 123A 及 PNAP 計算各期限（日曆日）。W&R（撤回再提交）令審批期由最後一次 W&R 日重新起計。",
+ "prompt": "案例純屬虛構。按 Cap. 123 / 123A 及 PNAP 計算各期限（日曆日，起始日不計）。法定期限的最後一日如屬星期日，順延至下一日；PNAP 期限不順延。W&R（撤回再提交）令審批期由最後一次 W&R 日重新起計。",
  "input": {
   "as_of": "2027-09-15",
   "submissions": [
@@ -141,7 +141,7 @@
   {
    "path": "op_refusal_due",
    "type": "date",
-   "expected": "2029-07-15",
+   "expected": "2029-07-16",
    "desc": "佔用許可證拒批期限"
   }
  ],
