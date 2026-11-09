@@ -47,7 +47,7 @@ Generate sketch plans with rooms, areas and a title block from the same project 
 
 ## Quick start
 
-The checking tools need only Python 3.9 or later.
+The checking tools need only Python 3.9 or later. If you are new to Python, install it from [python.org](https://www.python.org/downloads/) (on Windows, tick **Add python.exe to PATH**), then open Terminal or PowerShell. Without Git, use **Code > Download ZIP** on GitHub, unzip it and `cd` into the folder.
 
 ```bash
 git clone https://github.com/paulip114/hk-architecture.git
@@ -57,14 +57,47 @@ python3 tools/bpr_check.py examples/demo_composite.json -o report.md   # B(P)R c
 python3 tools/moe_check.py examples/demo_composite.json                # means of escape
 python3 tools/submission_timeline.py examples/demo_submission.json     # BD deadlines
 python3 tools/cost_estimate.py examples/demo_practice.json             # order of cost
-python3 tools/fs_lookup.py "travel distance"                           # search the Fire Code
+python3 tools/fs_lookup.py "travel distance"                           # look up a Fire Code definition
 ```
 
 On Windows, use `python` in place of `python3` and `.venv\Scripts\python` in place of `.venv/bin/python`.
 
-Exit code `1` means the check found a failure, not that the tool crashed. Copy a file from [`examples/`](examples/) to start your own project; all the demo schemes are fictional.
+The checking tools print a report. Add `-o report.md` to save it as a file too. Most demo schemes contain failures, so don't be surprised to see them.
 
-The drawing tools need extra packages:
+### Read the results
+
+| Result | Meaning | What to do |
+| --- | --- | --- |
+| `PASS` | Meets the limit the tool checked | Include it in the AP's review. It is not an approval |
+| `FAIL` | Does not meet the limit | Change the scheme or the input, then run the tool again |
+| `CHECK` | Needs a person: the rule needs judgement, a figure is unverified, or an input is missing | Read the note, then check the official text or ask the AP |
+| `INFO` | For information only | No action, unless the note asks for one |
+
+The exit code is `0` if nothing failed and usually `1` if a check failed. A Python traceback means bad input or a missing package, not a check result, although it also exits with `1` ([#73](https://github.com/paulip114/hk-architecture/issues/73)).
+
+### Check your own scheme
+
+1. Copy the example file for the tool. All the demo schemes are fictional.
+2. Replace the figures with your scheme, keeping the block the tool reads.
+3. Run the tool on your file, and give the report to the AP.
+
+| Example file in [`examples/`](examples/) | Tool: block it reads |
+| --- | --- |
+| `demo_composite.json` | `bpr_check`: `site`, `building`, `floors`, `rooms` · `moe_check`: `means_of_escape` · `fire_cd_check`: `fire_construction`, `means_of_access` · `part_e_check`: `part_e` |
+| `demo_composite_planning.json` | `planning_lease_check`: `planning_lease`, with `demo_composite.json` as the project and this file as `--block` |
+| `demo_composite_design.json` | `sbd_check`: `sustainable_design` · `bfa_check`: `barrier_free` |
+| `demo_composite_fsm_energy.json` | `part_f_check`: `fire_safety_management` · `fsi_check`: `fsi` · `energy_check`: `energy` |
+| `demo_cinema.json` | `ppe_check`: `ppe` |
+| `demo_atrium_fe.json` | `fire_eng_timeline`: `fire_engineering` |
+| `demo_massing.json` | `massing_study`: `options` |
+| `demo_submission.json` | `submission_timeline`: `submission` |
+| `demo_practice.json` | `contract_admin`: `contract` · `cost_estimate`: `cost` · `supervision_plan`: `supervision` · `dxf_plan`, `ifc_model`: `drawing` |
+
+[`docs/reference.md`](docs/reference.md) lists the input fields. `dxf_area_takeoff` reads a DXF file. `fs_lookup` needs no project file: it finds definitions, use classes and performance requirements. Its `--clause` option needs your own text copy of the Code, saved as `fs-code-2011.txt` ([#75](https://github.com/paulip114/hk-architecture/issues/75)).
+
+### Drawing tools
+
+These need extra packages:
 
 ```bash
 python3 -m venv .venv
@@ -121,7 +154,7 @@ This graph follows the tools, so it leaves out rule documents with no tool, such
 
 The repo is designed to be read and run by an agent:
 
-- **[`skills/`](skills/)** holds 12 Claude skills, such as B(P)R checks, massing studies and design statements. They expect the repo at `/mnt/project-files/architect-kb`, so change that path if you put it elsewhere.
+- **[`skills/`](skills/)** holds 12 Claude skills, such as B(P)R checks, massing studies and design statements. To use one in Claude Code, copy its folder to `.claude/skills/` and replace `/mnt/project-files/architect-kb` with your repo path ([#74](https://github.com/paulip114/hk-architecture/issues/74)).
 - **Rule documents and data tables** give the agent sources to cite, and they mark what has not been verified.
 - **[`AGENTS.md`](AGENTS.md)** sets the working rules for agents in this repo.
 

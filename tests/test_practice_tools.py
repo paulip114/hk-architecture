@@ -8,6 +8,7 @@ import copy
 import importlib.util
 import json
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -206,6 +207,26 @@ class Drawing(unittest.TestCase):
         log = ifcopenshell.validate.json_logger()
         ifcopenshell.validate.validate(f, log)
         self.assertEqual(log.statements, [])
+
+
+class Readme(unittest.TestCase):
+    TEXT = (ROOT / "README.md").read_text(encoding="utf-8")
+
+    def test_every_tool_is_listed(self):
+        for path in TOOLS.glob("*.py"):
+            self.assertIn(path.stem, self.TEXT, path.name)
+
+    def test_listed_example_files_exist(self):
+        for name in re.findall(r"`(demo_\w+\.json)`", self.TEXT):
+            self.assertTrue((ROOT / "examples" / name).exists(), name)
+
+    def test_listed_blocks_are_in_the_example_file(self):
+        for name, cells in re.findall(r"^\| `(demo_\w+\.json)` \| (.+) \|$", self.TEXT, flags=re.M):
+            data = json.loads((ROOT / "examples" / name).read_text(encoding="utf-8"))
+            cells = cells.split(", with ")[0]
+            for tool_blocks in cells.split(" · "):
+                for block in re.findall(r"`(\w+)`", tool_blocks.split(": ", 1)[1]):
+                    self.assertIn(block, data, f"{name}: {block}")
 
 
 class Console(unittest.TestCase):
