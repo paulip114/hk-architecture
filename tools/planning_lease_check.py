@@ -26,6 +26,8 @@ lease_gfa_concessions[]: {item, area_m2, group: I | II_nil | II_premium | III}
 bonus_pr:  district, oldest_op_year, residential_share, application_year
 premium_estimate: before_rate_hkd_m2, after_rate_hkd_m2, before_gfa_m2 (indicative only)
 
+minor_relaxation: true gives CHECK (s16) only for an excess up to 20% (MINOR_RELAX_PCT, a screening assumption);
+a larger excess is FAIL (s12A).
 Exit code 1 when any item fails. Output is a draft for an AP / planning consultant.
 """
 import argparse
@@ -40,6 +42,9 @@ from bpr_check import EXEMPT_FRACTION  # noqa: E402  same GFA rules as the B(P)R
 D = json.loads((HERE.parent / "planning" / "planning_lands.json").read_text(encoding="utf-8"))
 PASS, FAIL, WARN, INFO = "PASS", "FAIL", "CHECK", "INFO"
 EPS = 1e-9
+# Screening assumption, not a rule: the Ordinance and the plans set no percentage for "minor relaxation".
+# An excess above this is reported FAIL (s12A route) instead of CHECK (s16). Confirm with the AP / planning consultant.
+MINOR_RELAX_PCT = 20.0
 
 
 def fmt(x, nd=2):
@@ -89,6 +94,10 @@ def run(p, q):
     pr_d, pr_n = g["domestic"] / area, g["non_domestic"] / area
     ozp, prop, lease = q.get("ozp", {}), q.get("proposal", {}), q.get("lease", {})
     relax = bool(ozp.get("minor_relaxation"))
+
+    def small_excess(actual, lim):
+        """Minor relaxation is a CHECK only for a small excess (screening assumption, see MINOR_RELAX_PCT)."""
+        return relax and (actual / lim - 1) * 100 <= MINOR_RELAX_PCT + EPS
     add("JPN 4", "GFA used (BD basis)", f"{fmt(total)} m²", "-", INFO,
         f"domestic {fmt(g['domestic'])}, non-domestic {fmt(g['non_domestic'])}; site {fmt(area)} m²")
 
@@ -119,12 +128,12 @@ def run(p, q):
             add("Remarks", label, fmt(actual, 3), f"≤ {lim}", PASS)
             return
         over = (actual / lim - 1) * 100
-        if relax:
+        if small_excess(actual, lim):
             add("Remarks", label, fmt(actual, 3), f"≤ {lim}", WARN,
                 f"+{over:.1f}%: minor relaxation under s16 (needs planning and design merits)")
             needs["s16"].append(f"minor relaxation of {label} ({fmt(actual,3)} vs {lim})")
         else:
-            add("Remarks", label, fmt(actual, 3), f"≤ {lim}", FAIL, f"+{over:.1f}%, no minor relaxation clause: s12A")
+            add("Remarks", label, fmt(actual, 3), f"≤ {lim}", FAIL, f"+{over:.1f}%, " + ("beyond the screening limit for minor relaxation" if relax else "no minor relaxation clause") + ": s12A")
             needs["s12A"].append(f"{label} above OZP")
 
     pr_check("Domestic PR", pr_d, ozp.get("max_pr_domestic"))
@@ -161,11 +170,13 @@ def run(p, q):
             if top <= lim + EPS:
                 add("Remarks", "Building height", f"{fmt(top)} mPD", f"≤ {lim} mPD", PASS,
                     f"main roof; building height {fmt(h)} m from mean formation level" if h is not None else "main roof")
-            elif relax:
-                add("Remarks", "Building height", f"{fmt(top)} mPD", f"≤ {lim} mPD", WARN, "minor relaxation under s16")
+            elif small_excess(top, lim):
+                add("Remarks", "Building height", f"{fmt(top)} mPD", f"≤ {lim} mPD", WARN,
+                    f"+{(top / lim - 1) * 100:.1f}%: minor relaxation under s16 (needs planning and design merits)")
                 needs["s16"].append(f"minor relaxation of BH ({fmt(top)} vs {lim} mPD)")
             else:
-                add("Remarks", "Building height", f"{fmt(top)} mPD", f"≤ {lim} mPD", FAIL, "s12A")
+                add("Remarks", "Building height", f"{fmt(top)} mPD", f"≤ {lim} mPD", FAIL,
+                    f"+{(top / lim - 1) * 100:.1f}%, " + ("beyond the screening limit for minor relaxation" if relax else "no minor relaxation clause") + ": s12A")
                 needs["s12A"].append("BH above OZP")
     if ozp.get("max_bh_storeys") is not None and prop.get("storeys") is not None:
         ok = int(prop["storeys"]) <= int(ozp["max_bh_storeys"])

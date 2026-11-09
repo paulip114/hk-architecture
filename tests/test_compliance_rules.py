@@ -2,7 +2,9 @@
 
 Run:  python3 -m unittest discover -s tests
 """
+import copy
 import importlib.util
+import json
 import sys
 import unittest
 from pathlib import Path
@@ -19,6 +21,7 @@ def load(name):
 
 
 bpr = load("bpr_check")
+planning = load("planning_lease_check")
 sbd = load("sbd_check")
 bfa = load("bfa_check")
 fsi = load("fsi_check")
@@ -250,6 +253,37 @@ class BarrierFreeDivisions15And19(unittest.TestCase):
             q = {"building_type": "non_domestic", "counters": [counter]}
             rows = [r[4] for r in bfa.run(q) if r[0].startswith("Div 15")]
             self.assertEqual(rows, [expected] * 4)
+
+
+class PlanningMinorRelaxation(unittest.TestCase):
+    """#88: minor relaxation is CHECK only for a small excess; a large one is FAIL (s12A)."""
+    PROJECT = json.loads((ROOT / "examples" / "demo_composite.json").read_text(encoding="utf-8"))
+    BLOCK = json.loads((ROOT / "examples" / "demo_composite_planning.json").read_text(encoding="utf-8"))["planning_lease"]
+
+    def height_row(self, roof_mpd, relax=True):
+        q = copy.deepcopy(self.BLOCK)
+        q["ozp"]["minor_relaxation"] = relax
+        q["ozp"]["max_bh_mpd"] = 50
+        q["proposal"]["main_roof_mpd"] = roof_mpd
+        q["proposal"]["rooftop"] = []
+        rows, _, needs = planning.run(self.PROJECT, q)
+        return [r for r in rows if r[1] == "Building height"][0], needs
+
+    def test_small_excess_is_check_with_s16(self):
+        row, needs = self.height_row(54)
+        self.assertEqual(row[4], planning.WARN)
+        self.assertTrue(needs["s16"])
+        self.assertFalse(needs["s12A"])
+
+    def test_large_excess_is_fail_with_s12a(self):
+        row, needs = self.height_row(290)
+        self.assertEqual(row[4], planning.FAIL)
+        self.assertTrue(needs["s12A"])
+        self.assertFalse(any("BH" in n for n in needs["s16"]))
+
+    def test_no_clause_is_fail(self):
+        row, _ = self.height_row(54, relax=False)
+        self.assertEqual(row[4], planning.FAIL)
 
 
 if __name__ == "__main__":
