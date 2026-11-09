@@ -47,7 +47,7 @@ Unfinished work is tracked in [GitHub issues](https://github.com/paulip114/hk-ar
 | `planning/planning-rules.md` | Town planning: OZP Notes (Column 1/2, Remarks), JPN 4/5 PR and height rules, s12A / s16 / s16A / s17 / appeal procedure and time limits, TPB guidelines, Bonus PR (JPN 9) and transfer of PR (PG-43A) |
 | `lands/lands-rules.md` | Land administration: lease clauses, JPN 4 GFA groups under lease, GBP under lease (LAO PN 2/2018), approval / consent (PN 4/2021), lease modification and land exchange (PN 2/2023), premium and standard rates |
 | `planning/planning_lands.json` | Time limits, JPN 5 roof-top limits, JPN 9 standard rates as data |
-| `tools/planning_lease_check.py` | OZP + lease checker: `python3 tools/planning_lease_check.py project.json [--block planning.json]` (reads `planning_lease`; GFA from `floors[]`) |
+| `tools/planning_lease_check.py` | OZP + lease checker: `python3 tools/planning_lease_check.py project.json [--block planning.json]` (reads `planning_lease`; GFA from `floors[]`; with `minor_relaxation: true`, a height or PR excess up to 20% is `CHECK` (s16), a larger one `FAIL` (s12A). The 20% is a screening assumption, [#90](https://github.com/paulip114/hk-architecture/issues/90)) |
 | `examples/demo_composite_planning.json`, `demo_composite_planning_report.md` | OZP / lease demo for the composite building (fictional plan and lot) |
 | `design/` | Massing study methods, design statement guide and templates, architectural movements and masters (see `design/README.md`) |
 | `tools/massing_study.py` | Massing options and development envelope, runs `bpr_check` on each option (`examples/demo_massing.json`) |
